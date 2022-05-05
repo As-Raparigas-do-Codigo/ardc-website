@@ -1,0 +1,26 @@
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@500&display=swap");
+@import "./variables";
+@import "./gradients";
+@import "./buttons";
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $color-primary;
+}
+
+p {
+  color: $text-color;
+}
+
+a {
+  text-decoration: none;
+}

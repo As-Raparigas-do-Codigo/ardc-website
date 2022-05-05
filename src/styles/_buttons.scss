@@ -1,0 +1,55 @@
+$button-border-radius: 6px;
+$button-height: 48px;
+$button-color-primary: $color-secondary;
+
+%button {
+  display: inline-block;
+  height: $button-height;
+  line-height: $button-height;
+  border-radius: $button-border-radius;
+  padding: 0 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: max-content;
+
+  &[disabled],
+  &.inactive,
+  &.disabled {
+    opacity: 60%;
+    pointer-events: none;
+  }
+
+  //for button tag instead of a
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.button-primary {
+  @extend %button;
+  background-color: $button-color-primary;
+  color: $white;
+  border: 1px solid $button-color-primary;
+
+  &:hover:not([disabled]),
+  &[hover] {
+    color: $white;
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+}
+
+.button-secondary {
+  @extend %button;
+  background-color: $white;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+
+  &:hover:not([disabled]),
+  &[hover] {
+    color: $color-primary;
+    box-shadow: 0 0 0 2px $color-primary;
+  }
+}
