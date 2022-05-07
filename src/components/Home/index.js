@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import TertiaryButton from "../Buttons/TertiaryButton";
+import Button from "../Button";
 
 function Home() {
 	return (
@@ -9,13 +9,18 @@ function Home() {
 			<h1>Home Page</h1>
 
 			<div class="gradient-zig-zag">
-				<button className="button-primary">Button</button>
-				<a href="/somehe" className="button-secondary">
-					Link
-				</a>
-				<TertiaryButton disabled href="/tertiarybtn">
-					Button text here
-				</TertiaryButton>
+				<Button btnClass="button-primary">Primary</Button>
+				<Button btnClass="button-primary" disabled>
+					Primary disabled
+				</Button>
+				<Button btnClass="button-secondary">Secondary</Button>
+				<Button btnClass="button-secondary" disabled>
+					Secondary disabled
+				</Button>
+				<Button btnClass="button-tertiary">Tertiary</Button>
+				<Button btnClass="button-tertiary" disabled>
+					Tertiary disabled
+				</Button>
 			</div>
 		</div>
 	);
