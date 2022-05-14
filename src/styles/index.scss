@@ -5,8 +5,8 @@
 @import "./buttons";
 
 body {
-	margin: 0;
-	font-family: $font-family-primary;
+  margin: 0;
+  font-family: $font-family-primary;
 }
 
 h1,
@@ -14,13 +14,13 @@ h2,
 h3,
 h4,
 h5 {
-	color: $color-primary;
+  color: $color-primary;
 }
 
 p {
-	color: $text-color;
+  color: $text-color;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
