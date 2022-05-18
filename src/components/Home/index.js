@@ -7,6 +7,7 @@ function Home() {
   return (
     <div className="home">
       <h1>Home Page</h1>
+      
       <div class="gradient-zig-zag">
         <Button btnClass="button-primary">Primary</Button>
         <Button btnClass="button-primary" disabled>
