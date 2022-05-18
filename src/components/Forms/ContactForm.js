@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
 function ContactForm() {
-
+  
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-
+  
   const sendForm = (evt) => {
     evt.preventDefault()
     var myHeaders = new Headers();
@@ -26,11 +26,11 @@ function ContactForm() {
       redirect: 'follow'
     };
     fetch("https://apex.oracle.com/pls/apex/ardc/forms/contact", requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
   }
-
+  
   return (
     <Form>
       <Form.Group className="mb-3" controlId="nameInputField">
@@ -49,8 +49,8 @@ function ContactForm() {
         Enviar mensagem
       </Button>
     </Form>
-    );
-  }
+  );
+}
   
-  export default ContactForm;
+export default ContactForm;
   
