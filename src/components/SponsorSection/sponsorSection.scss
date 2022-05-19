@@ -1,0 +1,31 @@
+@import "../../styles/variables";
+
+.sponsor-section {
+  margin: 90px auto 70px;
+  text-align: center;
+
+  p {
+    font-family: $font-family-primary;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+  }
+  div {
+    width: 800px;
+    display: grid;
+    grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+    margin: 0 auto;
+
+    @media only screen and (max-width: $md) {
+      grid-template-columns: 100%;
+
+      img:nth-of-type(-n + 2) {
+        margin-bottom: 36px;
+      }
+    }
+    img {
+      height: 50px;
+      justify-self: center;
+    }
+  }
+}
