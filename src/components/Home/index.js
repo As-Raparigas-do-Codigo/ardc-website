@@ -10,7 +10,6 @@ function Home() {
   return (
     <div className="home">
       <h1>Home Page</h1>
-
       <div className="gradient">
         <button className="button-primary">Button</button>
         <a href="/somehe" className="button-secondary">
@@ -30,21 +29,30 @@ function Home() {
             Tertiary disabled
           </Button>
         </div>
+      </div>
+
+      <div className="zig-zag">
         <SponsorSection />
       </div>
 
+      <div className="gradient">
+        <h2>
+          Queremos desmistificar o papel da mulher na tecnologia. --do be done
+        </h2>
+      </div>
+
+      <div className="bg-blue">
+        <h2>Gostavas de colaborar connosco-- to be done</h2>
+      </div>
       <div className="zig-zag">
         <Events />
       </div>
-
       <div className="gradient">
         <h2>Conhece os nossos mentores. -- to be done</h2>
       </div>
-
       <div className="zig-zag">
         <Articles />
       </div>
-
       <div className="bg-pink">
         <h2>Ajuda o projecto a crescer -- to be done</h2>
       </div>
