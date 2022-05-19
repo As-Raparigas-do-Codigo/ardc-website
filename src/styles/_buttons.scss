@@ -53,3 +53,25 @@ $button-color-primary: $color-secondary;
     box-shadow: 0 0 0 2px $color-primary;
   }
 }
+
+.button-tertiary {
+  @extend %button;
+  font-size: 14px;
+
+  svg {
+    margin-right: 5px;
+  }
+
+  &:hover:not([disabled]),
+  &[hover] {
+    color: $button-color-primary;
+    text-decoration: underline;
+  }
+
+  &[disabled],
+  &.inactive,
+  &.disabled {
+    opacity: 60%;
+    pointer-events: none;
+  }
+}
