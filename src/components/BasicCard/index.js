@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../Button";
+import Button from "../Button";
 import "./basic-card.scss";
 
 function BasicCard(props) {
