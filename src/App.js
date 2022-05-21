@@ -8,6 +8,7 @@ import Blog from "pages/Blog";
 import Contact from "pages/Contact";
 import NavBar from "components/NavBarComponent";
 import Social from "components/Social";
+import Team from "pages/Team";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/mentorship" element={<Mentorship />} />
           <Route exact path="/events" element={<Events />} />
           <Route exact path="/blog" element={<Blog />} />
+          <Route exact path="/team" element={<Team />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/contact" element={<Contact />} />
         </Routes>

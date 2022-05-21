@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
 import logo from "../assets/ardc-logo.svg";
 
@@ -35,7 +36,13 @@ function NavBarComponent() {
             <Nav.Link href="/mentorship">Mentorias</Nav.Link>
             <Nav.Link href="/events">Eventos</Nav.Link>
             <Nav.Link href="/blog">Blog</Nav.Link>
-            <Nav.Link href="/about">Sobre Nós</Nav.Link>
+            <NavDropdown title="Sobre Nós" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="/about">
+                Sobre o projecto
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/team">A nossa equipa</NavDropdown.Item>
+            </NavDropdown>
             <Nav.Link href="/contact">Contactos</Nav.Link>
           </Nav>
         </Navbar.Collapse>

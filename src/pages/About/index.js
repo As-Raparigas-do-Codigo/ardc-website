@@ -2,8 +2,8 @@ import React from "react";
 
 function About() {
   return (
-    <div className="About">
-      <h1>About Page</h1>
+    <div className="about">
+      <h1>As Raparigas do Código</h1>
     </div>
   );
 }
