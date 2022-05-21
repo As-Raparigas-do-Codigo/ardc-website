@@ -5,8 +5,8 @@ import articles from "../../data/articles";
 import events from "../../data/events";
 
 // Components
-import BasicCardsRow from "../BasicCardsRow";
-import SponsorSection from "../SponsorSection";
+import BasicCardsRow from "components/BasicCardsRow";
+import SponsorSection from "components/SponsorSection";
 
 function Home() {
   return (
