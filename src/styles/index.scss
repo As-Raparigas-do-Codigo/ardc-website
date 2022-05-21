@@ -1,7 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap");
 @import "./variables";
-@import "./gradients";
+@import "./backgrounds";
 @import "./buttons";
 
 body {
@@ -19,8 +19,17 @@ h5 {
 
 p {
   color: $text-color;
+  font-size: 14px;
+  line-height: 28px;
 }
 
 a {
   text-decoration: none;
+}
+
+// utilities
+
+.padding-top-bottom-medium {
+  padding-top: 76px;
+  padding-bottom: 76px;
 }

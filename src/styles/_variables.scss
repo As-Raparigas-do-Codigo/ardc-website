@@ -2,10 +2,12 @@
 $brand-color: #000958; // dark blue
 $white: #fff;
 $blue: #20bce9;
+$light-blue: #c7eefb;
 $green: #01c2a9;
 $gray: #131a27;
 $light-gray: #dedede;
 $pink: #ffb8b8;
+$light-pink: #ffedee;
 $red: #ff124b;
 
 $color-primary: $brand-color;
@@ -15,7 +17,7 @@ $color-secondary: $green;
 $text-color: $gray;
 
 /* font family */
-$font-family-primary: "Roboto", sans-serif;
+$font-family-primary: "Roboto Mono", sans-serif;
 
 /* breakpoints */
 $xl: 1200px;

@@ -7,7 +7,6 @@ $button-color-primary: $color-secondary;
   height: $button-height;
   line-height: $button-height;
   border-radius: $button-border-radius;
-  padding: 0 20px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -29,6 +28,7 @@ $button-color-primary: $color-secondary;
 
 .button-primary {
   @extend %button;
+  padding: 0 20px;
   background-color: $button-color-primary;
   color: $white;
   border: 1px solid $button-color-primary;
@@ -43,6 +43,7 @@ $button-color-primary: $color-secondary;
 
 .button-secondary {
   @extend %button;
+  padding: 0 20px;
   background-color: $white;
   color: $color-primary;
   border: 1px solid $color-primary;

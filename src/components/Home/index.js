@@ -1,34 +1,56 @@
 import React from "react";
-import SponsorSection from "../SponsorSection";
+
+// data
+import articles from "../../data/articles";
+import events from "../../data/events";
 
 // Components
-import Button from "../Button";
+import BasicCardsRow from "../BasicCardsRow";
+import SponsorSection from "../SponsorSection";
 
 function Home() {
   return (
     <div className="home">
-      <h1>Home Page</h1>
+      <div className="gradient">
+        <h1>Somos as Raparigas do Código --to be done</h1>
+      </div>
 
-      <div className="gradient-zig-zag">
-        <button className="button-primary">Button</button>
-        <a href="/somehe" className="button-secondary">
-          Link
-        </a>
-        <div class="gradient-zig-zag">
-          <Button btnClass="button-primary">Primary</Button>
-          <Button btnClass="button-primary" disabled>
-            Primary disabled
-          </Button>
-          <Button btnClass="button-secondary">Secondary</Button>
-          <Button btnClass="button-secondary" disabled>
-            Secondary disabled
-          </Button>
-          <Button btnClass="button-tertiary">Tertiary</Button>
-          <Button btnClass="button-tertiary" disabled>
-            Tertiary disabled
-          </Button>
-        </div>
+      <div className="zig-zag">
         <SponsorSection />
+      </div>
+
+      <div className="gradient">
+        <h2>
+          Queremos desmistificar o papel da mulher na tecnologia. --do be done
+        </h2>
+      </div>
+
+      <div className="bg-blue">
+        <h2>Gostavas de colaborar connosco-- to be done</h2>
+      </div>
+      <div className="zig-zag">
+        <BasicCardsRow
+          data={events}
+          heading={"Talks & Eventos"}
+          subtitle={
+            "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
+        />
+      </div>
+      <div className="gradient">
+        <h2>Conhece os nossos mentores. -- to be done</h2>
+      </div>
+      <div className="zig-zag">
+        <BasicCardsRow
+          data={articles}
+          heading={"Artigos recentes"}
+          subtitle={
+            "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
+        />
+      </div>
+      <div className="bg-pink">
+        <h2>Ajuda o projecto a crescer -- to be done</h2>
       </div>
     </div>
   );

@@ -1,20 +1,33 @@
-.gradient-zig-zag {
-  position: relative;
+// heights are temporary just to see the sections
+.gradient {
   height: 400px;
   background: linear-gradient(to bottom, #c9eef9 0%, #fdedee 100%);
+}
 
+.bg-blue {
+  height: 400px;
+  background-color: $light-blue;
+}
+
+.bg-pink {
+  height: 400px;
+  background-color: $light-pink;
+}
+
+.zig-zag {
+  position: relative;
   &:before {
     position: absolute;
     top: -20px;
     left: 0;
     background: linear-gradient(
         -45deg,
-        #c9eef9 16px,
-        #c9eef9 16px,
-        #c9eef9 16px,
+        #ffffff 16px,
+        #ffffff 16px,
+        #ffffff 16px,
         transparent 0
       ),
-      linear-gradient(45deg, #c9eef9 16px, transparent 0);
+      linear-gradient(45deg, #ffffff 16px, transparent 0);
     background-position: left top;
     background-repeat: repeat-x;
     background-size: 22px 32px;
@@ -30,8 +43,8 @@
     position: absolute;
     bottom: -16px;
     left: 0px;
-    background: linear-gradient(-45deg, transparent 16px, #fdedee 0),
-      linear-gradient(45deg, transparent 16px, #fdedee 0);
+    background: linear-gradient(-45deg, transparent 16px, #ffffff 0),
+      linear-gradient(45deg, transparent 16px, #ffffff 0);
     background-repeat: repeat-x;
     background-position: left bottom;
     background-size: 22px 32px;
