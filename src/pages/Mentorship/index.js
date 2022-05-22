@@ -1,5 +1,5 @@
 import React from "react";
-import MentorshipForm from "../Forms/MentorshipForm";
+import MentorshipForm from "../../components/Forms/MentorshipForm";
 
 function Mentorship() {
   return (

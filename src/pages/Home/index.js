@@ -4,7 +4,7 @@ import React from "react";
 import articles from "../../data/articles";
 import events from "../../data/events";
 
-// Components<<<<<<< HEAD:src/pages/Home/index.js
+// Components
 import BasicCardsRow from "components/BasicCardsRow";
 import SponsorSection from "components/SponsorSection";
 import WorkshopsSection from "components/WorkshopsSection";
