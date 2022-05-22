@@ -4,9 +4,10 @@ import React from "react";
 import articles from "../../data/articles";
 import events from "../../data/events";
 
-// Components
+// Components<<<<<<< HEAD:src/pages/Home/index.js
 import BasicCardsRow from "components/BasicCardsRow";
 import SponsorSection from "components/SponsorSection";
+import WorkshopsSection from "components/WorkshopsSection";
 
 function Home() {
   return (
@@ -17,6 +18,12 @@ function Home() {
 
       <div className="zig-zag">
         <SponsorSection />
+        <WorkshopsSection
+          heading={"Os nossos workshops"}
+          subtitle={
+            "Oferecemos vários cursos e workshops, totalmente gratuitos e adaptados às necessidades e interesses das alunas inscritas."
+          }
+        />
       </div>
 
       <div className="gradient">
