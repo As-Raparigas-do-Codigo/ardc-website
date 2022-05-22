@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Workshops from "./components/Workshops";
-import Mentorship from "./components/Mentorship";
-import Events from "./components/Events";
-import About from "./components/About";
-import Blog from "./components/Blog";
-import Contact from "./components/Contact";
-import NavBar from "./components/NavBarComponent";
-import Social from "./components/Social";
+import Home from "pages/Home";
+import Workshops from "pages/Workshops";
+import Mentorship from "pages/Mentorship";
+import Events from "pages/Events";
+import About from "pages/About";
+import Blog from "pages/Blog";
+import Contact from "pages/Contact";
+import NavBar from "components/NavBarComponent";
+import Social from "components/Social";
+import Team from "pages/Team";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/mentorship" element={<Mentorship />} />
           <Route exact path="/events" element={<Events />} />
           <Route exact path="/blog" element={<Blog />} />
+          <Route exact path="/team" element={<Team />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/contact" element={<Contact />} />
         </Routes>
