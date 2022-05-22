@@ -4,10 +4,11 @@ import React from "react";
 import articles from "../../data/articles";
 import events from "../../data/events";
 
-// Components<<<<<<< HEAD:src/pages/Home/index.js
+// Components
 import BasicCardsRow from "components/BasicCardsRow";
 import SponsorSection from "components/SponsorSection";
 import WorkshopsSection from "components/WorkshopsSection";
+import MentorsSection from "components/MentorsSection";
 
 function Home() {
   return (
@@ -45,7 +46,7 @@ function Home() {
         />
       </div>
       <div className="gradient">
-        <h2>Conhece os nossos mentores. -- to be done</h2>
+        <MentorsSection />
       </div>
       <div className="zig-zag">
         <BasicCardsRow
