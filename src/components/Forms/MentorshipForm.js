@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Stack } from "react-bootstrap";
 
 function MentorshipForm() {
-  
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [mentorshipType, setMentorshipType] = useState(1);
@@ -34,40 +34,49 @@ function MentorshipForm() {
       redirect: 'follow'
     };
     fetch("https://apex.oracle.com/pls/apex/ardc/forms/mentorship", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
   }
-  
+
   return (
     <Form>
-      <Form.Group className="mb-3" controlId="nameInputField">
-        <Form.Control type="text" placeholder="Nome *" value={name} onChange={(e) => setName(e.target.value)}/>
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="emailInputField">
-        <Form.Control type="email" placeholder="Email *" value={email} onChange={(e) => setEmail(e.target.value)}/>
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="mentorshipTypeField">
-        <Form.Label>Que tipo de mentorias procuras? *</Form.Label>
-        <Form.Check type="radio" name="mentorshipType" checked={mentorshipType === 1} value={1} label="Individual" onChange={(e) => setMentorshipType(e.target.checked ? 1 : 2)}/>
-        <Form.Check type="radio" name="mentorshipType" checked={mentorshipType === 2} value={2} label="Em grupo"   onChange={(e) => setMentorshipType(e.target.checked ? 2 : 1)}/>
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="mentorshipAreas">
-        <Form.Label>Em que área(s) procuras mentoria? *</Form.Label>
-        <Form.Check type="checkbox" checked={frontendChecked} label="Frontend Development" onChange={(e) => setFrontendChecked(e.target.checked ? true : false)}/>
-        <Form.Check type="checkbox" checked={backendChecked} label="Backend Development" onChange={(e) =>  setBackendChecked(e.target.checked ? true : false)}/>
-        <Form.Check type="checkbox" checked={uxuiChecked} label="UX / UI Design" onChange={(e) =>  setUXUIChecked(e.target.checked ? true : false)}/>
-        <Form.Check type="checkbox" checked={projectMgmtChecked}  label="Project Management" onChange={(e) =>  setProjectMgmtChecked(e.target.checked ? true : false)}/>
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="subjectMessageField">
-        <Form.Control type="text" placeholder="Mensagem / Comentário" value={message} onChange={(e) => setMessage(e.target.value)}/>
-      </Form.Group>
-      <Button variant="primary" type="submit" disabled={!name || !email || !message } onClick={sendForm}>
-        Submeter
-      </Button>
+      <Stack gap={3}>
+        <Form.Group className="mb-3" controlId="nameInputField">
+          <Form.Control type="text" name="nameInputField" placeholder="Nome *" value={name} onChange={(e) => setName(e.target.value)} size="lg" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="emailInputField">
+          <Form.Control type="email" name="emailInputField" placeholder="Email *" value={email} onChange={(e) => setEmail(e.target.value)} size="lg" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="mentorshipTypeField">
+          <Stack gap={3}>
+            <div>Que tipo de mentorias procuras? *</div>
+            <Form.Check type="radio" id="mentorshipTypeIndividual" checked={mentorshipType === 1} value={1} label="Individual" onChange={(e) => setMentorshipType(e.target.checked ? 1 : 2)} />
+            <Form.Check type="radio" id="mentorshipTypeGroup" checked={mentorshipType === 2} value={2} label="Em grupo" onChange={(e) => setMentorshipType(e.target.checked ? 2 : 1)} />
+          </Stack>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="mentorshipAreas">
+          <Stack gap={3}>
+            <div>Em que área(s) procuras mentoria? *</div>
+            <Form.Check type="checkbox" id="mentorshipAreaFrontend" checked={frontendChecked} label="Frontend Development" onChange={(e) => setFrontendChecked(e.target.checked ? true : false)} />
+            <Form.Check type="checkbox" id="mentorshipAreaBackend" checked={backendChecked} label="Backend Development" onChange={(e) => setBackendChecked(e.target.checked ? true : false)} />
+            <Form.Check type="checkbox" id="mentorshipAreaUXUI" checked={uxuiChecked} label="UX / UI Design" onChange={(e) => setUXUIChecked(e.target.checked ? true : false)} />
+            <Form.Check type="checkbox" id="mentorshipAreaPM" checked={projectMgmtChecked} label="Project Management" onChange={(e) => setProjectMgmtChecked(e.target.checked ? true : false)} />
+          </Stack>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="subjectMessageField">
+          <Form.Control type="text" as="textarea" rows="3" placeholder="Mensagem / Comentário" value={message} onChange={(e) => setMessage(e.target.value)} size="lg" />
+        </Form.Group>
+      </Stack>
+
+      <div className="d-flex justify-content-between">
+        <p className="mandatory-hint">* Preenchimento obrigatório</p>
+        <Button variant="primary" type="submit" disabled={!name || !email || !message} onClick={sendForm}>
+          Submeter
+        </Button>
+      </div>
     </Form>
-    );
-  }
-  
-  export default MentorshipForm;
-  
+  );
+}
+
+export default MentorshipForm;
