@@ -1,0 +1,90 @@
+@import "../../styles/variables";
+
+.horizontal-card {
+  border: 1px solid $light-gray;
+
+  @media (min-width: $lg) {
+    display: flex;
+    gap: 60px;
+  }
+
+  &:first-of-type {
+    margin-bottom: 30px;
+  }
+}
+
+.horizontal-card__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  @media (min-width: $lg) {
+    max-width: 315px;
+    height: 315px;
+  }
+}
+
+.horizontal-card__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+
+  @media (min-width: $lg) {
+    padding: 24px 75px 45px 0;
+  }
+}
+
+.horizontal-card__description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 0;
+}
+
+.horizontal-card__description,
+.horizontal-card__details {
+  font-size: 14px;
+}
+
+.horizontal-card__details {
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.horizontal-card__buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  @media (min-width: $md) {
+    display: block;
+  }
+
+  .button-tertiary {
+    @media (min-width: $md) {
+      margin-left: 32px;
+    }
+  }
+}
+
+.horizontal-card__badge {
+  color: $color-secondary;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 28px;
+  height: 28px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid $color-secondary;
+  border-radius: 120px;
+  max-width: max-content;
+  margin-bottom: 15px;
+
+  @media (min-width: $lg) {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+}

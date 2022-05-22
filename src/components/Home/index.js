@@ -7,6 +7,7 @@ import events from "../../data/events";
 // Components
 import BasicCardsRow from "../BasicCardsRow";
 import SponsorSection from "../SponsorSection";
+import WorkshopsSection from "../WorkshopsSection";
 
 function Home() {
   return (
@@ -17,6 +18,12 @@ function Home() {
 
       <div className="zig-zag">
         <SponsorSection />
+        <WorkshopsSection
+          heading={"Os nossos workshops"}
+          subtitle={
+            "Oferecemos vários cursos e workshops, totalmente gratuitos e adaptados às necessidades e interesses das alunas inscritas."
+          }
+        />
       </div>
 
       <div className="gradient">
