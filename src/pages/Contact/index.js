@@ -1,8 +1,6 @@
 import React from "react";
 import ContactForm from "../../components/Forms/ContactForm";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col } from "react-bootstrap";
 
 const ContactInfoSection = () => (
   <Container className="my-5 py-5">
@@ -28,7 +26,7 @@ const ContactInfoSection = () => (
 const ContactFormSection = () => (
   <Container className="my-5 py-5 px-5 bordered-box shadow-lg">
     <Row>
-      <h2 className="mb-2">Precisas de ajuda</h2>
+      <h2 className="mb-2">Precisas de ajuda?</h2>
       <p className="mb-4">Envia-nos a tua mensagem através do formulário de contacto.</p>
     </Row>
     <Row>
