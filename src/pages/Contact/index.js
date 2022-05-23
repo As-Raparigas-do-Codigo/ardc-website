@@ -1,6 +1,7 @@
 import React from "react";
 import ContactForm from "components/Forms/ContactForm";
 import { Container, Row, Col } from "react-bootstrap";
+import Constants from "Constants";
 
 const ContactInfoSection = () => (
   <Container className="my-5 py-5">
@@ -16,7 +17,7 @@ const ContactInfoSection = () => (
         </Row>
         <Row xs="auto" md="auto" lg="auto" className="mb-3">
           <Col xs={2} md={2} lg={2}><strong>Email:</strong></Col>
-          <Col><a href="mailto:asraparigasdocodigo@gmail.com">asraparigasdocodigo@gmail.com</a></Col>
+          <Col><a href={`mailto:${Constants.Email}`}>{Constants.Email}</a></Col>
         </Row>
       </Container>
     </Row>
