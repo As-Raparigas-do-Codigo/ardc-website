@@ -1,5 +1,5 @@
 import React from "react";
-import MentorshipForm from "../../components/Forms/MentorshipForm";
+import MentorshipForm from "components/Forms/MentorshipForm";
 import { Container, Row, Col } from "react-bootstrap";
 
 const MentorshipInfoSection = () => (
