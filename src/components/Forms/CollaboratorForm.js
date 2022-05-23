@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, Stack } from "react-bootstrap";
 import Button from "components/Button"
+import { SuccessToastMessage, ErrorToastMessage } from "components/Forms/Toasts";
 
 function CollaboratorForm() {
 
@@ -22,6 +23,42 @@ function CollaboratorForm() {
   const [foundUsFacebookChecked, setFoundUsFacebookChecked] = useState(false);
   const [foundUsOtherChecked, setFoundUsOtherChecked] = useState(false);
   const [message, setMessage] = useState('');
+
+  const resetData = () => {
+    setName('');
+    setEmail('');
+    setCity('');
+    setWebsite('');
+    setMentorChecked('');
+    setSpeakerChecked('');
+    setContentChecked('');
+    setSocialMediaChecked('');
+    setEventOrgChecked('');
+    setPromotionChecked('');
+    setTechnicalChecked('');
+    setOtherChecked('');
+    setFoundUsInstaChecked('');
+    setFoundUsWebsiteChecked('');
+    setFoundUsLinkedinChecked('');
+    setFoundUsFacebookChecked('');
+    setFoundUsOtherChecked('');
+    setMessage('');
+  };
+
+  const [sending, setSending] = useState(false);
+
+  const [successToast, setSuccessToast] = useState(false);
+  const hideSuccessToast = () => setSuccessToast(false);
+  const showSuccessToast = () => setSuccessToast(true);
+
+  const [errorToast, setErrorToast] = useState(false);
+  const hideErrorToast = () => setErrorToast(false);
+  const showErrorToast = () => setErrorToast(true);
+
+  const hideToasts = () => {
+    hideSuccessToast();
+    hideErrorToast();
+  };
 
   const sendForm = (evt) => {
     evt.preventDefault()
@@ -54,60 +91,74 @@ function CollaboratorForm() {
       body: raw,
       redirect: 'follow'
     };
+    setSending(true);
+    hideToasts();
     fetch("https://apex.oracle.com/pls/apex/ardc/forms/collaborator", requestOptions)
       .then(response => response.text())
       .then(result => console.log(result))
-      .catch(error => console.log('error', error));
+      .then(() => {
+        showSuccessToast();
+        resetData();
+      })
+      .catch(error => {
+        console.log('error', error);
+        showErrorToast();
+      })
+      .finally(() => setSending(false));
   }
 
   return (
-    <Form>
-      <Form.Group className="mb-3" controlId="nameInputField">
-        <Form.Control type="text" placeholder="Nome *" value={name} onChange={(e) => setName(e.target.value)} size="lg" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="emailInputField">
-        <Form.Control type="email" placeholder="Email *" value={email} onChange={(e) => setEmail(e.target.value)} size="lg" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="cityInputField">
-        <Form.Control type="text" placeholder="Cidade *" value={city} onChange={(e) => setCity(e.target.value)} size="lg" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="websiteInputField">
-        <Form.Control type="url" placeholder="Website / LinkedIn *" value={website} onChange={(e) => setWebsite(e.target.value)} size="lg" />
-      </Form.Group>
-      <Form.Group className="mt-5 mb-2" controlId="collaborationAreasField">
-        <Stack gap={3}>
-          <Form.Label>Em que actividades gostarias de colaborar? *</Form.Label>
-          <Form.Check type="checkbox" id="mentor" checked={mentorChecked} label="Ser mentor/a" onChange={(e) => setMentorChecked(e.target.checked ? true : false)} />
-          <Form.Check type="checkbox" id="speaker" checked={speakerChecked} label="Ser orador/a (escolas, workshops, aulas)" onChange={(e) => setSpeakerChecked(e.target.checked ? true : false)} />
-          <Form.Check type="checkbox" id="content" checked={contentChecked} label="Criação de conteúdo social (Instagram, notícias, etc.)" onChange={(e) => setContentChecked(e.target.checked ? true : false)} />
-          <Form.Check type="checkbox" id="socialMedia" checked={socialMediaChecked} label="Gestão de imagem e redes sociais" onChange={(e) => setSocialMediaChecked(e.target.checked ? true : false)} />
-          <Form.Check type="checkbox" id="eventOrg" checked={eventOrgChecked} label="Organização de eventos (encontros, workshops)" onChange={(e) => setEventOrgChecked(e.target.checked ? true : false)} />
-          <Form.Check type="checkbox" id="promotion" checked={promotionChecked} label="Divulgação" onChange={(e) => setPromotionChecked(e.target.checked ? true : false)} />
-          <Form.Check type="checkbox" id="technical" checked={technicalChecked} label="Colaboração técnica (gestão do website)" onChange={(e) => setTechnicalChecked(e.target.checked ? true : false)} />
-          <Form.Check type="checkbox" id="other" checked={otherChecked} label="Outras" onChange={(e) => setOtherChecked(e.target.checked ? true : false)} />
-        </Stack>
-      </Form.Group>
-      <Form.Group className="mt-5 mb-2" controlId="howDidYouFindUsField">
-        <Stack gap={3}>
-          <Form.Label>Como tomaste conhecimento da nossa comunidade? *</Form.Label>
-          <Form.Check type="checkbox" id="foundUsInsta" checked={foundUsInstaChecked} label="Instagram" onChange={(e) => setFoundUsInstaChecked(e.target.checked ? true : false)} />
-          <Form.Check type="checkbox" id="foundUsWebsite" checked={foundUsWebsiteChecked} label="Website" onChange={(e) => setFoundUsWebsiteChecked(e.target.checked ? true : false)} />
-          <Form.Check type="checkbox" id="foundUsLinkedin" checked={foundUsLinkedinChecked} label="LinkedIn" onChange={(e) => setFoundUsLinkedinChecked(e.target.checked ? true : false)} />
-          <Form.Check type="checkbox" id="foundUsFacebook" checked={foundUsFacebookChecked} label="Facebook" onChange={(e) => setFoundUsFacebookChecked(e.target.checked ? true : false)} />
-          <Form.Check type="checkbox" id="foundUsOther" checked={foundUsOtherChecked} label="Outro" onChange={(e) => setFoundUsOtherChecked(e.target.checked ? true : false)} />
-        </Stack>
-      </Form.Group>
-      <Form.Group className="mt-5 mb-2" controlId="subjectMessageField">
-        <Form.Label>Fala-nos um pouco sobre ti e de que forma gostarias de colaborar. *</Form.Label>
-        <Form.Control type="text" as="textarea" rows="3" placeholder="Mensagem / Comentário" value={message} onChange={(e) => setMessage(e.target.value)} size="lg" />
-      </Form.Group>
-      <div className="d-flex justify-content-between">
-        <p className="mandatory-hint">* Preenchimento obrigatório</p>
-        <Button btnClass="button-primary" btnType="submit" disabled={!name || !email || !city || !website || !message} onClick={sendForm}>
-          Submeter
-        </Button>
-      </div>
-    </Form>
+    <>
+      <SuccessToastMessage show={successToast} onClose={hideSuccessToast} />
+      <ErrorToastMessage show={errorToast} onClose={hideErrorToast} />
+      <Form>
+        <Form.Group className="mb-3" controlId="nameInputField">
+          <Form.Control type="text" placeholder="Nome *" value={name} onChange={(e) => setName(e.target.value)} size="lg" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="emailInputField">
+          <Form.Control type="email" placeholder="Email *" value={email} onChange={(e) => setEmail(e.target.value)} size="lg" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="cityInputField">
+          <Form.Control type="text" placeholder="Cidade *" value={city} onChange={(e) => setCity(e.target.value)} size="lg" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="websiteInputField">
+          <Form.Control type="url" placeholder="Website / LinkedIn *" value={website} onChange={(e) => setWebsite(e.target.value)} size="lg" />
+        </Form.Group>
+        <Form.Group className="mt-5 mb-2" controlId="collaborationAreasField">
+          <Stack gap={3}>
+            <Form.Label>Em que actividades gostarias de colaborar? *</Form.Label>
+            <Form.Check type="checkbox" id="mentor" checked={mentorChecked} label="Ser mentor/a" onChange={(e) => setMentorChecked(e.target.checked ? true : false)} />
+            <Form.Check type="checkbox" id="speaker" checked={speakerChecked} label="Ser orador/a (escolas, workshops, aulas)" onChange={(e) => setSpeakerChecked(e.target.checked ? true : false)} />
+            <Form.Check type="checkbox" id="content" checked={contentChecked} label="Criação de conteúdo social (Instagram, notícias, etc.)" onChange={(e) => setContentChecked(e.target.checked ? true : false)} />
+            <Form.Check type="checkbox" id="socialMedia" checked={socialMediaChecked} label="Gestão de imagem e redes sociais" onChange={(e) => setSocialMediaChecked(e.target.checked ? true : false)} />
+            <Form.Check type="checkbox" id="eventOrg" checked={eventOrgChecked} label="Organização de eventos (encontros, workshops)" onChange={(e) => setEventOrgChecked(e.target.checked ? true : false)} />
+            <Form.Check type="checkbox" id="promotion" checked={promotionChecked} label="Divulgação" onChange={(e) => setPromotionChecked(e.target.checked ? true : false)} />
+            <Form.Check type="checkbox" id="technical" checked={technicalChecked} label="Colaboração técnica (gestão do website)" onChange={(e) => setTechnicalChecked(e.target.checked ? true : false)} />
+            <Form.Check type="checkbox" id="other" checked={otherChecked} label="Outras" onChange={(e) => setOtherChecked(e.target.checked ? true : false)} />
+          </Stack>
+        </Form.Group>
+        <Form.Group className="mt-5 mb-2" controlId="howDidYouFindUsField">
+          <Stack gap={3}>
+            <Form.Label>Como tomaste conhecimento da nossa comunidade? *</Form.Label>
+            <Form.Check type="checkbox" id="foundUsInsta" checked={foundUsInstaChecked} label="Instagram" onChange={(e) => setFoundUsInstaChecked(e.target.checked ? true : false)} />
+            <Form.Check type="checkbox" id="foundUsWebsite" checked={foundUsWebsiteChecked} label="Website" onChange={(e) => setFoundUsWebsiteChecked(e.target.checked ? true : false)} />
+            <Form.Check type="checkbox" id="foundUsLinkedin" checked={foundUsLinkedinChecked} label="LinkedIn" onChange={(e) => setFoundUsLinkedinChecked(e.target.checked ? true : false)} />
+            <Form.Check type="checkbox" id="foundUsFacebook" checked={foundUsFacebookChecked} label="Facebook" onChange={(e) => setFoundUsFacebookChecked(e.target.checked ? true : false)} />
+            <Form.Check type="checkbox" id="foundUsOther" checked={foundUsOtherChecked} label="Outro" onChange={(e) => setFoundUsOtherChecked(e.target.checked ? true : false)} />
+          </Stack>
+        </Form.Group>
+        <Form.Group className="mt-5 mb-2" controlId="subjectMessageField">
+          <Form.Label>Fala-nos um pouco sobre ti e de que forma gostarias de colaborar. *</Form.Label>
+          <Form.Control type="text" as="textarea" rows="3" placeholder="Mensagem / Comentário" value={message} onChange={(e) => setMessage(e.target.value)} size="lg" />
+        </Form.Group>
+        <div className="d-flex justify-content-between">
+          <p className="mandatory-hint">* Preenchimento obrigatório</p>
+          <Button btnClass="button-primary" btnType="submit" disabled={!name || !email || !city || !website || !message || sending} onClick={sendForm}>
+            Submeter
+          </Button>
+        </div>
+      </Form>
+    </>
   );
 }
 
