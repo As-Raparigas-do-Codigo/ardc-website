@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Form, Button, Stack } from "react-bootstrap";
+import { Form, Stack } from "react-bootstrap";
+import Button from "components/Button";
 
 function MentorshipForm() {
 
@@ -71,7 +72,7 @@ function MentorshipForm() {
 
       <div className="d-flex justify-content-between">
         <p className="mandatory-hint">* Preenchimento obrigatório</p>
-        <Button variant="primary" type="submit" disabled={!name || !email || !message} onClick={sendForm}>
+        <Button btnClass="button-primary" btnType="submit" disabled={!name || !email || !message} onClick={sendForm}>
           Submeter
         </Button>
       </div>
