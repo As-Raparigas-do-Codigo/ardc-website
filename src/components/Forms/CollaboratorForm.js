@@ -73,7 +73,7 @@ function CollaboratorForm() {
       <Form.Group className="mb-3" controlId="websiteInputField">
         <Form.Control type="url" placeholder="Website / LinkedIn *" value={website} onChange={(e) => setWebsite(e.target.value)} size="lg" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="collaborationAreasField">
+      <Form.Group className="mt-5 mb-2" controlId="collaborationAreasField">
         <Stack gap={3}>
           <Form.Label>Em que actividades gostarias de colaborar? *</Form.Label>
           <Form.Check type="checkbox" id="mentor" checked={mentorChecked} label="Ser mentor/a" onChange={(e) => setMentorChecked(e.target.checked ? true : false)} />
@@ -86,7 +86,7 @@ function CollaboratorForm() {
           <Form.Check type="checkbox" id="other" checked={otherChecked} label="Outras" onChange={(e) => setOtherChecked(e.target.checked ? true : false)} />
         </Stack>
       </Form.Group>
-      <Form.Group className="mb-3" controlId="howDidYouFindUsField">
+      <Form.Group className="mt-5 mb-2" controlId="howDidYouFindUsField">
         <Stack gap={3}>
           <Form.Label>Como tomaste conhecimento da nossa comunidade? *</Form.Label>
           <Form.Check type="checkbox" id="foundUsInsta" checked={foundUsInstaChecked} label="Instagram" onChange={(e) => setFoundUsInstaChecked(e.target.checked ? true : false)} />
@@ -96,7 +96,7 @@ function CollaboratorForm() {
           <Form.Check type="checkbox" id="foundUsOther" checked={foundUsOtherChecked} label="Outro" onChange={(e) => setFoundUsOtherChecked(e.target.checked ? true : false)} />
         </Stack>
       </Form.Group>
-      <Form.Group className="mb-3" controlId="subjectMessageField">
+      <Form.Group className="mt-5 mb-2" controlId="subjectMessageField">
         <Form.Label>Fala-nos um pouco sobre ti e de que forma gostarias de colaborar. *</Form.Label>
         <Form.Control type="text" as="textarea" rows="3" placeholder="Mensagem / Comentário" value={message} onChange={(e) => setMessage(e.target.value)} size="lg" />
       </Form.Group>
