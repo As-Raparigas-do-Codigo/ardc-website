@@ -1,16 +1,16 @@
 // heights are temporary just to see the sections
 .gradient {
-  height: 400px;
+  height: auto;
   background: linear-gradient(to bottom, #c9eef9 0%, #fdedee 100%);
 }
 
 .bg-blue {
-  height: 400px;
+  height: auto;
   background-color: $light-blue;
 }
 
 .bg-pink {
-  height: 400px;
+  height: auto;
   background-color: $light-pink;
 }
 

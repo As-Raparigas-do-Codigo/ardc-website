@@ -8,6 +8,7 @@ import events from "../../data/events";
 import BasicCardsRow from "components/BasicCardsRow";
 import SponsorSection from "components/SponsorSection";
 import WorkshopsSection from "components/WorkshopsSection";
+import MentorsSection from "components/MentorsSection";
 
 function Home() {
   return (
@@ -45,7 +46,7 @@ function Home() {
         />
       </div>
       <div className="gradient">
-        <h2>Conhece os nossos mentores. -- to be done</h2>
+        <MentorsSection />
       </div>
       <div className="zig-zag">
         <BasicCardsRow

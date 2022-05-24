@@ -8,7 +8,7 @@
   border: 1px solid $light-gray;
   max-width: 370px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $lg) {
     margin-bottom: 30px;
   }
 }
