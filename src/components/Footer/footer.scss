@@ -1,0 +1,25 @@
+@import "styles/variables";
+
+
+hr{
+  border: 1px solid #DEDEDE;
+}
+
+ul{
+  text-decoration: none;
+  padding-left: 0;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  color: $color-primary;
+  text-decoration: underline;
+}
+
+.copyright{
+  text-align: right;
+  color: $color-primary;
+}
