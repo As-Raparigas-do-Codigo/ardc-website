@@ -9,6 +9,7 @@ import Contact from "pages/Contact";
 import NavBar from "components/NavBarComponent";
 import Social from "components/Social";
 import Team from "pages/Team";
+import Collaborate from "pages/Collaborate";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route exact path="/team" element={<Team />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/collaborate" element={<Collaborate />} />
         </Routes>
       </Router>
     </div>
