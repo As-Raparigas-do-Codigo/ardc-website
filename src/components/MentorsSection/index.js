@@ -28,7 +28,7 @@ const responsive = {
 function MentorsSection() {
   const mentorsCards = team
     .filter((x) => x.roles.includes("mentor"))
-    .map((item, key) => <PersonCard key={key} person={item} />);
+    .map((item) => <PersonCard key={item.id} person={item} />);
   return (
     <Container className="padding-top-bottom-medium">
       <Row>
