@@ -6,24 +6,24 @@ import { ReactComponent as TwitterIcon } from "../../assets/icons/social/twitter
 import { ReactComponent as LinkedinIcon } from "../../assets/icons/social/linkedin.svg";
 import { ReactComponent as MediumIcon } from "../../assets/icons/social/medium.svg";
 import { ReactComponent as Other } from "../../assets/icons/social/other.svg";
+import { ReactComponent as EmailIcon } from "../../assets/icons/email.svg";
 
 function Icon({ name, link = "#", onClickAction = null }) {
-  const socialIconsMap = {
+  const iconsMap = {
     instagram: <InstagramIcon />,
     facebook: <FacebookIcon />,
     linkedin: <LinkedinIcon />,
     twitter: <TwitterIcon />,
     github: <GithubIcon />,
     medium: <MediumIcon />,
+    email: <EmailIcon />,
     other: <Other />,
   };
 
-  const ClickableIcon = (
-    <span onClick={onClickAction}>{socialIconsMap[name]}</span>
-  );
+  const ClickableIcon = <span onClick={onClickAction}>{iconsMap[name]}</span>;
   const LinkableIcon = (
     <a className={"me-3"} href={link} target="_blank" rel="noreferrer">
-      {socialIconsMap[name]}
+      {iconsMap[name]}
     </a>
   );
 
