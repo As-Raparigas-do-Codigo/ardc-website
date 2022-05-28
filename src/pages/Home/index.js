@@ -11,7 +11,7 @@ import WorkshopsSection from "components/WorkshopsSection";
 import MentorsSection from "components/MentorsSection";
 import Button from "components/Button";
 import { Container, Row, Col } from "react-bootstrap";
-import logo from "../../assets/home/home_page_photo.png";
+import logo from "../../assets/home/home_page_photo.jpeg";
 
 function Home() {
   return (
@@ -25,7 +25,7 @@ function Home() {
               <Button style={{paddingTop:30}} href={'/workshops'} btnClass="button-primary">Conhece os nossos workshops</Button>
             </Col>
             <Col xs={12} md={6} style={{ marginTop: 30 }}>
-              <img src={logo} style={{height:470, borderColor:'white', backgroundColor:'white', borderRadius:15, padding:6, marginBottom:90}} className="horizontal-card__img" alt=''/>
+              <img src={logo} style={{borderColor:'white', backgroundColor:'white', borderRadius:15, padding:6, marginBottom:90, objectFit: 'contain'}} className="horizontal-card__img" alt=''/>
             </Col>
           </Row>
         </Container>
