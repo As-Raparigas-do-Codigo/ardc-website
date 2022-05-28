@@ -26,7 +26,7 @@ const MentorshipInfoSection = () => (
 );
 
 const MentorshipFormSection = () => (
-  <Container className="my-5 p-5 bordered-box shadow-lg">
+  <Container className="my-5 p-5 box-radius shadow-lg">
     <Row>
       <h2 className="mb-2">Procuras mentoria?</h2>
       <p className="mb-4">Placeholder de texto para descrição, lorem ipsum dolor sit amet.</p>
