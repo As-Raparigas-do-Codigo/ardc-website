@@ -11,21 +11,30 @@ import WorkshopsSection from "components/WorkshopsSection";
 import MentorsSection from "components/MentorsSection";
 import Button from "components/Button";
 import { Container, Row, Col } from "react-bootstrap";
-import logo from "../../assets/home/home_page_photo.jpeg";
+import logo from "assets/home/home_page_photo.jpeg";
 
 function Home() {
   return (
     <div className="home">
       <div className="gradient">
-        <Container style={{paddingTop:100}}>
+        <Container className="py-5">
           <Row>
-            <Col xs={12} md={6}>
-              <h1>Somos As Raparigas do Código</h1>
-              <p style={{paddingTop:30}}>Uma comunidade jovem focada em promover a inclusão digital através da realização de atividades associadas ao ensino da programação para raparigas e mulheres.</p>
-              <Button style={{paddingTop:30}} href={'/workshops'} btnClass="button-primary">Conhece os nossos workshops</Button>
+            <Col className="my-4 align-self-center">
+              <h1 className="py-1">Somos As Raparigas do Código</h1>
+              <p className="py-1">Uma comunidade jovem focada em promover a inclusão digital através da realização de atividades associadas ao ensino da programação para raparigas e mulheres.</p>
+              <Container className="p-0">
+                <Row>
+                  <Col className="col-auto">
+                    <Button href={'/workshops'} btnClass="button-primary">Conhece os nossos workshops</Button>
+                  </Col>
+                  <Col className="col-auto">
+                    <Button href={'/collaborate'} btnClass="button-tertiary">Quero colaborar!</Button>
+                  </Col>
+                </Row>
+              </Container>
             </Col>
-            <Col xs={12} md={6} style={{ marginTop: 30 }}>
-              <img src={logo} style={{borderColor:'white', backgroundColor:'white', borderRadius:15, padding:6, marginBottom:90, objectFit: 'contain'}} className="horizontal-card__img" alt=''/>
+            <Col className="my-4 col-auto">
+              <img src={logo} className="box-border box-radius horizontal-card__img shadow" alt='As raparigas do código' />
             </Col>
           </Row>
         </Container>

@@ -35,8 +35,15 @@ a {
 }
 
 
-.bordered-box {
+.box-radius {
   border-radius: 16px;
+}
+
+.box-border {
+  border-color: $white;
+  background-color: $white;
+  padding: 6px;
+  object-fit: contain;
 }
 
 .margin-right-15{
