@@ -1,17 +1,17 @@
-import React from "react";
+import logo from "assets/home/home_page_photo.jpeg";
+import LinkArrow from "components/LinkArrow";
 
-// data
+import BasicCardsRow from "components/BasicCardsRow";
+import LinkButton from "components/LinkButton";
+import MentorsSection from "components/MentorsSection";
+import SponsorSection from "components/SponsorSection";
+import WorkshopsSection from "components/WorkshopsSection";
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+
 import articles from "../../data/articles";
 import events from "../../data/events";
 
-// Components
-import BasicCardsRow from "components/BasicCardsRow";
-import SponsorSection from "components/SponsorSection";
-import WorkshopsSection from "components/WorkshopsSection";
-import MentorsSection from "components/MentorsSection";
-import Button from "components/Button";
-import { Container, Row, Col } from "react-bootstrap";
-import logo from "assets/home/home_page_photo.jpeg";
 
 function Home() {
   return (
@@ -24,11 +24,11 @@ function Home() {
               <p className="py-1">Uma comunidade jovem focada em promover a inclusão digital através da realização de atividades associadas ao ensino da programação para raparigas e mulheres.</p>
               <Container className="p-0">
                 <Row>
-                  <Col className="col-auto">
-                    <Button href={'/workshops'} btnClass="button-primary">Conhece os nossos workshops</Button>
+                  <Col className="col-auto align-self-center">
+                    <LinkButton href="/workshops" variant="primary">Conhece os nossos workshops</LinkButton>
                   </Col>
-                  <Col className="col-auto">
-                    <Button href={'/collaborate'} btnClass="button-tertiary">Quero colaborar!</Button>
+                  <Col className="col-auto align-self-center">
+                    <LinkArrow href="/collaborate">Quero colaborar!</LinkArrow>                    
                   </Col>
                 </Row>
               </Container>
