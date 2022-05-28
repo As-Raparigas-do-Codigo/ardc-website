@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form, Stack } from "react-bootstrap";
-import Button from "components/Button"
 
 function CollaboratorForm() {
 
@@ -103,9 +102,9 @@ function CollaboratorForm() {
       </Form.Group>
       <div className="d-flex justify-content-between">
         <p className="mandatory-hint">* Preenchimento obrigatório</p>
-        <Button btnClass="button-primary" btnType="submit" disabled={!name || !email || !city || !website || !message} onClick={sendForm}>
+        <button className="button-primary" type="submit" disabled={!name || !email || !city || !website || !message} onClick={sendForm}>
           Submeter
-        </Button>
+        </button>
       </div>
     </Form>
   );
