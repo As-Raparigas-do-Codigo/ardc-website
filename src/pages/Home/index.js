@@ -9,12 +9,26 @@ import BasicCardsRow from "components/BasicCardsRow";
 import SponsorSection from "components/SponsorSection";
 import WorkshopsSection from "components/WorkshopsSection";
 import MentorsSection from "components/MentorsSection";
+import Button from "components/Button";
+import { Container, Row, Col } from "react-bootstrap";
+import logo from "../../assets/home/home_page_photo.png";
 
 function Home() {
   return (
     <div className="home">
       <div className="gradient">
-        <h1>Somos as Raparigas do Código --to be done</h1>
+        <Container style={{paddingTop:100}}>
+          <Row>
+            <Col xs={12} md={6}>
+              <h1>Somos As Raparigas do Código</h1>
+              <p style={{paddingTop:30}}>Uma comunidade jovem focada em promover a inclusão digital através da realização de atividades associadas ao ensino da programação para raparigas e mulheres.</p>
+              <Button style={{paddingTop:30}} href={'/workshops'} btnClass="button-primary">Conhece os nossos workshops</Button>
+            </Col>
+            <Col xs={12} md={6} style={{ marginTop: 30 }}>
+              <img src={logo} style={{height:470, borderColor:'white', backgroundColor:'white', borderRadius:15, padding:6, marginBottom:90}} className="horizontal-card__img" alt=''/>
+            </Col>
+          </Row>
+        </Container>
       </div>
 
       <div className="zig-zag">
