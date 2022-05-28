@@ -1,5 +1,6 @@
 import React from "react";
-import Button from "../Button";
+import LinkArrow from "components/LinkArrow";
+import LinkButton from "components/LinkButton";
 import "./horizontal-card.scss";
 
 function HorizontalCard(props) {
@@ -16,12 +17,12 @@ function HorizontalCard(props) {
         <p className="horizontal-card__description">{props.description}</p>
         <span className="horizontal-card__details f-bold">{props.date}</span>
         <div className="horizontal-card__buttons">
-          <Button btnClass="button-primary" href={props.buttonUrl}>
+          <LinkButton href={props.buttonUrl}>
             {props.buttonLabel}
-          </Button>
-          <Button btnClass="button-tertiary" href={props.linkUrl}>
+          </LinkButton>
+          <LinkArrow href={props.linkUrl}>
             {props.linkLabel}
-          </Button>
+          </LinkArrow>
         </div>
       </div>
     </div>
