@@ -24,7 +24,7 @@ const ContactInfoSection = () => (
 );
 
 const ContactFormSection = () => (
-  <Container className="my-5 py-5 px-5 bordered-box shadow-lg">
+  <Container className="my-5 py-5 px-5 box-radius shadow-lg">
     <Row>
       <h2 className="mb-2">Precisas de ajuda?</h2>
       <p className="mb-4">Envia-nos a tua mensagem através do formulário de contacto.</p>
