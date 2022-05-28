@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Container } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 
 const createMarkup = function(textHtml) {
     return {__html: textHtml};
@@ -7,13 +7,19 @@ const createMarkup = function(textHtml) {
 
 function NumberedRow(props) {
   return (
-    <Row className="px-5 mx-5" id={props.number}>
-        <Container className="my-5 py-5 px-5">
-            <h1 className="mb-2">{props.number}</h1>
-            <h4 className="mb-2">{props.title}</h4>
-            <p dangerouslySetInnerHTML={createMarkup(props.textHtml)}/>
-            <hr></hr>
+    <Row id={props.number}>
+        <Container className="my-3">
+          <Row>
+            <Col lg="auto" md="auto" sm="auto" className="align-top">
+              <div className="fs-xxl">{props.number}</div>
+            </Col>
+            <Col className="px-3">
+              <h4 className="mb-2">{props.title}</h4>
+              <p dangerouslySetInnerHTML={createMarkup(props.textHtml)}/>
+            </Col>
+          </Row>
         </Container>
+        <hr></hr>
     </Row>
   );
 }

@@ -4,9 +4,9 @@ import NumberedRow from "components/NumberedRow";
 import { Container, Row } from "react-bootstrap";
 
 const CollaborateFormSection = () => (
-  <Container className="my-5 py-5 px-5">
+  <Container className="my-5 py-5">
     <Row>
-      <h2 className="mb-2">Queres colaborar connosco?</h2>
+      <div className="mb-2 fs-xxl">Queres colaborar connosco?</div>
       <p className="mb-4">Placeholder de texto para descrição, lorem ipsum dolor sit amet.</p>
     </Row>
     <Row id="formulario-colaboracao">
@@ -16,20 +16,20 @@ const CollaborateFormSection = () => (
 )
 
 const CollaborateContent = () => (
-  <Container className="my-5 py-5 px-5">
+  <Container className="mt-5">
     <Row>
       <p className="mb-2">COMO PODES COLABORAR?</p>
       <h2>Baseamo-nos na colaboração entre membros de diferentes áreas.</h2>
       <p className="mb-4">Enquanto comunidade, <strong>As Raparigas do Código</strong> baseiam-se na colaboração entre membros de diferentes áreas (engenharia, design, educação, marketing, comunicação, entre outras). Se gostas de ensinar, de escrever e produzir conteúdo digital, ou estás sempre a par das últimas novidades no mundo da tecnologia, gostávamos muito de poder contar contigo!</p>
       <p className="mb-4">Existem diferentes formas de poderes colaborar connosco, dependendo da tua disponibilidade e interesse. Se gostavas de te juntar a nós, preenche o <a href="#formulario-colaboracao">formulário de colaboração</a> ou envia-nos um email para <a href="mailto=geral@raparigasdocodigo.pt">geral@raparigasdocodigo.pt</a>. Ficamos à tua espera! </p>
-      <hr></hr>
     </Row>
+    <hr></hr>
   </Container>
 )
 
 const Collaborate = () => (
   <Container fluid="md" className="Collaborate">
-    <Row className="px-5 mx-5">
+    <Row>
       <CollaborateContent/>
     </Row>
     <NumberedRow number='01' title='Desenvolver conteúdo sobre Tecnologia' textHtml='<p>Se és um/a curioso/a da tecnologia, conheces imensos livros, filmes, séries ou jogos, as tuas recomendações são preciosas para nós! Se és o/a geek do teu grupo de amigos e conheces os monitores e teclados ponta de gama atuais, porque não partilhar connosco? <strong>Todo o tipo de conteúdo é bem vindo!</strong></p>'/>
