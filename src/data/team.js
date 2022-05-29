@@ -48,7 +48,7 @@ const team = [
     id: 6,
     roles: ["admin", "mentor"],
     name: "Inês Martins",
-    company: "SWORDHealth",
+    company: "SWORD Health",
     job: "Application Security Engineer",
     social: [{ linkedin: "https://www.linkedin.com/in/ines-af-martins/" }, { other: "https://inesmartins.github.io/" }],
     avatar: "ines-martins.jpg",
