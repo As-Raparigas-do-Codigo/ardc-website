@@ -4,12 +4,11 @@ import "./person-card.scss";
 
 function PersonCard({ person }) {
   return (
-    <div className="person-card" id={person.id}>
+    <div className="person-card">
       <img
         src={require("assets/team/" + person.avatar)}
         className="person-card__img"
         alt={"a person"}
-        mentors
       />
       <div className="person-card__body">
         <h5>{person.name}</h5>
@@ -18,10 +17,11 @@ function PersonCard({ person }) {
       </div>
 
       <div className="person-card__icons">
-        {person.social.map((socialNetworkLink) => {
+        {person.social.map((socialNetworkLink, index) => {
           let socialNetwork = Object.keys(socialNetworkLink)[0];
           return (
             <Icon
+              key={index}
               name={socialNetwork}
               link={socialNetworkLink[socialNetwork]}
             />
