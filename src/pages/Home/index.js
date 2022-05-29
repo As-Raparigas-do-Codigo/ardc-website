@@ -1,14 +1,16 @@
-import logo from "assets/home/home_page_photo.jpeg";
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+// components
 import LinkArrow from "components/LinkArrow";
-
 import BasicCardsRow from "components/BasicCardsRow";
 import LinkButton from "components/LinkButton";
 import MentorsSection from "components/MentorsSection";
 import SponsorSection from "components/SponsorSection";
 import WorkshopsSection from "components/WorkshopsSection";
-import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-
+// images
+import banner from "assets/home/banner.jpeg";
+import missao from "assets/home/missao.png";
+// data
 import articles from "../../data/articles";
 import events from "../../data/events";
 
@@ -34,7 +36,7 @@ function Home() {
               </Container>
             </Col>
             <Col className="my-4 col-auto">
-              <img src={logo} className="box-border box-radius horizontal-card__img shadow" alt='As raparigas do código' />
+              <img src={banner} className="box-border box-radius horizontal-card__img shadow" alt='As raparigas do código' />
             </Col>
           </Row>
         </Container>
@@ -51,11 +53,43 @@ function Home() {
       </div>
 
       <div className="gradient">
-        <h2>
-          Queremos desmistificar o papel da mulher na tecnologia. --do be done
-        </h2>
+        <Container className="py-5">
+          <Row>
+            <Col className="my-4">
+              <p>A NOSSA MISSÃO</p>
+              <p className="py-1">E encorajando mais raparigas e mulheres a ingressar no sector das tecnologias de informação.</p>
+              <p className="py-1">Temos como objetivo a criação de oportunidades de aprendizagem para jovens raparigas e mulheres, fomentando um ambiente inclusivo e de colaboração, e estimulando o interesse pela aquisição de competências digitais, nomeadamente a programação.</p>
+              <Container className="p-0">
+                <Row>
+                  <Col className="col-auto align-self-center">
+                    <LinkButton href="/workshops" variant="primary">Sabe mais sobre nós</LinkButton>
+                  </Col>
+                </Row>
+              </Container>
+            </Col>
+            <Col className="my-4 col-auto">
+              <img src={missao} className="box-border box-radius horizontal-card__img shadow" alt='As raparigas do código' />
+            </Col>
+          </Row>
+        </Container>
+        <hr></hr>
+        <Container className="py-5">
+          <Row>
+            <Col xs={4}>
+              <h1 style={{fontSize: 82, textAlign: 'center' }}>123+</h1>
+              <p style={{ textAlign: 'center' }}>Workshops realizados</p>
+            </Col>
+            <Col xs={4}>
+              <h1 style={{fontSize: 82, textAlign: 'center' }}>45+</h1>
+              <p style={{ textAlign: 'center' }}>Professores & Mentores</p>
+            </Col>
+            <Col xs={4}>
+              <h1 style={{fontSize: 82, textAlign: 'center' }}>678</h1>
+              <p style={{ textAlign: 'center' }}>Alunas inscritas</p>
+            </Col>
+          </Row>
+        </Container>
       </div>
-
       <div className="bg-blue">
         <h2>Gostavas de colaborar connosco-- to be done</h2>
       </div>
