@@ -28,14 +28,13 @@ const responsive = {
 function MentorsSection() {
   const mentorsCards = team
     .filter((x) => x.roles.includes("mentor"))
-    .map((item) => <PersonCard person={item} />);
+    .map((item) => <PersonCard key={item.id} person={item} />);
   return (
     <Container className="padding-top-bottom-medium">
       <Row>
-        <h2 className="mb-2">Mentores</h2>
+        <h2 className="mb-2">Conhece os nossos mentores.</h2>
         <p className="mb-5">
-          Placeholder de texto para descrição, lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
+          Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
       </Row>
 
@@ -46,7 +45,8 @@ function MentorsSection() {
         responsive={responsive}
         renderDotsOutside
         renderButtonGroupOutside
-        dotListClass={"custom-dots"}
+        dotListClass="custom-dots"
+        itemClass="card-item"
         // customButtonGroup={<CustomButtonGroupAsArrows />}
         infinite={false}>
         {mentorsCards}
