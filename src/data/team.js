@@ -66,7 +66,7 @@ const team = [
     id: 7,
     roles: ["admin", "mentor"],
     name: "Joana Lopes",
-    company: "Aubay Portugal",
+    company: "IDMind",
     job: "Robotics Software Development",
     social: [{ linkedin: "https://www.linkedin.com/in/joana-g-lopes/" }],
     avatar: "joana.png",
