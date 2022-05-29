@@ -19,7 +19,88 @@ a{
   text-decoration: underline;
 }
 
-.copyright{
-  text-align: right;
-  color: $color-primary;
+
+.card {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 8px;
+  border: 1px solid $light-gray;
+  max-width: 570px;
+  height: 100%;
+
+  @media (max-width: $lg) {
+    margin-bottom: 30px;
+  }
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.card-body {
+  padding: 23px 30px;
+  line-height: 28px;
+  height:100%;
+
+  span {
+    display: block;
+    font-size: 12px;
+    color: $color-secondary;
+    margin-bottom: 10px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+}
+
+hr{
+  border: 1px solid #DEDEDE;
+}
+
+.card-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.card-author {
+  bottom: 40px;
+  align-items: baseline;
+  margin-top: 15px;
+  // position:absolute;
+}
+
+.card-text{
+  height: 25vh;
+
+  // @media (max-width: $sm) {
+  //    height: ;
+  // }
+}
+
+.testimonials{
+  margin-top: 100px;
+}
+
+.social-link-svg {
+   svg {
+      @media (max-width: $lg) {
+        height: 30px;
+        width: auto
+      }
+   }
+}
+
+.legal-copy {
+  p {
+    color: $color-primary;
+    font-size:12px;
+  }
 }
