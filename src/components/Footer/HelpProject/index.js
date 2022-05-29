@@ -1,6 +1,6 @@
 import { Row, Container, Col } from "react-bootstrap";
 import Button from "components/Button";
-import "./help-project.scss";
+import "../footer.scss";
 import testimonials from "data/testimonials";
 
 const HelpProject = () => {
@@ -36,7 +36,7 @@ const HelpProject = () => {
       <Row className="testimonials">
         {testimonials.map((testimonial) => {
           return (
-            <Col>
+            <Col sm={12} md={6} className={"mt-5"}>
               <TestimonialCard
                 key={testimonial.id}
                 description={testimonial.text}
@@ -66,7 +66,7 @@ const TestimonialCard = ({ description, name, avatar }) => {
               mentors
             />
           </Col>
-          <Col xs={6} md={10}>
+          <Col xs={10} md={10}>
             <h5>{name}</h5>
           </Col>
         </Row>

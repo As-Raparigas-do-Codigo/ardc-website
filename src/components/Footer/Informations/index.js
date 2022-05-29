@@ -6,7 +6,23 @@ import Button from "components/Button";
 import SocialLinks from "components/SocialLinks";
 import Icon from "components/Icon";
 
+import "../footer.scss";
+
 const Informations = () => {
+  // const [isMobile, setIsMobile] = useState(false);
+
+  // const handleResize = () => {
+  //   if (window.outerWidth <= 820) {
+  //     setIsMobile(true);
+  //   } else {
+  //     setIsMobile(false);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("resize", handleResize);
+  // }, []);
+
   return (
     <Container className="padding-top-bottom-medium align-center">
       <Row>
@@ -38,7 +54,7 @@ const Informations = () => {
       </Row>
       <hr className={"mt-5"} />
       <Row className={"mt-5"}>
-        <Col>
+        <Col sm={12} md={6}>
           <h4>As Raparigas do Código</h4>
           <p className={"w-75"}>
             Uma comunidade jovem focada em promover a inclusão digital através
@@ -50,9 +66,9 @@ const Informations = () => {
             asraparigasdocodigo@gmail.com
           </p>
         </Col>
-        <Col>
+        <Col sm={12} md={6}>
           <Row>
-            <Col>
+            <Col sm={12} md={6} className={"mt-3"}>
               <h4>O Projecto</h4>
               <ul>
                 <li>
@@ -72,7 +88,7 @@ const Informations = () => {
                 </li> */}
               </ul>
             </Col>
-            <Col>
+            <Col sm={12} md={6} className={"mt-3"}>
               <h4>Eventos</h4>
               <ul>
                 <li>
@@ -93,13 +109,17 @@ const Informations = () => {
         <SocialLinks />
       </Row>
       <hr className={"mt-5"} />
-      <Row className={"mt-5"}>
-        <Col className={"align-left"}>
-          <a href="/">Informação Legal</a> |{" "}
-          <a href="/">Politica de Privacidade</a>
+      <Row className={"legal-copy"}>
+        <Col sm={12} md={6} className={"mt-5"}>
+          <p className="text-center">
+            <a href="/">Informação Legal</a> |{" "}
+            <a href="/">Politica de Privacidade</a>
+          </p>
         </Col>
-        <Col className={"copyright"}>
-          Copyright © 2022 As Raparigas do Código. All Rights Reserved
+        <Col sm={12} md={6} className={"mt-5"}>
+          <p className="text-center">
+            Copyright © 2022 As Raparigas do Código. All Rights Reserved
+          </p>
         </Col>
       </Row>
     </Container>

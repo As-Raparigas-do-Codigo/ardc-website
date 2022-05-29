@@ -22,7 +22,11 @@ function Icon({ name, link = "#", onClickAction = null }) {
 
   const ClickableIcon = <span onClick={onClickAction}>{iconsMap[name]}</span>;
   const LinkableIcon = (
-    <a className={"me-3"} href={link} target="_blank" rel="noreferrer">
+    <a
+      className={"me-3 social-link-svg"}
+      href={link}
+      target="_blank"
+      rel="noreferrer">
       {iconsMap[name]}
     </a>
   );
