@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form, Stack } from "react-bootstrap";
-import Button from "components/Button";
 import { SuccessToastMessage, ErrorToastMessage } from "components/Forms/Toasts";
 
 function ContactForm() {
@@ -86,7 +85,7 @@ function ContactForm() {
         </Stack>
         <div className="d-flex justify-content-between">
           <p className="mandatory-hint">* Preenchimento obrigatório</p>
-          <button className="button-primary" type="submit" disabled={!name || !email || !subject || !message} onClick={sendForm}>
+          <button className="button-primary" type="submit" disabled={!name || !email || !subject || !message || sending} onClick={sendForm}>
             Enviar mensagem
           </button>
         </div>
