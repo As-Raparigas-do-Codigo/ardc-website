@@ -57,7 +57,7 @@ const team = [
     id: 6,
     roles: ["admin", "mentor"],
     name: "Isabel Costa",
-    company: "Globality",
+    company: "Deliveroo",
     job: "Software Engineer",
     social: [{ linkedin: "https://www.linkedin.com/in/isabelcmdcosta/" }, { other: "https://isabelcosta.github.io/" }],
     avatar: "isabel.jpg",
