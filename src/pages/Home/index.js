@@ -62,7 +62,7 @@ function Home() {
               <Container className="p-0">
                 <Row>
                   <Col className="col-auto align-self-center">
-                    <LinkButton href="/workshops" variant="primary">Sabe mais sobre nós</LinkButton>
+                    <LinkButton href="/about" variant="primary">Sabe mais sobre nós</LinkButton>
                   </Col>
                 </Row>
               </Container>
@@ -91,7 +91,26 @@ function Home() {
         </Container>
       </div>
       <div className="bg-blue">
-        <h2>Gostavas de colaborar connosco-- to be done</h2>
+        <Container className="py-5">
+          <Row>
+            <Col xs={0} md={2} lg={3}></Col>
+            <Col xs={12} md={8} lg={6}>
+              <Row>
+                <p style={{ textAlign: 'center' }}>JUNTA-TE À NOSSA COMUNIDADE!</p>
+              </Row>
+              <Row>
+                <h2 style={{ textAlign: 'center' }}>Gostavas de colaborar connosco?</h2>
+              </Row>
+              <Row>
+                <p style={{ textAlign: 'center' }}>Se gostas de ensinar, de escrever e produzir conteúdo digital, ou estás sempre a par das últimas novidades no mundo da tecnologia, gostávamos muito de poder contar contigo!</p>
+              </Row>
+              <Row>
+                <LinkButton href="/collaborate" variant="primary">Quero colaborar!</LinkButton>
+              </Row>
+            </Col>
+            <Col xs={0} md={2} lg={3}></Col>
+          </Row>
+        </Container>
       </div>
       <div className="zig-zag">
         <BasicCardsRow
