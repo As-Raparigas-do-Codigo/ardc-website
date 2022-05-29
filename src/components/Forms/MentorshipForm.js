@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form, Stack } from "react-bootstrap";
-import Button from "components/Button";
 import { SuccessToastMessage, ErrorToastMessage } from "components/Forms/Toasts";
 
 function MentorshipForm() {
@@ -110,7 +109,7 @@ function MentorshipForm() {
 
         <div className="d-flex justify-content-between">
           <p className="mandatory-hint">* Preenchimento obrigatório</p>
-          <button className="button-primary" type="submit" disabled={!name || !email || !message} onClick={sendForm}>
+          <button className="button-primary" type="submit" disabled={!name || !email || !message || sending} onClick={sendForm}>
             Submeter
           </button>
         </div>
