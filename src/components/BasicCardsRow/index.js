@@ -17,7 +17,7 @@ function BasicCardsRow(props) {
     </Col>
   ));
   return (
-    <Container className="padding-top-bottom-medium">
+    <Container className="mt-5 py-md-5">
       <Row>
         <h2 className="mb-2">{props.heading}</h2>
         <p className="mb-5">{props.subtitle}</p>

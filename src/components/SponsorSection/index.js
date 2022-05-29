@@ -22,11 +22,11 @@ const SponsorImages = [{
 }];
 
 const SponsorSection = () => (
-  <Container className="mt-5 py-5">
+  <Container className="mt-5 pt-md-5">
     <h6 className="sponsor-title text-uppercase text-center mb-4">headline para principais parceiros aqui, lorem ipsum dolor.</h6>
     <Row className="justify-content-center">
       {SponsorImages.map(image => (
-        <Col key={image.id} className="col-auto m-5">
+        <Col key={image.id} className="col-auto py-3 my-md-5 mx-5">
           <img className="sponsor-image" src={image.src} alt={image.alt} />
         </Col>
       ))}

@@ -19,8 +19,8 @@ function Home() {
   return (
     <div className="home">
       <div className="gradient">
-        <Container className="py-5">
-          <Row className="py-5">
+        <Container className="pt-md-5 pb-5">
+          <Row className="py-md-5">
             <Col className="my-4 align-self-center">
               <h1 className="py-1">Somos As Raparigas do Código</h1>
               <p className="py-1">Uma comunidade jovem focada em promover a inclusão digital através da realização de atividades associadas ao ensino da programação para raparigas e mulheres.</p>
@@ -58,7 +58,7 @@ function Home() {
       <div className="zig-zag"></div>
 
       <div className="gradient">
-        <Container className="py-5">
+        <Container className="py-md-5">
           <Row>
             <Col className="my-4">
               <h6 className="py-5">A NOSSA MISSÃO</h6>
@@ -80,15 +80,15 @@ function Home() {
         <hr></hr>
         <Container className="py-5 px-2">
           <Row>
-            <Col className="px-2">
+            <Col className="px-5 my-2">
               <h1 className="text-center fs-x5 fw-bold mb-1">123+</h1>
               <p className="text-center">Workshops realizados</p>
             </Col>
-            <Col className="px-2">
+            <Col className="px-5 my-2">
               <h1 className="text-center fs-x5 fw-bold mb-1">45+</h1>
               <p className="text-center">Professores & Mentores</p>
             </Col>
-            <Col className="px-2">
+            <Col className="px-5 my-2">
               <h1 className="text-center fs-x5 fw-bold mb-1">678</h1>
               <p className="text-center">Alunas inscritas</p>
             </Col>
@@ -111,28 +111,36 @@ function Home() {
           </Row>
         </Container>
       </div>
-      <div className="zig-zag">
-        <BasicCardsRow
-          data={events}
-          heading={"Talks & Eventos"}
-          subtitle={
-            "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          }
-        />
-      </div>
+
+      <div className="zig-zag"></div>
+
+      <BasicCardsRow
+        data={events}
+        heading={"Talks & Eventos"}
+        subtitle={
+          "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+      />
+
       <div className="gradient">
-        <MentorsSection />
+        <div className="zig-zag"></div>
+        <div className="pt-2">
+          <MentorsSection />
+        </div>
       </div>
-      <div className="zig-zag">
-        <BasicCardsRow
-          data={articles}
-          heading={"Artigos recentes"}
-          subtitle={
-            "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          }
-        />
-      </div>
+
+      <div className="zig-zag"></div>
+
+      <BasicCardsRow
+        data={articles}
+        heading={"Artigos recentes"}
+        subtitle={
+          "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        }
+      />
+
       <div className="bg-pink">
+        <div className="zig-zag"></div>
         <h2>Ajuda o projecto a crescer -- to be done</h2>
       </div>
     </div>

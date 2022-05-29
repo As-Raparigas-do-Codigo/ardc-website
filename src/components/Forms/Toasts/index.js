@@ -26,7 +26,7 @@ export const ErrorToastMessage = ({ show = false, onClose }) => (
     variant="danger"
   >
     <p>
-      Pedimos desculpa mas, por motivos técnicos, não foi possível submeter o teu pedido. Tenta novamente ou contacta-nos através do email <a href={`mailto:${Constants.Email}`}>{Constants.Email}</a>.
+      Pedimos desculpa mas, por motivos técnicos, não foi possível submeter o teu pedido. Tenta novamente ou contacta-nos através do email <a className="text-danger" href={`mailto:${Constants.Email}`}>{Constants.Email}</a>.
     </p>
   </ToastMessage>
 );
