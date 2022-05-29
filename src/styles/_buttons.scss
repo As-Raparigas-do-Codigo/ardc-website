@@ -58,6 +58,7 @@ $button-color-primary: $color-secondary;
 .button-tertiary {
   @extend %button;
   font-size: 14px;
+  color: $color-primary;
 
   svg {
     margin-right: 5px;
@@ -65,7 +66,7 @@ $button-color-primary: $color-secondary;
 
   &:hover:not([disabled]),
   &[hover] {
-    color: $button-color-primary;
+    color: $color-secondary;
     text-decoration: underline;
   }
 

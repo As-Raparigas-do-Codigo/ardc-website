@@ -5,7 +5,7 @@ const ToastMessage = ({ show = false, title, children, onClose, autohide = false
   <ToastContainer className="position-fixed p-3" position="top-center">
     <Toast className="toast-message p-3" show={show} onClose={onClose} autohide={autohide} delay={delay}>
       <Toast.Header>
-        <div className={`w-100 text-${variant}`}>
+        <div className={`w-100 fw-bold text-${variant}`}>
           {title}
         </div>
       </Toast.Header>
