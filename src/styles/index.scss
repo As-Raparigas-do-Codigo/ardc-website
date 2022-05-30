@@ -39,11 +39,15 @@ a {
   border-radius: 16px;
 }
 
-.margin-right-15{
-  margin-right: 15px;
+.text-secondary-color {
+  color: $color-secondary;
 }
 
 .fs-xxl {
   font-size: 3.5rem !important;
   line-height: 3.5rem !important;
+}
+
+.text-700-weight{
+  font-weight: 700;
 }
