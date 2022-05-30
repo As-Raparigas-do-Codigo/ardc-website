@@ -9,7 +9,6 @@ function PersonCard({ person }) {
         src={require("assets/team/" + person.avatar)}
         className="person-card__img"
         alt={"a person"}
-        mentors
       />
       <div className="person-card__body">
         <h5>{person.name}</h5>
@@ -19,9 +18,11 @@ function PersonCard({ person }) {
 
       <div className="person-card__icons">
         {person.social.map((socialNetworkLink) => {
-          let socialNetwork = Object.keys(socialNetworkLink)[0];
+          const socialNetwork = Object.keys(socialNetworkLink)[0];
+          const key = `${person.id}-${socialNetwork}`;
           return (
             <Icon
+              key={key}
               name={socialNetwork}
               link={socialNetworkLink[socialNetwork]}
             />

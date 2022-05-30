@@ -28,29 +28,32 @@ const responsive = {
 function MentorsSection() {
   const mentorsCards = team
     .filter((x) => x.roles.includes("mentor"))
-    .map((item) => <PersonCard person={item} />);
+    .map((item) => <PersonCard key={item.id} person={item} />);
   return (
-    <Container className="padding-top-bottom-medium">
+    <Container className="mt-5 pt-md-5 pb-5">
       <Row>
-        <h2 className="mb-2">Mentores</h2>
+        <h2 className="mb-2">Conhece os nossos mentores.</h2>
         <p className="mb-5">
-          Placeholder de texto para descrição, lorem ipsum dolor sit amet,
-          consectetur adipiscing elit.
+          Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
       </Row>
 
-      <Carousel
-        autoPlay={false}
-        showDots
-        arrows={false}
-        responsive={responsive}
-        renderDotsOutside
-        renderButtonGroupOutside
-        dotListClass={"custom-dots"}
-        // customButtonGroup={<CustomButtonGroupAsArrows />}
-        infinite={false}>
-        {mentorsCards}
-      </Carousel>
+      <Row>
+        <Carousel
+          autoPlay={false}
+          showDots
+          arrows={false}
+          responsive={responsive}
+          renderDotsOutside
+          renderButtonGroupOutside
+          dotListClass="custom-dots"
+          itemClass="card-item"
+          // customButtonGroup={<CustomButtonGroupAsArrows />}
+          infinite={false}>
+          {mentorsCards}
+        </Carousel>
+      </Row>
+
     </Container>
   );
 }
