@@ -57,9 +57,6 @@ function Home() {
           }
         />
       </div>
-      <div className="bg-pink">
-        <h2>Ajuda o projecto a crescer -- to be done</h2>
-      </div>
     </div>
   );
 }
