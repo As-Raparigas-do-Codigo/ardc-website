@@ -104,3 +104,10 @@ hr{
     font-size:12px;
   }
 }
+
+.centering-col {
+  @media (max-width: $lg) {
+    margin: 0 auto;
+    width: fit-content;
+  }
+}
