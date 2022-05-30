@@ -25,6 +25,11 @@
   height: 170px;
   object-fit: cover;
   border-radius: 100%;
+
+  @media (max-width: $lg) {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .person-card__body {

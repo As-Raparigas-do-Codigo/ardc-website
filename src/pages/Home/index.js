@@ -14,7 +14,6 @@ import missao from "assets/home/missao.png";
 import articles from "../../data/articles";
 import events from "../../data/events";
 
-
 function Home() {
   return (
     <div className="home">
@@ -23,11 +22,17 @@ function Home() {
           <Row className="py-md-5">
             <Col className="my-4 align-self-center">
               <h1 className="py-1">Somos As Raparigas do Código</h1>
-              <p className="py-1">Uma comunidade jovem focada em promover a inclusão digital através da realização de atividades associadas ao ensino da programação para raparigas e mulheres.</p>
+              <p className="py-1">
+                Uma comunidade jovem focada em promover a inclusão digital
+                através da realização de atividades associadas ao ensino da
+                programação para raparigas e mulheres.
+              </p>
               <Container className="p-0">
                 <Row>
                   <Col className="col-auto align-self-center">
-                    <LinkButton href="/workshops" variant="primary">Conhece os nossos workshops</LinkButton>
+                    <LinkButton href="/workshops" variant="primary">
+                      Conhece os nossos workshops
+                    </LinkButton>
                   </Col>
                   <Col className="col-auto align-self-center">
                     <LinkArrow href="/collaborate">Quero colaborar!</LinkArrow>
@@ -36,7 +41,11 @@ function Home() {
               </Container>
             </Col>
             <Col className="my-4 col-auto">
-              <img src={banner} className="box-border box-radius horizontal-card__img shadow" alt='As raparigas do código' />
+              <img
+                src={banner}
+                className="box-border box-radius horizontal-card__img shadow"
+                alt="As raparigas do código"
+              />
             </Col>
           </Row>
         </Container>
@@ -62,18 +71,32 @@ function Home() {
           <Row>
             <Col className="my-4">
               <h6 className="py-5">A NOSSA MISSÃO</h6>
-              <p className="py-1">E encorajando mais raparigas e mulheres a ingressar no sector das tecnologias de informação.</p>
-              <p className="py-1">Temos como objetivo a criação de oportunidades de aprendizagem para jovens raparigas e mulheres, fomentando um ambiente inclusivo e de colaboração, e estimulando o interesse pela aquisição de competências digitais, nomeadamente a programação.</p>
+              <p className="py-1">
+                E encorajando mais raparigas e mulheres a ingressar no sector
+                das tecnologias de informação.
+              </p>
+              <p className="py-1">
+                Temos como objetivo a criação de oportunidades de aprendizagem
+                para jovens raparigas e mulheres, fomentando um ambiente
+                inclusivo e de colaboração, e estimulando o interesse pela
+                aquisição de competências digitais, nomeadamente a programação.
+              </p>
               <Container className="p-0">
                 <Row>
                   <Col className="col-auto align-self-center">
-                    <LinkButton href="/about" variant="primary">Sabe mais sobre nós</LinkButton>
+                    <LinkButton href="/about" variant="primary">
+                      Sabe mais sobre nós
+                    </LinkButton>
                   </Col>
                 </Row>
               </Container>
             </Col>
             <Col className="my-4 col-auto">
-              <img src={missao} className="box-border box-radius horizontal-card__img shadow" alt='As raparigas do código' />
+              <img
+                src={missao}
+                className="box-border box-radius horizontal-card__img shadow"
+                alt="As raparigas do código"
+              />
             </Col>
           </Row>
         </Container>
@@ -102,9 +125,15 @@ function Home() {
               <div className="d-grid gap-4">
                 <h6 className="text-center">JUNTA-TE À NOSSA COMUNIDADE!</h6>
                 <h2 className="text-center">Gostavas de colaborar connosco?</h2>
-                <p className="text-center">Se gostas de ensinar, de escrever e produzir conteúdo digital, ou estás sempre a par das últimas novidades no mundo da tecnologia, gostávamos muito de poder contar contigo!</p>
+                <p className="text-center">
+                  Se gostas de ensinar, de escrever e produzir conteúdo digital,
+                  ou estás sempre a par das últimas novidades no mundo da
+                  tecnologia, gostávamos muito de poder contar contigo!
+                </p>
                 <div className="text-center">
-                  <LinkButton href="/collaborate" variant="primary">Quero colaborar!</LinkButton>
+                  <LinkButton href="/collaborate" variant="primary">
+                    Quero colaborar!
+                  </LinkButton>
                 </div>
               </div>
             </Col>
@@ -138,11 +167,6 @@ function Home() {
           "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit."
         }
       />
-
-      <div className="bg-pink">
-        <div className="zig-zag"></div>
-        <h2>Ajuda o projecto a crescer -- to be done</h2>
-      </div>
     </div>
   );
 }
