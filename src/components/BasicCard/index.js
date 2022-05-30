@@ -1,5 +1,6 @@
 import React from "react";
-import Button from "../Button";
+
+import LinkArrow from "components/LinkArrow";
 import "./basic-card.scss";
 
 function BasicCard(props) {
@@ -10,9 +11,9 @@ function BasicCard(props) {
         {props.date && <span>{props.date}</span>}
         <h5>{props.title}</h5>
         <p className="basic-card__description">{props.description}</p>
-        <Button btnClass="button-tertiary" href={props.url}>
+        <LinkArrow href={props.url}>
           {props.link}
-        </Button>
+        </LinkArrow>
       </div>
     </div>
   );
