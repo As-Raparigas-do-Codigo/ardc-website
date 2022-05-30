@@ -4,6 +4,19 @@ import { Row, Col, Container } from "react-bootstrap";
 import team from "data/team";
 
 function Team() {
+  team.sort((a, b) => {
+    const nameA = a.name.toLowerCase();
+    const nameB = b.name.toLowerCase();
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+
+    return 0;
+  });
+
   const founderTeam = team.filter((x) => x.roles.includes("founder"));
   const adminTeam = team.filter(
     (x) => x.roles.includes("admin") && !x.roles.includes("founder")
@@ -55,6 +68,9 @@ function Team() {
                 <PersonCard key={key} person={item} />
               </Col>
             ))}
+            <Col className={"mt-4"}>
+              <PersonCard key={"colaborar"} />
+            </Col>
           </Row>
         </Container>
       </div>
