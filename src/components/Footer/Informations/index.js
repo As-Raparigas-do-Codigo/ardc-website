@@ -63,7 +63,9 @@ const Informations = () => {
           </p>
           <p>
             <Icon name={"email"} link={"#"} />
-            asraparigasdocodigo@gmail.com
+            <a href="mailto:asraparigasdocodigo@gmail.com">
+              asraparigasdocodigo@gmail.com
+            </a>
           </p>
         </Col>
         <Col sm={12} md={6}>
@@ -106,7 +108,9 @@ const Informations = () => {
         </Col>
       </Row>
       <Row className={"mt-5"}>
-        <SocialLinks />
+        <div className={"mt-5 centering-col"}>
+          <SocialLinks />
+        </div>
       </Row>
       <hr className={"mt-5"} />
       <Row className={"legal-copy"}>
