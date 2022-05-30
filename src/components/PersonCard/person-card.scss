@@ -9,7 +9,7 @@
   border: 1px solid $light-gray;
   max-width: 270px;
   height: 406px;
-
+  position: relative;
   svg  {
     fill: $color-primary;
   }
@@ -56,4 +56,6 @@
 
 .person-card__icons {
  padding: 0px 30px;
+ position: absolute;
+ bottom: 25px;
 }
