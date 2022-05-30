@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Row, Container, Col } from "react-bootstrap";
-import Button from "components/Button";
+import LinkButton from "components/LinkButton";
 
 import SocialLinks from "components/SocialLinks";
 import Icon from "components/Icon";
@@ -45,9 +45,9 @@ const Informations = () => {
           </Row>
           <Row>
             <p>
-              <Button btnClass="button-primary" href={"#"}>
+              <LinkButton href="#">
                 Ver o vídeo no Youtube
-              </Button>
+              </LinkButton>
             </p>
           </Row>
         </Col>
