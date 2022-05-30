@@ -7,6 +7,7 @@ const CollaborateFormSection = () => (
   <Container className="my-5 py-5">
     <Row>
       <div className="mb-2 fs-xxl">Queres colaborar connosco?</div>
+      <p className="mb-4"></p>
     </Row>
     <Row id="formulario-colaboracao">
       <CollaboratorForm />
