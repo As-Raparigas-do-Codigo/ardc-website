@@ -10,6 +10,7 @@ import NavBar from "components/NavBarComponent";
 import Social from "components/Social";
 import Team from "pages/Team";
 import Collaborate from "pages/Collaborate";
+import Footer from "components/Footer";
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/collaborate" element={<Collaborate />} />
         </Routes>
+
+        <Footer />
       </Router>
     </div>
   );

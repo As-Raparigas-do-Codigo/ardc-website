@@ -85,3 +85,15 @@ hr {
   font-size: $font-size-base * 5 !important;
   line-height: $font-size-base * 5 !important;
 } 
+.text-secondary-color {
+  color: $color-secondary;
+}
+
+.fs-xxl {
+  font-size: 3.5rem !important;
+  line-height: 3.5rem !important;
+}
+
+.text-700-weight{
+  font-weight: 700;
+}
