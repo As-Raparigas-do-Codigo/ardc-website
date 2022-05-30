@@ -1,5 +1,5 @@
 import { Row, Container, Col } from "react-bootstrap";
-import Button from "components/Button";
+import LinkButton from "components/LinkButton";
 import "../footer.scss";
 import testimonials from "data/testimonials";
 
@@ -28,9 +28,9 @@ const HelpProject = () => {
       </Row>
       <Row>
         <Col md={{ span: 6, offset: 3 }}>
-          <Button btnClass="button-primary" href={"#"}>
+          <LinkButton href="#">
             Quero fazer um donativo
-          </Button>
+          </LinkButton>
         </Col>
       </Row>
       <Row className="testimonials">

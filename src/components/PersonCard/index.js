@@ -17,11 +17,12 @@ function PersonCard({ person }) {
       </div>
 
       <div className="person-card__icons">
-        {person.social.map((socialNetworkLink, index) => {
-          let socialNetwork = Object.keys(socialNetworkLink)[0];
+        {person.social.map((socialNetworkLink) => {
+          const socialNetwork = Object.keys(socialNetworkLink)[0];
+          const key = `${person.id}-${socialNetwork}`;
           return (
             <Icon
-              key={index}
+              key={key}
               name={socialNetwork}
               link={socialNetworkLink[socialNetwork]}
             />
