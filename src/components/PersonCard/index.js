@@ -4,7 +4,7 @@ import "./person-card.scss";
 
 function PersonCard({ person }) {
   return (
-    <div className="person-card" id={person.id}>
+    <div className="person-card">
       <img
         src={require("assets/team/" + person.avatar)}
         className="person-card__img"
