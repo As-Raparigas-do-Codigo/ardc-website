@@ -1,10 +1,12 @@
 import React from "react";
 
+import PageLayout from "components/PageLayout";
+
 function About() {
   return (
-    <div className="about">
+    <PageLayout title="About" description="bla bla bla cenas">
       <h1>As Raparigas do Código</h1>
-    </div>
+    </PageLayout>
   );
 }
 
