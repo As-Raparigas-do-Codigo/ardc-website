@@ -7,6 +7,9 @@ import LinkButton from "components/LinkButton";
 import MentorsSection from "components/MentorsSection";
 import SponsorSection from "components/SponsorSection";
 import WorkshopsSection from "components/WorkshopsSection";
+import PageLayout from "components/PageLayout";
+// import BannerPage from "components/BannerPage";
+
 // images
 import banner from "assets/home/banner.jpeg";
 import missao from "assets/home/missao.png";
@@ -14,45 +17,43 @@ import missao from "assets/home/missao.png";
 import articles from "../../data/articles";
 import events from "../../data/events";
 
-function Home() {
+const IntroContent = () => {
   return (
-    <div className="home">
-      <div className="gradient">
-        <Container className="pt-md-5 pb-5">
-          <Row className="py-md-5">
-            <Col className="my-4 align-self-center">
-              <h1 className="py-1">Somos As Raparigas do Código</h1>
-              <p className="py-1">
-                Uma comunidade jovem focada em promover a inclusão digital
-                através da realização de atividades associadas ao ensino da
-                programação para raparigas e mulheres.
-              </p>
-              <Container className="p-0">
-                <Row>
-                  <Col className="col-auto align-self-center">
-                    <LinkButton href="/workshops" variant="primary">
-                      Conhece os nossos workshops
-                    </LinkButton>
-                  </Col>
-                  <Col className="col-auto align-self-center">
-                    <LinkArrow href="/collaborate">Quero colaborar!</LinkArrow>
-                  </Col>
-                </Row>
-              </Container>
+    <>
+      <Col className="my-4 align-self-center">
+        <h1 className="py-1">Somos As Raparigas do Código</h1>
+        <p className="py-1">
+          Uma comunidade jovem focada em promover a inclusão digital através da
+          realização de atividades associadas ao ensino da programação para
+          raparigas e mulheres.
+        </p>
+        <Container className="p-0">
+          <Row>
+            <Col className="col-auto align-self-center">
+              <LinkButton href="/workshops" variant="primary">
+                Conhece os nossos workshops
+              </LinkButton>
             </Col>
-            <Col className="my-4 col-auto">
-              <img
-                src={banner}
-                className="box-border box-radius horizontal-card__img shadow"
-                alt="As raparigas do código"
-              />
+            <Col className="col-auto align-self-center">
+              <LinkArrow href="/collaborate">Quero colaborar!</LinkArrow>
             </Col>
           </Row>
         </Container>
-      </div>
+      </Col>
+      <Col className="my-4 col-auto">
+        <img
+          src={banner}
+          className="box-border box-radius horizontal-card__img shadow"
+          alt="As raparigas do código"
+        />
+      </Col>
+    </>
+  );
+};
 
-      <div className="zig-zag"></div>
-
+function Home() {
+  return (
+    <PageLayout title="Home" customBanner={<IntroContent />}>
       <SponsorSection />
 
       <hr />
@@ -167,7 +168,7 @@ function Home() {
           "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit."
         }
       />
-    </div>
+    </PageLayout>
   );
 }
 

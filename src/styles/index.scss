@@ -106,3 +106,48 @@ hr {
 .text-700-weight{
   font-weight: 700;
 }
+
+.navigation-position{
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    color: $color-primary;
+}
+
+.padding-top-first-section {
+   &:first-child {
+    padding-top: 3rem !important;
+   }
+}
+.nav-link {
+  color: $color-primary !important;
+  font-weight: 500;
+  margin: 0px 15px;
+
+  &[active="true"] {
+    color: $color-secondary !important;
+  }
+
+  &:hover {
+    color: $color-secondary !important;
+  }
+
+}
+
+.navbar-nav {
+  @media (max-width: $lg){
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    z-index: 2;
+    position: relative;
+  }
+}
