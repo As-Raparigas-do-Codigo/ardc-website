@@ -2,46 +2,68 @@
 
 .person-card {
   display: flex;
-
-  flex-direction: column;
   background-color: $white;
   border-radius: 8px;
   border: 1px solid $light-gray;
-  max-width: 270px;
-  height: 406px;
+  position: relative;
+  margin: auto;
 
-  svg  {
-    fill: $color-primary;
-  }
+  flex-direction: column;
+  height: 406px;
+  max-width: 270px;
 
   @media (max-width: $lg) {
-    margin-bottom: 30px;
+    flex-direction: row;
+    height: unset;
+    max-width: unset;
+    min-height: 175px;
   }
 }
 
 .person-card__img {
-  margin: 30px auto;
-  width: 170px;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 100%;
+  display: flex;
+
+  img {
+    margin: 30px auto;
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 100%;
+  
+    @media (max-width: $lg) {
+      margin: 30px;
+      width: 70px;
+      height: 70px;
+    }
+  }
 }
 
+
+
 .person-card__body {
-  padding: 0px 30px 23px 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+  height: 100%;
+
+
+  @media (max-width: $lg) {
+    margin: 30px 7px 30px 0;
+    width: 100%;
+  }
 
   h5 {
     font-size: 18px;
   }
 }
 
-.person-card__job{
+.person-card__job {
   font-family: Roboto Mono;
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0em;
-  
+
 }
 
 .person-card__company {
@@ -55,5 +77,20 @@
 
 
 .person-card__icons {
- padding: 0px 30px;
+  margin-top: auto;
+  margin-bottom: 30px;
+
+  @media (max-width: $lg) {
+    margin-top: 15px;
+    margin-bottom: auto;
+  }
+
+  .social-link-svg svg {
+    fill: $color-primary;
+    height: 30px;
+
+    @media (max-width: $lg) {
+      height: 15px;
+    }
+  }
 }

@@ -19,6 +19,15 @@ $toast-background-color: $white;
 $toast-border-radius: 8px;
 $toast-header-color: $color-secondary;
 
+$grid-breakpoints: (
+  xs: $xs,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  xxl: $xxl
+);
+
 @import "~bootstrap/scss/bootstrap";
 
 // 
