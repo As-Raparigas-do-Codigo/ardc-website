@@ -1,10 +1,12 @@
 import React from "react";
 
+import PageLayout from "components/PageLayout";
+
 function Events() {
   return (
-    <div className="Events">
-      <h1>Events Page</h1>
-    </div>
+    <PageLayout title="Eventos" description="bla bla bla cenas">
+      <h1>Eventos</h1>
+    </PageLayout>
   );
 }
 
