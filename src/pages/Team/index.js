@@ -42,7 +42,7 @@ function Team() {
           <Row>
             <h2>Direção</h2>
           </Row>
-          <Row className={"mt-4"} xs={1} md={4}>
+          <Row className={"mt-4"} xs={1} md={1} lg={4}>
             {founderTeam.map((item, key) => (
               <Col className={"mt-4"}>
                 <PersonCard key={key} person={item} />
@@ -52,7 +52,7 @@ function Team() {
           <Row className={"mt-5"}>
             <h2>Administração</h2>
           </Row>
-          <Row className={"mt-4"} xs={2} md={4}>
+          <Row className={"mt-4"} xs={1} md={1} lg={4}>
             {adminTeam.map((item, key) => (
               <Col className={"mt-4"}>
                 <PersonCard key={key} person={item} />
@@ -62,7 +62,7 @@ function Team() {
           <Row className={"mt-5"}>
             <h2>Mentores</h2>
           </Row>
-          <Row className={"mt-4 mb-5"} xs={2} md={4}>
+          <Row className={"mt-4 mb-5"} xs={1} lg={4}>
             {mentorsTeam.map((item, key) => (
               <Col className={"mt-4"}>
                 <PersonCard key={key} person={item} />
