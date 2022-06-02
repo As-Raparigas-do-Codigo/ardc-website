@@ -10,7 +10,7 @@ function About() {
     },
     {
       label: "Sobre nós",
-      href: "/about",
+      href: "/sobre-nos",
     },
     { label: "Sobre o projecto" },
   ];
