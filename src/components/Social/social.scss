@@ -1,6 +1,24 @@
 @import "../../styles/variables";
 
 .social-bar {
-  height: 36px;
+
   background-color: $brand-color;
+
+  @media (min-width: $md) {
+    height: 36px;
+    padding-top: 4px;
+  }
+  padding-top: 10px;
+  height: 50px;
+  
+  .links {
+    @media (min-width: $md) {
+      float: right;
+    }
+
+    margin: auto;
+    text-align: center;
+
+  }
+
 }
