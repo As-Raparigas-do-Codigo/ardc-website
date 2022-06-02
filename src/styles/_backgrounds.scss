@@ -16,6 +16,7 @@
 
 .zig-zag {
   position: relative;
+  z-index: 1;
   &:before {
     position: absolute;
     top: -20px;

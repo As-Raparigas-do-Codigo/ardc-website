@@ -1,11 +1,12 @@
 import React from "react";
 
+import PageLayout from "components/PageLayout";
+
 function Blog() {
   return (
-    <div className="Blog">
-      <h1>Blog Page</h1>
-    </div>
+    <PageLayout title="Blog" description="bla bla bla cenas">
+      <h1>Blog page</h1>
+    </PageLayout>
   );
 }
-
 export default Blog;
