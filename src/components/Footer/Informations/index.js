@@ -77,13 +77,13 @@ const Informations = () => {
                   <a href="/about"> Sobre nós</a>
                 </li>
                 <li>
-                  <a href="/mentorship"> Quero Colaborar!</a>
+                  <a href="/colaborar"> Quero Colaborar!</a>
                 </li>
                 <li>
                   <a href="/blog"> Blog</a>
                 </li>
                 <li>
-                  <a href="/contact"> Contactos</a>
+                  <a href="/contactos"> Contactos</a>
                 </li>
                 {/* <li>
                   <a href="#"> FAQs</a>
@@ -97,10 +97,10 @@ const Informations = () => {
                   <a href="/workshops"> Workshops</a>
                 </li>
                 <li>
-                  <a href="/mentorship"> Mentorias</a>
+                  <a href="/mentorias"> Mentorias</a>
                 </li>
                 <li>
-                  <a href="/events"> Eventos</a>
+                  <a href="/eventos"> Eventos</a>
                 </li>
               </ul>
             </Col>
