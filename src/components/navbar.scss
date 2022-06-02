@@ -1,0 +1,38 @@
+@import "styles/variables";
+
+.navbar-nav {
+  @media (max-width: $lg) {
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    z-index: 2;
+    position: relative;
+  }
+
+  .nav-link {
+    font-weight: 500;
+    margin: 0px 15px;
+  
+    &.active {
+      font-weight: 700;
+    }
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .dropdown {
+    .dropdown-item:hover {
+      text-decoration: underline;
+    }
+  }
+}
