@@ -32,6 +32,7 @@ $button-color-primary: $color-secondary;
   background-color: $button-color-primary;
   color: $white;
   border: 1px solid $button-color-primary;
+  text-decoration: none;
 
   &:hover:not([disabled]),
   &[hover] {
@@ -47,6 +48,7 @@ $button-color-primary: $color-secondary;
   background-color: $white;
   color: $color-primary;
   border: 1px solid $color-primary;
+  text-decoration: none;
 
   &:hover:not([disabled]),
   &[hover] {
@@ -59,6 +61,7 @@ $button-color-primary: $color-secondary;
   @extend %button;
   font-size: 14px;
   color: $color-primary;
+  text-decoration: none;
 
   svg {
     margin-right: 5px;
@@ -76,9 +79,4 @@ $button-color-primary: $color-secondary;
     opacity: 60%;
     pointer-events: none;
   }
-}
-
-a.button-primary,
-a.button-secondary {
-  text-decoration: none;
 }
