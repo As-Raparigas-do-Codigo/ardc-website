@@ -53,17 +53,17 @@ function NavBarComponent() {
           <Nav className="ms-auto">
             <NavLink location={location} to="/"><HomeIcon /></NavLink>
             <NavLink location={location} to="/workshops">Workshops</NavLink>
-            <NavLink location={location} to="/mentorship">Mentorias</NavLink>
-            {/* <NavLink location={location} to="/events">Eventos</NavLink> */}
+            <NavLink location={location} to="/mentorias">Mentorias</NavLink>
+            {/* <NavLink location={location} to="/eventos">Eventos</NavLink> */}
             {/* <NavLink location={location} to="/blog">Blog</NavLink> */}
             <NavDropdown title="Sobre Nós" id="navbarScrollingDropdown">
-              <NavDropdownItem location={location} to="/about">
+              <NavDropdownItem location={location} to="/sobre-nos">
                 Sobre o projecto
               </NavDropdownItem>
               <NavDropdown.Divider />
-              <NavDropdownItem location={location} to="/team">A nossa equipa</NavDropdownItem>
+              <NavDropdownItem location={location} to="/equipa">A nossa equipa</NavDropdownItem>
             </NavDropdown>
-            <NavLink location={location} to="/contact">Contactos</NavLink>
+            <NavLink location={location} to="/contactos">Contactos</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
