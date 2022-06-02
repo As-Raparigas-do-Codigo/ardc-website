@@ -29,6 +29,7 @@ a{
   border: 1px solid $light-gray;
   max-width: 570px;
   height: 100%;
+  position: relative;
 
   @media (max-width: $lg) {
     margin-bottom: 30px;
@@ -74,15 +75,11 @@ hr{
   bottom: 40px;
   align-items: baseline;
   margin-top: 15px;
-  // position:absolute;
+  position:absolute;
 }
 
 .card-text{
   height: 25vh;
-
-  // @media (max-width: $sm) {
-  //    height: ;
-  // }
 }
 
 .testimonials{
