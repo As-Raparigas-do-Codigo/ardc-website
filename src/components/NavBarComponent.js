@@ -57,7 +57,7 @@ function NavBarComponent() {
             {/* <NavLink location={location} to="/eventos">Eventos</NavLink> */}
             {/* <NavLink location={location} to="/blog">Blog</NavLink> */}
             <NavDropdown title="Sobre Nós" id="navbarScrollingDropdown">
-              <NavDropdownItem location={location} to="/sobre-nos">
+              <NavDropdownItem location={location} to="/sobre">
                 Sobre o projecto
               </NavDropdownItem>
               <NavDropdown.Divider />
