@@ -35,7 +35,7 @@ const IntroContent = () => {
               </LinkButton>
             </Col>
             <Col className="col-auto align-self-center">
-              <LinkArrow href="/collaborate">Quero colaborar!</LinkArrow>
+              <LinkArrow href="/colaborar">Quero colaborar!</LinkArrow>
             </Col>
           </Row>
         </Container>
@@ -85,7 +85,7 @@ function Home() {
               <Container className="p-0">
                 <Row>
                   <Col className="col-auto align-self-center">
-                    <LinkButton href="/about" variant="primary">
+                    <LinkButton href="/sobre" variant="primary">
                       Sabe mais sobre nós
                     </LinkButton>
                   </Col>
@@ -132,7 +132,7 @@ function Home() {
                   tecnologia, gostávamos muito de poder contar contigo!
                 </p>
                 <div className="text-center">
-                  <LinkButton href="/collaborate" variant="primary">
+                  <LinkButton href="/colaborar" variant="primary">
                     Quero colaborar!
                   </LinkButton>
                 </div>
