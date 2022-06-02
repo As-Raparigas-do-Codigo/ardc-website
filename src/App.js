@@ -29,7 +29,7 @@ function App() {
           <Route exact path="/eventos" element={<Events />} />
           <Route exact path="/blog" element={<Blog />} />
           <Route exact path="/equipa" element={<Team />} />
-          <Route exact path="/sobre-nos" element={<About />} />
+          <Route exact path="/sobre" element={<About />} />
           <Route exact path="/contactos" element={<Contact />} />
           <Route exact path="/colaborar" element={<Collaborate />} />
         </Routes>

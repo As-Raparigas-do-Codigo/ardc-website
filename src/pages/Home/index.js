@@ -85,7 +85,7 @@ function Home() {
               <Container className="p-0">
                 <Row>
                   <Col className="col-auto align-self-center">
-                    <LinkButton href="/sobre-nos" variant="primary">
+                    <LinkButton href="/sobre" variant="primary">
                       Sabe mais sobre nós
                     </LinkButton>
                   </Col>

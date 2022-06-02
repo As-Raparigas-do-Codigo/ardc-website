@@ -10,14 +10,14 @@ function About() {
     },
     {
       label: "Sobre nós",
-      href: "/sobre-nos",
+      href: "/sobre",
     },
     { label: "Sobre o projecto" },
   ];
 
   return (
     <PageLayout
-      title="About"
+      title="Sobre o projecto"
       description="bla bla bla cenas"
       breadcrumbsData={breadcrumbs}>
       <h1>As Raparigas do Código</h1>
