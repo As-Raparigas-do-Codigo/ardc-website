@@ -46,8 +46,19 @@ const CollaborateContent = () => (
 );
 
 const Collaborate = () => {
+  const breadcrumbs = [
+    {
+      label: "Home",
+      href: "/",
+    },
+    { label: "Queres colaborar connosco?" },
+  ];
+
   return (
-    <PageLayout title="Colabora" description="bla bla bla cenas">
+    <PageLayout
+      title="Colabora"
+      description="bla bla bla cenas"
+      breadcrumbsData={breadcrumbs}>
       <Container fluid="md">
         <Row>
           <CollaborateContent />

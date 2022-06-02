@@ -78,8 +78,19 @@ const MentorsSection = () => (
 );
 
 const Mentorship = () => {
+  const breadcrumbs = [
+    {
+      label: "Home",
+      href: "/",
+    },
+    { label: "Mentorias" },
+  ];
+
   return (
-    <PageLayout title="Mentoria" description="bla bla bla cenas">
+    <PageLayout
+      title="Mentoria"
+      description="bla bla bla cenas"
+      breadcrumbsData={breadcrumbs}>
       <Container fluid="md">
         <Row>
           <Col>
