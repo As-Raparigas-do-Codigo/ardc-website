@@ -1,12 +1,20 @@
 import React from "react";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, Breadcrumb } from "react-bootstrap";
 
-function PageLayout({ title, description, customBanner = null, children }) {
+function PageLayout({
+  title,
+  description,
+  customBanner = null,
+  breadcrumbsData,
+  children,
+}) {
+  const bannerHasInfo = title || customBanner;
+  const backgroundClass = bannerHasInfo ? "gradient" : "bg-blue";
   return (
     <div>
-      <div className="gradient">
+      <div className={backgroundClass}>
         <Container className="pt-md-5 pb-5 padding-top-first-section">
-          {(title || customBanner) && (
+          {bannerHasInfo && (
             <Row className="py-md-5 py-sm-5">
               {customBanner ? (
                 customBanner
@@ -23,7 +31,37 @@ function PageLayout({ title, description, customBanner = null, children }) {
         </Container>
       </div>
 
-      {(title || customBanner) && <div className="zig-zag"></div>}
+      {bannerHasInfo && <div className="zig-zag"></div>}
+
+      {breadcrumbsData && (
+        <div className="breadcrumb mt-4">
+          <Container>
+            <Row>
+              <Col>
+                <Breadcrumb>
+                  {breadcrumbsData.map((breadcrumb) => {
+                    if (breadcrumb.href) {
+                      return (
+                        <Breadcrumb.Item href={breadcrumb.href}>
+                          {breadcrumb.label}
+                        </Breadcrumb.Item>
+                      );
+                    } else {
+                      return (
+                        <Breadcrumb.Item active>
+                          {breadcrumb.label}
+                        </Breadcrumb.Item>
+                      );
+                    }
+                  })}
+                </Breadcrumb>
+              </Col>
+            </Row>
+            <hr />
+          </Container>
+        </div>
+      )}
+
       <div> {children}</div>
     </div>
   );

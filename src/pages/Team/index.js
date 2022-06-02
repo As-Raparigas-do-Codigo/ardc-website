@@ -6,6 +6,18 @@ import team from "data/team";
 import PageLayout from "components/PageLayout";
 
 function Team() {
+  const breadcrumbs = [
+    {
+      label: "Home",
+      href: "/",
+    },
+    {
+      label: "Sobre nós",
+      href: "/team",
+    },
+    { label: "A nossa equipa" },
+  ];
+
   team.sort((a, b) => {
     const nameA = a.name.toLowerCase();
     const nameB = b.name.toLowerCase();
@@ -28,7 +40,10 @@ function Team() {
   );
 
   return (
-    <PageLayout title="Team" description="bla bla bla cenas">
+    <PageLayout
+      title="Team"
+      description="bla bla bla cenas"
+      breadcrumbsData={breadcrumbs}>
       <Container className={"mt-5 padding-top-bottom-medium"}>
         <Row>
           <h2>Direção</h2>

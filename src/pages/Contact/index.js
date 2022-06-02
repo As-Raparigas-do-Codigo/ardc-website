@@ -49,8 +49,18 @@ const ContactFormSection = () => (
 );
 
 const Contact = ({ banner }) => {
+  const breadcrumbs = [
+    {
+      label: "Home",
+      href: "/",
+    },
+    { label: "Contactos" },
+  ];
   return (
-    <PageLayout title="Contactos" description="bla bla bla cenas">
+    <PageLayout
+      title="Contactos"
+      description="bla bla bla cenas"
+      breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="padding-top-first-section">
         <Row>
           <Col>
