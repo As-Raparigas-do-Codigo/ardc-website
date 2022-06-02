@@ -19,6 +19,7 @@ $toast-background-color: $white;
 $toast-border-radius: 8px;
 $toast-header-color: $color-secondary;
 
+// Customizar grid-breakpoints
 $grid-breakpoints: (
   xs: $xs,
   sm: $sm,
@@ -27,6 +28,18 @@ $grid-breakpoints: (
   xl: $xl,
   xxl: $xxl
 );
+
+// Customizar navbar
+$navbar-light-color: $color-primary;
+$navbar-light-active-color: $color-secondary;
+$navbar-light-hover-color: $color-primary;
+
+// Customizar dropdown
+$dropdown-link-active-bg: $white;
+$dropdown-link-active-color: $color-secondary;
+$dropdown-link-color: $color-primary;
+$dropdown-link-hover-color: $color-primary;
+$dropdown-link-hover-bg: $white;
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -120,38 +133,6 @@ hr {
     padding-top: 3rem !important;
    }
 }
-.nav-link {
-  color: $color-primary !important;
-  font-weight: 500;
-  margin: 0px 15px;
-
-  &[active="true"] {
-    color: $color-secondary !important;
-  }
-
-  &:hover {
-    color: $color-secondary !important;
-  }
-
-}
-
-.navbar-nav {
-  @media (max-width: $lg){
-    min-width: 10rem;
-    padding: 0.5rem 0;
-    margin: 0;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 0.25rem;
-    z-index: 2;
-    position: relative;
-  }
-}
 
 .breadcrumb-item.active {
   color: $color-secondary;
@@ -162,4 +143,4 @@ hr {
     font-weight: 700 !important;
     color: $color-primary !important;
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E") !important;
-  }
+}

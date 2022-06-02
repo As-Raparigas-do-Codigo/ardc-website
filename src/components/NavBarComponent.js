@@ -1,14 +1,29 @@
-import React, { useState, createRef, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
+import { useLocation } from "react-router-dom";
 import logo from "assets/ardc-logo.svg";
 import { ReactComponent as HomeIcon } from "assets/icons/home.svg";
+import { Link } from "react-router-dom";
+import "components/navbar.scss"
 
-function NavBarComponent(props) {
+const NavLink = ({ location, to, children }) => (
+  <Nav.Link as={Link} to={to} className={{ 'active': location.pathname === to }}>
+    {children}
+  </Nav.Link>
+);
+
+const NavDropdownItem = ({ location, to, children }) => (
+  <NavDropdown.Item as={Link} to={to} className={{ 'active': location.pathname === to }}>
+    {children}
+  </NavDropdown.Item>
+);
+
+function NavBarComponent() {
   const [navColour, updateNavbar] = useState(false);
-  const navRef = createRef();
+  const location = useLocation();
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -18,23 +33,10 @@ function NavBarComponent(props) {
     }
   }
 
-  useEffect(() => {
-    const currentHref = window.location.pathname;
-
-    const currentNav = navRef.current.children[0].querySelectorAll(
-      `.nav-link[href='${currentHref}']`
-    );
-
-    if (currentNav && currentNav.length > 0) {
-      currentNav[0].setAttribute("active", true);
-    }
-  });
-
   window.addEventListener("scroll", scrollHandler);
 
   return (
     <Navbar
-      ref={navRef}
       collapseOnSelect
       expand="lg"
       className={
@@ -49,21 +51,19 @@ function NavBarComponent(props) {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="/">
-              <HomeIcon />
-            </Nav.Link>
-            <Nav.Link href="/workshops">Workshops</Nav.Link>
-            <Nav.Link href="/mentorship">Mentorias</Nav.Link>
-            {/* <Nav.Link href="/events">Eventos</Nav.Link>
-            <Nav.Link href="/blog">Blog</Nav.Link> */}
+            <NavLink location={location} to="/"><HomeIcon /></NavLink>
+            <NavLink location={location} to="/workshops">Workshops</NavLink>
+            <NavLink location={location} to="/mentorship">Mentorias</NavLink>
+            {/* <NavLink location={location} to="/events">Eventos</NavLink> */}
+            {/* <NavLink location={location} to="/blog">Blog</NavLink> */}
             <NavDropdown title="Sobre Nós" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="/about">
+              <NavDropdownItem location={location} to="/about">
                 Sobre o projecto
-              </NavDropdown.Item>
+              </NavDropdownItem>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/team">A nossa equipa</NavDropdown.Item>
+              <NavDropdownItem location={location} to="/team">A nossa equipa</NavDropdownItem>
             </NavDropdown>
-            <Nav.Link href="/contact">Contactos</Nav.Link>
+            <NavLink location={location} to="/contact">Contactos</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
