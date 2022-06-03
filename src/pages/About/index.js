@@ -1,6 +1,6 @@
 import React from "react";
-
 import PageLayout from "components/PageLayout";
+import Constants from "Constants";
 
 function About() {
   const breadcrumbs = [
@@ -10,7 +10,7 @@ function About() {
     },
     {
       label: "Sobre nós",
-      href: "/sobre",
+      href: Constants.AboutRoute,
     },
     { label: "Sobre o projecto" },
   ];
