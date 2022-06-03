@@ -10,7 +10,7 @@ function About() {
     },
     {
       label: "Sobre nós",
-      href: "/sobre",
+      href: Constants.AboutRoute,
     },
     { label: "Sobre o projecto" },
   ];

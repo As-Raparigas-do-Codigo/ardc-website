@@ -13,7 +13,7 @@ function Team() {
     },
     {
       label: "Sobre nós",
-      href: "/team",
+      href: Constants.TeamRoute,
     },
     { label: "A nossa equipa" },
   ];

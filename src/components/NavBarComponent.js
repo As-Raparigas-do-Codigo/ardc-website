@@ -52,18 +52,18 @@ function NavBarComponent() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
             <NavLink location={location} to="/"><HomeIcon /></NavLink>
-            <NavLink location={location} to="/workshops">Workshops</NavLink>
-            <NavLink location={location} to="/mentorias">Mentorias</NavLink>
-            {/* <NavLink location={location} to="/eventos">Eventos</NavLink> */}
-            {/* <NavLink location={location} to="/blog">Blog</NavLink> */}
+            <NavLink location={location} to={Constants.WorkshopsRoute}>Workshops</NavLink>
+            <NavLink location={location} to={Constants.MentorshipsRoute}>Mentorias</NavLink>
+            {/* <NavLink location={location} to={Constants.EventsRoute}>Eventos</NavLink> */}
+            {/* <NavLink location={location} to={Constants.BlogRoute}>Blog</NavLink> */}
             <NavDropdown title="Sobre Nós" id="navbarScrollingDropdown">
-              <NavDropdownItem location={location} to="/sobre">
+              <NavDropdownItem location={location} to={Constants.AboutRoute}>
                 Sobre o projecto
               </NavDropdownItem>
               <NavDropdown.Divider />
-              <NavDropdownItem location={location} to="/equipa">A nossa equipa</NavDropdownItem>
+              <NavDropdownItem location={location} to={Constants.TeamRoute}>A nossa equipa</NavDropdownItem>
             </NavDropdown>
-            <NavLink location={location} to="/contactos">Contactos</NavLink>
+            <NavLink location={location} to={Constants.ContactsRoute}>Contactos</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
