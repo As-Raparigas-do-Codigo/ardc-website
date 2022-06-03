@@ -13,7 +13,7 @@ function PageLayout({
   return (
     <div>
       <div className={backgroundClass}>
-        <Container className="pt-md-5 pb-5 padding-top-first-section">
+        <Container className="pt-md-5 pb-4 padding-top-first-section">
           {bannerHasInfo && (
             <Row className="py-md-5 py-sm-5">
               {customBanner ? (
