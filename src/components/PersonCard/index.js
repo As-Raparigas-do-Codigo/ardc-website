@@ -2,6 +2,7 @@ import React from "react";
 import Icon from "components/Icon";
 import LinkButton from "components/LinkButton";
 import "./person-card.scss";
+import Constants from "Constants";
 
 function PersonCard({ person = null }) {
   const Colaborar = () => {
