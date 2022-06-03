@@ -1,5 +1,6 @@
 import React from "react";
 import Icon from "components/Icon";
+import "./social-links.scss";
 
 const socialLinks = [
   { facebook: "https://www.facebook.com/AsRaparigasDoCodigo" },
@@ -14,7 +15,7 @@ function SocialLinks() {
       {socialLinks.map((socialNetworkLink) => {
         let socialNetwork = Object.keys(socialNetworkLink)[0];
         return (
-          <Icon key={socialNetwork} name={socialNetwork} link={socialNetworkLink[socialNetwork]} theme={'topBar'} />
+          <Icon key={socialNetwork} name={socialNetwork} link={socialNetworkLink[socialNetwork]}/>
         );
       })}
     </div>
