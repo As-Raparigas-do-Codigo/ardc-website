@@ -14,7 +14,8 @@ import PageLayout from "components/PageLayout";
 import banner from "assets/home/banner.jpeg";
 import missao from "assets/home/missao.png";
 // data
-import articles from "../../data/articles";
+// TODO: retirar comentário após MVP
+//import articles from "../../data/articles";
 import events from "../../data/events";
 
 const IntroContent = () => {
@@ -152,7 +153,7 @@ function Home() {
         }
       />
 
-      <div className="gradient">
+      <div className="bg-blue">
         <div className="zig-zag"></div>
         <div className="pt-2">
           <MentorsSection />
@@ -160,7 +161,7 @@ function Home() {
       </div>
     </PageLayout>
   );
-
+  // TODO: retirar comentário após MVP
   //<div className="zig-zag"></div>
   //<BasicCardsRow
   //data={articles}

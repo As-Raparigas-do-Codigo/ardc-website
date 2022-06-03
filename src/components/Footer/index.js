@@ -1,11 +1,13 @@
 import React from "react";
 
-import HelpProject from "components/Footer/HelpProject";
+// TODO: retirar comentário após MVP
+//import HelpProject from "components/Footer/HelpProject";
 import Informations from "components/Footer/Informations";
 
 import "./footer.scss";
 
 const Footer = function () {
+    // TODO: retirar comentário após MVP
     //<div className="bg-pink text-center">
     //<HelpProject />
     //</div>
