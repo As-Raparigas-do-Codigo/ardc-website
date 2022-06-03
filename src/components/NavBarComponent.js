@@ -8,6 +8,7 @@ import logo from "assets/ardc-logo.svg";
 import { ReactComponent as HomeIcon } from "assets/icons/home.svg";
 import { Link } from "react-router-dom";
 import "components/navbar.scss"
+import Constants from "Constants";
 
 const NavLink = ({ location, to, children }) => (
   <Nav.Link as={Link} to={to} className={{ 'active': location.pathname === to }}>

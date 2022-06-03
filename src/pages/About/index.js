@@ -1,6 +1,6 @@
 import React from "react";
-
 import PageLayout from "components/PageLayout";
+import Constants from "Constants";
 
 function About() {
   const breadcrumbs = [
