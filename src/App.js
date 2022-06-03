@@ -12,6 +12,7 @@ import Social from "components/Social";
 import Team from "pages/Team";
 import Collaborate from "pages/Collaborate";
 import Footer from "components/Footer";
+import Constants from "Constants";
 
 function App() {
   return (
@@ -24,14 +25,14 @@ function App() {
 
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/workshops" element={<Workshops />} />
-          <Route exact path="/mentorias" element={<Mentorship />} />
-          <Route exact path="/eventos" element={<Events />} />
-          <Route exact path="/blog" element={<Blog />} />
-          <Route exact path="/equipa" element={<Team />} />
-          <Route exact path="/sobre" element={<About />} />
-          <Route exact path="/contactos" element={<Contact />} />
-          <Route exact path="/colaborar" element={<Collaborate />} />
+          <Route exact path={Constants.WorkshopsRoute} element={<Workshops />} />
+          <Route exact path={Constants.MentorshipsRoute} element={<Mentorship />} />
+          <Route exact path={Constants.EventsRoute} element={<Events />} />
+          <Route exact path={Constants.BlogRoute} element={<Blog />} />
+          <Route exact path={Constants.TeamRoute} element={<Team />} />
+          <Route exact path={Constants.AboutRoute} element={<About />} />
+          <Route exact path={Constants.ContactsRoute} element={<Contact />} />
+          <Route exact path={Constants.CollaborateRoute} element={<Collaborate />} />
         </Routes>
 
         <Footer />

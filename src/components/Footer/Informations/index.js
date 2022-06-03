@@ -7,6 +7,7 @@ import SocialLinks from "components/SocialLinks";
 import Icon from "components/Icon";
 
 import "../footer.scss";
+import Constants from "Constants";
 
 const Informations = () => {
   // const [isMobile, setIsMobile] = useState(false);
@@ -76,16 +77,16 @@ const Informations = () => {
               <h4>O Projecto</h4>
               <ul>
                 <li>
-                  <a href="/about"> Sobre nós</a>
+                  <a href={Constants.AboutRoute}> Sobre nós</a>
                 </li>
                 <li>
-                  <a href="/colaborar"> Quero Colaborar!</a>
+                  <a href={Constants.CollaborateRoute}> Quero Colaborar!</a>
                 </li>
                 <li>
-                  <a href="/blog"> Blog</a>
+                  <a href={Constants.BlogRoute}> Blog</a>
                 </li>
                 <li>
-                  <a href="/contactos"> Contactos</a>
+                  <a href={Constants.ContactsRoute}> Contactos</a>
                 </li>
                 {/* <li>
                   <a href="#"> FAQs</a>
@@ -96,13 +97,13 @@ const Informations = () => {
               <h4>Eventos</h4>
               <ul>
                 <li>
-                  <a href="/workshops"> Workshops</a>
+                  <a href={Constants.WorkshopsRoute}> Workshops</a>
                 </li>
                 <li>
-                  <a href="/mentorias"> Mentorias</a>
+                  <a href={Constants.MentorshipsRoute}> Mentorias</a>
                 </li>
                 <li>
-                  <a href="/eventos"> Eventos</a>
+                  <a href={Constants.EventsRoute}> Eventos</a>
                 </li>
               </ul>
             </Col>
