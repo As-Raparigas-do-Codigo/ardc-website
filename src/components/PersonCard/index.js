@@ -16,7 +16,7 @@ function PersonCard({ person = null }) {
         <div className="person-card__body">
           <h5>Gostavas de colaborar connosco?</h5>
           <div className="person-card__icons">
-            <LinkButton href="/colaborar">Quero Colaborar!</LinkButton>
+            <LinkButton href={Constants.CollaborateRoute}>Quero Colaborar!</LinkButton>
           </div>
         </div>
       </div>

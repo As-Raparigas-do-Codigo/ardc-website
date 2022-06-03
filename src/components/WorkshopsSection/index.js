@@ -30,7 +30,7 @@ function WorkshopsSection(props) {
           <p className="">{props.subtitle}</p>
         </Col>
         <Col className="col-auto align-self-end">
-          <LinkArrow href="/workshops">Ver todos os workshops</LinkArrow>
+          <LinkArrow href={Constants.WorkshopsRoute}>Ver todos os workshops</LinkArrow>
         </Col>
       </Row>
       <Row>{articlesArray}</Row>
