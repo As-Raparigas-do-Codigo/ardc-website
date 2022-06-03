@@ -158,18 +158,17 @@ function Home() {
           <MentorsSection />
         </div>
       </div>
-
-      <div className="zig-zag"></div>
-
-      <BasicCardsRow
-        data={articles}
-        heading={"Artigos recentes"}
-        subtitle={
-          "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        }
-      />
     </PageLayout>
   );
+
+  //<div className="zig-zag"></div>
+  //<BasicCardsRow
+  //data={articles}
+  //heading={"Artigos recentes"}
+  //subtitle={
+  //"Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  //}
+  ///>
 }
 
 export default Home;
