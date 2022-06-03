@@ -6,11 +6,11 @@ import Informations from "components/Footer/Informations";
 import "./footer.scss";
 
 const Footer = function () {
-  return (
+    //<div className="bg-pink text-center">
+    //<HelpProject />
+    //</div>
+    return (
     <div>
-      <div className="bg-pink text-center">
-        <HelpProject />
-      </div>
       <div className="gradient">
         <Informations />
       </div>
