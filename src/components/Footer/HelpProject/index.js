@@ -34,11 +34,11 @@ const HelpProject = () => {
         </Col>
       </Row>
       <Row className="testimonials">
-        {testimonials.map((testimonial) => {
+        {testimonials.map((testimonial, index) => {
           return (
-            <Col sm={12} md={6} className={"mt-5"}>
+            <Col sm={12} md={6} className={"mt-5"} key={testimonial.id}>
               <TestimonialCard
-                key={testimonial.id}
+                key={testimonial.id}                
                 description={testimonial.text}
                 name={testimonial.name}
                 avatar={testimonial.avatar}
@@ -63,7 +63,6 @@ const TestimonialCard = ({ description, name, avatar }) => {
               src={require("assets/team/" + avatar)}
               className="card-img"
               alt={"a person"}
-              mentors
             />
           </Col>
           <Col xs={10} md={10}>
