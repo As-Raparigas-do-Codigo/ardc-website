@@ -8,8 +8,6 @@ import MentorsSection from "components/MentorsSection";
 import SponsorSection from "components/SponsorSection";
 import WorkshopsSection from "components/WorkshopsSection";
 import PageLayout from "components/PageLayout";
-// import BannerPage from "components/BannerPage";
-
 // images
 import banner from "assets/home/banner.jpeg";
 import missao from "assets/home/missao.png";
