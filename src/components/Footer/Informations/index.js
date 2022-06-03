@@ -45,7 +45,9 @@ const Informations = () => {
           </Row>
           <Row>
             <p>
-              <LinkButton href="#">
+              <LinkButton
+                href="https://www.youtube.com/watch?v=5ku99qSbZOI"
+                target="blank">
                 Ver o vídeo no Youtube
               </LinkButton>
             </p>
