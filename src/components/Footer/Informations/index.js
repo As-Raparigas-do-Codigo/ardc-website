@@ -25,7 +25,7 @@ const Informations = () => {
   // }, []);
 
   return (
-    <Container className="padding-top-bottom-medium align-center">
+    <Container className="info padding-top-bottom-medium align-center">
       <Row>
         <Col>
           <img
