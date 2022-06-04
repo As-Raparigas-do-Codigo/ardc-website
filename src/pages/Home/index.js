@@ -134,9 +134,7 @@ function Home() {
       <BasicCardsRow
         data={events}
         heading={"Talks & Eventos"}
-        subtitle={
-          "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        }
+        subtitle=""
       />
 
       {

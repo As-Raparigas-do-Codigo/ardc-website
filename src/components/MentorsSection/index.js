@@ -33,7 +33,9 @@ function MentorsSection() {
       <Row>
         <h2 className="mb-2">Conhece os nossos mentores.</h2>
         <p className="mb-5">
-          A nossa equipa é formada por pessoas provenientes de diversas áreas profissionais. Da engenharia ao design, das ciências ao marketing, a trabalhar juntos por um futuro mais inclusivo.
+          A nossa equipa é formada por pessoas provenientes de diversas áreas profissionais.
+          <br/>
+          Da engenharia ao design, das ciências ao marketing, a trabalhar juntos por um futuro mais inclusivo.
         </p>
       </Row>
 
