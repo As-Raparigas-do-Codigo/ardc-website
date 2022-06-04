@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Route, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { Offcanvas } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -10,14 +11,24 @@ import logo from "assets/ardc-logo.svg";
 import { Routes, SiteContent } from "Constants";
 import "components/navbar.scss"
 
-const NavLink = ({ location, to, children }) => (
-  <Nav.Link as={Link} to={to} className={{ 'active': location.pathname === to }}>
+const NavLink = ({ location, to, children, onSelect, className = '' }) => (
+  <Nav.Link
+    className={`${className} ${location.pathname === to ? 'active' : ''}`}
+    onClick={onSelect}
+    as={Link}
+    to={to}
+  >
     {children}
   </Nav.Link>
 );
 
-const NavDropdownItem = ({ location, to, children }) => (
-  <NavDropdown.Item as={Link} to={to} className={{ 'active': location.pathname === to }}>
+const NavDropdownItem = ({ location, to, children, onSelect, className = '' }) => (
+  <NavDropdown.Item
+    className={`${className} ${location.pathname === to ? 'active' : ''}`}
+    onClick={onSelect}
+    as={Link}
+    to={to}
+    >
     {children}
   </NavDropdown.Item>
 );
@@ -25,6 +36,15 @@ const NavDropdownItem = ({ location, to, children }) => (
 function NavBarComponent() {
   const [navColour, updateNavbar] = useState(false);
   const location = useLocation();
+  const [expanded, setExpanded] = useState(false);
+
+  const onSelect = () => {
+    setExpanded(false);
+  };
+
+  const onToggle = () => {
+    setExpanded(!expanded);
+  };
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -38,41 +58,57 @@ function NavBarComponent() {
 
   return (
     <Navbar
-      collapseOnSelect
+      expanded={expanded}
+      onSelect={onSelect}
+      onToggle={onToggle}
       expand="lg"
       className={
         navColour
           ? "sticky navigation-position"
           : "navbar__component navigation-position"
       }>
-      <Container>
-        <Navbar.Brand href="/">
+      <Container className="flex-nowrap">
+        <Navbar.Brand as={Link} to="/">
           <img src={logo} className="img-fluid logo" alt="brand" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto">
-            <NavLink location={location} to={ Routes.Home }><HomeIcon /></NavLink>
-            <NavLink location={location} to={ Routes.Workshops }>
-              { SiteContent.Title.Workshops }
-            </NavLink>
-            <NavLink location={location} to={ Routes.Mentorships }>
-              { SiteContent.Title.Mentorships }
-            </NavLink>
-            <NavDropdown title={ SiteContent.Title.AboutTheProject } id="navbarScrollingDropdown">
-              <NavDropdownItem location={location} to={ Routes.About }>
-                { SiteContent.Title.AboutTheProject }
-              </NavDropdownItem>
-              <NavDropdown.Divider />
-              <NavDropdownItem location={location} to={ Routes.Team }>
-                { SiteContent.Title.OurTeam }
-              </NavDropdownItem>
-            </NavDropdown>
-            <NavLink location={location} to={ Routes.Contacts }>
-              { SiteContent.Title.Contacts }
-            </NavLink>
-          </Nav>
-        </Navbar.Collapse>
+        <Navbar.Offcanvas
+          id="responsive-navbar-nav"
+          aria-labelledby="responsive-navbar-nav"
+          placement="end"
+        >
+          <Offcanvas.Header closeButton className="mx-2">
+            <Container>
+              <Link to="/" onClick={onSelect}>
+                <img src={logo} className="img-fluid logo w-80" alt="brand" />
+              </Link>
+            </Container>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="ms-auto">
+              <NavLink location={location} to={ Routes.Home } onSelect={onSelect} className="d-none d-lg-block">
+                <HomeIcon />
+              </NavLink>
+              <NavLink location={location} to={ Routes.Workshops } onSelect={onSelect} className="text-center">
+                { SiteContent.Title.Workshops }
+              </NavLink>
+              <NavLink location={location} to={ Routes.Mentorships } onSelect={onSelect} className="text-center">
+                { SiteContent.Title.Mentorships }
+              </NavLink>
+              <NavDropdown title={ SiteContent.Title.AboutUs } id="navbarScrollingDropdown" className="text-center">
+                <NavDropdownItem location={location} to={Routes.About} onSelect={onSelect} className="text-center text-lg-center">
+                  { SiteContent.Title.AboutTheProject }
+                </NavDropdownItem>
+                <NavDropdownItem location={location} to={Routes.Team} onSelect={onSelect} className="text-center">
+                  { SiteContent.Title.OurTeam }
+                </NavDropdownItem>
+              </NavDropdown>
+              <NavLink location={location} to={Routes.Contacts} onSelect={onSelect} className="text-center">
+                { SiteContent.Title.Contacts }
+              </NavLink>
+            </Nav>
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
       </Container>
     </Navbar>
   );
