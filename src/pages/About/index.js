@@ -5,22 +5,24 @@ import { Routes, SiteContent } from "Constants";
 function About() {
   const breadcrumbs = [
     {
-      label: "Home",
-      href: "/",
+      label: SiteContent.Title.Home,
+      href: Routes.Home,
     },
     {
       label: SiteContent.Title.AboutUs,
       href: Routes.About,
     },
-    { label: "Sobre o projecto" },
+    {
+      label: SiteContent.Title.AboutTheProject 
+    },
   ];
 
   return (
     <PageLayout
-      title={SiteContent.Title.AboutUs}
+      title={ SiteContent.Title.AboutUs }
       description="bla bla bla cenas"
       breadcrumbsData={breadcrumbs}>
-      <h1>As Raparigas do Código</h1>
+      <h1>{ SiteContent.Title.RdC }</h1>
     </PageLayout>
   );
 }

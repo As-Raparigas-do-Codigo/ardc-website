@@ -5,9 +5,9 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
-import logo from "assets/ardc-logo.svg";
 import { ReactComponent as HomeIcon } from "assets/icons/home.svg";
-import { SiteContent, Routes } from "Constants";
+import logo from "assets/ardc-logo.svg";
+import { Routes, SiteContent } from "Constants";
 import "components/navbar.scss"
 
 const NavLink = ({ location, to, children }) => (
@@ -52,17 +52,25 @@ function NavBarComponent() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <NavLink location={location} to="/"><HomeIcon /></NavLink>
-            <NavLink location={location} to={Routes.Workshops}>{SiteContent.Title.Workshops}</NavLink>
-            <NavLink location={location} to={Routes.Mentorships}>{SiteContent.Title.Mentorships}</NavLink>
-            <NavDropdown title={SiteContent.Title.AboutTheProject} id="navbarScrollingDropdown">
-              <NavDropdownItem location={location} to={Routes.About}>
-                {SiteContent.Title.AboutTheProject}
+            <NavLink location={location} to={ Routes.Home }><HomeIcon /></NavLink>
+            <NavLink location={location} to={ Routes.Workshops }>
+              { SiteContent.Title.Workshops }
+            </NavLink>
+            <NavLink location={location} to={ Routes.Mentorships }>
+              { SiteContent.Title.Mentorships }
+            </NavLink>
+            <NavDropdown title={ SiteContent.Title.AboutTheProject } id="navbarScrollingDropdown">
+              <NavDropdownItem location={location} to={ Routes.About }>
+                { SiteContent.Title.AboutTheProject }
               </NavDropdownItem>
               <NavDropdown.Divider />
-              <NavDropdownItem location={location} to={Routes.Team}>A nossa equipa</NavDropdownItem>
+              <NavDropdownItem location={location} to={ Routes.Team }>
+                { SiteContent.Title.OurTeam }
+              </NavDropdownItem>
             </NavDropdown>
-            <NavLink location={location} to={Routes.Contacts}>Contactos</NavLink>
+            <NavLink location={location} to={ Routes.Contacts }>
+              { SiteContent.Title.Contacts }
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

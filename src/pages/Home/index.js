@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Routes, SiteContent } from "Constants";
-// components
 import LinkArrow from "components/LinkArrow";
 import BasicCardsRow from "components/BasicCardsRow";
 import LinkButton from "components/LinkButton";
@@ -9,7 +8,6 @@ import MentorsSection from "components/MentorsSection";
 import SponsorSection from "components/SponsorSection";
 import WorkshopsSection from "components/WorkshopsSection";
 import PageLayout from "components/PageLayout";
-// images
 import banner from "assets/home/banner.jpeg";
 import missao from "assets/home/missao.png";
 import events from "../../data/events";
@@ -21,19 +19,21 @@ const IntroContent = () => {
   return (
     <>
       <Col className="my-4 align-self-center">
-        <h1 className="py-1">Somos As Raparigas do Código</h1>
+        <h1 className="py-1">{ SiteContent.Title.WeAreRdC }</h1>
         <p className="py-1">
-          {SiteContent.Text.WhoWeAre}
+          { SiteContent.Text.WhoWeAre }
         </p>
         <Container className="p-0">
           <Row>
             <Col className="col-auto align-self-center">
-              <LinkButton href={Routes.Workshops} variant="primary">
+              <LinkButton href={ Routes.Workshops } variant="primary">
                 Conhece os nossos workshops
               </LinkButton>
             </Col>
             <Col className="col-auto align-self-center">
-              <LinkArrow href={Routes.Collaborate}>Quero colaborar!</LinkArrow>
+              <LinkArrow href={ Routes.Collaborate }>
+                { SiteContent.Title.IWantToCollaborate }
+              </LinkArrow>
             </Col>
           </Row>
         </Container>
@@ -130,9 +130,7 @@ function Home() {
           </Row>
         </Container>
       </div>
-
       <div className="zig-zag"></div>
-
       <BasicCardsRow
         data={events}
         heading={"Talks & Eventos"}

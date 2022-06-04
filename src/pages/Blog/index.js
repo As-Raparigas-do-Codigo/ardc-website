@@ -8,7 +8,9 @@ function Blog() {
       label: SiteContent.Title.Home,
       href: Routes.Home,
     },
-    { label: SiteContent.Title.Blog },
+    {
+      label: SiteContent.Title.Blog
+    },
   ];
 
   return (

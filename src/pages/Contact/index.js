@@ -54,7 +54,9 @@ const Contact = ({ banner }) => {
       label: SiteContent.Title.Home,
       href: Routes.Home,
     },
-    { label: SiteContent.Title.Contacts },
+    { 
+      label: SiteContent.Title.Contacts
+    },
   ];
   return (
     <PageLayout

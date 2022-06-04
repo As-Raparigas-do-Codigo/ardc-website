@@ -9,7 +9,9 @@ function Events() {
       label: SiteContent.Title.Home,
       href: Routes.Home,
     },
-    { label: SiteContent.Title.Events },
+    { 
+      label: SiteContent.Title.Events
+    },
   ];
   return (
     <PageLayout

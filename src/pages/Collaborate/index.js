@@ -52,7 +52,9 @@ const Collaborate = () => {
       label: SiteContent.Title.Home,
       href: Routes.Home,
     },
-    { label: "Queres colaborar connosco?" },
+    {
+      label: SiteContent.Title.DoYouWantToCollaborate
+    },
   ];
 
   return (

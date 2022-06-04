@@ -84,7 +84,9 @@ const Mentorship = () => {
       label: SiteContent.Title.Home,
       href: Routes.Home,
     },
-    { label: SiteContent.Title.Mentorships },
+    {
+      label: SiteContent.Title.Mentorships
+    },
   ];
 
   return (
