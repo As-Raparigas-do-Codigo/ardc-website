@@ -41,7 +41,7 @@ const Informations = () => {
       <hr className={"mt-5"} />
       <Row className={"mt-5"}>
         <Col sm={12} md={6}>
-          <h4>As Raparigas do Código</h4>
+          <h4>{ SiteContent.Title.RdC }</h4>
           <p className={"w-75"}>
             { SiteContent.Text.WhoWeAre }
           </p>
@@ -58,30 +58,30 @@ const Informations = () => {
               <h4>O Projecto</h4>
               <ul>
                 <li>
-                  <a href={Routes.About}> { SiteContent.Title.AboutUs }</a>
+                  <a href={ Routes.About }> { SiteContent.Title.AboutUs }</a>
                 </li>
                 <li>
-                  <a href={Routes.Collaborate}> Quero Colaborar!</a>
+                  <a href={ Routes.Collaborate }> { SiteContent.Title.IWantToCollaborate }</a>
                 </li>
                 <li>
-                  <a href={Routes.Blog}> { SiteContent.Title.Blog }</a>
+                  <a href={ Routes.Blog }> { SiteContent.Title.Blog }</a>
                 </li>
                 <li>
-                  <a href={Routes.Contacts}> { SiteContent.Title.Contacts }</a>
+                  <a href={ Routes.Contacts }> { SiteContent.Title.Contacts }</a>
                 </li>
               </ul>
             </Col>
             <Col sm={12} md={6} className={"mt-3"}>
-              <h4>{SiteContent.Title.Events}</h4>
+              <h4>{ SiteContent.Title.Events }</h4>
               <ul>
                 <li>
-                  <a href={Routes.Workshops}> { SiteContent.Title.Workshops }</a>
+                  <a href={ Routes.Workshops }> { SiteContent.Title.Workshops }</a>
                 </li>
                 <li>
-                  <a href={Routes.Mentorships}> { SiteContent.Title.Mentorships }</a>
+                  <a href={ Routes.Mentorships }> { SiteContent.Title.Mentorships }</a>
                 </li>
                 <li>
-                  <a href={Routes.Events}> { SiteContent.Title.Events }</a>
+                  <a href={ Routes.Events }> { SiteContent.Title.Events }</a>
                 </li>
               </ul>
             </Col>

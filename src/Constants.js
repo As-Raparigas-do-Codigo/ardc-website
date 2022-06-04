@@ -23,11 +23,16 @@ const SiteContent = {
     Blog: "Blog",
     Collaborate: "Colabora",
     Contacts: "Contactos",
+    DoYouWantToCollaborate: "Queres colaborar connosco?",
     Events: "Eventos",  
     Home: "Home",
+    IWantToCollaborate: "Quero Colaborar!",
     LegalInfo: "Informação Legal",
     Mentorships: "Mentorias",
+    OurTeam: "A nossa equipa",
     PrivacyPolicy: "Politica de Privacidade",
+    RdC: "As Raparigas do Código",
+    WeAreRdC: "Somos As Raparigas do Código",
     Workshops: "Workshops"
   },
   Text: {

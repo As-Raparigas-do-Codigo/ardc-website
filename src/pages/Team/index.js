@@ -1,21 +1,23 @@
 import React from "react";
-import PersonCard from "components/PersonCard";
 import { Row, Col, Container } from "react-bootstrap";
-import team from "data/team";
+import PersonCard from "components/PersonCard";
 import PageLayout from "components/PageLayout";
-import { Routes } from "Constants";
+import { SiteContent, Routes } from "Constants";
+import team from "data/team";
 
 function Team() {
   const breadcrumbs = [
     {
-      label: "Home",
-      href: "/",
+      label: SiteContent.Title.Home,
+      href: Routes.Home,
     },
     {
-      label: "Sobre nós",
+      label: SiteContent.Title.AboutUs,
       href: Routes.Team,
     },
-    { label: "A nossa equipa" },
+    { 
+      label: SiteContent.Title.OurTeam 
+    },
   ];
 
   team.sort((a, b) => {
