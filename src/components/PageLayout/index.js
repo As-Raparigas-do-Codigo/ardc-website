@@ -34,7 +34,7 @@ function PageLayout({
       {bannerHasInfo && <div className="zig-zag"></div>}
 
       {breadcrumbsData && (
-        <div className="breadcrumb mt-4">
+        <div className="breadcrumb mt-4 d-none d-sm-block">
           <Container>
             <Row>
               <Col>
