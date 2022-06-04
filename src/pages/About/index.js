@@ -16,12 +16,11 @@ function About() {
       label: SiteContent.Title.AboutTheProject 
     },
   ];
-
   return (
     <PageLayout
       title={ SiteContent.Title.AboutUs }
       description="bla bla bla cenas"
-      breadcrumbsData={breadcrumbs}>
+      breadcrumbsData={ breadcrumbs }>
       <h1>{ SiteContent.Title.RdC }</h1>
     </PageLayout>
   );

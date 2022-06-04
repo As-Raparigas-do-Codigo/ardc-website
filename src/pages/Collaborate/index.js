@@ -56,12 +56,11 @@ const Collaborate = () => {
       label: SiteContent.Title.DoYouWantToCollaborate
     },
   ];
-
   return (
     <PageLayout
-      title={SiteContent.Title.Collaborate}
+      title={ SiteContent.Title.Collaborate }
       description="bla bla bla cenas"
-      breadcrumbsData={breadcrumbs}>
+      breadcrumbsData={ breadcrumbs }>
       <Container fluid="md">
         <Row>
           <CollaborateContent />
