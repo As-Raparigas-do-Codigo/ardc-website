@@ -1,19 +1,19 @@
 import React from "react";
-
 import PageLayout from "components/PageLayout";
+import { Routes, SiteContent } from "Constants";
 
 function Blog() {
   const breadcrumbs = [
     {
-      label: "Home",
-      href: "/",
+      label: SiteContent.Title.Home,
+      href: Routes.Home,
     },
-    { label: "Blog" },
+    { label: SiteContent.Title.Blog },
   ];
 
   return (
     <PageLayout
-      title="Blog"
+      title={SiteContent.Title.Blog}
       description="bla bla bla cenas"
       breadcrumbsData={breadcrumbs}>
       <h1>Blog page</h1>

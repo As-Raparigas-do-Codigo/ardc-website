@@ -1,6 +1,7 @@
 import React from "react";
 import MentorshipForm from "components/Forms/MentorshipForm";
 import { Container, Col, Row } from "react-bootstrap";
+import { Routes, SiteContent } from "Constants";
 import PageLayout from "components/PageLayout";
 
 const MentorshipInfoSection = () => (
@@ -80,10 +81,10 @@ const MentorsSection = () => (
 const Mentorship = () => {
   const breadcrumbs = [
     {
-      label: "Home",
-      href: "/",
+      label: SiteContent.Title.Home,
+      href: Routes.Home,
     },
-    { label: "Mentorias" },
+    { label: SiteContent.Title.Mentorships },
   ];
 
   return (

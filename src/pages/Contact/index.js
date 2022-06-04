@@ -1,8 +1,8 @@
 import React from "react";
-import ContactForm from "components/Forms/ContactForm";
 import { Container, Row, Col } from "react-bootstrap";
-import Constants from "Constants";
+import ContactForm from "components/Forms/ContactForm";
 import PageLayout from "components/PageLayout";
+import { Constants, Routes, SiteContent } from "Constants";
 
 const ContactInfoSection = () => (
   <Container className="my-5 py-5">
@@ -51,14 +51,14 @@ const ContactFormSection = () => (
 const Contact = ({ banner }) => {
   const breadcrumbs = [
     {
-      label: "Home",
-      href: "/",
+      label: SiteContent.Title.Home,
+      href: Routes.Home,
     },
-    { label: "Contactos" },
+    { label: SiteContent.Title.Contacts },
   ];
   return (
     <PageLayout
-      title="Contactos"
+      title={SiteContent.Title.Contacts}
       description="bla bla bla cenas"
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="padding-top-first-section">

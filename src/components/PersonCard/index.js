@@ -2,6 +2,7 @@ import React from "react";
 import Icon from "components/Icon";
 import LinkButton from "components/LinkButton";
 import "./person-card.scss";
+import { Routes } from "Constants";
 
 function PersonCard({ person = null }) {
   const Colaborar = () => {
@@ -16,7 +17,7 @@ function PersonCard({ person = null }) {
         <div className="person-card__body">
           <h5>Gostavas de colaborar connosco?</h5>
           <div className="person-card__icons">
-            <LinkButton href="/colaborar">Quero Colaborar!</LinkButton>
+            <LinkButton href={Routes.Collaborate}>Quero Colaborar!</LinkButton>
           </div>
         </div>
       </div>

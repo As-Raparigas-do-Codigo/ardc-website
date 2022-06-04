@@ -3,6 +3,7 @@ import CollaboratorForm from "components/Forms/CollaboratorForm";
 import NumberedRow from "components/NumberedRow";
 import PageLayout from "components/PageLayout";
 import { Container, Row } from "react-bootstrap";
+import { Routes, SiteContent } from "../../Constants";
 
 const CollaborateFormSection = () => (
   <Container className="my-5 py-5 padding-top-first-section">
@@ -48,15 +49,15 @@ const CollaborateContent = () => (
 const Collaborate = () => {
   const breadcrumbs = [
     {
-      label: "Home",
-      href: "/",
+      label: SiteContent.Title.Home,
+      href: Routes.Home,
     },
     { label: "Queres colaborar connosco?" },
   ];
 
   return (
     <PageLayout
-      title="Colabora"
+      title={SiteContent.Title.Collaborate}
       description="bla bla bla cenas"
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md">

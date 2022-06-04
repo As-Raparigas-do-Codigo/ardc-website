@@ -2,8 +2,8 @@ import React from "react";
 import PersonCard from "components/PersonCard";
 import { Row, Col, Container } from "react-bootstrap";
 import team from "data/team";
-
 import PageLayout from "components/PageLayout";
+import { Routes } from "Constants";
 
 function Team() {
   const breadcrumbs = [
@@ -13,7 +13,7 @@ function Team() {
     },
     {
       label: "Sobre nós",
-      href: "/team",
+      href: Routes.Team,
     },
     { label: "A nossa equipa" },
   ];
