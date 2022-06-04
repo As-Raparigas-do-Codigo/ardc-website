@@ -30,6 +30,8 @@ $grid-breakpoints: (
 );
 
 // Customizar navbar
+$nav-link-color: $color-primary;
+$nav-link-hover-color: $color-secondary;
 $navbar-light-color: $color-primary;
 $navbar-light-active-color: $color-secondary;
 $navbar-light-hover-color: $color-primary;
@@ -50,6 +52,7 @@ $dropdown-link-hover-bg: $white;
 
 body {
   margin: 0;
+  padding: 0 !important;
   font-family: $font-family-primary;
 }
 
