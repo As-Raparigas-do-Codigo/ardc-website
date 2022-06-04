@@ -9,15 +9,26 @@ import { ReactComponent as HomeIcon } from "assets/icons/home.svg";
 import { Link } from "react-router-dom";
 import "components/navbar.scss"
 import Constants from "Constants";
+import { Offcanvas } from "react-bootstrap";
 
-const NavLink = ({ location, to, children }) => (
-  <Nav.Link as={Link} to={to} className={{ 'active': location.pathname === to }}>
+const NavLink = ({ location, to, children, onSelect, className = '' }) => (
+  <Nav.Link
+    className={`${className} ${location.pathname === to ? 'active' : ''}`}
+    onClick={onSelect}
+    as={Link}
+    to={to}
+  >
     {children}
   </Nav.Link>
 );
 
-const NavDropdownItem = ({ location, to, children }) => (
-  <NavDropdown.Item as={Link} to={to} className={{ 'active': location.pathname === to }}>
+const NavDropdownItem = ({ location, to, children, onSelect, className = '' }) => (
+  <NavDropdown.Item
+    className={`${className} ${location.pathname === to ? 'active' : ''}`}
+    onClick={onSelect}
+    as={Link}
+    to={to}
+    >
     {children}
   </NavDropdown.Item>
 );
@@ -25,6 +36,15 @@ const NavDropdownItem = ({ location, to, children }) => (
 function NavBarComponent() {
   const [navColour, updateNavbar] = useState(false);
   const location = useLocation();
+  const [expanded, setExpanded] = useState(false);
+
+  const onSelect = () => {
+    setExpanded(false);
+  };
+
+  const onToggle = () => {
+    setExpanded(!expanded);
+  };
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -38,35 +58,51 @@ function NavBarComponent() {
 
   return (
     <Navbar
-      collapseOnSelect
+      expanded={expanded}
+      onSelect={onSelect}
+      onToggle={onToggle}
       expand="lg"
       className={
         navColour
           ? "sticky navigation-position"
           : "navbar__component navigation-position"
       }>
-      <Container>
-        <Navbar.Brand href="/">
+      <Container className="flex-nowrap">
+        <Navbar.Brand as={Link} to="/">
           <img src={logo} className="img-fluid logo" alt="brand" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto">
-            <NavLink location={location} to="/"><HomeIcon /></NavLink>
-            <NavLink location={location} to={Constants.WorkshopsRoute}>Workshops</NavLink>
-            <NavLink location={location} to={Constants.MentorshipsRoute}>Mentorias</NavLink>
-            {/* <NavLink location={location} to={Constants.EventsRoute}>Eventos</NavLink> */}
-            {/* <NavLink location={location} to={Constants.BlogRoute}>Blog</NavLink> */}
-            <NavDropdown title="Sobre Nós" id="navbarScrollingDropdown">
-              <NavDropdownItem location={location} to={Constants.AboutRoute}>
-                Sobre o projecto
-              </NavDropdownItem>
-              <NavDropdown.Divider />
-              <NavDropdownItem location={location} to={Constants.TeamRoute}>A nossa equipa</NavDropdownItem>
-            </NavDropdown>
-            <NavLink location={location} to={Constants.ContactsRoute}>Contactos</NavLink>
-          </Nav>
-        </Navbar.Collapse>
+        <Navbar.Offcanvas
+          id="responsive-navbar-nav"
+          aria-labelledby="responsive-navbar-nav"
+          placement="end"
+        >
+          <Offcanvas.Header closeButton className="mx-2">
+            <Container>
+              <Link to="/" onClick={onSelect}>
+                <img src={logo} className="img-fluid logo w-80" alt="brand" />
+              </Link>
+            </Container>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="ms-auto">
+              <NavLink location={location} to="/" onSelect={onSelect} className="d-none d-lg-block"><HomeIcon /></NavLink>
+              <NavLink location={location} to={Constants.WorkshopsRoute} onSelect={onSelect} className="text-center">Workshops</NavLink>
+              <NavLink location={location} to={Constants.MentorshipsRoute} onSelect={onSelect} className="text-center">Mentorias</NavLink>
+              {/* <NavLink location={location} to={Constants.EventsRoute}>Eventos</NavLink> */}
+              {/* <NavLink location={location} to={Constants.BlogRoute}>Blog</NavLink> */}
+              <NavDropdown title="Sobre Nós" id="navbarScrollingDropdown" className="text-center">
+                <NavDropdownItem location={location} to={Constants.AboutRoute} onSelect={onSelect} className="text-center text-lg-center">
+                  Sobre o projecto
+                </NavDropdownItem>
+                <NavDropdownItem location={location} to={Constants.TeamRoute} onSelect={onSelect} className="text-center">
+                  A nossa equipa
+                </NavDropdownItem>
+              </NavDropdown>
+              <NavLink location={location} to={Constants.ContactsRoute} onSelect={onSelect} className="text-center">Contactos</NavLink>
+            </Nav>
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
       </Container>
     </Navbar>
   );
