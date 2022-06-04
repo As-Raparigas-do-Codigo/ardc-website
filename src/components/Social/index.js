@@ -6,7 +6,7 @@ import "./social.scss";
 function SocialBar() {
   return <div className="social-bar">
     <Container>
-        <SocialLinks/>
+        <SocialLinks variant="light" />
     </Container>
   </div>;
 }
