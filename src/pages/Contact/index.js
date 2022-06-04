@@ -60,7 +60,7 @@ const Contact = ({ banner }) => {
   ];
   return (
     <PageLayout
-      title={SiteContent.Title.Contacts}
+      title={ SiteContent.Title.Contacts }
       description="bla bla bla cenas"
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="padding-top-first-section">

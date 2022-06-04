@@ -12,9 +12,10 @@ function Workshops() {
       label: SiteContent.Title.Workshops
     },
   ];
-
   return (
-    <PageLayout title={ SiteContent.Title.Workshops } description="Oferecemos vários cursos e workshops de programação, totalmente gratuitos e adaptados às necessidades e interesses das alunas inscritas." breadcrumbsData={breadcrumbs}>
+    <PageLayout title={ SiteContent.Title.Workshops } 
+                description="Oferecemos vários cursos e workshops de programação, totalmente gratuitos e adaptados às necessidades e interesses das alunas inscritas." 
+                breadcrumbsData={ breadcrumbs }>
       <h1>Workshops Page</h1>
     </PageLayout>
   );

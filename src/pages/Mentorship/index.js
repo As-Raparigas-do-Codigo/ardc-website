@@ -88,12 +88,11 @@ const Mentorship = () => {
       label: SiteContent.Title.Mentorships
     },
   ];
-
   return (
     <PageLayout
       title="Mentoria"
       description="bla bla bla cenas"
-      breadcrumbsData={breadcrumbs}>
+      breadcrumbsData={ breadcrumbs }>
       <Container fluid="md">
         <Row>
           <Col>
