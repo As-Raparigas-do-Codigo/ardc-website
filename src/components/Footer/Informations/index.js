@@ -63,9 +63,13 @@ const Informations = () => {
                 <li>
                   <a href={ Routes.Collaborate }> { SiteContent.Title.IWantToCollaborate }</a>
                 </li>
-                <li>
+                {
+                  /* TODO: retirar comentário depois do MVP
+                  <li>
                   <a href={ Routes.Blog }> { SiteContent.Title.Blog }</a>
-                </li>
+                  </li>
+                  */
+                }
                 <li>
                   <a href={ Routes.Contacts }> { SiteContent.Title.Contacts }</a>
                 </li>
