@@ -8,10 +8,7 @@ const ContactInfoSection = () => (
   <Container className="my-5 py-5">
     <Row>
       <h2 className="mb-2">Envia-nos um email.</h2>
-      <p className="mb-4">
-        Placeholder de texto para descrição, lorem ipsum dolor sit amet,
-        consectetur adipiscing elit.
-      </p>
+      <p className="mb-4">Estes são os contactos que poderás usar.</p>
     </Row>
     <Row>
       <Container>
@@ -54,14 +51,14 @@ const Contact = ({ banner }) => {
       label: SiteContent.Title.Home,
       href: Routes.Home,
     },
-    { 
-      label: SiteContent.Title.Contacts
+    {
+      label: SiteContent.Title.Contacts,
     },
   ];
   return (
     <PageLayout
-      title={ SiteContent.Title.Contacts }
-      description="bla bla bla cenas"
+      title="Contactos"
+      description="Não hesites em contactar-nos para qualquer informacão"
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="padding-top-first-section">
         <Row>

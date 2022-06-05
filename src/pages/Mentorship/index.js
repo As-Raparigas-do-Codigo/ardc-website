@@ -7,29 +7,14 @@ import PageLayout from "components/PageLayout";
 const MentorshipInfoSection = () => (
   <Container className="my-5 py-5 padding-top-first-section">
     <Row>
-      <h6 className="mb-2">SUB-HEADING PLACEHOLDER </h6>
-      <h2 className="mb-2">
-        Heading placeholder lorem ipsum dolor sit amet, consectetur.
-      </h2>
+      <h6 className="mb-2">PROGRAMA DE MENTORIA</h6>
+      <h2 className="mb-2">O que fazemos?</h2>
       <p className="mb-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-        aliquet eros et gravida convallis. Integer placerat blandit arcu, nec
-        imperdiet urna pretium at. Sed et massa nec tortor dapibus facilisis et
-        ut lacus. Integer tincidunt augue ut sem scelerisque hendrerit. Fusce
-        vel laoreet sapien. In hac habitasse platea dictumst. Etiam a ultrices
-        turpis. Donec id auctor nunc. Donec vitae pharetra massa, sit amet
-        venenatis quam.
+        Temos uma equipa vasta de diversas qualidades que te podem ajudar a
+        guiar-te por este mundo das tecnologias.
       </p>
-      <p className="mb-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-        aliquet eros et gravida convallis. Integer placerat blandit arcu, nec
-        imperdiet urna pretium at. Sed et massa nec tortor dapibus facilisis et
-        ut lacus.
-      </p>
-      <p className="mb-4">
-        Placeholder de texto para descrição, lorem ipsum dolor sit amet,
-        consectetur adipiscing elit.
-      </p>
+      <p className="mb-4">A nossa equipa de mentores irá seguir-</p>
+      <p className="mb-4">Existem duas opcões disponíveis:</p>
     </Row>
     <Row>
       <ul className="mx-4">
@@ -57,7 +42,7 @@ const MentorshipFormSection = () => (
     <Row>
       <h2 className="mb-2">Procuras mentoria?</h2>
       <p className="mb-4">
-        Placeholder de texto para descrição, lorem ipsum dolor sit amet.
+        Preenche este formulário e iremos responder-te o mais breve possível.
       </p>
     </Row>
     <Row>
@@ -85,14 +70,14 @@ const Mentorship = () => {
       href: Routes.Home,
     },
     {
-      label: SiteContent.Title.Mentorships
+      label: SiteContent.Title.Mentorships,
     },
   ];
   return (
     <PageLayout
       title="Mentoria"
-      description="bla bla bla cenas"
-      breadcrumbsData={ breadcrumbs }>
+      description="Sentes-te perdid@? Precisas de apoio mas não sabes a quem pedir?"
+      breadcrumbsData={breadcrumbs}>
       <Container fluid="md">
         <Row>
           <Col>
