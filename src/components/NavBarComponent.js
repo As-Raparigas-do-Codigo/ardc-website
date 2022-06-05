@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Offcanvas } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
