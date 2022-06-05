@@ -43,8 +43,8 @@ function Team() {
 
   return (
     <PageLayout
-      title="Team"
-      description="Conhece a nossa equipa!"
+      title={ SiteContent.Title.OurTeam }
+      description={ SiteContent.Subtitle.OurTeam }
       breadcrumbsData={breadcrumbs}>
       <Container className={"mt-5 padding-top-bottom-medium"}>
         <Row>

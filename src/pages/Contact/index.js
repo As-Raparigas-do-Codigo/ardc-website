@@ -57,8 +57,8 @@ const Contact = ({ banner }) => {
   ];
   return (
     <PageLayout
-      title="Contactos"
-      description="Não hesites em contactar-nos para qualquer informacão"
+      title={ SiteContent.Title.Contacts }
+      description={ SiteContent.Subtitle.Contacts }
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="padding-top-first-section">
         <Row>

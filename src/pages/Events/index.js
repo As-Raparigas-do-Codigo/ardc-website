@@ -16,7 +16,7 @@ function Events() {
   return (
     <PageLayout
       title={ SiteContent.Title.Events }
-      description="bla bla bla cenas"
+      description={ SiteContent.Subtitle.Events }
       breadcrumbsData={ breadcrumbs }>
       <h1>{ SiteContent.Title.Events }</h1>
     </PageLayout>

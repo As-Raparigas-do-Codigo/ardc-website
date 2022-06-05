@@ -40,10 +40,8 @@ const MentorshipInfoSection = () => (
 const MentorshipFormSection = () => (
   <Container className="my-5 p-5 box-radius shadow-lg">
     <Row>
-      <h2 className="mb-2">Procuras mentoria?</h2>
-      <p className="mb-4">
-        Preenche este formulário e iremos responder-te o mais breve possível.
-      </p>
+      <h2 className="mb-2">{ SiteContent.Title.MentorshipForm }</h2>
+      <p className="mb-4">{ SiteContent.Subtitle.MentorshipForm }</p>
     </Row>
     <Row>
       <MentorshipForm />
@@ -54,7 +52,7 @@ const MentorshipFormSection = () => (
 const MentorsSection = () => (
   <Container>
     <Row>
-      <h2 className="mb-2">Conhece os nossos mentores.</h2>
+      <h2 className="mb-2">{ SiteContent.Title.GetToKnowOurMentors }</h2>
       <p className="mb-4">
         Placeholder de texto para descrição, lorem ipsum dolor sit amet.
       </p>
@@ -75,8 +73,8 @@ const Mentorship = () => {
   ];
   return (
     <PageLayout
-      title="Mentoria"
-      description="Sentes-te perdid@? Precisas de apoio mas não sabes a quem pedir?"
+      title={ SiteContent.Title.Mentorship }
+      description={ SiteContent.Subtitle.Mentorship }
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md">
         <Row>
