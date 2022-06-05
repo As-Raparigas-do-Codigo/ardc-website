@@ -1,5 +1,3 @@
-import Workshops from "pages/Workshops";
-
 const Constants = {
   Email: "asraparigasdocodigo@gmail.com"
 };
