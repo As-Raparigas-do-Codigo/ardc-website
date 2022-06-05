@@ -44,7 +44,7 @@ function Team() {
   return (
     <PageLayout
       title="Team"
-      description="bla bla bla cenas"
+      description="Conhece a nossa equipa!"
       breadcrumbsData={breadcrumbs}>
       <Container className={"mt-5 padding-top-bottom-medium"}>
         <Row>
