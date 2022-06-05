@@ -19,7 +19,7 @@ function About() {
   return (
     <PageLayout
       title={ SiteContent.Title.AboutUs }
-      description="bla bla bla cenas"
+      description={ SiteContent.Subtitle.AboutUs }
       breadcrumbsData={ breadcrumbs }>
       <h1>{ SiteContent.Title.RdC }</h1>
     </PageLayout>

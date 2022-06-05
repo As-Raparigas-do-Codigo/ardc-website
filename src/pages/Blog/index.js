@@ -16,9 +16,9 @@ function Blog() {
   return (
     <PageLayout
       title={ SiteContent.Title.Blog }
-      description="bla bla bla cenas"
+      description={ SiteContent.Subtitle.Blog }
       breadcrumbsData={breadcrumbs}>
-      <h1>Blog page</h1>
+      <h1>{ SiteContent.Title.Blog }</h1>
     </PageLayout>
   );
 }

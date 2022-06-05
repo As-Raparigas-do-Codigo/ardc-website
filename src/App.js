@@ -24,7 +24,7 @@ function App() {
         </header>
 
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path={SiteRoutes.Home} element={<Home />} />
           <Route exact path={SiteRoutes.Workshops} element={<Workshops />} />
           <Route exact path={SiteRoutes.Mentorships} element={<Mentorship />} />
           <Route exact path={SiteRoutes.Events} element={<Events />} />

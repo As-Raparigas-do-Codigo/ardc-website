@@ -55,8 +55,8 @@ function Home() {
       <SponsorSection />
       <hr />
       <WorkshopsSection
-        heading={"Os nossos workshops"}
-        subtitle={ SiteContent.Text.OurWorkshops } />
+        heading={ SiteContent.Title.OurWorkshops }
+        subtitle={ SiteContent.Subtitle.Workshops } />
 
       <div className="zig-zag"></div>
 
