@@ -29,6 +29,7 @@ const SiteContent = {
     Home: "Home",
     IWantToCollaborate: "Quero Colaborar!",
     LegalInfo: "Informação Legal",
+    MentorshipProgram: "PROGRAMA DE MENTORIA",
     MentorshipForm: "Procuras mentoria?",
     Mentorship: "Mentoria",
     Mentorships: "Mentorias",
@@ -37,6 +38,7 @@ const SiteContent = {
     OurWorkshops: "Os nossos workshops",
     RdC: "As Raparigas do Código",
     WeAreRdC: "Somos As Raparigas do Código",
+    WhatDoWeDo: "O que fazemos?",
     Workshops: "Workshops"
   },
   Subtitle: {
@@ -44,6 +46,7 @@ const SiteContent = {
     Blog: "TBD",
     Collaborate: "TBD",
     Contacts: "Não hesites em contactar-nos para qualquer informacão",
+    GetToKnowOurMentors: "TBD",
     Events: "TBD",
     Mentorship: "Sentes-te perdid@? Precisas de apoio mas não sabes a quem pedir?",
     MentorshipForm: "Preenche este formulário e iremos responder-te o mais breve possível.",

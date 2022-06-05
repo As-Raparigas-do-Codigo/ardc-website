@@ -7,8 +7,8 @@ import PageLayout from "components/PageLayout";
 const MentorshipInfoSection = () => (
   <Container className="my-5 py-5 padding-top-first-section">
     <Row>
-      <h6 className="mb-2">PROGRAMA DE MENTORIA</h6>
-      <h2 className="mb-2">O que fazemos?</h2>
+      <h6 className="mb-2">{ SiteContent.Title.MentorshipProgram }</h6>
+      <h2 className="mb-2">{ SiteContent.Title.WhatDoWeDo }</h2>
       <p className="mb-4">
         Temos uma equipa vasta de diversas qualidades que te podem ajudar a
         guiar-te por este mundo das tecnologias.
@@ -53,9 +53,7 @@ const MentorsSection = () => (
   <Container>
     <Row>
       <h2 className="mb-2">{ SiteContent.Title.GetToKnowOurMentors }</h2>
-      <p className="mb-4">
-        Placeholder de texto para descrição, lorem ipsum dolor sit amet.
-      </p>
+      <p className="mb-4">{ SiteContent.Subtitle.GetToKnowOurMentors }</p>
     </Row>
     <Row>TODO: mentor cards</Row>
   </Container>
