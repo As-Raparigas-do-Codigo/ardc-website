@@ -3,6 +3,9 @@ import MentorshipForm from "components/Forms/MentorshipForm";
 import { Container, Col, Row } from "react-bootstrap";
 import PageLayout from "components/PageLayout";
 
+import LinkArrow from "components/LinkArrow";
+import Constants from "Constants";
+
 const MentorshipInfoSection = () => (
   <Container className="my-5 py-5 padding-top-first-section">
     <Row>
@@ -48,6 +51,9 @@ const MentorshipInfoSection = () => (
         </p>
       </ul>
     </Row>
+    <LinkArrow href={Constants.TeamRoute} variant="primary">
+      Conhece os nossos mentores
+    </LinkArrow>
   </Container>
 );
 
@@ -65,17 +71,27 @@ const MentorshipFormSection = () => (
   </Container>
 );
 
-const MentorsSection = () => (
-  <Container>
-    <Row>
-      <h2 className="mb-2">Conhece os nossos mentores.</h2>
-      <p className="mb-4">
-        Placeholder de texto para descrição, lorem ipsum dolor sit amet.
-      </p>
-    </Row>
-    <Row>TODO: mentor cards</Row>
-  </Container>
-);
+// const MentorsSection = () => {
+//   const mentorsTeam = team.filter((x) => x.roles.includes("mentor"));
+
+//   return (
+//     <Container className={"mt-5 padding-top-bottom-medium"}>
+//       <Row>
+//         <h2 className="mb-2">Conhece os nossos mentores.</h2>
+//         <p className="mb-4">
+//           Placeholder de texto para descrição, lorem ipsum dolor sit amet.
+//         </p>
+//       </Row>
+//       <Row className={"mt-4"} xs={1} md={1} lg={4}>
+//         {mentorsTeam.map((item, key) => (
+//           <Col className={"mt-4"}>
+//             <PersonCard key={key} person={item} />
+//           </Col>
+//         ))}
+//       </Row>
+//     </Container>
+//   );
+// };
 
 const Mentorship = () => {
   const breadcrumbs = [
@@ -100,9 +116,9 @@ const Mentorship = () => {
             <MentorshipFormSection />
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <MentorsSection />
-        </Row>
+        </Row> */}
       </Container>
     </PageLayout>
   );
