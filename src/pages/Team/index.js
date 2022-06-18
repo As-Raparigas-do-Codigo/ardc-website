@@ -18,25 +18,25 @@ function Team() {
     { label: "A nossa equipa" },
   ];
 
-  team.sort((a, b) => {
-    const nameA = a.name.toLowerCase();
-    const nameB = b.name.toLowerCase();
-    if (nameA < nameB) {
-      return -1;
-    }
-    if (nameA > nameB) {
-      return 1;
-    }
+  // team.sort((a, b) => {
+  //   const nameA = a.name.toLowerCase();
+  //   const nameB = b.name.toLowerCase();
+  //   if (nameA < nameB) {
+  //     return -1;
+  //   }
+  //   if (nameA > nameB) {
+  //     return 1;
+  //   }
 
-    return 0;
-  });
+  //   return 0;
+  // });
 
   const founderTeam = team.filter((x) => x.roles.includes("founder"));
   const adminTeam = team.filter(
     (x) => x.roles.includes("admin") && !x.roles.includes("founder")
   );
-  const mentorsTeam = team.filter(
-    (x) => x.roles.includes("mentor") && !x.roles.includes("admin")
+  const collabTeam = team.filter(
+    (x) => x.roles.includes("collaborator") && !x.roles.includes("admin")
   );
 
   return (
@@ -46,7 +46,7 @@ function Team() {
       breadcrumbsData={breadcrumbs}>
       <Container className={"mt-5 padding-top-bottom-medium"}>
         <Row>
-          <h2>Direção</h2>
+          <h2>Fundadora</h2>
         </Row>
         <Row className={"mt-4"} xs={1} md={1} lg={4}>
           {founderTeam.map((item, key) => (
@@ -66,10 +66,10 @@ function Team() {
           ))}
         </Row>
         <Row className={"mt-5"}>
-          <h2>Mentores</h2>
+          <h2>Colaboradores</h2>
         </Row>
         <Row className={"mt-4 mb-5"} xs={1} lg={4}>
-          {mentorsTeam.map((item, key) => (
+          {collabTeam.map((item, key) => (
             <Col className={"mt-4"}>
               <PersonCard key={key} person={item} />
             </Col>
