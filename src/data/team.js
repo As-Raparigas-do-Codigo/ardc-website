@@ -5,7 +5,10 @@ const team = [
     name: "Miriam Santos",
     company: "Univ. de Coimbra",
     job: "PhD Candidate",
-    social: [{ linkedin: "https://www.linkedin.com/in/miriamseoanesantos/" }, { other: "https://miriamspsantos.github.io/" }],
+    social: [
+      { linkedin: "https://www.linkedin.com/in/miriamseoanesantos/" },
+      { other: "https://miriamspsantos.github.io/" },
+    ],
     avatar: "miriam.jpg",
   },
   {
@@ -14,7 +17,10 @@ const team = [
     name: "Ricardo Pereira",
     company: "Univ. de Coimbra",
     job: "Machine Learning Researcher",
-    social: [{ linkedin: "https://www.linkedin.com/in/ricardo-dc-pereira" }, { other: "https://ricardodcpereira.com/" }],
+    social: [
+      { linkedin: "https://www.linkedin.com/in/ricardo-dc-pereira" },
+      { other: "https://ricardodcpereira.com/" },
+    ],
     avatar: "ricardo.png",
   },
   {
@@ -50,7 +56,10 @@ const team = [
     name: "Inês Martins",
     company: "SWORD Health",
     job: "Application Security Engineer",
-    social: [{ linkedin: "https://www.linkedin.com/in/ines-af-martins/" }, { other: "https://inesmartins.github.io/" }],
+    social: [
+      { linkedin: "https://www.linkedin.com/in/ines-af-martins/" },
+      { other: "https://inesmartins.github.io/" },
+    ],
     avatar: "ines-martins.jpg",
   },
   {
@@ -59,7 +68,10 @@ const team = [
     name: "Isabel Costa",
     company: "Deliveroo",
     job: "Software Engineer",
-    social: [{ linkedin: "https://www.linkedin.com/in/isabelcmdcosta/" }, { other: "https://isabelcosta.github.io/" }],
+    social: [
+      { linkedin: "https://www.linkedin.com/in/isabelcmdcosta/" },
+      { other: "https://isabelcosta.github.io/" },
+    ],
     avatar: "isabel.jpg",
   },
   {
@@ -86,7 +98,12 @@ const team = [
     name: "Pedro Fonseca",
     company: "KWAN",
     job: "Software Engineer",
-    social: [{ linkedin: "http://linkedin.com/in/pedromlfonseca" }, {instagram: "https://instagram.com/thedrawingdev"}, {github: "https://github.com/PMLF"}, { other: "https://pmlf.github.io/" }],
+    social: [
+      { linkedin: "http://linkedin.com/in/pedromlfonseca" },
+      { instagram: "https://instagram.com/thedrawingdev" },
+      { github: "https://github.com/PMLF" },
+      { other: "https://pmlf.github.io/" },
+    ],
     avatar: "pedro-fonseca.png",
   },
   {
@@ -100,16 +117,19 @@ const team = [
   },
   {
     id: 12,
-    roles: ["mentor"],
+    roles: ["mentor", "collaborator"],
     name: "Adolfo Ferreira",
     company: "Spider AF",
     job: "Designer",
-    social: [{ linkedin: "https://www.linkedin.com/in/iamadolfo/" }, { instagram: "https://instagram.com/fromadolfo" }],
+    social: [
+      { linkedin: "https://www.linkedin.com/in/iamadolfo/" },
+      { instagram: "https://instagram.com/fromadolfo" },
+    ],
     avatar: "adolfo.png",
   },
   {
     id: 13,
-    roles: ["mentor"],
+    roles: ["mentor", "collaborator"],
     name: "Catarina Silva",
     company: "Nature Research Centre",
     job: "Chief Researcher",
@@ -118,34 +138,41 @@ const team = [
   },
   {
     id: 14,
-    roles: ["mentor"],
+    roles: ["mentor", "collaborator"],
     name: "Daniela Domingues",
     company: "Critical Software",
     job: "Software Engineer",
-    social: [{ linkedin: "https://www.linkedin.com/in/daniela-domingues-04b72645/" }],
+    social: [
+      { linkedin: "https://www.linkedin.com/in/daniela-domingues-04b72645/" },
+    ],
     avatar: "daniela-domingues.jpg",
   },
   {
     id: 15,
-    roles: ["mentor"],
+    roles: ["mentor", "collaborator"],
     name: "Flávia Ribeiro",
     company: "InvoiceXpress",
     job: "Software Engineer",
-    social: [{ linkedin: "https://www.linkedin.com/in/daniela-domingues-04b72645/" }],
+    social: [
+      { linkedin: "https://www.linkedin.com/in/daniela-domingues-04b72645/" },
+    ],
     avatar: "flavia.png",
   },
   {
     id: 16,
-    roles: ["mentor"],
+    roles: ["mentor", "collaborator"],
     name: "Marina Baltar",
     company: "UAb - Eng. Informática",
     job: "Account Manager",
-    social: [{ linkedin: "https://www.linkedin.com/in/flaviamribeiro/" }, { instagram: "https://www.instagram.com/flavia_ribeiro_18/" }],
+    social: [
+      { linkedin: "https://www.linkedin.com/in/flaviamribeiro/" },
+      { instagram: "https://www.instagram.com/flavia_ribeiro_18/" },
+    ],
     avatar: "marina.jpg",
   },
   {
     id: 17,
-    roles: ["mentor"],
+    roles: ["mentor", "collaborator"],
     name: "Pedro Torres",
     company: "Salsify",
     job: "Senior Director of Engineering",
@@ -154,22 +181,63 @@ const team = [
   },
   {
     id: 18,
-    roles: ["mentor"],
+    roles: ["mentor", "collaborator"],
     name: "Rita Pereira",
     company: "Tibber",
     job: "Product Manager",
-    social: [{ linkedin: "https://www.linkedin.com/in/ritasousapereira/" }, {github: "https://github.com/ritapereira10"}],
+    social: [
+      { linkedin: "https://www.linkedin.com/in/ritasousapereira/" },
+      { github: "https://github.com/ritapereira10" },
+    ],
     avatar: "rita.jpg",
   },
   {
     id: 19,
-    roles: ["mentor"],
+    roles: ["mentor", "collaborator"],
     name: "Sérgio Silva",
     company: "Microsoft",
     job: "Principal Software Engineering Manager",
-    social: [{ linkedin: "hhttps://www.linkedin.com/in/sergio-a-silva/" }],
+    social: [{ linkedin: "https://www.linkedin.com/in/sergio-a-silva/" }],
     avatar: "sergio.png",
-  }
+  },
+  {
+    id: 20,
+    roles: ["mentor", "collaborator"],
+    name: "Ines de Matos",
+    company: "Talkdesk",
+    job: "Software Engineer",
+    social: [
+      { linkedin: "https://www.linkedin.com/in/itmm92/" },
+      { instagram: "https://instagram.com/nenas.analog" },
+      { medium: "https://ines-matos.medium.com/" },
+      { github: "https://github.com/toothlesspanda" },
+    ],
+    avatar: "inesmatos.png",
+  },
+  {
+    id: 21,
+    roles: ["mentor", "collaborator"],
+    name: "Rita Peixoto",
+    company: "UM - Eng. Informática",
+    job: "Software Engineer",
+    social: [
+      { linkedin: "https://www.linkedin.com/in/anaritapeixoto/" },
+      { github: "https://github.com/rita-peixoto" },
+    ],
+    avatar: "ritapeixoto.png",
+  },
+  {
+    id: 22,
+    roles: ["mentor", "collaborator"],
+    name: "Marta Dias",
+    company: "Talkdesk",
+    job: "Software Engineer",
+    social: [
+      { linkedin: "https://www.linkedin.com/in/marta-r-dias/" },
+      { instagram: "https://www.instagram.com/aanalista/" },
+    ],
+    avatar: "marta.png",
+  },
 ];
 
 export default team;
