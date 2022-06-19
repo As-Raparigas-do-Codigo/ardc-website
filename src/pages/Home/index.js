@@ -8,6 +8,7 @@ import MentorsSection from "components/MentorsSection";
 import SponsorSection from "components/SponsorSection";
 import WorkshopsSection from "components/WorkshopsSection";
 import PageLayout from "components/PageLayout";
+import Statistics from "components/Statistics";
 // import BannerPage from "components/BannerPage";
 import Constants from "Constants";
 // images
@@ -35,7 +36,9 @@ const IntroContent = () => {
               </LinkButton>
             </Col>
             <Col className="col-auto align-self-center">
-              <LinkArrow href={Constants.CollaborateRoute}>Quero colaborar!</LinkArrow>
+              <LinkArrow href={Constants.CollaborateRoute}>
+                Quero colaborar!
+              </LinkArrow>
             </Col>
           </Row>
         </Container>
@@ -102,21 +105,8 @@ function Home() {
           </Row>
         </Container>
         <hr></hr>
-        <Container className="py-5 px-2">
-          <Row>
-            <Col className="px-5 my-2">
-              <h1 className="text-center fs-x5 fw-bold mb-1">123+</h1>
-              <p className="text-center">Workshops realizados</p>
-            </Col>
-            <Col className="px-5 my-2">
-              <h1 className="text-center fs-x5 fw-bold mb-1">45+</h1>
-              <p className="text-center">Professores & Mentores</p>
-            </Col>
-            <Col className="px-5 my-2">
-              <h1 className="text-center fs-x5 fw-bold mb-1">678</h1>
-              <p className="text-center">Alunas inscritas</p>
-            </Col>
-          </Row>
+        <Container className="px-2">
+          <Statistics />
         </Container>
       </div>
       <div className="bg-blue">
@@ -132,7 +122,10 @@ function Home() {
                   tecnologia, gostávamos muito de poder contar contigo!
                 </p>
                 <div className="text-center">
-                  <LinkButton href={Constants.CollaborateRoute} variant="primary">
+                  <LinkButton
+                    href={Constants.CollaborateRoute}
+                    variant="primary"
+                  >
                     Quero colaborar!
                   </LinkButton>
                 </div>
