@@ -7,6 +7,7 @@ import LinkButton from "components/LinkButton";
 import MentorsSection from "components/MentorsSection";
 import SponsorSection from "components/SponsorSection";
 import WorkshopsSection from "components/WorkshopsSection";
+import KPISSection from "components/KPISSection";
 import PageLayout from "components/PageLayout";
 import banner from "assets/home/banner.jpeg";
 import missao from "assets/home/missao.png";
@@ -54,6 +55,9 @@ function Home() {
     <PageLayout title="Home" customBanner={<IntroContent />}>
       <SponsorSection />
       <hr />
+
+      <div className="zig-zag"></div>
+
       <WorkshopsSection
         heading={ SiteContent.Title.OurWorkshops }
         subtitle={ SiteContent.Subtitle.Workshops } />
@@ -91,22 +95,7 @@ function Home() {
           </Row>
         </Container>
         <hr></hr>
-        <Container className="py-5 px-2">
-          <Row>
-            <Col className="px-5 my-2">
-              <h1 className="text-center fs-x5 fw-bold mb-1">123+</h1>
-              <p className="text-center">Workshops realizados</p>
-            </Col>
-            <Col className="px-5 my-2">
-              <h1 className="text-center fs-x5 fw-bold mb-1">45+</h1>
-              <p className="text-center">Professores & Mentores</p>
-            </Col>
-            <Col className="px-5 my-2">
-              <h1 className="text-center fs-x5 fw-bold mb-1">678</h1>
-              <p className="text-center">Alunas inscritas</p>
-            </Col>
-          </Row>
-        </Container>
+        <KPISSection />
       </div>
       <div className="bg-blue">
         <Container className="py-5">
