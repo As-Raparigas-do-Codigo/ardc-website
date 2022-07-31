@@ -1,25 +1,8 @@
-import HorizontalCard from "../HorizontalCard";
+import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import workshops from "../../data/workshops";
+import WorkshopsList from "components/WorkshopsList";
 import LinkArrow from "components/LinkArrow";
 import { Routes } from "Constants";
-
-const articlesArray = workshops.map((item) => (
-  <Col lg={12} md={12} sm={12} key={item.id}>
-    <HorizontalCard
-      alt={item.alt}
-      date={item.date}
-      description={item.description}
-      imgPath={item.image}
-      buttonUrl={item.buttonUrl}
-      buttonLabel={item.buttonLabel}
-      linkUrl={item.linkUrl}
-      linkLabel={item.linkLabel}
-      duration={item.duration}
-      title={item.title}
-    />
-  </Col>
-));
 
 function WorkshopsSection(props) {
   return (
@@ -33,7 +16,9 @@ function WorkshopsSection(props) {
           <LinkArrow href={Routes.Workshop}>Ver todos os workshops</LinkArrow>
         </Col>
       </Row>
-      <Row>{articlesArray}</Row>
+      <Row>
+        <WorkshopsList next/>
+      </Row>
     </Container>
   );
 }
