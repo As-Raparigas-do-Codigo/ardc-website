@@ -1,14 +1,15 @@
 import React, { useMemo, useState } from "react";
 
-import HorizontalCard from "components/HorizontalCard";
 import { Row, Col } from "react-bootstrap";
+import HorizontalCard from "components/HorizontalCard";
+import { SiteContent } from "Constants";
 import dataWorkshops from "../../data/workshops";
 
 function WorkshopsList({next = false, all = false, old = false}) {
   const [workshops] = useState(dataWorkshops)
-  let title = "Todos os nossos workshops"
-  let subtitle = "Podes ver todos os workshops que já realizámos e aqueles que ainda estarão por acontecer!"
-  let emptyList = "Se queres workshops contacta-nos!"
+  let title = SiteContent.Title.WorkshopsList 
+  let subtitle = SiteContent.Subtitle.WorkshopsList
+  let emptyList = SiteContent.Empty.WorkshopsList
 
   const isFutureWorkshop = (date) => {
     return new Date(date).getTime() > Date.now()
@@ -25,14 +26,13 @@ function WorkshopsList({next = false, all = false, old = false}) {
   }, [workshops, old, next])
 
   if(next){
-    title =  "Próximos workshops"
-    subtitle = "Reserva já o teu lugar!"
-    emptyList = "Aguarda pelos próximos workshops!"
+    title = SiteContent.Title.WorkshopsListNext 
+    subtitle = SiteContent.Subtitle.WorkshopsListNext
+    emptyList = SiteContent.Empty.WorkshopsListNext
   }
 
   if(old){
-    title =  "Os nossos workshops"
-    subtitle = "Visita os workshops que já realizámos"
+    subtitle = SiteContent.Subtitle.WorkshopsListOld
   }
 
   return (
@@ -49,7 +49,7 @@ function WorkshopsList({next = false, all = false, old = false}) {
               description={item.description}
               imgPath={item.image}
               buttonUrl={"mailto:asraparigasdocodigo@gmail.com"}
-              buttonLabel={isFutureWorkshop(item.startingDate) ? "Quero inscrever-me !" : null}
+              buttonLabel={isFutureWorkshop(item.startingDate) ? SiteContent.Buttons.WorkshopCard : null}
               linkUrl={item.linkUrl}
               // linkLabel={"Ver mais detalhes"}
               duration={item.descriptiveDuration}
