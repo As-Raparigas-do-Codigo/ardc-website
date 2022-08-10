@@ -3,9 +3,10 @@ import MentorshipForm from "components/Forms/MentorshipForm";
 import { Container, Col, Row } from "react-bootstrap";
 import { Routes, SiteContent } from "Constants";
 import PageLayout from "components/PageLayout";
+// import PersonCard from "components/PersonCard";
+// import team from "data/team";
 
 import LinkArrow from "components/LinkArrow";
-import Constants from "Constants";
 
 const MentorshipInfoSection = () => (
   <Container className="my-5 py-5 padding-top-first-section">
@@ -46,7 +47,7 @@ const MentorshipInfoSection = () => (
         </p>
       </ul>
     </Row>
-    <LinkArrow href={Constants.TeamRoute} variant="primary">
+    <LinkArrow href={Routes.TeamRoute} variant="primary">
       Conhece os nossos mentores
     </LinkArrow>
   </Container>
@@ -64,25 +65,25 @@ const MentorshipFormSection = () => (
   </Container>
 );
 
-const MentorsSection = () => {
-  const mentorsTeam = team.filter((x) => x.roles.includes("mentor"));
+// const MentorsSection = () => {
+//   const mentorsTeam = team.filter((x) => x.roles.includes("mentor"));
 
-  return (
-   <Container className={"mt-5 padding-top-bottom-medium"}>
-     <Row>
-      <h2 className="mb-2">{SiteContent.Title.GetToKnowOurMentors}</h2>
-      <p className="mb-4">{SiteContent.Subtitle.GetToKnowOurMentors}</p>
-     </Row>
-     <Row className={"mt-4"} xs={1} md={1} lg={4}>
-       {mentorsTeam.map((item, key) => (
-         <Col className={"mt-4"}>
-           <PersonCard key={key} person={item} />
-         </Col>
-       ))}
-     </Row>
-   </Container>
-  );
-};
+//   return (
+//    <Container className={"mt-5 padding-top-bottom-medium"}>
+//      <Row>
+//       <h2 className="mb-2">{SiteContent.Title.GetToKnowOurMentors}</h2>
+//       <p className="mb-4">{SiteContent.Subtitle.GetToKnowOurMentors}</p>
+//      </Row>
+//      <Row className={"mt-4"} xs={1} md={1} lg={4}>
+//        {mentorsTeam.map((item, key) => (
+//          <Col className={"mt-4"}>
+//            <PersonCard key={key} person={item} />
+//          </Col>
+//        ))}
+//      </Row>
+//    </Container>
+//   );
+// };
 
 
 const Mentorship = () => {
