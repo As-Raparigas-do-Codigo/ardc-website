@@ -35,7 +35,8 @@ const SiteContent = {
     Mentorships: "Mentorias",
     OurTeam: "A nossa equipa",
     PrivacyPolicy: "Politica de Privacidade",
-    OurWorkshops: "Os nossos workshops",
+    WorkshopsList: "Os nossos workshops",
+    WorkshopsListNext: "Próximos workshops",
     RdC: "As Raparigas do Código",
     WeAreRdC: "Somos As Raparigas do Código",
     WhatDoWeDo: "O que fazemos?",
@@ -51,13 +52,23 @@ const SiteContent = {
     Mentorship: "Sentes-te perdid@? Precisas de apoio mas não sabes a quem pedir?",
     MentorshipForm: "Preenche este formulário e iremos responder-te o mais breve possível.",
     OurTeam: "Conhece a nossa equipa!",
-    Workshops: "Oferecemos vários cursos e workshops de programação, totalmente gratuitos e adaptados às necessidades e interesses das alunas inscritas."
+    Workshops: "Oferecemos vários cursos e workshops de programação, totalmente gratuitos e adaptados às necessidades e interesses das alunas inscritas.",
+    WorkshopsList: "Podes ver todos os workshops que já realizámos e aqueles que ainda estarão por acontecer!",
+    WorkshopsListNext: "Reserva já o teu lugar!",
+    WorkshopsListOld: "Visita os workshops que já realizámos"
   },
   Text: {
     Copyright: "Copyright © 2022 As Raparigas do Código. All Rights Reserved",
     WhoWeAre: "Uma organização focada em desmistificar o papel da mulher na tecnologia, promovendo a inclusão digital e encorajando mais raparigas e mulheres a ingressar no sector das tecnologias de informação.",
     OurMission_p1: "Garantir que todas as mulheres que queiram aprender sobre tecnologia tenham um espaço onde o possam fazer rodeadas de colegas e pares que as representam e apoiam.",
     OurMission_p2: "Queremos desmistificar o papel da mulher na tecnologia, encorajando mais raparigas e mulheres a ingressar no sector das tecnologias de informação.",
+  },
+  Empty: {
+    WorkshopsList: "Infelizmente, não temos workshops, mas aceitamos sugestões. Contacta-nos!",
+    WorkshopsListNext: "Aguarda pelos próximos workshops! Se tiveres sugestões, contacta-nos!",
+  },
+  Buttons: {
+    WorkshopCard: "Quero inscrever-me !"
   }
 }
 
