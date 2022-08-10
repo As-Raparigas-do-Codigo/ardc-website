@@ -2,7 +2,7 @@ import HorizontalCard from "../HorizontalCard";
 import { Row, Col, Container } from "react-bootstrap";
 import workshops from "../../data/workshops";
 import LinkArrow from "components/LinkArrow";
-import Constants from "Constants";
+import { Routes } from "Constants";
 
 const articlesArray = workshops.map((item) => (
   <Col lg={12} md={12} sm={12} key={item.id}>
@@ -30,7 +30,7 @@ function WorkshopsSection(props) {
           <p className="">{props.subtitle}</p>
         </Col>
         <Col className="col-auto align-self-end">
-          <LinkArrow href={Constants.WorkshopsRoute}>Ver todos os workshops</LinkArrow>
+          <LinkArrow href={Routes.Workshop}>Ver todos os workshops</LinkArrow>
         </Col>
       </Row>
       <Row>{articlesArray}</Row>

@@ -1,6 +1,6 @@
 import React from "react";
 import ToastMessage from "components/Toast";
-import Constants from "Constants";
+import { Constants } from "Constants";
 
 export const SuccessToastMessage = ({ show = false, onClose }) => (
   <ToastMessage

@@ -1,16 +1,22 @@
 import React from "react";
-
-import HelpProject from "components/Footer/HelpProject";
 import Informations from "components/Footer/Informations";
-
 import "./footer.scss";
 
+// TODO: retirar comentário após MVP
+//import HelpProject from "components/Footer/HelpProject";
+
 const Footer = function () {
-  return (
+    // 
+    //
+    //<HelpProject />
+    //</div>
+    return (
     <div>
-      <div className="bg-pink text-center">
-        <HelpProject />
-      </div>
+      {
+        /* TODO: retirar comentário após MVP
+        <div className="bg-pink text-center">
+        */
+      }
       <div className="gradient">
         <Informations />
       </div>

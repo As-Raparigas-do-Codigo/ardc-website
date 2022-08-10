@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-
-// Assets
+// assets
 import AWS from "assets/sponsorlogos/aws.png";
 import PortoTechHub from "assets/sponsorlogos/portohub.png";
 import WIT from "assets/sponsorlogos/wit.png";
@@ -23,7 +22,7 @@ const SponsorImages = [{
 
 const SponsorSection = () => (
   <Container className="mt-5 pt-md-5">
-    <h6 className="sponsor-title text-uppercase text-center mb-4">headline para principais parceiros aqui, lorem ipsum dolor.</h6>
+    <h6 className="sponsor-title text-uppercase text-center mb-4">Os nossos parceiros</h6>
     <Row className="justify-content-center">
       {SponsorImages.map(image => (
         <Col key={image.id} className="col-auto py-3 my-md-5 mx-5">

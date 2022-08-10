@@ -1,17 +1,14 @@
 import React from "react";
-import ContactForm from "components/Forms/ContactForm";
 import { Container, Row, Col } from "react-bootstrap";
-import Constants from "Constants";
+import ContactForm from "components/Forms/ContactForm";
 import PageLayout from "components/PageLayout";
+import { Constants, Routes, SiteContent } from "Constants";
 
 const ContactInfoSection = () => (
   <Container className="my-5 py-5">
     <Row>
       <h2 className="mb-2">Envia-nos um email.</h2>
-      <p className="mb-4">
-        Placeholder de texto para descrição, lorem ipsum dolor sit amet,
-        consectetur adipiscing elit.
-      </p>
+      <p className="mb-4">Estes são os contactos que poderás usar.</p>
     </Row>
     <Row>
       <Container>
@@ -51,15 +48,17 @@ const ContactFormSection = () => (
 const Contact = ({ banner }) => {
   const breadcrumbs = [
     {
-      label: "Home",
-      href: "/",
+      label: SiteContent.Title.Home,
+      href: Routes.Home,
     },
-    { label: "Contactos" },
+    {
+      label: SiteContent.Title.Contacts,
+    },
   ];
   return (
     <PageLayout
-      title="Contactos"
-      description="bla bla bla cenas"
+      title={ SiteContent.Title.Contacts }
+      description={ SiteContent.Subtitle.Contacts }
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="padding-top-first-section">
         <Row>

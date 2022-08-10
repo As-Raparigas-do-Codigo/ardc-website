@@ -1,18 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "pages/Home";
-import Workshops from "pages/Workshops";
-import Mentorship from "pages/Mentorship";
-import Events from "pages/Events";
 import About from "pages/About";
 import Blog from "pages/Blog";
+import Collaborate from "pages/Collaborate";
 import Contact from "pages/Contact";
+import Events from "pages/Events";
+import Home from "pages/Home";
+import Mentorship from "pages/Mentorship";
+import Team from "pages/Team";
+import Workshops from "pages/Workshops";
 import NavBar from "components/NavBarComponent";
 import Social from "components/Social";
-import Team from "pages/Team";
-import Collaborate from "pages/Collaborate";
 import Footer from "components/Footer";
-import Constants from "Constants";
+import { Routes as SiteRoutes } from "Constants";
 
 function App() {
   return (
@@ -24,15 +24,15 @@ function App() {
         </header>
 
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path={Constants.WorkshopsRoute} element={<Workshops />} />
-          <Route exact path={Constants.MentorshipsRoute} element={<Mentorship />} />
-          <Route exact path={Constants.EventsRoute} element={<Events />} />
-          <Route exact path={Constants.BlogRoute} element={<Blog />} />
-          <Route exact path={Constants.TeamRoute} element={<Team />} />
-          <Route exact path={Constants.AboutRoute} element={<About />} />
-          <Route exact path={Constants.ContactsRoute} element={<Contact />} />
-          <Route exact path={Constants.CollaborateRoute} element={<Collaborate />} />
+          <Route exact path={SiteRoutes.Home} element={<Home />} />
+          <Route exact path={SiteRoutes.Workshops} element={<Workshops />} />
+          <Route exact path={SiteRoutes.Mentorships} element={<Mentorship />} />
+          <Route exact path={SiteRoutes.Events} element={<Events />} />
+          <Route exact path={SiteRoutes.Blog} element={<Blog />} />
+          <Route exact path={SiteRoutes.Team} element={<Team />} />
+          <Route exact path={SiteRoutes.About} element={<About />} />
+          <Route exact path={SiteRoutes.Contacts} element={<Contact />} />
+          <Route exact path={SiteRoutes.Collaborate} element={<Collaborate />} />
         </Routes>
 
         <Footer />
