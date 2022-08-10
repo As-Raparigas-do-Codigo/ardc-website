@@ -10,7 +10,7 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 4,
-    slidesToSlide: 2 // optional, default to 1.
+    slidesToSlide: 3 // optional, default to 1.
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -27,7 +27,12 @@ const responsive = {
 function MentorsSection() {
   const mentorsCards = team
     .filter((x) => x.roles.includes('mentor'))
-    .map((item) => <PersonCard key={item.id} person={item} />);
+    .slice(0, 8)
+    .map((item) => <PersonCard key={item.id} person={item} />)
+    .sort((a, b) => {
+      return a.id - b.id;
+    });
+
   return (
     <Container className="mt-5 pt-md-5 pb-5">
       <Row>
@@ -51,8 +56,7 @@ function MentorsSection() {
           dotListClass="custom-dots"
           itemClass="card-item"
           // customButtonGroup={<CustomButtonGroupAsArrows />}
-          infinite={false}
-        >
+          infinite={false}>
           {mentorsCards}
         </Carousel>
       </Row>
