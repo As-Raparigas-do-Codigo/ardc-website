@@ -1,15 +1,15 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Offcanvas } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
-import { useLocation } from "react-router-dom";
-import logo from "assets/ardc-logo.svg";
 import { ReactComponent as HomeIcon } from "assets/icons/home.svg";
-import { Link } from "react-router-dom";
+import logo from "assets/ardc-logo.svg";
+import { Routes, SiteContent } from "Constants";
 import "components/navbar.scss"
-import Constants from "Constants";
-import { Offcanvas } from "react-bootstrap";
 
 const NavLink = ({ location, to, children, onSelect, className = '' }) => (
   <Nav.Link
@@ -86,20 +86,26 @@ function NavBarComponent() {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="ms-auto">
-              <NavLink location={location} to="/" onSelect={onSelect} className="d-none d-lg-block"><HomeIcon /></NavLink>
-              <NavLink location={location} to={Constants.WorkshopsRoute} onSelect={onSelect} className="text-center">Workshops</NavLink>
-              <NavLink location={location} to={Constants.MentorshipsRoute} onSelect={onSelect} className="text-center">Mentorias</NavLink>
-              {/* <NavLink location={location} to={Constants.EventsRoute}>Eventos</NavLink> */}
-              {/* <NavLink location={location} to={Constants.BlogRoute}>Blog</NavLink> */}
-              <NavDropdown title="Sobre Nós" id="navbarScrollingDropdown" className="text-center">
-                <NavDropdownItem location={location} to={Constants.AboutRoute} onSelect={onSelect} className="text-center text-lg-center">
-                  Sobre o projecto
+              <NavLink location={location} to={ Routes.Home } onSelect={onSelect} className="d-none d-lg-block">
+                <HomeIcon />
+              </NavLink>
+              <NavLink location={location} to={ Routes.Workshops } onSelect={onSelect} className="text-center">
+                { SiteContent.Title.Workshops }
+              </NavLink>
+              <NavLink location={location} to={ Routes.Mentorships } onSelect={onSelect} className="text-center">
+                { SiteContent.Title.Mentorships }
+              </NavLink>
+              <NavDropdown title={ SiteContent.Title.AboutUs } id="navbarScrollingDropdown" className="text-center">
+                <NavDropdownItem location={location} to={Routes.About} onSelect={onSelect} className="text-center text-lg-center">
+                  { SiteContent.Title.AboutTheProject }
                 </NavDropdownItem>
-                <NavDropdownItem location={location} to={Constants.TeamRoute} onSelect={onSelect} className="text-center">
-                  A nossa equipa
+                <NavDropdownItem location={location} to={Routes.Team} onSelect={onSelect} className="text-center">
+                  { SiteContent.Title.OurTeam }
                 </NavDropdownItem>
               </NavDropdown>
-              <NavLink location={location} to={Constants.ContactsRoute} onSelect={onSelect} className="text-center">Contactos</NavLink>
+              <NavLink location={location} to={Routes.Contacts} onSelect={onSelect} className="text-center">
+                { SiteContent.Title.Contacts }
+              </NavLink>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

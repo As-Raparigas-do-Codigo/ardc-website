@@ -1,26 +1,27 @@
 import React from "react";
 import PageLayout from "components/PageLayout";
-import Constants from "Constants";
+import { Routes, SiteContent } from "Constants";
 
 function About() {
   const breadcrumbs = [
     {
-      label: "Home",
-      href: "/",
+      label: SiteContent.Title.Home,
+      href: Routes.Home,
     },
     {
-      label: "Sobre nós",
-      href: Constants.AboutRoute,
+      label: SiteContent.Title.AboutUs,
+      href: Routes.About,
     },
-    { label: "Sobre o projecto" },
+    {
+      label: SiteContent.Title.AboutTheProject 
+    },
   ];
-
   return (
     <PageLayout
-      title="Sobre o projecto"
-      description="bla bla bla cenas"
-      breadcrumbsData={breadcrumbs}>
-      <h1>As Raparigas do Código</h1>
+      title={ SiteContent.Title.AboutUs }
+      description={ SiteContent.Subtitle.AboutUs }
+      breadcrumbsData={ breadcrumbs }>
+      <h1>{ SiteContent.Title.RdC }</h1>
     </PageLayout>
   );
 }

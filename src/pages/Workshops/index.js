@@ -1,19 +1,22 @@
 import React from "react";
-
 import PageLayout from "components/PageLayout";
+import { Routes, SiteContent } from "Constants";
 
 function Workshops() {
   const breadcrumbs = [
     {
-      label: "Home",
-      href: "/",
+      label: SiteContent.Title.Home,
+      href: Routes.Home,
     },
-    { label: "Workshops" },
+    {
+      label: SiteContent.Title.Workshops
+    },
   ];
-
   return (
-    <PageLayout title="Workshops" description="Oferecemos vários cursos e workshops de programação, totalmente gratuitos e adaptados às necessidades e interesses das alunas inscritas." breadcrumbsData={breadcrumbs}>
-      <h1>Workshops Page</h1>
+    <PageLayout title={ SiteContent.Title.Workshops }
+                description={ SiteContent.Subtitle.Workshops } 
+                breadcrumbsData={ breadcrumbs }>
+      <h1>{ SiteContent.Title.Workshops }</h1>
     </PageLayout>
   );
 }

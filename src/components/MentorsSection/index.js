@@ -1,5 +1,4 @@
 import React from "react";
-
 import PersonCard from "components/PersonCard";
 import { Row, Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
@@ -34,7 +33,9 @@ function MentorsSection() {
       <Row>
         <h2 className="mb-2">Conhece os nossos mentores.</h2>
         <p className="mb-5">
-          Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          A nossa equipa é formada por pessoas provenientes de diversas áreas profissionais.
+          <br/>
+          Da engenharia ao design, das ciências ao marketing, a trabalhar juntos por um futuro mais inclusivo.
         </p>
       </Row>
 
