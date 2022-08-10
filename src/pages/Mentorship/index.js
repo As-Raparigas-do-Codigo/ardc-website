@@ -3,11 +3,10 @@ import MentorshipForm from "components/Forms/MentorshipForm";
 import { Container, Col, Row } from "react-bootstrap";
 import { Routes, SiteContent } from "Constants";
 import PageLayout from "components/PageLayout";
-import PersonCard from "components/PersonCard";
-import team from "data/team";
+// import PersonCard from "components/PersonCard";
+// import team from "data/team";
 
 import LinkArrow from "components/LinkArrow";
-import { Constants } from "Constants";
 
 const MentorshipInfoSection = () => (
   <Container className="my-5 py-5 padding-top-first-section">
@@ -48,7 +47,7 @@ const MentorshipInfoSection = () => (
         </p>
       </ul>
     </Row>
-    <LinkArrow href={Constants.TeamRoute} variant="primary">
+    <LinkArrow href={Routes.TeamRoute} variant="primary">
       Conhece os nossos mentores
     </LinkArrow>
   </Container>
