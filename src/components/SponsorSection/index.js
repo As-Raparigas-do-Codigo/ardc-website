@@ -1,37 +1,39 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-// assets
-import AWS from "assets/sponsorlogos/aws.png";
-import PortoTechHub from "assets/sponsorlogos/portohub.png";
-import WIT from "assets/sponsorlogos/wit.png";
 import "./sponsorSection.scss";
+import sponsors from "data/sponsors";
 
-const SponsorImages = [{
-  id: 1,
-  src: AWS,
-  alt: "AWS logo"
-}, {
-  id: 2,
-  src: PortoTechHub,
-  alt: "Porto Tech Hub logo"
-}, {
-  id: 3,
-  src: WIT,
-  alt: "Women In Tech logo"
-}];
+const SponsorSection = () => {
 
-const SponsorSection = () => (
-  <Container className="mt-5 pt-md-5">
-    <h6 className="sponsor-title text-uppercase text-center mb-4">Os nossos parceiros</h6>
-    <Row className="justify-content-center">
-      {SponsorImages.map(image => (
-        <Col key={image.id} className="col-auto py-3 my-md-5 mx-5">
-          <img className="sponsor-image" src={image.src} alt={image.alt} />
-        </Col>
-      ))}
+  const renderSponsorLogos = (level) => {
+    const hasGrayscale = [2, 3].includes(level)
+    const sponsorsToDisplay = sponsors.filter(
+      sponsor => sponsor.level === level
+    )
+
+    return <Row className="justify-content-center">
+      {
+        sponsorsToDisplay.map(
+          sponsor => (
+            <Col key={sponsor.id} className="col-auto py-3 my-md-2 mx-2">
+              <a href={sponsor.link}>
+                <img className={`${hasGrayscale ? "sponsor-grayscale" : null} sponsor-${level}`} src={sponsor.image} alt={sponsor.alt} />
+              </a>
+            </Col>
+          )
+        )
+      }
     </Row>
-  </Container>
-);
+  }
 
+  return (
+    <Container className="mt-5 pt-md-5 py-5">
+      <h6 className="sponsor-title text-uppercase text-center mb-4">Os nossos parceiros</h6>
+      {renderSponsorLogos(1)}
+      {renderSponsorLogos(2)}
+      {renderSponsorLogos(3)}
+    </Container>
+  )
+}
 
 export default SponsorSection;
