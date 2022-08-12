@@ -1,29 +1,12 @@
 import React from "react";
-
 import { Row, Container, Col } from "react-bootstrap";
+import { Constants, Routes, SiteContent } from "Constants";
 import LinkButton from "components/LinkButton";
-
 import SocialLinks from "components/SocialLinks";
 import Icon from "components/Icon";
-
 import "../footer.scss";
-import Constants from "Constants";
 
 const Informations = () => {
-  // const [isMobile, setIsMobile] = useState(false);
-
-  // const handleResize = () => {
-  //   if (window.outerWidth <= 820) {
-  //     setIsMobile(true);
-  //   } else {
-  //     setIsMobile(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("resize", handleResize);
-  // }, []);
-
   return (
     <Container className="info padding-top-bottom-medium align-center">
       <Row>
@@ -58,16 +41,14 @@ const Informations = () => {
       <hr className={"mt-5"} />
       <Row className={"mt-5"}>
         <Col sm={12} md={6}>
-          <h4>As Raparigas do Código</h4>
+          <h4>{ SiteContent.Title.RdC }</h4>
           <p className={"w-75"}>
-            Uma comunidade jovem focada em promover a inclusão digital através
-            da realização de atividades associadas ao ensino da programação para
-            raparigas em idade escolar (ensino básico, secundário e superior).{" "}
+            { SiteContent.Text.WhoWeAre }
           </p>
           <p>
             <Icon name={"email"} link={"#"} />
             <a href="mailto:asraparigasdocodigo@gmail.com">
-              asraparigasdocodigo@gmail.com
+              {Constants.Email}
             </a>
           </p>
         </Col>
@@ -77,33 +58,34 @@ const Informations = () => {
               <h4>O Projecto</h4>
               <ul>
                 <li>
-                  <a href={Constants.AboutRoute}> Sobre nós</a>
+                  <a href={ Routes.About }> { SiteContent.Title.AboutUs }</a>
                 </li>
                 <li>
-                  <a href={Constants.CollaborateRoute}> Quero Colaborar!</a>
+                  <a href={ Routes.Collaborate }> { SiteContent.Title.IWantToCollaborate }</a>
                 </li>
+                {
+                  /* TODO: retirar comentário depois do MVP
+                  <li>
+                  <a href={ Routes.Blog }> { SiteContent.Title.Blog }</a>
+                  </li>
+                  */
+                }
                 <li>
-                  <a href={Constants.BlogRoute}> Blog</a>
+                  <a href={ Routes.Contacts }> { SiteContent.Title.Contacts }</a>
                 </li>
-                <li>
-                  <a href={Constants.ContactsRoute}> Contactos</a>
-                </li>
-                {/* <li>
-                  <a href="#"> FAQs</a>
-                </li> */}
               </ul>
             </Col>
             <Col sm={12} md={6} className={"mt-3"}>
-              <h4>Eventos</h4>
+              <h4>{ SiteContent.Title.Events }</h4>
               <ul>
                 <li>
-                  <a href={Constants.WorkshopsRoute}> Workshops</a>
+                  <a href={ Routes.Workshops }> { SiteContent.Title.Workshops }</a>
                 </li>
                 <li>
-                  <a href={Constants.MentorshipsRoute}> Mentorias</a>
+                  <a href={ Routes.Mentorships }> { SiteContent.Title.Mentorships }</a>
                 </li>
                 <li>
-                  <a href={Constants.EventsRoute}> Eventos</a>
+                  <a href={ Routes.Events }> { SiteContent.Title.Events }</a>
                 </li>
               </ul>
             </Col>
@@ -119,13 +101,13 @@ const Informations = () => {
       <Row className={"legal-copy"}>
         <Col sm={12} md={6} className={"mt-5"}>
           <p className="text-center">
-            <a href="/">Informação Legal</a> |{" "}
-            <a href="/">Politica de Privacidade</a>
+            <a href={ Routes.LegalInfo }>{ SiteContent.Title.LegalInfo }</a> |{" "}
+            <a href={ Routes.PrivacyPolicy }>{ SiteContent.Title.PrivacyPolicy }</a>
           </p>
         </Col>
         <Col sm={12} md={6} className={"mt-5"}>
           <p className="text-center">
-            Copyright © 2022 As Raparigas do Código. All Rights Reserved
+            { SiteContent.Text.Copyright }
           </p>
         </Col>
       </Row>
