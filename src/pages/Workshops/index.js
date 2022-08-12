@@ -1,19 +1,38 @@
 import React from "react";
+import { Routes, SiteContent } from "Constants";
+import { Container } from "react-bootstrap";
 
 import PageLayout from "components/PageLayout";
+import WorkshopsList from "components/WorkshopsList";
+import KPISSection from "components/KPISSection";
+
 
 function Workshops() {
   const breadcrumbs = [
     {
-      label: "Home",
-      href: "/",
+      label: SiteContent.Title.Home,
+      href: Routes.Home,
     },
-    { label: "Workshops" },
+    {
+      label: SiteContent.Title.Workshops
+    },
   ];
-
   return (
-    <PageLayout title="Workshops" description="Oferecemos vários cursos e workshops de programação, totalmente gratuitos e adaptados às necessidades e interesses das alunas inscritas." breadcrumbsData={breadcrumbs}>
-      <h1>Workshops Page</h1>
+    <PageLayout
+      title={ SiteContent.Title.Workshops }
+      description={ SiteContent.Subtitle.Workshops }
+      breadcrumbsData={breadcrumbs}>
+      <Container className="mt-5 py-md-5">
+        <WorkshopsList next/>
+      </Container>
+      <div className="zig-zag"></div>
+      <div className="bg-pink">
+          <KPISSection />
+      </div>
+      <Container className="mt-5 py-md-5">
+        <WorkshopsList all/>
+      </Container>
+
     </PageLayout>
   );
 }

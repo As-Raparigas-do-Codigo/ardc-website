@@ -1,43 +1,39 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-// components
+import { Routes, SiteContent } from "Constants";
 import LinkArrow from "components/LinkArrow";
 import BasicCardsRow from "components/BasicCardsRow";
 import LinkButton from "components/LinkButton";
 import MentorsSection from "components/MentorsSection";
 import SponsorSection from "components/SponsorSection";
 import WorkshopsSection from "components/WorkshopsSection";
+import KPISSection from "components/KPISSection";
 import PageLayout from "components/PageLayout";
-import Statistics from "components/Statistics";
-// import BannerPage from "components/BannerPage";
-import Constants from "Constants";
-// images
 import banner from "assets/home/banner.jpeg";
 import missao from "assets/home/missao.png";
-// data
-import articles from "../../data/articles";
 import events from "../../data/events";
+// data
+// TODO: retirar comentário após MVP
+//import articles from "../../data/articles";
 
 const IntroContent = () => {
   return (
     <>
       <Col className="my-4 align-self-center">
-        <h1 className="py-1">Somos As Raparigas do Código</h1>
+        <h1 className="py-1">{ SiteContent.Title.WeAreRdC }</h1>
         <p className="py-1">
-          Uma comunidade jovem focada em promover a inclusão digital através da
-          realização de atividades associadas ao ensino da programação para
-          raparigas e mulheres.
+          { SiteContent.Text.WhoWeAre }
         </p>
         <Container className="p-0">
           <Row>
             <Col className="col-auto align-self-center">
-              <LinkButton href={Constants.WorkshopsRoute} variant="primary">
+              <LinkButton href={ Routes.Workshops } variant="primary">
                 Conhece os nossos workshops
               </LinkButton>
             </Col>
             <Col className="col-auto align-self-center">
-              <LinkArrow href={Constants.CollaborateRoute}>
-                Quero colaborar!
+              <LinkArrow href={ Routes.Collaborate }>
+                { SiteContent.Title.IWantToCollaborate }
               </LinkArrow>
             </Col>
           </Row>
@@ -58,15 +54,13 @@ function Home() {
   return (
     <PageLayout title="Home" customBanner={<IntroContent />}>
       <SponsorSection />
-
       <hr />
 
+      <div className="zig-zag"></div>
+
       <WorkshopsSection
-        heading={"Os nossos workshops"}
-        subtitle={
-          "Oferecemos vários cursos e workshops, totalmente gratuitos e adaptados às necessidades e interesses das alunas inscritas."
-        }
-      />
+        heading={ SiteContent.Title.OurWorkshops }
+        subtitle={ SiteContent.Subtitle.Workshops } />
 
       <div className="zig-zag"></div>
 
@@ -76,19 +70,15 @@ function Home() {
             <Col className="my-4">
               <h6 className="py-5">A NOSSA MISSÃO</h6>
               <p className="py-1">
-                E encorajando mais raparigas e mulheres a ingressar no sector
-                das tecnologias de informação.
+                { SiteContent.Text.OurMission_p1 }
               </p>
               <p className="py-1">
-                Temos como objetivo a criação de oportunidades de aprendizagem
-                para jovens raparigas e mulheres, fomentando um ambiente
-                inclusivo e de colaboração, e estimulando o interesse pela
-                aquisição de competências digitais, nomeadamente a programação.
+                { SiteContent.Text.OurMission_p2 }
               </p>
               <Container className="p-0">
                 <Row>
                   <Col className="col-auto align-self-center">
-                    <LinkButton href={Constants.AboutRoute} variant="primary">
+                    <LinkButton href={ Routes.About } variant="primary">
                       Sabe mais sobre nós
                     </LinkButton>
                   </Col>
@@ -105,9 +95,7 @@ function Home() {
           </Row>
         </Container>
         <hr></hr>
-        <Container className="px-2">
-          <Statistics />
-        </Container>
+        <KPISSection />
       </div>
       <div className="bg-blue">
         <Container className="py-5">
@@ -122,10 +110,7 @@ function Home() {
                   tecnologia, gostávamos muito de poder contar contigo!
                 </p>
                 <div className="text-center">
-                  <LinkButton
-                    href={Constants.CollaborateRoute}
-                    variant="primary"
-                  >
+                  <LinkButton href={ Routes.Collaborate } variant="primary">
                     Quero colaborar!
                   </LinkButton>
                 </div>
@@ -134,33 +119,32 @@ function Home() {
           </Row>
         </Container>
       </div>
-
       <div className="zig-zag"></div>
-
       <BasicCardsRow
         data={events}
         heading={"Talks & Eventos"}
-        subtitle={
-          "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        }
+        subtitle=""
       />
 
-      <div className="gradient">
+      {
+        /* TODO: mudar para className="gradient" depois do MVP */
+      }
+      <div className="bg-blue">
         <div className="zig-zag"></div>
         <div className="pt-2">
           <MentorsSection />
         </div>
       </div>
-
-      <div className="zig-zag"></div>
-
-      <BasicCardsRow
-        data={articles}
-        heading={"Artigos recentes"}
-        subtitle={
-          "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        }
-      />
+      {
+        /* TODO: retirar comentário após MVP
+        <div className="zig-zag"></div>
+        <BasicCardsRow 
+          data={articles}
+          heading={"Artigos recentes"}
+          subtitle={ "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+        />
+        */
+      }
     </PageLayout>
   );
 }

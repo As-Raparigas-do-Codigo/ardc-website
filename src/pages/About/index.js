@@ -1,26 +1,29 @@
 import React from "react";
-import Constants from "Constants";
 import { Container, Row, Col } from "react-bootstrap";
+import { Routes, SiteContent } from "Constants";
 
 // components
 import PageLayout from "components/PageLayout";
 import Teaser from "components/Teaser";
 import Statistics from "components/Statistics";
-
+ 
 // data
 import about from "data/about.js";
+
 
 function About() {
   const breadcrumbs = [
     {
-      label: "Home",
-      href: "/",
+      label: SiteContent.Title.Home,
+      href: Routes.Home,
     },
     {
-      label: "Sobre nós",
-      href: Constants.AboutRoute,
+      label: SiteContent.Title.AboutUs,
+      href: Routes.About,
     },
-    { label: "Sobre o projecto" },
+    {
+      label: SiteContent.Title.AboutTheProject 
+    },
   ];
 
   const aboutBellow = about.slice(1, 3).map((data) => {
@@ -40,10 +43,10 @@ function About() {
 
   return (
     <PageLayout
-      title="Sobre o projecto"
-      description="bla bla bla cenas"
-      breadcrumbsData={breadcrumbs}
-    >
+      title={ SiteContent.Title.AboutUs }
+      description={ SiteContent.Subtitle.AboutUs }
+      breadcrumbsData={ breadcrumbs }>
+      <h1>{ SiteContent.Title.RdC }</h1>
       <Container>
         <Row>
           <Col md={12} key={about[0].id}>
@@ -66,6 +69,7 @@ function About() {
         {" "}
         <Row>{aboutBellow}</Row>
       </Container>
+
     </PageLayout>
   );
 }

@@ -17,12 +17,8 @@ function HorizontalCard(props) {
         <p className="horizontal-card__description">{props.description}</p>
         <span className="horizontal-card__details f-bold">{props.date}</span>
         <div className="horizontal-card__buttons">
-          <LinkButton href={props.buttonUrl}>
-            {props.buttonLabel}
-          </LinkButton>
-          <LinkArrow href={props.linkUrl}>
-            {props.linkLabel}
-          </LinkArrow>
+          {props.buttonLabel && <LinkButton href={props.buttonUrl} target="_blank">{props.buttonLabel}</LinkButton>}
+          {props.linkLabel && <LinkArrow href={props.linkUrl} target="_blank">{props.linkLabel}</LinkArrow>}
         </div>
       </div>
     </div>
