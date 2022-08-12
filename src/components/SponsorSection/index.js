@@ -5,10 +5,10 @@ import sponsors from "data/sponsors";
 
 const SponsorSection = () => {
 
-  const renderSponsorLogos = (level) => {
-    const hasGrayscale = [2, 3].includes(level)
+  const renderSponsorLogosTier = (tier) => {
+    const hasGrayscale = [2, 3].includes(tier)
     const sponsorsToDisplay = sponsors.filter(
-      sponsor => sponsor.level === level
+      sponsor => sponsor.tier === tier
     )
 
     return <Row className="justify-content-center">
@@ -17,7 +17,7 @@ const SponsorSection = () => {
           sponsor => (
             <Col key={sponsor.id} className="col-auto py-3 my-md-2 mx-2">
               <a href={sponsor.link}>
-                <img className={`${hasGrayscale ? "sponsor-grayscale" : null} sponsor-${level}`} src={sponsor.image} alt={sponsor.alt} />
+                <img className={`${hasGrayscale ? "sponsor-grayscale" : null} sponsor-${tier}`} src={sponsor.image} alt={sponsor.alt} />
               </a>
             </Col>
           )
@@ -29,9 +29,9 @@ const SponsorSection = () => {
   return (
     <Container className="mt-5 pt-md-5 py-5">
       <h6 className="sponsor-title text-uppercase text-center mb-4">Os nossos parceiros</h6>
-      {renderSponsorLogos(1)}
-      {renderSponsorLogos(2)}
-      {renderSponsorLogos(3)}
+      {renderSponsorLogosTier(1)}
+      {renderSponsorLogosTier(2)}
+      {renderSponsorLogosTier(3)}
     </Container>
   )
 }
