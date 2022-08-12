@@ -8,12 +8,12 @@ import valtech from "../assets/sponsorlogos/valtech.png"
 import kwan from "../assets/sponsorlogos/kwan.png"
 
 const sponsors = [
-	{
-		id: 1,
-		image: aws,
-		alt: "Logo da AWS",
-		tier: 2,
-		link: "https://aws.amazon.com/",
+  {
+    id: 1,
+    image: aws,
+    alt: "Logo da AWS",
+    tier: 2,
+    link: "https://aws.amazon.com/",
 	},
 	{
 		id: 2,
