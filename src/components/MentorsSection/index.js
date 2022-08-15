@@ -1,32 +1,32 @@
-import React from "react";
-import PersonCard from "components/PersonCard";
-import { Row, Container } from "react-bootstrap";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import "./mentors-section.scss";
-import team from "data/team";
+import React from 'react';
+import PersonCard from 'components/PersonCard';
+import { Row, Container } from 'react-bootstrap';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import './mentors-section.scss';
+import team from 'data/team';
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 4,
-    slidesToSlide: 2, // optional, default to 1.
+    slidesToSlide: 2 // optional, default to 1.
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: 1,
-    slidesToSlide: 1, // optional, default to 1.
+    slidesToSlide: 1 // optional, default to 1.
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
-    slidesToSlide: 1, // optional, default to 1.
-  },
+    slidesToSlide: 1 // optional, default to 1.
+  }
 };
 
 function MentorsSection() {
   const mentorsCards = team
-    .filter((x) => x.roles.includes("mentor"))
+    .filter((x) => x.roles.includes('mentor'))
     .map((item) => <PersonCard key={item.id} person={item} />);
   return (
     <Container className="mt-5 pt-md-5 pb-5">
@@ -34,8 +34,9 @@ function MentorsSection() {
         <h2 className="mb-2">Conhece os nossos mentores.</h2>
         <p className="mb-5">
           A nossa equipa é formada por pessoas provenientes de diversas áreas profissionais.
-          <br/>
-          Da engenharia ao design, das ciências ao marketing, a trabalhar juntos por um futuro mais inclusivo.
+          <br />
+          Da engenharia ao design, das ciências ao marketing, a trabalhar juntos por um futuro mais
+          inclusivo.
         </p>
       </Row>
 
@@ -50,11 +51,11 @@ function MentorsSection() {
           dotListClass="custom-dots"
           itemClass="card-item"
           // customButtonGroup={<CustomButtonGroupAsArrows />}
-          infinite={false}>
+          infinite={false}
+        >
           {mentorsCards}
         </Carousel>
       </Row>
-
     </Container>
   );
 }
