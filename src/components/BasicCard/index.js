@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import LinkArrow from "components/LinkArrow";
-import "./basic-card.scss";
+import LinkArrow from 'components/LinkArrow';
+import './basic-card.scss';
 
 function BasicCard(props) {
   return (
@@ -11,9 +11,7 @@ function BasicCard(props) {
         {props.date && <span>{props.date}</span>}
         <h5>{props.title}</h5>
         <p className="basic-card__description">{props.description}</p>
-        <LinkArrow href={props.url}>
-          {props.link}
-        </LinkArrow>
+        <LinkArrow href={props.url}>{props.link}</LinkArrow>
       </div>
     </div>
   );

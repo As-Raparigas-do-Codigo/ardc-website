@@ -1,9 +1,9 @@
-import React from "react";
-import CollaboratorForm from "components/Forms/CollaboratorForm";
-import NumberedRow from "components/NumberedRow";
-import PageLayout from "components/PageLayout";
-import { Container, Row } from "react-bootstrap";
-import { Routes, SiteContent } from "../../Constants";
+import React from 'react';
+import CollaboratorForm from 'components/Forms/CollaboratorForm';
+import NumberedRow from 'components/NumberedRow';
+import PageLayout from 'components/PageLayout';
+import { Container, Row } from 'react-bootstrap';
+import { Routes, SiteContent } from '../../Constants';
 
 const CollaborateFormSection = () => (
   <Container className="my-5 py-5 padding-top-first-section">
@@ -23,23 +23,17 @@ const CollaborateContent = () => (
       <p className="mb-2">COMO PODES COLABORAR?</p>
       <h2>Baseamo-nos na colaboração entre membros de diferentes áreas.</h2>
       <p className="mb-4">
-        Enquanto comunidade, <strong>As Raparigas do Código</strong> baseiam-se
-        na colaboração entre membros de diferentes áreas (engenharia, design,
-        educação, marketing, comunicação, entre outras). Se gostas de ensinar,
-        de escrever e produzir conteúdo digital, ou estás sempre a par das
-        últimas novidades no mundo da tecnologia, gostávamos muito de poder
-        contar contigo!
+        Enquanto comunidade, <strong>As Raparigas do Código</strong> baseiam-se na colaboração entre
+        membros de diferentes áreas (engenharia, design, educação, marketing, comunicação, entre
+        outras). Se gostas de ensinar, de escrever e produzir conteúdo digital, ou estás sempre a
+        par das últimas novidades no mundo da tecnologia, gostávamos muito de poder contar contigo!
       </p>
       <p className="mb-4">
-        Existem diferentes formas de poderes colaborar connosco, dependendo da
-        tua disponibilidade e interesse. Se gostavas de te juntar a nós,
-        preenche o{" "}
-        <a href="#formulario-colaboracao">formulário de colaboração</a> ou
-        envia-nos um email para{" "}
-        <a href="mailto=geral@raparigasdocodigo.pt">
-          geral@raparigasdocodigo.pt
-        </a>
-        . Ficamos à tua espera!{" "}
+        Existem diferentes formas de poderes colaborar connosco, dependendo da tua disponibilidade e
+        interesse. Se gostavas de te juntar a nós, preenche o{' '}
+        <a href="#formulario-colaboracao">formulário de colaboração</a> ou envia-nos um email para{' '}
+        <a href="mailto=geral@raparigasdocodigo.pt">geral@raparigasdocodigo.pt</a>. Ficamos à tua
+        espera!{' '}
       </p>
     </Row>
     <hr></hr>
@@ -50,17 +44,18 @@ const Collaborate = () => {
   const breadcrumbs = [
     {
       label: SiteContent.Title.Home,
-      href: Routes.Home,
+      href: Routes.Home
     },
     {
       label: SiteContent.Title.DoYouWantToCollaborate
-    },
+    }
   ];
   return (
     <PageLayout
-      title={ SiteContent.Title.Collaborate }
-      description={ SiteContent.Subtitle.Collaborate }
-      breadcrumbsData={ breadcrumbs }>
+      title={SiteContent.Title.Collaborate}
+      description={SiteContent.Subtitle.Collaborate}
+      breadcrumbsData={breadcrumbs}
+    >
       <Container fluid="md">
         <Row>
           <CollaborateContent />
