@@ -85,7 +85,7 @@ const Informations = () => {
                   <a href={ Routes.Mentorships }> { SiteContent.Title.Mentorships }</a>
                 </li>
                 <li>
-                  <a href={ Routes.Events }> { SiteContent.Title.Events }</a>
+                  <a href={ Routes.Events } style={{ display: 'none' }}> { SiteContent.Title.Events }</a>
                 </li>
               </ul>
             </Col>
