@@ -1,8 +1,8 @@
-import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
-import WorkshopsList from "components/WorkshopsList";
-import LinkArrow from "components/LinkArrow";
-import { Routes } from "Constants";
+import React from 'react';
+import { Row, Col, Container } from 'react-bootstrap';
+import WorkshopsList from 'components/WorkshopsList';
+import LinkArrow from 'components/LinkArrow';
+import { Routes } from 'Constants';
 
 function WorkshopsSection(props) {
   return (
@@ -17,7 +17,7 @@ function WorkshopsSection(props) {
         </Col>
       </Row>
       <Row>
-        <WorkshopsList next/>
+        <WorkshopsList next />
       </Row>
     </Container>
   );
