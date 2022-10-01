@@ -1,10 +1,10 @@
 import React from 'react';
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from 'react-bootstrap';
 import { Routes, SiteContent } from 'Constants';
-import PageLayout from "components/PageLayout";
-import Teaser from "components/Teaser";
-import Statistics from "components/Statistics";
-import about from "data/about.js";
+import PageLayout from 'components/PageLayout';
+import Teaser from 'components/Teaser';
+import Statistics from 'components/Statistics';
+import about from 'data/about.js';
 
 function About() {
   const breadcrumbs = [
@@ -38,9 +38,9 @@ function About() {
 
   return (
     <PageLayout
-      title={ SiteContent.Title.AboutUs }
-      description={ SiteContent.Subtitle.AboutUs }
-      breadcrumbsData={ breadcrumbs }>
+      title={SiteContent.Title.AboutUs}
+      description={SiteContent.Subtitle.AboutUs}
+      breadcrumbsData={breadcrumbs}>
       <Container>
         <Row>
           <Col md={12} key={about[0].id}>
@@ -60,7 +60,6 @@ function About() {
         <Statistics />
       </div>
       <Container>
-        {" "}
         <Row>{aboutBellow}</Row>
       </Container>
     </PageLayout>
