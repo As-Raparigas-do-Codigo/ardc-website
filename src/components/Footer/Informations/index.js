@@ -1,21 +1,17 @@
-import React from "react";
-import { Row, Container, Col } from "react-bootstrap";
-import { Constants, Routes, SiteContent } from "Constants";
-import LinkButton from "components/LinkButton";
-import SocialLinks from "components/SocialLinks";
-import Icon from "components/Icon";
-import "../footer.scss";
+import React from 'react';
+import { Row, Container, Col } from 'react-bootstrap';
+import { Constants, Routes, SiteContent } from 'Constants';
+import LinkButton from 'components/LinkButton';
+import SocialLinks from 'components/SocialLinks';
+import Icon from 'components/Icon';
+import '../footer.scss';
 
 const Informations = () => {
   return (
     <Container className="info padding-top-bottom-medium align-center">
       <Row>
         <Col>
-          <img
-            className="rounded mx-auto d-block"
-            alt=""
-            src={require("assets/award-logo.png")}
-          />
+          <img className="rounded mx-auto d-block" alt="" src={require('assets/award-logo.png')} />
         </Col>
         <Col>
           <Row>
@@ -29,86 +25,74 @@ const Informations = () => {
           </Row>
           <Row>
             <p>
-              <LinkButton
-                href="https://www.youtube.com/watch?v=5ku99qSbZOI"
-                target="blank">
+              <LinkButton href="https://www.youtube.com/watch?v=5ku99qSbZOI" target="blank">
                 Ver o vídeo no Youtube
               </LinkButton>
             </p>
           </Row>
         </Col>
       </Row>
-      <hr className={"mt-5"} />
-      <Row className={"mt-5"}>
+      <hr className={'mt-5'} />
+      <Row className={'mt-5'}>
         <Col sm={12} md={6}>
-          <h4>{ SiteContent.Title.RdC }</h4>
-          <p className={"w-75"}>
-            { SiteContent.Text.WhoWeAre }
-          </p>
+          <h4>{SiteContent.Title.RdC}</h4>
+          <p className={'w-75'}>{SiteContent.Text.WhoWeAre}</p>
           <p>
-            <Icon name={"email"} link={"#"} />
-            <a href="mailto:asraparigasdocodigo@gmail.com">
-              {Constants.Email}
-            </a>
+            <Icon name={'email'} link={'#'} />
+            <a href="mailto:asraparigasdocodigo@gmail.com">{Constants.Email}</a>
           </p>
         </Col>
         <Col sm={12} md={6}>
           <Row>
-            <Col sm={12} md={6} className={"mt-3"}>
+            <Col sm={12} md={6} className={'mt-3'}>
               <h4>O Projecto</h4>
               <ul>
                 <li>
-                  <a href={ Routes.About }> { SiteContent.Title.AboutUs }</a>
+                  <a href={Routes.About}> {SiteContent.Title.AboutUs}</a>
                 </li>
                 <li>
-                  <a href={ Routes.Collaborate }> { SiteContent.Title.IWantToCollaborate }</a>
+                  <a href={Routes.Collaborate}> {SiteContent.Title.IWantToCollaborate}</a>
                 </li>
-                {
-                  /* TODO: retirar comentário depois do MVP
+                {/* TODO: retirar comentário depois do MVP
                   <li>
                   <a href={ Routes.Blog }> { SiteContent.Title.Blog }</a>
                   </li>
-                  */
-                }
+                  */}
                 <li>
-                  <a href={ Routes.Contacts }> { SiteContent.Title.Contacts }</a>
+                  <a href={Routes.Contacts}> {SiteContent.Title.Contacts}</a>
                 </li>
               </ul>
             </Col>
-            <Col sm={12} md={6} className={"mt-3"}>
-              <h4>{ SiteContent.Title.Events }</h4>
+            <Col sm={12} md={6} className={'mt-3'}>
+              <h4>{SiteContent.Title.Events}</h4>
               <ul>
                 <li>
-                  <a href={ Routes.Workshops }> { SiteContent.Title.Workshops }</a>
+                  <a href={Routes.Workshops}> {SiteContent.Title.Workshops}</a>
                 </li>
                 <li>
-                  <a href={ Routes.Mentorships }> { SiteContent.Title.Mentorships }</a>
-                </li>
-                <li>
-                  <a href={ Routes.Events }> { SiteContent.Title.Events }</a>
+                  <a href={ Routes.Events } style={{ display: 'none' }}> { SiteContent.Title.Events }</a>
+                  <a href={Routes.Mentorships}> {SiteContent.Title.Mentorships}</a>
                 </li>
               </ul>
             </Col>
           </Row>
         </Col>
       </Row>
-      <Row className={"mt-5"}>
-        <div className={"mt-5 centering-col"}>
+      <Row className={'mt-5'}>
+        <div className={'mt-5 centering-col'}>
           <SocialLinks />
         </div>
       </Row>
-      <hr className={"mt-5"} />
-      <Row className={"legal-copy"}>
-        <Col sm={12} md={6} className={"mt-5"}>
+      <hr className={'mt-5'} />
+      <Row className={'legal-copy'}>
+        <Col sm={12} md={6} className={'mt-5'}>
           <p className="text-center">
-            <a href={ Routes.LegalInfo }>{ SiteContent.Title.LegalInfo }</a> |{" "}
-            <a href={ Routes.PrivacyPolicy }>{ SiteContent.Title.PrivacyPolicy }</a>
+            <a href={Routes.TermsOfUsePolicy}>{SiteContent.Title.TermsOfUsePolicy}</a> |{' '}
+            <a href={Routes.PrivacyPolicy}>{SiteContent.Title.PrivacyPolicy}</a>
           </p>
         </Col>
-        <Col sm={12} md={6} className={"mt-5"}>
-          <p className="text-center">
-            { SiteContent.Text.Copyright }
-          </p>
+        <Col sm={12} md={6} className={'mt-5'}>
+          <p className="text-center">{SiteContent.Text.Copyright}</p>
         </Col>
       </Row>
     </Container>

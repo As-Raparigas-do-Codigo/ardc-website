@@ -1,17 +1,17 @@
-import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import { Routes, SiteContent } from "Constants";
-import LinkArrow from "components/LinkArrow";
-import BasicCardsRow from "components/BasicCardsRow";
-import LinkButton from "components/LinkButton";
-import MentorsSection from "components/MentorsSection";
-import SponsorSection from "components/SponsorSection";
-import WorkshopsSection from "components/WorkshopsSection";
-import KPISSection from "components/KPISSection";
-import PageLayout from "components/PageLayout";
-import banner from "assets/home/banner.jpeg";
-import missao from "assets/home/missao.png";
-import events from "../../data/events";
+import React from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Routes, SiteContent } from 'Constants';
+import LinkArrow from 'components/LinkArrow';
+import BasicCardsRow from 'components/BasicCardsRow';
+import LinkButton from 'components/LinkButton';
+import MentorsSection from 'components/MentorsSection';
+import SponsorSection from 'components/SponsorSection';
+import WorkshopsSection from 'components/WorkshopsSection';
+import KPISSection from 'components/KPISSection';
+import PageLayout from 'components/PageLayout';
+import banner from 'assets/home/banner.jpeg';
+import missao from 'assets/home/missao.png';
+import events from '../../data/events';
 // data
 // TODO: retirar comentário após MVP
 //import articles from "../../data/articles";
@@ -20,20 +20,18 @@ const IntroContent = () => {
   return (
     <>
       <Col className="my-4 align-self-center">
-        <h1 className="py-1">{ SiteContent.Title.WeAreRdC }</h1>
-        <p className="py-1">
-          { SiteContent.Text.WhoWeAre }
-        </p>
+        <h1 className="py-1">{SiteContent.Title.WeAreRdC}</h1>
+        <p className="py-1">{SiteContent.Text.WhoWeAre}</p>
         <Container className="p-0">
           <Row>
             <Col className="col-auto align-self-center">
-              <LinkButton href={ Routes.Workshops } variant="primary">
+              <LinkButton href={Routes.Workshops} variant="primary">
                 Conhece os nossos workshops
               </LinkButton>
             </Col>
             <Col className="col-auto align-self-center">
-              <LinkArrow href={ Routes.Collaborate }>
-                { SiteContent.Title.IWantToCollaborate }
+              <LinkArrow href={Routes.Collaborate}>
+                {SiteContent.Title.IWantToCollaborate}
               </LinkArrow>
             </Col>
           </Row>
@@ -59,8 +57,9 @@ function Home() {
       <div className="zig-zag"></div>
 
       <WorkshopsSection
-        heading={ SiteContent.Title.OurWorkshops }
-        subtitle={ SiteContent.Subtitle.Workshops } />
+        heading={SiteContent.Title.OurWorkshops}
+        subtitle={SiteContent.Subtitle.Workshops}
+      />
 
       <div className="zig-zag"></div>
 
@@ -69,16 +68,12 @@ function Home() {
           <Row>
             <Col className="my-4">
               <h6 className="py-5">A NOSSA MISSÃO</h6>
-              <p className="py-1">
-                { SiteContent.Text.OurMission_p1 }
-              </p>
-              <p className="py-1">
-                { SiteContent.Text.OurMission_p2 }
-              </p>
+              <p className="py-1">{SiteContent.Text.OurMission_p1}</p>
+              <p className="py-1">{SiteContent.Text.OurMission_p2}</p>
               <Container className="p-0">
                 <Row>
                   <Col className="col-auto align-self-center">
-                    <LinkButton href={ Routes.About } variant="primary">
+                    <LinkButton href={Routes.About} variant="primary">
                       Sabe mais sobre nós
                     </LinkButton>
                   </Col>
@@ -105,12 +100,12 @@ function Home() {
                 <h6 className="text-center">JUNTA-TE À NOSSA COMUNIDADE!</h6>
                 <h2 className="text-center">Gostavas de colaborar connosco?</h2>
                 <p className="text-center">
-                  Se gostas de ensinar, de escrever e produzir conteúdo digital,
-                  ou estás sempre a par das últimas novidades no mundo da
-                  tecnologia, gostávamos muito de poder contar contigo!
+                  Se gostas de ensinar, de escrever e produzir conteúdo digital, ou estás sempre a
+                  par das últimas novidades no mundo da tecnologia, gostávamos muito de poder contar
+                  contigo!
                 </p>
                 <div className="text-center">
-                  <LinkButton href={ Routes.Collaborate } variant="primary">
+                  <LinkButton href={Routes.Collaborate} variant="primary">
                     Quero colaborar!
                   </LinkButton>
                 </div>
@@ -120,31 +115,23 @@ function Home() {
         </Container>
       </div>
       <div className="zig-zag"></div>
-      <BasicCardsRow
-        data={events}
-        heading={"Talks & Eventos"}
-        subtitle=""
-      />
+      <BasicCardsRow data={events} heading={'Talks & Eventos'} subtitle="" />
 
-      {
-        /* TODO: mudar para className="gradient" depois do MVP */
-      }
+      {/* TODO: mudar para className="gradient" depois do MVP */}
       <div className="bg-blue">
         <div className="zig-zag"></div>
         <div className="pt-2">
           <MentorsSection />
         </div>
       </div>
-      {
-        /* TODO: retirar comentário após MVP
+      {/* TODO: retirar comentário após MVP
         <div className="zig-zag"></div>
         <BasicCardsRow 
           data={articles}
           heading={"Artigos recentes"}
           subtitle={ "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit." }
         />
-        */
-      }
+        */}
     </PageLayout>
   );
 }
