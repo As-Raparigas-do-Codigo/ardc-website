@@ -8,8 +8,10 @@ import Events from 'pages/Events';
 import Home from 'pages/Home';
 import Mentorship from 'pages/Mentorship';
 import Team from 'pages/Team';
+/*
 import PrivacyPolicy from 'pages/PrivacyPolicy';
 import TermsOfUsePolicy from 'pages/TermsOfUsePolicy';
+*/
 import Workshops from 'pages/Workshops';
 import NavBar from 'components/NavBarComponent';
 import Social from 'components/Social';
@@ -35,8 +37,12 @@ function App() {
           <Route exact path={SiteRoutes.About} element={<About />} />
           <Route exact path={SiteRoutes.Contacts} element={<Contact />} />
           <Route exact path={SiteRoutes.Collaborate} element={<Collaborate />} />
-          <Route exact path={SiteRoutes.PrivacyPolicy} element={<PrivacyPolicy />} />
-          <Route exact path={SiteRoutes.TermsOfUsePolicy} element={<TermsOfUsePolicy />} />
+          {
+            /*
+            <Route exact path={SiteRoutes.PrivacyPolicy} element={<PrivacyPolicy />} />
+            <Route exact path={SiteRoutes.TermsOfUsePolicy} element={<TermsOfUsePolicy />} />
+            */
+          }
         </Routes>
 
         <Footer />
