@@ -1,8 +1,8 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import ContactForm from "components/Forms/ContactForm";
-import PageLayout from "components/PageLayout";
-import { Constants, Routes, SiteContent } from "Constants";
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import ContactForm from 'components/Forms/ContactForm';
+import PageLayout from 'components/PageLayout';
+import { Constants, Routes, SiteContent } from 'Constants';
 
 const ContactInfoSection = () => (
   <Container className="my-5 py-5">
@@ -35,9 +35,7 @@ const ContactFormSection = () => (
   <Container className="my-5 py-5 px-5 box-radius shadow-lg">
     <Row>
       <h2 className="mb-2">Precisas de ajuda?</h2>
-      <p className="mb-4">
-        Envia-nos a tua mensagem através do formulário de contacto.
-      </p>
+      <p className="mb-4">Envia-nos a tua mensagem através do formulário de contacto.</p>
     </Row>
     <Row>
       <ContactForm />
@@ -45,21 +43,22 @@ const ContactFormSection = () => (
   </Container>
 );
 
-const Contact = ({ banner }) => {
+const Contact = () => {
   const breadcrumbs = [
     {
       label: SiteContent.Title.Home,
-      href: Routes.Home,
+      href: Routes.Home
     },
     {
-      label: SiteContent.Title.Contacts,
-    },
+      label: SiteContent.Title.Contacts
+    }
   ];
   return (
     <PageLayout
-      title={ SiteContent.Title.Contacts }
-      description={ SiteContent.Subtitle.Contacts }
-      breadcrumbsData={breadcrumbs}>
+      title={SiteContent.Title.Contacts}
+      description={SiteContent.Subtitle.Contacts}
+      breadcrumbsData={breadcrumbs}
+    >
       <Container fluid="md" className="padding-top-first-section">
         <Row>
           <Col>
