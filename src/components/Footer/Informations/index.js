@@ -72,9 +72,6 @@ const Informations = () => {
                 <li>
                   <a href={Routes.Mentorships}> {SiteContent.Title.Mentorships}</a>
                 </li>
-                <li>
-                  <a href={Routes.Events}> {SiteContent.Title.Events}</a>
-                </li>
               </ul>
             </Col>
           </Row>
