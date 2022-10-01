@@ -70,6 +70,7 @@ const Informations = () => {
                   <a href={Routes.Workshops}> {SiteContent.Title.Workshops}</a>
                 </li>
                 <li>
+                  <a href={ Routes.Events } style={{ display: 'none' }}> { SiteContent.Title.Events }</a>
                   <a href={Routes.Mentorships}> {SiteContent.Title.Mentorships}</a>
                 </li>
               </ul>
