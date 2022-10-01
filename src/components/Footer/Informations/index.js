@@ -70,7 +70,9 @@ const Informations = () => {
                   <a href={Routes.Workshops}> {SiteContent.Title.Workshops}</a>
                 </li>
                 <li>
-                  <a href={ Routes.Events } style={{ display: 'none' }}> { SiteContent.Title.Events }</a>
+                  <a href={Routes.Events} style={{ display: 'none' }}>
+                    {SiteContent.Title.Events}
+                  </a>
                   <a href={Routes.Mentorships}> {SiteContent.Title.Mentorships}</a>
                 </li>
               </ul>
@@ -87,7 +89,7 @@ const Informations = () => {
       <Row className={'legal-copy'}>
         <Col sm={12} md={6} className={'mt-5'}>
           <p className="text-center">
-            <a href={Routes.TermsOfUsePolicy}>{SiteContent.Title.TermsOfUsePolicy}</a> |{' '}
+            {/* <a href={Routes.TermsOfUsePolicy}>{SiteContent.Title.TermsOfUsePolicy}</a> |{' '} */}
             <a href={Routes.PrivacyPolicy}>{SiteContent.Title.PrivacyPolicy}</a>
           </p>
         </Col>
