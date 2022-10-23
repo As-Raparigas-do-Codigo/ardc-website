@@ -1,5 +1,5 @@
 import React from 'react';
-import Awards from 'components/Footer/Informations';
+import Awards from 'components/Footer/Awards';
 import './footer.scss';
 
 const Footer = function () {

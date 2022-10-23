@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
-import { SiteContent } from 'SiteContent';
+import { SiteContent } from 'data/SiteContent';
 
 function CollaboratorForm() {
   const [name, setName] = useState('');

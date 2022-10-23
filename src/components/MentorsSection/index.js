@@ -4,8 +4,8 @@ import { Row, Container } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './mentors-section.scss';
-import team from 'data/team';
-import { SiteContent } from 'SiteContent';
+import TeamData from 'data/Team';
+import { SiteContent } from 'data/SiteContent';
 
 const responsive = {
   desktop: {
@@ -26,7 +26,7 @@ const responsive = {
 };
 
 function MentorsSection() {
-  const mentorsCards = team
+  const mentorsCards = TeamData
     .filter((x) => x.roles.includes('mentor'))
     .map((item) => <PersonCard key={item.id} person={item} />);
   return (

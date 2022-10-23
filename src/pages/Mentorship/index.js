@@ -2,7 +2,7 @@ import React from 'react';
 import MentorshipForm from 'components/Forms/MentorshipForm';
 import { Container, Col, Row } from 'react-bootstrap';
 import { Routes } from 'Constants';
-import { SiteContent } from 'SiteContent';
+import { SiteContent } from 'data/SiteContent';
 import PageLayout from 'components/PageLayout';
 
 import LinkArrow from 'components/LinkArrow';

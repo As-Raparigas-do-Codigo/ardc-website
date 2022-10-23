@@ -2,8 +2,8 @@ import React, { useMemo, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import HorizontalCard from 'components/HorizontalCard';
 import { Constants } from 'Constants';
-import { SiteContent } from 'SiteContent';
-import dataWorkshops from '../../data/workshops';
+import { SiteContent } from 'data/SiteContent';
+import dataWorkshops from '../../data/Workshops';
 
 function WorkshopsList({ next = false, old = false }) {
   const [workshops] = useState(dataWorkshops);
@@ -51,7 +51,6 @@ function WorkshopsList({ next = false, old = false }) {
                 isFutureWorkshop(item.startingDate) ? SiteContent.WorkshopsList.Buttons : null
               }
               linkUrl={item.linkUrl}
-              // linkLabel={"Ver mais detalhes"}
               duration={item.descriptiveDuration}
               title={item.title}
             />

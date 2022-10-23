@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import About from 'pages/About';
+import AboutUs from 'pages/About';
 import Contact from 'pages/Contact';
 import Events from 'pages/Events';
 import Home from 'pages/Home';
@@ -22,7 +22,7 @@ function App() {
           <NavBar />
         </header>
         <Routes>
-          <Route exact path={SiteRoutes.About} element={<About />} />
+          <Route exact path={SiteRoutes.About} element={<AboutUs />} />
           <Route exact path={SiteRoutes.Contacts} element={<Contact />} />
           <Route exact path={SiteRoutes.Events} element={<Events />} />
           <Route exact path={SiteRoutes.Home} element={<Home />} />

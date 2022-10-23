@@ -4,7 +4,7 @@ import NumberedRow from 'components/NumberedRow';
 import PageLayout from 'components/PageLayout';
 import { Container, Row } from 'react-bootstrap';
 import { Routes } from '../../Constants';
-import { SiteContent } from '../../SiteContent';
+import { SiteContent } from '../../data/SiteContent';
 
 const CollaborateFormSection = () => (
   <Container className="my-5 py-5 padding-top-first-section">

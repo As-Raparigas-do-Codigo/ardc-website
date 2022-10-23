@@ -1,4 +1,4 @@
-import { SiteContent } from "SiteContent";
+import { SiteContent } from "data/SiteContent";
 
 const Constants = {
   Email: 'geral@raparigasdocodigo.pt'

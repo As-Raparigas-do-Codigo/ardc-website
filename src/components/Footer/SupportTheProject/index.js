@@ -1,31 +1,33 @@
 import { Row, Container, Col } from 'react-bootstrap';
 import LinkButton from 'components/LinkButton';
 import '../footer.scss';
-import testimonials from 'data/testimonials';
-import { SiteContent } from 'SiteContent';
+import testimonials from 'data/Testimonials';
+import { SiteContent } from 'data/SiteContent';
 
-const HelpTheProject = () => {
+const SupportTheProject = () => {
   return (
     <Container className="padding-top-bottom-medium">
       <Row>
         <Col>
-          <p className="text-secondary-color text-700-weight">BUY US A COFFEE!</p>
+          <p className="text-secondary-color text-700-weight">
+            {SiteContent.SupportTheProject.Title}
+          </p>
         </Col>
       </Row>
       <Row>
-        <h2>{SiteContent.HelpTheProjectSection.Title}</h2>
+        <h2>{SiteContent.SupportTheProject.Subtitle}</h2>
       </Row>
       <Row>
         <Col md={{ span: 6, offset: 3 }}>
           <p>
-            {SiteContent.HelpTheProjectSection.Text}
+            {SiteContent.SupportTheProject.Text}
           </p>
         </Col>
       </Row>
       <Row>
         <Col md={{ span: 6, offset: 3 }}>
           <LinkButton href="#">
-            {SiteContent.HelpTheProjectSection.Button}
+            {SiteContent.SupportTheProject.Button}
           </LinkButton>
         </Col>
       </Row>
@@ -66,4 +68,4 @@ const TestimonialCard = ({ description, name, avatar }) => {
   );
 };
 
-export default HelpTheProject;
+export default SupportTheProject;

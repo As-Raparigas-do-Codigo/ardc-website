@@ -1,4 +1,4 @@
-const data = [
+const TestimonialsData = [
   {
     id: 1,
     text:
@@ -20,4 +20,4 @@ const data = [
   }
 ];
 
-export default data;
+export default TestimonialsData;
