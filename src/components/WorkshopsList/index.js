@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 
 import { Row, Col } from 'react-bootstrap';
 import HorizontalCard from 'components/HorizontalCard';
-import { SiteContent } from 'Constants';
+import { Constants, SiteContent } from 'Constants';
 import dataWorkshops from '../../data/workshops';
 
 function WorkshopsList({ next = false, old = false }) {
@@ -46,7 +46,7 @@ function WorkshopsList({ next = false, old = false }) {
               date={item.date}
               description={item.description}
               imgPath={item.image}
-              buttonUrl={'mailto:asraparigasdocodigo@gmail.com'}
+              buttonUrl={`mailto:${Constants.Email}`}
               buttonLabel={
                 isFutureWorkshop(item.startingDate) ? SiteContent.Buttons.WorkshopCard : null
               }

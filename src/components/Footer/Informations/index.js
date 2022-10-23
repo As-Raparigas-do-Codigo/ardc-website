@@ -39,7 +39,7 @@ const Informations = () => {
           <p className={'w-75'}>{SiteContent.Text.WhoWeAre}</p>
           <p>
             <Icon name={'email'} link={'#'} />
-            <a href="mailto:asraparigasdocodigo@gmail.com">{Constants.Email}</a>
+            <a href={`mailto:${Constants.Email}`}>{Constants.Email}</a>
           </p>
         </Col>
         <Col sm={12} md={6}>

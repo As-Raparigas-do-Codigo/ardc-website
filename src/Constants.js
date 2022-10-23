@@ -1,5 +1,5 @@
 const Constants = {
-  Email: 'asraparigasdocodigo@gmail.com'
+  Email: 'geral@raparigasdocodigo.pt'
 };
 
 const Routes = {
