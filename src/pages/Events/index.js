@@ -1,6 +1,6 @@
 import React from 'react';
 import PageLayout from 'components/PageLayout';
-import { Routes } from 'Constants';
+import { Routes } from 'data/Constants';
 import { SiteContent } from 'data/SiteContent';
 
 function Events() {
@@ -17,9 +17,8 @@ function Events() {
     <PageLayout
       title={SiteContent.EventsPage.PageName}
       description={SiteContent.EventsPage.Description}
-      breadcrumbsData={breadcrumbs}
-    >
-      <h1>{SiteContent.Title.Events}</h1>
+      breadcrumbsData={breadcrumbs}>
+      <h1>{SiteContent.EventsPage.PageName}</h1>
     </PageLayout>
   );
 }

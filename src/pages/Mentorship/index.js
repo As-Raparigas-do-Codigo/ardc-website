@@ -1,7 +1,7 @@
 import React from 'react';
 import MentorshipForm from 'components/Forms/MentorshipForm';
 import { Container, Col, Row } from 'react-bootstrap';
-import { Routes } from 'Constants';
+import { Routes } from 'data/Constants';
 import { SiteContent } from 'data/SiteContent';
 import PageLayout from 'components/PageLayout';
 
@@ -24,21 +24,22 @@ const MentorshipInfoSection = () => (
     </Row>
     <Row>
       <ul className="mx-4">
-        <li className="mb-2">Mentorias Individuais</li>
+        <li className="mb-2">
+          {SiteContent.MentorshipsPage.IndividualMentorshipTitle}
+        </li>
         <p className="my-3">
-          Aqui o acompamento será feito de forma singular e completamente personalizado e adequado
-          aos teus objectivos pessoais.
+          {SiteContent.MentorshipsPage.IndividualMentorshipText}
         </p>
-        <li className="mb-2">Mentorias de Grupo</li>
+        <li className="mb-2">
+          {SiteContent.MentorshipsPage.GroupMentorshipTitle}
+        </li>
         <p className="my-3">
-          Neste tipo de mentoria faz sentido que os membros do grupo estejam alinhados nos
-          objectivos, pois se as necessidades de cada grupo forem muito dispares então o
-          acompanhamento poderá não ser o mais adequado.
+          {SiteContent.MentorshipsPage.GroupMentorshipText}
         </p>
       </ul>
     </Row>
     <LinkArrow href={Routes.TeamRoute} variant="primary">
-      Conhece os nossos mentores
+      {SiteContent.HomePage.MentorsSection.Title}
     </LinkArrow>
   </Container>
 );
@@ -46,8 +47,12 @@ const MentorshipInfoSection = () => (
 const MentorshipFormSection = () => (
   <Container className="my-5 p-5 box-radius shadow-lg">
     <Row>
-      <h2 className="mb-2">{SiteContent.MentorshipsPage.MentorshipForm.Title}</h2>
-      <p className="mb-4">{SiteContent.MentorshipsPage.MentorshipForm.Subtitle}</p>
+      <h2 className="mb-2">
+        {SiteContent.MentorshipsPage.MentorshipForm.Title}
+      </h2>
+      <p className="mb-4">
+        {SiteContent.MentorshipsPage.MentorshipForm.Subtitle}
+      </p>
     </Row>
     <Row>
       <MentorshipForm />
