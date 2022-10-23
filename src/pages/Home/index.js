@@ -11,6 +11,8 @@ import PageLayout from 'components/PageLayout';
 import banner from 'assets/home/banner.jpeg';
 import missao from 'assets/home/missao.png';
 import events from '../../data/events';
+import LinkArrow from 'components/LinkArrow';
+import pdf from 'assets/Booklet_ARDC_2022.pdf';
 // data
 // TODO: retirar comentário após MVP
 //import articles from "../../data/articles";
@@ -28,14 +30,11 @@ const IntroContent = () => {
                 Conhece os nossos workshops
               </LinkButton>
             </Col>
-            {/*
             <Col className="col-auto align-self-center">
-              <LinkArrow href={Routes.Collaborate}>
-                {SiteContent.Title.IWantToCollaborate}
+              <LinkArrow href={pdf} download>
+                Faz aqui download do nosso booklet
               </LinkArrow>
             </Col>
-            */
-            }
           </Row>
         </Container>
       </Col>
