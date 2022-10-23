@@ -4,6 +4,7 @@ import { Routes } from 'Constants';
 import { SiteContent } from 'SiteContent';
 import BasicCardsRow from 'components/BasicCardsRow';
 import LinkButton from 'components/LinkButton';
+import LinkArrow from 'components/LinkArrow';
 import MentorsSection from 'components/MentorsSection';
 import SponsorSection from 'components/SponsorSection';
 import WorkshopsSection from 'components/WorkshopsSection';
