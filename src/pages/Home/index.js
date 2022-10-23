@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Routes } from 'Constants';
-import { SiteContent } from 'SiteContent';
+import { SiteContent } from 'data/SiteContent';
 import BasicCardsRow from 'components/BasicCardsRow';
 import LinkButton from 'components/LinkButton';
 import LinkArrow from 'components/LinkArrow';
@@ -12,7 +12,7 @@ import KPISSection from 'components/KPISSection';
 import PageLayout from 'components/PageLayout';
 import banner from 'assets/home/banner.jpeg';
 import missao from 'assets/home/missao.png';
-import events from '../../data/events';
+import Events from '../../data/Events';
 import pdf from '../../assets/Booklet_ARDC_2022.pdf'
 
 const IntroContent = () => {
@@ -116,7 +116,7 @@ function Home() {
       </div>
       */ }
       <div className="zig-zag"></div>
-      <BasicCardsRow data={events} heading={SiteContent.HomePage.TalksSection.Title} subtitle="" />
+      <BasicCardsRow data={Events} heading={SiteContent.HomePage.TalksSection.Title} subtitle="" />
 
       {/* TODO: mudar para className="gradient" depois do MVP */}
       <div className="bg-blue">

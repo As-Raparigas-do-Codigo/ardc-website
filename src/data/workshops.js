@@ -1,7 +1,7 @@
 import python from '../assets/workshops/workshop-python.png';
 import react from '../assets/workshops/workshop-react.png';
 
-const workshops = [
+const WorkshopsData = [
   {
     id: 1,
     title: 'React',
@@ -47,4 +47,4 @@ const workshops = [
   }
 ];
 
-export default workshops;
+export default WorkshopsData;

@@ -1,6 +1,6 @@
 import image1 from '../assets/articles/image1.png';
 
-const events = [
+const Articles = [
   {
     id: 1,
     title: '#12: Gitanjali Rao (Women in Tech)',
@@ -36,4 +36,4 @@ const events = [
   }
 ];
 
-export default events;
+export default Articles;

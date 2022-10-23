@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes } from 'Constants';
-import { SiteContent } from 'SiteContent';
+import { SiteContent } from 'data/SiteContent';
 import { Container } from 'react-bootstrap';
 import PageLayout from 'components/PageLayout';
 import WorkshopsList from 'components/WorkshopsList';

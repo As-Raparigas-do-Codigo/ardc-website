@@ -1,9 +1,9 @@
 import image1 from "../assets/about/women-computer.webp";
 import image2 from "../assets/about/computer-photo.webp";
 import image3 from "../assets/about/computer-photo.webp";
-import { SiteContent } from "SiteContent";
+import { SiteContent } from "data/SiteContent";
 
-const about = [
+const AboutData = [
   {
     id: 1,
     title: SiteContent.AboutUsPage.Mission.Title,
@@ -30,4 +30,4 @@ const about = [
   }
 ];
 
-export default about;
+export default AboutData;

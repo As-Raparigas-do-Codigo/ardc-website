@@ -3,8 +3,8 @@ import { Row, Col, Container } from 'react-bootstrap';
 import PersonCard from 'components/PersonCard';
 import PageLayout from 'components/PageLayout';
 import { Routes } from 'Constants';
-import { SiteContent } from 'SiteContent';
-import team from 'data/team';
+import { SiteContent } from 'data/SiteContent';
+import TeamData from 'data/Team';
 
 function Team() {
   const breadcrumbs = [
@@ -21,9 +21,9 @@ function Team() {
     }
   ];
 
-  const founderTeam = team.filter((x) => x.roles.includes('founder'));
-  const adminTeam = team.filter((x) => x.roles.includes('admin') && !x.roles.includes('founder'));
-  const collabTeam = team.filter(
+  const founderTeam = TeamData.filter((x) => x.roles.includes('founder'));
+  const adminTeam = TeamData.filter((x) => x.roles.includes('admin') && !x.roles.includes('founder'));
+  const collabTeam = TeamData.filter(
     (x) => x.roles.includes('collaborator') && !x.roles.includes('admin')
   );
 

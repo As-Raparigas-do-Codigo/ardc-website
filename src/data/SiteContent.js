@@ -1,7 +1,14 @@
-
 const SiteContent = {
   AboutLabel: 'Sobre Nós',
   RdCLabel: 'As Raparigas do Código',
+  Toast: {
+    ContactSentSuccessfully: 'Agradecemos o teu interesse no nosso projecto. Alguém da nossa equipa irá entrar em contacto ' +
+    'contigo, o mais depressa possível.',
+    MessageSentSuccessfully: 'Obrigado! A tua mensagem foi enviada com sucesso. :D',
+    UnexpectedErrorOccurred: 'Oops! Algo de inesperado aconteceu. :(',
+    ErrorMessageWithEmail: 'Pedimos desculpa mas, por motivos técnicos, não foi possível submeter o teu pedido. Tenta ' +
+    'novamente ou contacta-nos através do email "geral@raparigasdocodigo.pt"'
+  },
   AboutUsPage: {
     Route: 'sobre',
     PageName: 'Sobre o projecto',
@@ -155,6 +162,11 @@ const SiteContent = {
     'torno de Aviso de Privacidad e informações pessoais. Se você tiver alguma dúvida sobre ' +
     'como lidamos com dados do utilizador e informações pessoais, entre em contacto connosco. '
   },
+  StatisticsSection: {
+    MentorsLabel: 'Professores & Mentores',
+    StudentsLabel: 'Alunas inscritas',
+    WorkshopsLabel: 'Workshops realizados'
+  },
   WorkshopsPage: {
     Route: 'workshops',
     PageName: 'Workshops',
@@ -187,8 +199,9 @@ const SiteContent = {
     }
   },
   /* not being used */
-  HelpTheProjectSection: {
-    Title: 'Ajuda o projecto a crescer.',
+  SupportTheProject: {
+    Title: 'BUY US A COFFEE!',
+    Subtitle: 'Ajuda o projecto a crescer.',
     Text: 'As Raparigas do Código são uma associação sem fins lucrativos e os nossos workshops e ' +
     'eventos são totalmente gratuitos. Considera um donativo para ajudar o nosso projecto a' +
     'crescer e apoiar a nossa missão.',
