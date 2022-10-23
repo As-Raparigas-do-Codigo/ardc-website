@@ -32,7 +32,7 @@ const CollaborateContent = () => (
         Existem diferentes formas de poderes colaborar connosco, dependendo da tua disponibilidade e
         interesse. Se gostavas de te juntar a nós, preenche o{' '}
         <a href="#formulario-colaboracao">formulário de colaboração</a> ou envia-nos um email para{' '}
-        <a href="mailto=geral@raparigasdocodigo.pt">geral@raparigasdocodigo.pt</a>. Ficamos à tua
+        <a href={`mailto=${Constants.Email}`}>{Constants.Email}</a>. Ficamos à tua
         espera!{' '}
       </p>
     </Row>
