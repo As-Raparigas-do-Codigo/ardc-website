@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
+import Reaptcha from 'reaptcha';
 
 function MentorshipForm() {
   const [name, setName] = useState('');
@@ -21,6 +22,7 @@ function MentorshipForm() {
     setMessage('');
   };
 
+  const [showCaptcha, setShowCaptcha] = useState(true);
   const [sending, setSending] = useState(false);
 
   const [successToast, setSuccessToast] = useState(false);
@@ -36,7 +38,11 @@ function MentorshipForm() {
     hideErrorToast();
   };
 
-  const sendForm = (evt) => {
+  const onVerify = () => {
+    setShowCaptcha(false)
+  }
+
+  const handleFormWasSubmitted = (evt) => {
     evt.preventDefault();
     var myHeaders = new Headers();
     myHeaders.append('Accept', 'application/json');
@@ -70,7 +76,10 @@ function MentorshipForm() {
         console.log('error', error);
         showErrorToast();
       })
-      .finally(() => setSending(false));
+      .finally(() => {
+        setSending(false)
+        showCaptcha(true)
+      });
   };
 
   return (
@@ -167,15 +176,30 @@ function MentorshipForm() {
         </Stack>
 
         <div className="d-flex justify-content-between">
-          <p className="mandatory-hint">* Preenchimento obrigatório</p>
-          <button
-            className="button-primary"
-            type="submit"
-            disabled={!name || !email || !message || sending}
-            onClick={sendForm}
-          >
-            Submeter
-          </button>
+          {
+            !showCaptcha && (
+              <p className="mandatory-hint">* Preenchimento obrigatório</p>
+            )
+          }
+          {
+            !showCaptcha && (
+              <button
+                className="button-primary"
+                type="submit"
+                disabled={!name || !email || !message || sending}
+                onClick={handleFormWasSubmitted}>
+                Submeter
+              </button>
+            )
+          }
+          {
+            /* this is a test recaptcha */
+            showCaptcha && (
+              <Reaptcha 
+                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                onVerify={onVerify}/>
+            )
+          }
         </div>
       </Form>
     </>
