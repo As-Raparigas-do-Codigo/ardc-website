@@ -9,7 +9,6 @@ const Routes = {
   Contacts: '/' + SiteContent.ContactsPage.Route,
   Events: '/' + SiteContent.EventsPage.Route,
   Home: '/',
-  TermsOfUsePolicy: '/termsofuse',
   Mentorships: '/' + SiteContent.MentorshipsPage.Route,
   PrivacyPolicy: '/' + SiteContent.PrivacyPolicyPage.Route,
   Team: '/' + SiteContent.TeamPage.Route,
