@@ -62,8 +62,7 @@ function ContactForm() {
         showSuccessToast();
         resetData();
       })
-      .catch((error) => {
-        console.log('error', error);
+      .catch(() => {
         showErrorToast();
       })
       .finally(() => {
@@ -124,22 +123,28 @@ function ContactForm() {
         </Stack>
         <div className="d-flex justify-content-between">
           {
-            !showCaptcha && <p className="mandatory-hint">* Preenchimento obrigatório</p>
+            !showCaptcha && (
+              <p className="mandatory-hint">* Preenchimento obrigatório</p>
+            )
           }
           {
-            !showCaptcha && <button
-              className="button-primary"
-              type="submit"
-              disabled={!name || !email || !subject || !message || sending}
-              onClick={handleFormWasSubmitted}
-            >
-              Enviar mensagem
-            </button>
+            !showCaptcha && (
+              <button
+                className="button-primary"
+                type="submit"
+                disabled={!name || !email || !subject || !message || sending}
+                onClick={handleFormWasSubmitted}>
+                Enviar mensagem
+              </button>
+            )
           }
           {
-            showCaptcha && <Reaptcha 
-              sitekey="***REMOVED***"
-              onVerify={onVerify}/>
+            /* this is a test recaptcha */
+            showCaptcha && (
+              <Reaptcha 
+                sitekey="***REMOVED***"
+                onVerify={onVerify}/>
+            )
           }
         </div>
       </Form>
