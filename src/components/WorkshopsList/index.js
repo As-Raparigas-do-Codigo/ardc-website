@@ -46,7 +46,7 @@ function WorkshopsList({ next = false, old = false }) {
               date={item.date}
               description={item.description}
               imgPath={item.image}
-              buttonUrl={'mailto:asraparigasdocodigo@gmail.com'}
+              buttonUrl={'mailto:geral@raparigasdocodigo.pt'}
               buttonLabel={
                 isFutureWorkshop(item.startingDate) ? SiteContent.Buttons.WorkshopCard : null
               }
