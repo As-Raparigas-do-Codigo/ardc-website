@@ -76,7 +76,7 @@ const SiteContent = {
       Description: 'Best Digital Inclusion Project started by a Woman.',
       Button: 'Ver o vídeo no Youtube'
     },
-    Copyright: 'Copyright © 2022 As Raparigas do Código. All Rights Reserved',
+    Copyright: `Copyright © ${new Date().getFullYear()} As Raparigas do Código. All Rights Reserved`
   },
   HomePage: {
     PageName: 'Home',
@@ -85,7 +85,8 @@ const SiteContent = {
     IntroSection: {
       Title: 'Somos As Raparigas do Código',
       Description: 'Uma organização focada em desmistificar o papel da mulher na tecnologia, promovendo a inclusão digital e encorajando mais raparigas e mulheres a ingressar no sector das tecnologias de informação.',
-      Button: 'Conhece os nossos workshops'
+      PrimaryButton: 'Conhece os nossos workshops',
+      SecondaryButton: 'Faz aqui download do nosso booklet'
     },
     MissionSection: {
       Title: 'A NOSSA MISSÃO',

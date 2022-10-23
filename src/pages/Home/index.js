@@ -12,6 +12,7 @@ import PageLayout from 'components/PageLayout';
 import banner from 'assets/home/banner.jpeg';
 import missao from 'assets/home/missao.png';
 import events from '../../data/events';
+import pdf from '../../assets/Booklet_ARDC_2022.pdf'
 
 const IntroContent = () => {
   return (
@@ -23,8 +24,13 @@ const IntroContent = () => {
           <Row>
             <Col className="col-auto align-self-center">
               <LinkButton href={Routes.Workshops} variant="primary">
-                {SiteContent.HomePage.IntroSection.Button}
+                {SiteContent.HomePage.IntroSection.PrimaryButton}
               </LinkButton>
+            </Col>
+            <Col className="col-auto align-self-center">
+              <LinkArrow href={pdf} download>
+                {SiteContent.HomePage.IntroSection.SecondaryButton}
+              </LinkArrow>
             </Col>
           </Row>
         </Container>
