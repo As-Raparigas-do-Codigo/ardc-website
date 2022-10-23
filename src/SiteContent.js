@@ -192,7 +192,7 @@ const SiteContent = {
     Text: 'As Raparigas do Código são uma associação sem fins lucrativos e os nossos workshops e ' +
     'eventos são totalmente gratuitos. Considera um donativo para ajudar o nosso projecto a' +
     'crescer e apoiar a nossa missão.',
-    Buttons: 'Quero fazer um donativo'
+    Button: 'Quero fazer um donativo'
   },
 };
 

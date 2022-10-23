@@ -24,7 +24,9 @@ const HelpTheProject = () => {
       </Row>
       <Row>
         <Col md={{ span: 6, offset: 3 }}>
-          <LinkButton href="#">{SiteContent.HelpTheProjectSection.Buttons}</LinkButton>
+          <LinkButton href="#">
+            {SiteContent.HelpTheProjectSection.Button}
+          </LinkButton>
         </Col>
       </Row>
       <Row className="testimonials">
