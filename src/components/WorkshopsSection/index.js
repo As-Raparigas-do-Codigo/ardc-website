@@ -3,6 +3,7 @@ import { Row, Col, Container } from 'react-bootstrap';
 import WorkshopsList from 'components/WorkshopsList';
 import LinkArrow from 'components/LinkArrow';
 import { Routes } from 'Constants';
+import { SiteContent } from 'SiteContent';
 
 function WorkshopsSection(props) {
   return (
@@ -13,7 +14,9 @@ function WorkshopsSection(props) {
           <p className="">{props.subtitle}</p>
         </Col>
         <Col className="col-auto align-self-end">
-          <LinkArrow href={Routes.Workshop}>Ver todos os workshops</LinkArrow>
+          <LinkArrow href={Routes.Workshop}>
+            {SiteContent.HomePage.WorkshopsSection.Button}
+          </LinkArrow>
         </Col>
       </Row>
       <Row>

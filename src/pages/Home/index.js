@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Routes, SiteContent } from 'Constants';
+import { Routes } from 'Constants';
+import { SiteContent } from 'SiteContent';
 import BasicCardsRow from 'components/BasicCardsRow';
 import LinkButton from 'components/LinkButton';
 import MentorsSection from 'components/MentorsSection';
@@ -11,31 +12,20 @@ import PageLayout from 'components/PageLayout';
 import banner from 'assets/home/banner.jpeg';
 import missao from 'assets/home/missao.png';
 import events from '../../data/events';
-// data
-// TODO: retirar comentário após MVP
-//import articles from "../../data/articles";
 
 const IntroContent = () => {
   return (
     <>
       <Col className="my-4 align-self-center">
-        <h1 className="py-1">{SiteContent.Title.WeAreRdC}</h1>
-        <p className="py-1">{SiteContent.Text.WhoWeAre}</p>
+        <h1 className="py-1">{SiteContent.HomePage.IntroSection.Title}</h1>
+        <p className="py-1">{SiteContent.HomePage.IntroSection.Description}</p>
         <Container className="p-0">
           <Row>
             <Col className="col-auto align-self-center">
               <LinkButton href={Routes.Workshops} variant="primary">
-                Conhece os nossos workshops
+                {SiteContent.HomePage.IntroSection.Button}
               </LinkButton>
             </Col>
-            {/*
-            <Col className="col-auto align-self-center">
-              <LinkArrow href={Routes.Collaborate}>
-                {SiteContent.Title.IWantToCollaborate}
-              </LinkArrow>
-            </Col>
-            */
-            }
           </Row>
         </Container>
       </Col>
@@ -59,8 +49,8 @@ function Home() {
       <div className="zig-zag"></div>
 
       <WorkshopsSection
-        heading={SiteContent.Title.OurWorkshops}
-        subtitle={SiteContent.Subtitle.Workshops}
+        heading={SiteContent.HomePage.WorkshopsSection.Title}
+        subtitle={SiteContent.WorkshopsPage.Description}
       />
 
       <div className="zig-zag"></div>
@@ -69,14 +59,14 @@ function Home() {
         <Container className="py-md-5">
           <Row>
             <Col className="my-4">
-              <h6 className="py-5">A NOSSA MISSÃO</h6>
-              <p className="py-1">{SiteContent.Text.OurMission_p1}</p>
-              <p className="py-1">{SiteContent.Text.OurMission_p2}</p>
+              <h6 className="py-5">{SiteContent.HomePage.MissionSection.Title}</h6>
+              <p className="py-1">{SiteContent.HomePage.MissionSection.Text_p1}</p>
+              <p className="py-1">{SiteContent.HomePage.MissionSection.Text_p2}</p>
               <Container className="p-0">
                 <Row>
                   <Col className="col-auto align-self-center">
                     <LinkButton href={Routes.About} variant="primary">
-                      Sabe mais sobre nós
+                    {SiteContent.HomePage.MissionSection.Button}
                     </LinkButton>
                   </Col>
                 </Row>
@@ -119,7 +109,7 @@ function Home() {
       </div>
       */ }
       <div className="zig-zag"></div>
-      <BasicCardsRow data={events} heading={'Talks & Eventos'} subtitle="" />
+      <BasicCardsRow data={events} heading={SiteContent.HomePage.TalksSection.Title} subtitle="" />
 
       {/* TODO: mudar para className="gradient" depois do MVP */}
       <div className="bg-blue">

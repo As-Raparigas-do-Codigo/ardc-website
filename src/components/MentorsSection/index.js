@@ -5,6 +5,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './mentors-section.scss';
 import team from 'data/team';
+import { SiteContent } from 'SiteContent';
 
 const responsive = {
   desktop: {
@@ -31,12 +32,13 @@ function MentorsSection() {
   return (
     <Container className="mt-5 pt-md-5 pb-5">
       <Row>
-        <h2 className="mb-2">Conhece os nossos mentores.</h2>
+        <h2 className="mb-2">
+          {SiteContent.HomePage.MentorsSection.Title}
+        </h2>
         <p className="mb-5">
-          A nossa equipa é formada por pessoas provenientes de diversas áreas profissionais.
+          {SiteContent.HomePage.MentorsSection.Text_p1}
           <br />
-          Da engenharia ao design, das ciências ao marketing, a trabalhar juntos por um futuro mais
-          inclusivo.
+          {SiteContent.HomePage.MentorsSection.Text_p2}
         </p>
       </Row>
 

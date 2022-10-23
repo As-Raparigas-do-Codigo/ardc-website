@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
 import Reaptcha from 'reaptcha';
+import { SiteContent } from 'SiteContent';
 
 function ContactForm() {
 
@@ -81,7 +82,7 @@ function ContactForm() {
           <Form.Group className="mb-3" controlId="nameInputField">
             <Form.Control
               type="text"
-              placeholder="Nome *"
+              placeholder={SiteContent.ContactsPage.ContactFormSection.NameLabel}
               value={name}
               onChange={(e) => setName(e.target.value)}
               size="lg"
@@ -91,7 +92,7 @@ function ContactForm() {
           <Form.Group className="mb-3" controlId="emailInputField">
             <Form.Control
               type="email"
-              placeholder="Email *"
+              placeholder={SiteContent.ContactsPage.ContactFormSection.EmailLabel}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               size="lg"
@@ -113,7 +114,7 @@ function ContactForm() {
               type="text"
               as="textarea"
               rows="3"
-              placeholder="Mensagem / Comentário"
+              placeholder={SiteContent.ContactsPage.ContactFormSection.MessageLabel}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               size="lg"
@@ -124,7 +125,9 @@ function ContactForm() {
         <div className="d-flex justify-content-between">
           {
             !showCaptcha && (
-              <p className="mandatory-hint">* Preenchimento obrigatório</p>
+              <p className="mandatory-hint">
+                {SiteContent.ContactsPage.ContactFormSection.MandatoryLabel}
+              </p>
             )
           }
           {
@@ -134,7 +137,7 @@ function ContactForm() {
                 type="submit"
                 disabled={!name || !email || !subject || !message || sending}
                 onClick={handleFormWasSubmitted}>
-                Enviar mensagem
+                {SiteContent.ContactsPage.ContactFormSection.SendMessageButton}
               </button>
             )
           }

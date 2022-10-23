@@ -31,13 +31,17 @@ function PageLayout({ title, description, customBanner = null, breadcrumbsData, 
             <Row>
               <Col>
                 <Breadcrumb>
-                  {breadcrumbsData.map((breadcrumb) => {
+                  {breadcrumbsData.map((breadcrumb, index) => {
                     if (breadcrumb.href) {
                       return (
-                        <Breadcrumb.Item href={breadcrumb.href}>{breadcrumb.label}</Breadcrumb.Item>
+                        <Breadcrumb.Item href={breadcrumb.href} key={index}>
+                          {breadcrumb.label}
+                        </Breadcrumb.Item>
                       );
                     } else {
-                      return <Breadcrumb.Item active>{breadcrumb.label}</Breadcrumb.Item>;
+                      return <Breadcrumb.Item active key={index}>
+                        {breadcrumb.label}
+                      </Breadcrumb.Item>;
                     }
                   })}
                 </Breadcrumb>

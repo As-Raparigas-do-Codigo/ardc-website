@@ -1,23 +1,24 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Routes, SiteContent } from 'Constants';
 import PageLayout from 'components/PageLayout';
 import Teaser from 'components/Teaser';
 import Statistics from 'components/Statistics';
 import about from 'data/about.js';
+import { Routes } from 'Constants';
+import { SiteContent } from 'SiteContent';
 
 function About() {
   const breadcrumbs = [
     {
-      label: SiteContent.Title.Home,
+      label: SiteContent.HomePage.PageName,
       href: Routes.Home
     },
     {
-      label: SiteContent.Title.AboutUs,
+      label: SiteContent.AboutLabel,
       href: Routes.About
     },
     {
-      label: SiteContent.Title.AboutTheProject
+      label: SiteContent.AboutUsPage.PageName
     }
   ];
 
@@ -38,8 +39,8 @@ function About() {
 
   return (
     <PageLayout
-      title={SiteContent.Title.AboutUs}
-      description={SiteContent.Subtitle.AboutUs}
+      title={SiteContent.AboutUsPage.PageName}
+      description={SiteContent.AboutUsPage.Description}
       breadcrumbsData={breadcrumbs}>
       <Container>
         <Row>
