@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
+import Reaptcha from 'reaptcha';
 
 function ContactForm() {
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
@@ -15,6 +17,7 @@ function ContactForm() {
     setMessage('');
   };
 
+  const [showCaptcha, setShowCaptcha] = useState(true);
   const [sending, setSending] = useState(false);
 
   const [successToast, setSuccessToast] = useState(false);
@@ -30,8 +33,11 @@ function ContactForm() {
     hideErrorToast();
   };
 
-  const sendForm = (evt) => {
-    evt.preventDefault();
+  const onVerify = () => {
+    setShowCaptcha(false)
+  }
+
+  const handleFormWasSubmitted = () => {
     var myHeaders = new Headers();
     myHeaders.append('Accept', 'application/json');
     myHeaders.append('Content-Type', 'application/json');
@@ -56,12 +62,15 @@ function ContactForm() {
         showSuccessToast();
         resetData();
       })
-      .catch((error) => {
-        console.log('error', error);
+      .catch(() => {
         showErrorToast();
       })
-      .finally(() => setSending(false));
-  };
+      .finally(() => {
+        setSending(false)
+        showCaptcha(true)
+      }
+    );
+  }
 
   return (
     <>
@@ -76,6 +85,7 @@ function ContactForm() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               size="lg"
+              enabled={showCaptcha}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="emailInputField">
@@ -85,6 +95,7 @@ function ContactForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               size="lg"
+              enabled={showCaptcha}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="subjectInputField">
@@ -94,6 +105,7 @@ function ContactForm() {
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               size="lg"
+              enabled={showCaptcha}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="subjectMessageField">
@@ -105,19 +117,35 @@ function ContactForm() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               size="lg"
+              enabled={showCaptcha}
             />
           </Form.Group>
         </Stack>
         <div className="d-flex justify-content-between">
-          <p className="mandatory-hint">* Preenchimento obrigatório</p>
-          <button
-            className="button-primary"
-            type="submit"
-            disabled={!name || !email || !subject || !message || sending}
-            onClick={sendForm}
-          >
-            Enviar mensagem
-          </button>
+          {
+            !showCaptcha && (
+              <p className="mandatory-hint">* Preenchimento obrigatório</p>
+            )
+          }
+          {
+            !showCaptcha && (
+              <button
+                className="button-primary"
+                type="submit"
+                disabled={!name || !email || !subject || !message || sending}
+                onClick={handleFormWasSubmitted}>
+                Enviar mensagem
+              </button>
+            )
+          }
+          {
+            /* this is a test recaptcha */
+            showCaptcha && (
+              <Reaptcha 
+                sitekey="***REMOVED***"
+                onVerify={onVerify}/>
+            )
+          }
         </div>
       </Form>
     </>
