@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes } from 'Constants';
+import { Routes } from 'data/Constants';
 import { SiteContent } from 'data/SiteContent';
 import { Container } from 'react-bootstrap';
 import PageLayout from 'components/PageLayout';

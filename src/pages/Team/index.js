@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import PersonCard from 'components/PersonCard';
 import PageLayout from 'components/PageLayout';
-import { Routes } from 'Constants';
+import { Routes } from 'data/Constants';
 import { SiteContent } from 'data/SiteContent';
 import TeamData from 'data/Team';
 

@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import HorizontalCard from 'components/HorizontalCard';
-import { Constants } from 'Constants';
+import { Constants } from 'data/Constants';
 import { SiteContent } from 'data/SiteContent';
 import dataWorkshops from '../../data/Workshops';
 

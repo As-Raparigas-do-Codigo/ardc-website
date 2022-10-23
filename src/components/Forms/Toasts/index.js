@@ -1,6 +1,6 @@
 import React from 'react';
 import ToastMessage from 'components/Toast';
-import { Constants } from 'Constants';
+import { Constants } from 'data/Constants';
 import { SiteContent } from 'data/SiteContent';
 
 export const SuccessToastMessage = ({ show = false, onClose }) => (

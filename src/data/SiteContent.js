@@ -59,7 +59,8 @@ const SiteContent = {
     ContactInfoSection: {
       Title: 'Envia-nos um email.',
       Description: 'Estes são os contactos que poderás usar.',
-      EmailLabel: 'Email:'
+      EmailLabel: 'Email:',
+      AdminLabel: 'Direção:'
     },
     ContactFormSection: {
       Title: 'Precisas de ajuda?',
@@ -129,6 +130,13 @@ const SiteContent = {
     'respondido com a mais brevidade possivel. A nossa dedicação será sempre em prol de quem nos ' +
     'procura e faremos o que estiver ao nosso alcance para ajudar.',
     Text_p3: 'Assim, para te esclarecemos melhor nós fornecemos dois tipos de mentorias:',
+    IndividualMentorshipTitle: 'Mentorias Individuais',
+    IndividualMentorshipText: 'Aqui o acompamento será feito de forma singular e completamente personalizado e adequado ' +
+    'aos teus objectivos pessoais.',
+    GroupMentorshipTitle: 'Mentorias de Grupo',
+    GroupMentorshipText: 'Neste tipo de mentoria faz sentido que os membros do grupo estejam alinhados nos ' +
+    'objectivos, pois se as necessidades de cada grupo forem muito dispares então o ' +
+    'acompanhamento poderá não ser o mais adequado.',
     MentorshipForm: {
       Title: 'Procuras mentoria?',
       Subtitle: 'Preenche este formulário e iremos responder-te o mais breve possível.',

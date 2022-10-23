@@ -3,7 +3,7 @@ import CollaboratorForm from 'components/Forms/CollaboratorForm';
 import NumberedRow from 'components/NumberedRow';
 import PageLayout from 'components/PageLayout';
 import { Container, Row } from 'react-bootstrap';
-import { Routes } from '../../Constants';
+import { Routes } from '../../data/Constants';
 import { SiteContent } from '../../data/SiteContent';
 
 const CollaborateFormSection = () => (

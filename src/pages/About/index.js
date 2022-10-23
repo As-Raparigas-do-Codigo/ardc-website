@@ -4,7 +4,7 @@ import PageLayout from 'components/PageLayout';
 import Teaser from 'components/Teaser';
 import Statistics from 'components/KPISSection';
 import AboutData from 'data/About.js';
-import { Routes } from 'Constants';
+import { Routes } from 'data/Constants';
 import { SiteContent } from 'data/SiteContent';
 
 function AboutUs() {

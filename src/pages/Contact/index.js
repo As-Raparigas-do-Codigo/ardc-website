@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ContactForm from 'components/Forms/ContactForm';
 import PageLayout from 'components/PageLayout';
-import { Constants, Routes } from 'Constants';
+import { Constants, Routes } from 'data/Constants';
 import { SiteContent } from 'data/SiteContent';
 
 const ContactInfoSection = () => (
@@ -19,7 +19,9 @@ const ContactInfoSection = () => (
       <Container>
         <Row xs="auto" md="auto" lg="auto" className="mb-3">
           <Col xs={2} md={2} lg={2}>
-            <strong>Direção:</strong>
+            <strong>
+              {SiteContent.ContactsPage.ContactInfoSection.AdminLabel}
+            </strong>
           </Col>
           <Col>Miriam Santos</Col>
         </Row>
@@ -68,8 +70,7 @@ const Contact = () => {
     <PageLayout
       title={SiteContent.ContactsPage.Title}
       description={SiteContent.ContactsPage.Description}
-      breadcrumbsData={breadcrumbs}
-    >
+      breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="padding-top-first-section">
         <Row>
           <Col>

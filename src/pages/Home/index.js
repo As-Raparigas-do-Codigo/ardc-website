@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Routes } from 'Constants';
+import { Routes } from 'data/Constants';
 import { SiteContent } from 'data/SiteContent';
 import BasicCardsRow from 'components/BasicCardsRow';
 import LinkButton from 'components/LinkButton';
@@ -66,9 +66,15 @@ function Home() {
         <Container className="py-md-5">
           <Row>
             <Col className="my-4">
-              <h6 className="py-5">{SiteContent.HomePage.MissionSection.Title}</h6>
-              <p className="py-1">{SiteContent.HomePage.MissionSection.Text_p1}</p>
-              <p className="py-1">{SiteContent.HomePage.MissionSection.Text_p2}</p>
+              <h6 className="py-5">
+                {SiteContent.HomePage.MissionSection.Title}
+              </h6>
+              <p className="py-1">
+                {SiteContent.HomePage.MissionSection.Text_p1}
+              </p>
+              <p className="py-1">
+                {SiteContent.HomePage.MissionSection.Text_p2}
+              </p>
               <Container className="p-0">
                 <Row>
                   <Col className="col-auto align-self-center">
@@ -116,7 +122,10 @@ function Home() {
       </div>
       */ }
       <div className="zig-zag"></div>
-      <BasicCardsRow data={Events} heading={SiteContent.HomePage.TalksSection.Title} subtitle="" />
+      <BasicCardsRow 
+        data={Events} 
+        heading={SiteContent.HomePage.TalksSection.Title} 
+        subtitle="" />
 
       {/* TODO: mudar para className="gradient" depois do MVP */}
       <div className="bg-blue">
