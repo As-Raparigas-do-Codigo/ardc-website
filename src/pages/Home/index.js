@@ -1,7 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Routes, SiteContent } from 'Constants';
-import LinkArrow from 'components/LinkArrow';
 import BasicCardsRow from 'components/BasicCardsRow';
 import LinkButton from 'components/LinkButton';
 import MentorsSection from 'components/MentorsSection';
@@ -29,11 +28,14 @@ const IntroContent = () => {
                 Conhece os nossos workshops
               </LinkButton>
             </Col>
+            {/*
             <Col className="col-auto align-self-center">
               <LinkArrow href={Routes.Collaborate}>
                 {SiteContent.Title.IWantToCollaborate}
               </LinkArrow>
             </Col>
+            */
+            }
           </Row>
         </Container>
       </Col>
@@ -92,6 +94,7 @@ function Home() {
         <hr></hr>
         <KPISSection />
       </div>
+      { /*
       <div className="bg-blue">
         <Container className="py-5">
           <Row>
@@ -114,6 +117,7 @@ function Home() {
           </Row>
         </Container>
       </div>
+      */ }
       <div className="zig-zag"></div>
       <BasicCardsRow data={events} heading={'Talks & Eventos'} subtitle="" />
 
