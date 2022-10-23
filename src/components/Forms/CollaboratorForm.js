@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
+import { SiteContent } from 'SiteContent';
 
 function CollaboratorForm() {
   const [name, setName] = useState('');
@@ -148,7 +149,9 @@ function CollaboratorForm() {
         </Form.Group>
         <Form.Group className="mt-5 mb-2" controlId="collaborationAreasField">
           <Stack gap={3}>
-            <Form.Label>Em que actividades gostarias de colaborar? *</Form.Label>
+            <Form.Label>
+              {SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreasLabel}
+            </Form.Label>
             <Form.Check
               type="checkbox"
               id="mentor"
@@ -160,56 +163,58 @@ function CollaboratorForm() {
               type="checkbox"
               id="speaker"
               checked={speakerChecked}
-              label="Ser orador/a (escolas, workshops, aulas)"
+              label={SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreas.Options.Speaker}
               onChange={(e) => setSpeakerChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="content"
               checked={contentChecked}
-              label="Criação de conteúdo social (Instagram, notícias, etc.)"
+              label={SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreas.Options.Content}
               onChange={(e) => setContentChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="socialMedia"
               checked={socialMediaChecked}
-              label="Gestão de imagem e redes sociais"
+              label={SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreas.Options.SocialMedia}
               onChange={(e) => setSocialMediaChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="eventOrg"
               checked={eventOrgChecked}
-              label="Organização de eventos (encontros, workshops)"
+              label={SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreas.Options.EventOrganisation}
               onChange={(e) => setEventOrgChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="promotion"
               checked={promotionChecked}
-              label="Divulgação"
+              label={SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreas.Options.Promotion}
               onChange={(e) => setPromotionChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="technical"
               checked={technicalChecked}
-              label="Colaboração técnica (gestão do website)"
+              label={SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreas.Options.Technical}
               onChange={(e) => setTechnicalChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="other"
               checked={otherChecked}
-              label="Outras"
+              label={SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreas.Options.Other}
               onChange={(e) => setOtherChecked(e.target.checked ? true : false)}
             />
           </Stack>
         </Form.Group>
         <Form.Group className="mt-5 mb-2" controlId="howDidYouFindUsField">
           <Stack gap={3}>
-            <Form.Label>Como tomaste conhecimento da nossa comunidade? *</Form.Label>
+            <Form.Label>
+              {SiteContent.CollaboratePage.CollaboratorForm.HowDidYouFindUsLabel}
+            </Form.Label>
             <Form.Check
               type="checkbox"
               id="foundUsInsta"

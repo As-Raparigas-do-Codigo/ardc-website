@@ -1,22 +1,22 @@
 import React from 'react';
-
 import PageLayout from 'components/PageLayout';
-import { Routes, SiteContent } from 'Constants';
+import { Routes } from 'Constants';
+import { SiteContent } from 'SiteContent';
 
 function Events() {
   const breadcrumbs = [
     {
-      label: SiteContent.Title.Home,
+      label: SiteContent.HomePage.PageName,
       href: Routes.Home
     },
     {
-      label: SiteContent.Title.Events
+      label: SiteContent.EventsPage.PageName
     }
   ];
   return (
     <PageLayout
-      title={SiteContent.Title.Events}
-      description={SiteContent.Subtitle.Events}
+      title={SiteContent.EventsPage.PageName}
+      description={SiteContent.EventsPage.Description}
       breadcrumbsData={breadcrumbs}
     >
       <h1>{SiteContent.Title.Events}</h1>

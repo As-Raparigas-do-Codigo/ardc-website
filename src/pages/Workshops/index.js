@@ -1,7 +1,7 @@
 import React from 'react';
-import { Routes, SiteContent } from 'Constants';
+import { Routes } from 'Constants';
+import { SiteContent } from 'SiteContent';
 import { Container } from 'react-bootstrap';
-
 import PageLayout from 'components/PageLayout';
 import WorkshopsList from 'components/WorkshopsList';
 import KPISSection from 'components/KPISSection';
@@ -9,17 +9,17 @@ import KPISSection from 'components/KPISSection';
 function Workshops() {
   const breadcrumbs = [
     {
-      label: SiteContent.Title.Home,
+      label: SiteContent.HomePage.PageName,
       href: Routes.Home
     },
     {
-      label: SiteContent.Title.Workshops
+      label: SiteContent.WorkshopsPage.PageName
     }
   ];
   return (
     <PageLayout
-      title={SiteContent.Title.Workshops}
-      description={SiteContent.Subtitle.Workshops}
+      title={SiteContent.WorkshopsPage.PageName}
+      description={SiteContent.WorkshopsPage.Description}
       breadcrumbsData={breadcrumbs}
     >
       <Container className="mt-5 py-md-5">

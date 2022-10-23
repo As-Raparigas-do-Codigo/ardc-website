@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
 import Reaptcha from 'reaptcha';
+import { SiteContent } from 'SiteContent';
 
 function MentorshipForm() {
   const [name, setName] = useState('');
@@ -92,7 +93,7 @@ function MentorshipForm() {
             <Form.Control
               type="text"
               name="nameInputField"
-              placeholder="Nome *"
+              placeholder={SiteContent.MentorshipsPage.MentorshipForm.NameLabel}
               value={name}
               onChange={(e) => setName(e.target.value)}
               size="lg"
@@ -102,7 +103,7 @@ function MentorshipForm() {
             <Form.Control
               type="email"
               name="emailInputField"
-              placeholder="Email *"
+              placeholder={SiteContent.MentorshipsPage.MentorshipForm.EmailLabel}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               size="lg"
@@ -167,7 +168,7 @@ function MentorshipForm() {
               type="text"
               as="textarea"
               rows="3"
-              placeholder="Mensagem / Comentário"
+              placeholder={SiteContent.MentorshipsPage.MentorshipForm.MessageLabel}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               size="lg"
@@ -178,7 +179,9 @@ function MentorshipForm() {
         <div className="d-flex justify-content-between">
           {
             !showCaptcha && (
-              <p className="mandatory-hint">* Preenchimento obrigatório</p>
+              <p className="mandatory-hint">
+                {SiteContent.MentorshipsPage.MentorshipForm.MandatoryLabel}
+              </p>
             )
           }
           {
@@ -188,7 +191,7 @@ function MentorshipForm() {
                 type="submit"
                 disabled={!name || !email || !message || sending}
                 onClick={handleFormWasSubmitted}>
-                Submeter
+                {SiteContent.MentorshipsPage.MentorshipForm.SubmitButton}
               </button>
             )
           }

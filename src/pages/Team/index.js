@@ -2,36 +2,24 @@ import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import PersonCard from 'components/PersonCard';
 import PageLayout from 'components/PageLayout';
-import { SiteContent, Routes } from 'Constants';
+import { Routes } from 'Constants';
+import { SiteContent } from 'SiteContent';
 import team from 'data/team';
 
 function Team() {
   const breadcrumbs = [
     {
-      label: SiteContent.Title.Home,
+      label: SiteContent.HomePage.PageName,
       href: Routes.Home
     },
     {
-      label: SiteContent.Title.AboutUs,
+      label: SiteContent.AboutLabel,
       href: Routes.Team
     },
     {
-      label: SiteContent.Title.OurTeam
+      label: SiteContent.TeamPage.PageName
     }
   ];
-
-  // team.sort((a, b) => {
-  //   const nameA = a.name.toLowerCase();
-  //   const nameB = b.name.toLowerCase();
-  //   if (nameA < nameB) {
-  //     return -1;
-  //   }
-  //   if (nameA > nameB) {
-  //     return 1;
-  //   }
-
-  //   return 0;
-  // });
 
   const founderTeam = team.filter((x) => x.roles.includes('founder'));
   const adminTeam = team.filter((x) => x.roles.includes('admin') && !x.roles.includes('founder'));
@@ -41,13 +29,13 @@ function Team() {
 
   return (
     <PageLayout
-      title={SiteContent.Title.OurTeam}
-      description={SiteContent.Subtitle.OurTeam}
+      title={SiteContent.TeamPage.PageName}
+      description={SiteContent.TeamPage.Description}
       breadcrumbsData={breadcrumbs}
     >
       <Container className={'mt-5 padding-top-bottom-medium'}>
         <Row>
-          <h2>Fundadora</h2>
+          <h2>{SiteContent.TeamPage.Label.Founder}</h2>
         </Row>
         <Row className={'mt-4'} xs={1} md={1} lg={4}>
           {founderTeam.map((item, key) => (
@@ -57,7 +45,7 @@ function Team() {
           ))}
         </Row>
         <Row className={'mt-5'}>
-          <h2>Administração</h2>
+          <h2>{SiteContent.TeamPage.Label.Administration}</h2>
         </Row>
         <Row className={'mt-4'} xs={1} md={1} lg={4}>
           {adminTeam.map((item, key) => (
@@ -67,7 +55,7 @@ function Team() {
           ))}
         </Row>
         <Row className={'mt-5'}>
-          <h2>Colaboradores</h2>
+          <h2>{SiteContent.TeamPage.Label.Collaborators}</h2>
         </Row>
         <Row className={'mt-4 mb-5'} xs={1} lg={4}>
           {collabTeam.map((item, key) => (

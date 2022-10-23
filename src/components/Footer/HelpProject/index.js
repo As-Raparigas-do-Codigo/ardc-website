@@ -2,8 +2,9 @@ import { Row, Container, Col } from 'react-bootstrap';
 import LinkButton from 'components/LinkButton';
 import '../footer.scss';
 import testimonials from 'data/testimonials';
+import { SiteContent } from 'SiteContent';
 
-const HelpProject = () => {
+const HelpTheProject = () => {
   return (
     <Container className="padding-top-bottom-medium">
       <Row>
@@ -12,20 +13,18 @@ const HelpProject = () => {
         </Col>
       </Row>
       <Row>
-        <h2>Ajuda o projecto a crescer.</h2>
+        <h2>{SiteContent.HelpTheProjectSection.Title}</h2>
       </Row>
       <Row>
         <Col md={{ span: 6, offset: 3 }}>
           <p>
-            As Raparigas do Código são uma associação sem fins lucrativos e os nossos workshops e
-            eventos são totalmente gratuitos. Considera um donativo para ajudar o nosso projecto a
-            crescer e apoiar a nossa missão.
+            {SiteContent.HelpTheProjectSection.Text}
           </p>
         </Col>
       </Row>
       <Row>
         <Col md={{ span: 6, offset: 3 }}>
-          <LinkButton href="#">Quero fazer um donativo</LinkButton>
+          <LinkButton href="#">{SiteContent.HelpTheProjectSection.Buttons}</LinkButton>
         </Col>
       </Row>
       <Row className="testimonials">
@@ -65,4 +64,4 @@ const TestimonialCard = ({ description, name, avatar }) => {
   );
 };
 
-export default HelpProject;
+export default HelpTheProject;

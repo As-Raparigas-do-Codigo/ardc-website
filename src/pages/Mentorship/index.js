@@ -1,32 +1,25 @@
 import React from 'react';
 import MentorshipForm from 'components/Forms/MentorshipForm';
 import { Container, Col, Row } from 'react-bootstrap';
-import { Routes, SiteContent } from 'Constants';
+import { Routes } from 'Constants';
+import { SiteContent } from 'SiteContent';
 import PageLayout from 'components/PageLayout';
-// import PersonCard from "components/PersonCard";
-// import team from "data/team";
 
 import LinkArrow from 'components/LinkArrow';
 
 const MentorshipInfoSection = () => (
   <Container className="my-5 py-5 padding-top-first-section">
     <Row>
-      <h6 className="mb-2">{SiteContent.Title.MentorshipProgram}</h6>
-      <h2 className="mb-2">{SiteContent.Title.WhatDoWeDo}</h2>
+      <h6 className="mb-2">{SiteContent.MentorshipsPage.Title}</h6>
+      <h2 className="mb-2">{SiteContent.MentorshipsPage.Subtitle}</h2>
       <p className="mb-4">
-        Temos uma equipa vasta de diversas qualidades que te podem ajudar a guiar-te por este mundo
-        das tecnologias. Nós iremos garantir que o mentor terá o connhecimento e um conjunto de
-        qualidades adequado àquilo que tu procuras
+        {SiteContent.MentorshipsPage.Text_p1}
       </p>
       <p className="mb-4">
-        A nossa equipa de mentores tem o propósito de te acompanhar ao longo deste teu novo
-        percurso. Alocando uma pessoa dedicada a ti irá permitir que tenhas um acompanhamento
-        bastante personalizado de acordo com os teus objectivos. Poderás tirar dúvidas e seres
-        respondido com a mais brevidade possivel. A nossa dedicação será sempre em prol de quem nos
-        procura e faremos o que estiver ao nosso alcance para ajudar.
+        {SiteContent.MentorshipsPage.Text_p2}
       </p>
       <p className="mb-4">
-        Assim, para te esclarecemos melhor nós fornecemos dois tipos de mentorias:
+        {SiteContent.MentorshipsPage.Text_p3}
       </p>
     </Row>
     <Row>
@@ -53,8 +46,8 @@ const MentorshipInfoSection = () => (
 const MentorshipFormSection = () => (
   <Container className="my-5 p-5 box-radius shadow-lg">
     <Row>
-      <h2 className="mb-2">{SiteContent.Title.MentorshipForm}</h2>
-      <p className="mb-4">{SiteContent.Subtitle.MentorshipForm}</p>
+      <h2 className="mb-2">{SiteContent.MentorshipsPage.MentorshipForm.Title}</h2>
+      <p className="mb-4">{SiteContent.MentorshipsPage.MentorshipForm.Subtitle}</p>
     </Row>
     <Row>
       <MentorshipForm />
@@ -85,17 +78,17 @@ const MentorshipFormSection = () => (
 const Mentorship = () => {
   const breadcrumbs = [
     {
-      label: SiteContent.Title.Home,
+      label: SiteContent.HomePage.PageName,
       href: Routes.Home
     },
     {
-      label: SiteContent.Title.Mentorships
+      label: SiteContent.MentorshipsPage.PageName
     }
   ];
   return (
     <PageLayout
-      title={SiteContent.Title.Mentorship}
-      description={SiteContent.Subtitle.Mentorship}
+      title={SiteContent.MentorshipsPage.PageName}
+      description={SiteContent.MentorshipsPage.Description}
       breadcrumbsData={breadcrumbs}
     >
       <Container fluid="md">
