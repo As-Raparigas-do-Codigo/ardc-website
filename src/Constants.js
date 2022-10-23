@@ -60,7 +60,7 @@ const SiteContent = {
     WorkshopsListOld: 'Visita os workshops que já realizámos'
   },
   Text: {
-    Copyright: 'Copyright © 2022 As Raparigas do Código. All Rights Reserved',
+    Copyright: `Copyright © ${new Date().getFullYear()} As Raparigas do Código. All Rights Reserved`,
     WhoWeAre:
       'Uma organização focada em desmistificar o papel da mulher na tecnologia, promovendo a inclusão digital e encorajando mais raparigas e mulheres a ingressar no sector das tecnologias de informação.',
     OurMission_p1:
