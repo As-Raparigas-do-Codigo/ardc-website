@@ -66,7 +66,8 @@ const SiteContent = {
     OurMission_p1:
       'Garantir que todas as mulheres que queiram aprender sobre tecnologia tenham um espaço onde o possam fazer rodeadas de colegas e pares que as representam e apoiam.',
     OurMission_p2:
-      'Queremos desmistificar o papel da mulher na tecnologia, encorajando mais raparigas e mulheres a ingressar no sector das tecnologias de informação.'
+      'Queremos desmistificar o papel da mulher na tecnologia, encorajando mais raparigas e mulheres a ingressar no sector das tecnologias de informação.',
+    AllMentorsLabel: 'Ver todos os mentores'
   },
   Empty: {
     WorkshopsList: 'Infelizmente, não temos workshops, mas aceitamos sugestões. Contacta-nos!',
