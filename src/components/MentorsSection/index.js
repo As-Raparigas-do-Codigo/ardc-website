@@ -8,6 +8,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './mentors-section.scss';
 import team from 'data/team';
+import { shuffle, sortById } from 'utils';
 
 const responsive = {
   desktop: {
@@ -28,13 +29,11 @@ const responsive = {
 };
 
 function MentorsSection() {
-  const mentorsCards = team
-    .filter((x) => x.roles.includes('mentor'))
+  const mentorsCards = shuffle(team.filter((x) => x.roles.includes('mentor')))
     .slice(0, 10)
     .map((item) => <PersonCard key={item.id} person={item} />)
-    .sort((a, b) => {
-      return a.id - b.id;
-    });
+    .sort(sortById);
+
   return (
     <Container className="mt-5 pt-md-5 pb-5">
       <Row>
