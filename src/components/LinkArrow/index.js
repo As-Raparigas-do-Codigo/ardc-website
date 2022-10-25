@@ -7,7 +7,7 @@ const LinkArrow = ({ href, disabled = false, download = false, children }) => (
     <Container>
       <Row>
         <Col className="col-auto p-0">
-          <GreenArrow />
+          <GreenArrow className="arrow-size-default"/>
         </Col>
         <Col className="col-auto">{children}</Col>
       </Row>
