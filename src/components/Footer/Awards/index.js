@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Container, Col } from 'react-bootstrap';
-import { Constants, Routes } from 'data/Constants';
+import Constants from 'data/Constants';
+import Routes from 'data/Routes';
 import SiteContent from 'data/SiteContent';
 import LinkButton from 'components/LinkButton';
 import SocialLinks from 'components/SocialLinks';

@@ -86,7 +86,7 @@ function ContactForm() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               size="lg"
-              enabled={showCaptcha}
+              enabled={showCaptcha.toString()}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="emailInputField">
@@ -96,7 +96,7 @@ function ContactForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               size="lg"
-              enabled={showCaptcha}
+              enabled={showCaptcha.toString()}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="subjectInputField">
@@ -106,7 +106,7 @@ function ContactForm() {
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               size="lg"
-              enabled={showCaptcha}
+              enabled={showCaptcha.toString()}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="subjectMessageField">
@@ -118,7 +118,7 @@ function ContactForm() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               size="lg"
-              enabled={showCaptcha}
+              enabled={showCaptcha.toString()}
             />
           </Form.Group>
         </Stack>

@@ -52,7 +52,7 @@ const WorkshopsData = [
     descriptiveDuration: 'Longa Duração'
   },
   {
-    id: 5,
+    id: 3,
     title: 'Como usar o GitHub como portfólio',
     image: gitportfolio,
     alt: 'GitHub como portfolio workshop',

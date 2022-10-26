@@ -11,7 +11,7 @@ import Workshops from 'pages/Workshops';
 import Footer from 'components/Footer';
 import NavBar from 'components/NavBarComponent';
 import Social from 'components/Social';
-import { Routes as SiteRoutes } from 'data/Constants';
+import SiteRoutes from 'data/Routes';
 
 function App() {
   return (

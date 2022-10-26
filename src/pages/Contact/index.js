@@ -2,7 +2,8 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ContactForm from 'components/Forms/ContactForm';
 import PageLayout from 'components/PageLayout';
-import { Constants, Routes } from 'data/Constants';
+import Constants from 'data/Constants';
+import Routes from 'data/Routes';
 import SiteContent from 'data/SiteContent';
 
 const ContactInfoSection = () => (

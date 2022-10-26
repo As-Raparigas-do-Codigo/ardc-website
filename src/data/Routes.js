@@ -1,3 +1,4 @@
+import SiteContent from './SiteContent';
 
 const Routes = {
   About: '/' + SiteContent.AboutUsPage.Route,
