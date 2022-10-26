@@ -1,17 +1,22 @@
 import React from 'react';
+import { Row, Container, Col } from 'react-bootstrap';
 import PersonCard from 'components/PersonCard';
-import { Row, Container } from 'react-bootstrap';
+import LinkArrow from 'components/LinkArrow';
+import { ReactComponent as GreenArrow } from 'assets/icons/green-arrow.svg';
+import { Routes, SiteContent } from 'Constants';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './mentors-section.scss';
 import TeamData from 'data/Team';
 import { SiteContent } from 'data/SiteContent';
+import team from 'data/team';
+import { shuffle, sortById } from 'utils';
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 4,
-    slidesToSlide: 2 // optional, default to 1.
+    slidesToSlide: 3 // optional, default to 1.
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -26,35 +31,44 @@ const responsive = {
 };
 
 function MentorsSection() {
-  const mentorsCards = TeamData
-    .filter((x) => x.roles.includes('mentor'))
-    .map((item) => <PersonCard key={item.id} person={item} />);
+  const mentorsCards = shuffle(team.filter((x) => x.roles.includes('mentor')))
+    .slice(0, 10)
+    .map((item) => <PersonCard key={item.id} person={item} />)
+    .sort(sortById);
+
   return (
     <Container className="mt-5 pt-md-5 pb-5">
       <Row>
         <h2 className="mb-2">
           {SiteContent.HomePage.MentorsSection.Title}
         </h2>
-        <p className="mb-5">
-          {SiteContent.HomePage.MentorsSection.Text_p1}
-          <br />
-          {SiteContent.HomePage.MentorsSection.Text_p2}
-        </p>
+      </Row>
+      <Row>
+        <Col>
+          <p className="mb-5">
+            {SiteContent.HomePage.MentorsSection.Text_p1}
+            <br />
+            {SiteContent.HomePage.MentorsSection.Text_p2}
+          </p>
+        </Col>
+        <Col className="d-flex justify-content-end align-items-end fw-bold">
+          <div className="mb-5">
+            <LinkArrow href={Routes.Team}> {SiteContent.Text.AllMentorsLabel} </LinkArrow>
+          </div>
+        </Col>
       </Row>
 
       <Row>
         <Carousel
-          autoPlay={false}
+          autoPlaySpeed={9000000}
           showDots
-          arrows={false}
+          arrows
           responsive={responsive}
           renderDotsOutside
-          renderButtonGroupOutside
           dotListClass="custom-dots"
           itemClass="card-item"
-          // customButtonGroup={<CustomButtonGroupAsArrows />}
-          infinite={false}
-        >
+          customLeftArrow={<CustomLeftArrow />}
+          customRightArrow={<CustomRightArrow />}>
           {mentorsCards}
         </Carousel>
       </Row>
@@ -62,35 +76,19 @@ function MentorsSection() {
   );
 }
 
-// const CustomDot = ({ onClick, active, index, carouselState }) => {
-//   const { currentSlide } = carouselState;
-//   return (
-//     <li style={{ background: active ? "grey" : "initial" }}>
-//       <button
-//         style={{ background: active ? "grey" : "initial" }}
-//         onClick={() => onClick()}
-//       />
-//     </li>
-//   );
-// };
-
-// const CustomButtonGroupAsArrows = ({ next, previous }) => {
-//   return (
-//     <div>
-//       <div
-//         style={{
-//           textAlign: "center",
-//         }}>
-//         <button onClick={previous}>{"<"}</button>
-//       </div>
-//       <div
-//         style={{
-//           textAlign: "center",
-//         }}>
-//         <button onClick={next}>{">"}</button>
-//       </div>
-//     </div>
-//   );
-// };
+const CustomLeftArrow = ({ onClick }) => (
+  <span onClick={() => onClick()}>
+    <div className="custom-arrow custom-arrow-left">
+      <GreenArrow className="blue-arrow" />
+    </div>
+  </span>
+);
+const CustomRightArrow = ({ onClick }) => (
+  <span onClick={() => onClick()}>
+    <div className="custom-arrow custom-arrow-right">
+      <GreenArrow className="blue-arrow" />
+    </div>
+  </span>
+);
 
 export default MentorsSection;
