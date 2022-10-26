@@ -52,7 +52,7 @@ function PageLayout({ title, description, customBanner = null, breadcrumbsData, 
         </div>
       )}
 
-      <div> {children}</div>
+      <div>{children}</div>
     </div>
   );
 }
