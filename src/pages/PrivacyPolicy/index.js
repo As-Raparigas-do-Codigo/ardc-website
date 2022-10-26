@@ -2,7 +2,7 @@ import React from 'react';
 import PageLayout from 'components/PageLayout';
 import { Container, Row } from 'react-bootstrap';
 import { Routes } from 'data/Constants';
-import { SiteContent } from 'data/SiteContent';
+import SiteContent from 'data/SiteContent';
 import './privacy-policy.scss';
 
 function PrivacyPolicy() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Routes } from 'data/Constants';
-import { SiteContent } from 'data/SiteContent';
+import SiteContent from 'data/SiteContent';
 import BasicCardsRow from 'components/BasicCardsRow';
 import LinkButton from 'components/LinkButton';
 import LinkArrow from 'components/LinkArrow';

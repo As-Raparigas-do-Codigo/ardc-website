@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import ContactForm from 'components/Forms/ContactForm';
 import PageLayout from 'components/PageLayout';
 import { Constants, Routes } from 'data/Constants';
-import { SiteContent } from 'data/SiteContent';
+import SiteContent from 'data/SiteContent';
 
 const ContactInfoSection = () => (
   <Container className="my-5 py-5">

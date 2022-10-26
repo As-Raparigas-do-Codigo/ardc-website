@@ -10,7 +10,7 @@ import { ReactComponent as HomeIcon } from 'assets/icons/home.svg';
 import logo from 'assets/ardc-logo.svg';
 import 'components/navbar.scss';
 import { Routes } from 'data/Constants';
-import { SiteContent } from 'data/SiteContent';
+import SiteContent from 'data/SiteContent';
 
 const NavLink = ({ location, to, children, onSelect, className = '' }) => (
   <Nav.Link
