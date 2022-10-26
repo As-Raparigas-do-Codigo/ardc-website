@@ -1,6 +1,6 @@
 import React from 'react';
 import PageLayout from 'components/PageLayout';
-import { Routes } from 'data/Constants';
+import Routes from 'data/Routes';
 import SiteContent from 'data/SiteContent';
 
 function Events() {

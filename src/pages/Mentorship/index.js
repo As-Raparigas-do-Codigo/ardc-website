@@ -1,7 +1,7 @@
 import React from 'react';
 import MentorshipForm from 'components/Forms/MentorshipForm';
 import { Container, Col, Row } from 'react-bootstrap';
-import { Routes } from 'data/Constants';
+import Routes from 'data/Routes';
 import SiteContent from 'data/SiteContent';
 import PageLayout from 'components/PageLayout';
 

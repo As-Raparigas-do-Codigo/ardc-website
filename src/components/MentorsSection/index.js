@@ -6,7 +6,7 @@ import { ReactComponent as GreenArrow } from 'assets/icons/green-arrow.svg';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './mentors-section.scss';
-import { Routes } from 'data/Constants';
+import Routes from 'data/Routes';
 import SiteContent from 'data/SiteContent';
 import TeamData from 'data/Team';
 import { shuffle, sortById } from 'utils';

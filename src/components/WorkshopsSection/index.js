@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import WorkshopsList from 'components/WorkshopsList';
 import LinkArrow from 'components/LinkArrow';
-import { Routes } from 'data/Constants';
+import Routes from 'data/Routes';
 import SiteContent from 'data/SiteContent';
 
 function WorkshopsSection(props) {
