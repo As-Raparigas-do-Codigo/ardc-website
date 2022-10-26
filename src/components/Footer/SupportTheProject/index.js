@@ -2,7 +2,7 @@ import { Row, Container, Col } from 'react-bootstrap';
 import LinkButton from 'components/LinkButton';
 import '../footer.scss';
 import testimonials from 'data/Testimonials';
-import { SiteContent } from 'data/SiteContent';
+import SiteContent from 'data/SiteContent';
 
 const SupportTheProject = () => {
   return (

@@ -1,7 +1,7 @@
 import image1 from "../assets/about/women-computer.webp";
 import image2 from "../assets/about/computer-photo.webp";
 import image3 from "../assets/about/computer-photo.webp";
-import { SiteContent } from "data/SiteContent";
+import SiteContent from "data/SiteContent";
 
 const AboutData = [
   {

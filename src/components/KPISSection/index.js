@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { SiteContent } from 'data/SiteContent';
+import SiteContent from 'data/SiteContent';
 
 const KPISSection = () => {
   return (

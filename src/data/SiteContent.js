@@ -105,7 +105,8 @@ const SiteContent = {
     MentorsSection: {
       Title: 'Conhece os nossos mentores.',
       Text_p1: 'A nossa equipa é formada por pessoas provenientes de diversas áreas profissionais.',
-      Text_p2: 'Da engenharia ao design, das ciências ao marketing, a trabalhar juntos por um futuro mais inclusivo.'
+      Text_p2: 'Da engenharia ao design, das ciências ao marketing, a trabalhar juntos por um futuro mais inclusivo.',
+      AllMentorsLabel: 'Ver todos os mentores'
     },
     TalksSection: {
       Title: 'Talks & Eventos'
@@ -217,4 +218,4 @@ const SiteContent = {
   },
 };
 
-export { SiteContent };
+export default SiteContent;

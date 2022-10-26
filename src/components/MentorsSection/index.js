@@ -3,13 +3,12 @@ import { Row, Container, Col } from 'react-bootstrap';
 import PersonCard from 'components/PersonCard';
 import LinkArrow from 'components/LinkArrow';
 import { ReactComponent as GreenArrow } from 'assets/icons/green-arrow.svg';
-import { Routes, SiteContent } from 'Constants';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './mentors-section.scss';
+import { Routes } from 'data/Constants';
+import SiteContent from 'data/SiteContent';
 import TeamData from 'data/Team';
-import { SiteContent } from 'data/SiteContent';
-import team from 'data/team';
 import { shuffle, sortById } from 'utils';
 
 const responsive = {
@@ -31,7 +30,7 @@ const responsive = {
 };
 
 function MentorsSection() {
-  const mentorsCards = shuffle(team.filter((x) => x.roles.includes('mentor')))
+  const mentorsCards = shuffle(TeamData.filter((x) => x.roles.includes('mentor')))
     .slice(0, 10)
     .map((item) => <PersonCard key={item.id} person={item} />)
     .sort(sortById);
@@ -53,7 +52,7 @@ function MentorsSection() {
         </Col>
         <Col className="d-flex justify-content-end align-items-end fw-bold">
           <div className="mb-5">
-            <LinkArrow href={Routes.Team}> {SiteContent.Text.AllMentorsLabel} </LinkArrow>
+            <LinkArrow href={Routes.Team}> {SiteContent.HomePage.MentorsSection.AllMentorsLabel} </LinkArrow>
           </div>
         </Col>
       </Row>
