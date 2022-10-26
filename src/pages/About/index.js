@@ -5,7 +5,7 @@ import Teaser from 'components/Teaser';
 import Statistics from 'components/KPISSection';
 import AboutData from 'data/About';
 import SiteContent from 'data/SiteContent';
-import { Routes } from 'data/Constants';
+import Routes from 'data/Routes';
 
 function AboutUs() {
   const breadcrumbs = [

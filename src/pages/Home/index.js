@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Routes } from 'data/Constants';
+import Routes from 'data/Routes';
 import SiteContent from 'data/SiteContent';
 import BasicCardsRow from 'components/BasicCardsRow';
 import LinkButton from 'components/LinkButton';
