@@ -38,7 +38,10 @@ function WorkshopsList({ next = false, old = false }) {
       <h2 className="mb-2">{title}</h2>
       <p>{subtitle}</p>
       <Row className="pb-3 mb-md-2">
-        {filteredWorkshop.length === 0 && emptyList}
+        {
+          filteredWorkshop.length === 0 &&
+          <p><strong>{emptyList}</strong></p>
+        }
         {filteredWorkshop.map((item) => (
           <Col lg={12} md={12} sm={12} key={item.id}>
             <HorizontalCard
