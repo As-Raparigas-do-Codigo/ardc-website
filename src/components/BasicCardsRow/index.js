@@ -1,6 +1,7 @@
-import BasicCard from "../BasicCard";
+import React from 'react';
+import BasicCard from '../BasicCard';
 
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container } from 'react-bootstrap';
 
 function BasicCardsRow(props) {
   const articlesArray = props.data.map((item) => (
