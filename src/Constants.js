@@ -14,7 +14,7 @@ const Routes = {
   PrivacyPolicy: '/privacy',
   Team: '/equipa',
   Workshops: '/workshops',
-  NotFound404: "*",
+  NotFound404: '*',
 };
 
 const SiteContent = {
@@ -42,7 +42,7 @@ const SiteContent = {
     WeAreRdC: 'Somos As Raparigas do Código',
     WhatDoWeDo: 'O que fazemos?',
     Workshops: 'Workshops',
-    NotFound404: "Oops! Página não encontrada...",
+    NotFound404: 'Oops! Página não encontrada...',
   },
   Subtitle: {
     AboutUs: 'TBD',
@@ -60,7 +60,7 @@ const SiteContent = {
       'Podes ver todos os workshops que já realizámos e aqueles que ainda estarão por acontecer!',
     WorkshopsListNext: 'Reserva já o teu lugar!',
     WorkshopsListOld: 'Visita os workshops que já realizámos',
-    NotFound404: "Parece que a página que estás à procura está indisponível ou não existe.",
+    NotFound404: 'Parece que a página que estás à procura está indisponível ou não existe.',
   },
   Text: {
     Copyright: `Copyright © ${new Date().getFullYear()} As Raparigas do Código. All Rights Reserved`,
@@ -77,8 +77,8 @@ const SiteContent = {
     WorkshopsListNext: 'Aguarda pelos próximos workshops! Se tiveres sugestões, contacta-nos!'
   },
   Buttons: {
-    WorkshopCard: "Quero inscrever-me !",
-    NotFound404: "Ir para a Página Inicial",
+    WorkshopCard: 'Quero inscrever-me !',
+    NotFound404: 'Ir para a Página Inicial',
   }
 };
 
