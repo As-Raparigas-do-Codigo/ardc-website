@@ -9,6 +9,7 @@ import Home from "pages/Home";
 import Mentorship from "pages/Mentorship";
 import Team from "pages/Team";
 import Workshops from "pages/Workshops";
+import NotFound404 from "pages/NotFound404";
 import NavBar from "components/NavBarComponent";
 import Social from "components/Social";
 import Footer from "components/Footer";
@@ -24,6 +25,7 @@ function App() {
         </header>
 
         <Routes>
+          <Route path={SiteRoutes.NotFound404} element={<NotFound404 />} />
           <Route exact path={SiteRoutes.Home} element={<Home />} />
           <Route exact path={SiteRoutes.Workshops} element={<Workshops />} />
           <Route exact path={SiteRoutes.Mentorships} element={<Mentorship />} />
