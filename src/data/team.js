@@ -200,7 +200,7 @@ const TeamData = [
     id: 20,
     roles: ['mentor', 'collaborator'],
     name: 'Ines de Matos',
-    company: 'Talkdesk',
+    company: 'Web Summit',
     job: 'Software Engineer',
     social: [
       { linkedin: 'https://www.linkedin.com/in/itmm92/' },
@@ -233,6 +233,41 @@ const TeamData = [
       { instagram: 'https://www.instagram.com/aanalista/' }
     ],
     avatar: 'marta.png'
+  },
+  {
+    id: 23,
+    roles: ['mentor', 'collaborator'],
+    name: 'Inês Silvestre',
+    company: 'Marley Spoon',
+    job: 'Talent Acquisition Manager',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/inespsilvestre/' }
+    ],
+    avatar: 'ines-silvestre.jpg'
+  },
+  {
+    id: 24,
+    roles: ['mentor', 'collaborator'],
+    name: 'Jéssica Lemos',
+    company: 'Talkdesk',
+    job: 'Software Engineer',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/inespsilvestre/' }
+    ],
+    avatar: 'jessica-lemos.png'
+  },
+  {
+    id: 25,
+    roles: ['mentor', 'collaborator'],
+    name: 'Nuno Reis',
+    company: 'Self-employed',
+    job: 'Outsystems MVP',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/nunocubal/' },
+      { other: 'https://www.nunoreis.pt/' },
+      { outsystems: 'https://www.outsystems.com/profile/psonomp8dh' }
+    ],
+    avatar: 'nuno-reis.png'
   }
 ];
 

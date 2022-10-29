@@ -28,7 +28,7 @@ function PersonCard({ person = null }) {
           <img src={require('assets/team/' + person.avatar)} alt={'a person'} />
         </div>
         <div className="person-card__body">
-          <h5>{person.name}</h5>
+          <h5 className="person-card__name">{person.name}</h5>
           <div className="person-card__job">{person.job}</div>
           <div className="person-card__company">{person.company}</div>
           <div className="person-card__icons">
