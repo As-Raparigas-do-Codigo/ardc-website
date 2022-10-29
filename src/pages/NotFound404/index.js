@@ -4,16 +4,17 @@ import LinkButton from "components/LinkButton";
 import PageLayout from "components/PageLayout";
 import notFoundImg from "assets/erro404-image.svg"
 import { SiteContent } from "Constants";
+import './index.scss'
 
 const NotFound404 = () => {
   return (
     <PageLayout>
       <Container className="info padding-top-bottom-large align-center">
-        <Row>
-          <Col>
+        <Row xs={1} md={1} lg={2} className="notfound404__row">
+          <Col className="notfound404__image-wrapper ">
             <img src={notFoundImg} alt="404 warning" />
           </Col>
-          <Col>
+          <Col className="notfound404__text">
             <Row>
               <p className="text-secondary-color text-700-weight">Erro 404</p>
             </Row>
