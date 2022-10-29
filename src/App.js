@@ -2,12 +2,14 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "pages/About";
 import Blog from "pages/Blog";
-import Collaborate from "pages/Collaborate";
+// import Collaborate from "pages/Collaborate";
 import Contact from "pages/Contact";
 import Events from "pages/Events";
 import Home from "pages/Home";
 import Mentorship from "pages/Mentorship";
 import Team from "pages/Team";
+import PrivacyPolicy from 'pages/PrivacyPolicy';
+// import TermsOfUsePolicy from 'pages/TermsOfUsePolicy';
 import Workshops from "pages/Workshops";
 import NotFound404 from "pages/NotFound404";
 import NavBar from "components/NavBarComponent";
@@ -34,7 +36,9 @@ function App() {
           <Route exact path={SiteRoutes.Team} element={<Team />} />
           <Route exact path={SiteRoutes.About} element={<About />} />
           <Route exact path={SiteRoutes.Contacts} element={<Contact />} />
-          <Route exact path={SiteRoutes.Collaborate} element={<Collaborate />} />
+          {/*<Route exact path={SiteRoutes.Collaborate} element={<Collaborate />*/}
+          <Route exact path={SiteRoutes.PrivacyPolicy} element={<PrivacyPolicy />} />
+          {/* <Route exact path={SiteRoutes.TermsOfUsePolicy} element={<TermsOfUsePolicy />} /> */}
         </Routes>
 
         <Footer />
