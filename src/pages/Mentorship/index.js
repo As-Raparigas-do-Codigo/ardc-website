@@ -37,7 +37,7 @@ const MentorshipInfoSection = ({ translation }) => (
         </p>
       </ul>
     </Row>
-    <LinkArrow href={Routes.TeamRoute} variant="primary">
+    <LinkArrow href={Routes(translation).TeamRoute} variant="primary">
       {translation("HomePage-MentorsSection-Title")}
     </LinkArrow>
   </Container>
@@ -83,7 +83,7 @@ const Mentorship = ({ translation }) => {
   const breadcrumbs = [
     {
       label: translation("HomePage-PageName"),
-      href: Routes.Home
+      href: Routes(translation).Home
     },
     {
       label: translation("MentorshipsPage-PageName")

@@ -8,7 +8,7 @@ function PrivacyPolicy({ translation }) {
   const breadcrumbs = [
     {
       label: translation("HomePage-PageName"),
-      href: Routes.Home
+      href: Routes(translation).Home
     },
     {
       label: translation("PrivacyPolicyPage-PageName")

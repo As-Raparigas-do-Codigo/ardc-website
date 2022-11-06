@@ -6,7 +6,7 @@ function Events({ translation }) {
   const breadcrumbs = [
     {
       label: translation("HomePage-PageName"),
-      href: Routes.Home
+      href: Routes(translation).Home
     },
     {
       label: translation("EventsPage-PageName")

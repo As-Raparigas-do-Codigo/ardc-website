@@ -46,7 +46,7 @@ const Collaborate = ({ translation }) => {
   const breadcrumbs = [
     {
       label: translation("SiteContent-HomePage-PageName"),
-      href: Routes.Home
+      href: Routes(translation).Home
     },
     {
       label: translation("SiteContent-CollaboratePage-PageName")
