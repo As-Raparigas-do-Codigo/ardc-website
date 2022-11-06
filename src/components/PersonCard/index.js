@@ -43,7 +43,7 @@ function PersonCard({ person = null }) {
       </div>
     );
   };
-  /* Quero Colaborar foi suprimida por agora */
+  /* Quero Colaborar foi suprimido por agora */
   return person ? <Person /> : '' /*<Colaborar />;*/
 }
 

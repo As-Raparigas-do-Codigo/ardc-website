@@ -7,7 +7,7 @@ import web3ed from '../assets/workshops/workshop-web3ed.jpeg';
 import gestaocarreira1 from '../assets/workshops/workshop-gestao-carreira-1.jpeg';
 import gestaocarreira2 from '../assets/workshops/workshop-gestao-carreira-2.jpeg';
 
-const workshops = [
+const WorkshopsData = [
   {
     id: 1,
     title: 'React',
@@ -52,7 +52,7 @@ const workshops = [
     descriptiveDuration: 'Longa Duração'
   },
   {
-    id: 5,
+    id: 3,
     title: 'Como usar o GitHub como portfólio',
     image: gitportfolio,
     alt: 'GitHub como portfolio workshop',
@@ -156,4 +156,4 @@ const workshops = [
   }
 ];
 
-export default workshops;
+export default WorkshopsData;
