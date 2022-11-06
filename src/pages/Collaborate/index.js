@@ -3,12 +3,13 @@ import CollaboratorForm from 'components/Forms/CollaboratorForm';
 import NumberedRow from 'components/NumberedRow';
 import PageLayout from 'components/PageLayout';
 import { Container, Row } from 'react-bootstrap';
-import { Routes, SiteContent } from '../../Constants';
+import { Routes } from '../../data/Constants';
+import SiteContent from 'data/SiteContent';
 
 const CollaborateFormSection = () => (
   <Container className="my-5 py-5 padding-top-first-section">
     <Row>
-      <div className="mb-2 fs-xxl">Queres colaborar connosco?</div>
+      <div className="mb-2 fs-xxl">{SiteContent.CollaboratePage.PageName}</div>
       <p className="mb-4"></p>
     </Row>
     <Row id="formulario-colaboracao">
@@ -20,8 +21,10 @@ const CollaborateFormSection = () => (
 const CollaborateContent = () => (
   <Container className="mt-5">
     <Row>
-      <p className="mb-2">COMO PODES COLABORAR?</p>
-      <h2>Baseamo-nos na colaboração entre membros de diferentes áreas.</h2>
+      <p className="mb-2">
+        {SiteContent.CollaboratePage.CollaborateContentSection.Title}
+      </p>
+      <h2>{SiteContent.CollaboratePage.CollaborateContentSection.Subtitle}</h2>
       <p className="mb-4">
         Enquanto comunidade, <strong>As Raparigas do Código</strong> baseiam-se na colaboração entre
         membros de diferentes áreas (engenharia, design, educação, marketing, comunicação, entre
@@ -43,17 +46,17 @@ const CollaborateContent = () => (
 const Collaborate = () => {
   const breadcrumbs = [
     {
-      label: SiteContent.Title.Home,
+      label: SiteContent.HomePage.PageName,
       href: Routes.Home
     },
     {
-      label: SiteContent.Title.DoYouWantToCollaborate
+      label: SiteContent.CollaboratePage.PageName
     }
   ];
   return (
     <PageLayout
-      title={SiteContent.Title.Collaborate}
-      description={SiteContent.Subtitle.Collaborate}
+      title={SiteContent.CollaboratePage.Title}
+      description={SiteContent.CollaboratePage.Description}
       breadcrumbsData={breadcrumbs}
     >
       <Container fluid="md">
