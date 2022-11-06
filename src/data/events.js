@@ -1,6 +1,9 @@
 import aubay from '../assets/events/aubay-mulheres-tecnologia.jpeg';
 import techCommunityGetTogether from '../assets/events/tech-community-get-together.jpeg';
 import geekGirlsPortugalRumoIT from '../assets/events/g2pt93-geek-girls-portugal.jpeg';
+import forbesPortugal from '../assets/events/forbes-portugal.png';
+import apdc from '../assets/events/apdc.jpeg';
+import we4change from '../assets/events/we4change.jpeg';
 
 const Events = [
   {
@@ -32,6 +35,36 @@ const Events = [
       'Estivemos presentes no webinar da Aubay Portugal sobre mulheres em tecnologia.',
     link: 'Vê o webinar no Youtube',
     url: 'https://www.youtube.com/watch?v=ccV9BrBjz2s'
+  },
+  {
+    id: 4,
+    title: 'Entrevista com Forbes Portugal',
+    image: forbesPortugal,
+    alt: 'Entrevista com Forbes Portugal',
+    description:
+      'Entrevista com Forbes sobre a missão das Raparigas do Código de apoiar e dar ferramentas às mulheres para ingressar no setor TI.',
+    link: 'Lê o artigo',
+    url: 'https://www.forbespt.com/raparigas-do-codigo-encoraja-raparigas-e-mulheres-a-ingressar-no-setor-das-tic/'
+  },
+  {
+    id: 5,
+    title: 'Participação no projeto We4Change',
+    image: we4change,
+    alt: 'Participação no projeto We4Change',
+    description:
+      'Participámos no evento Changemakers - hackathoon We4Change (presencial).',
+    link: '',
+    url: ''
+  },
+  {
+    id: 6,
+    title: 'Mulheres e Tecnologia: O match que se impõe',
+    image: apdc,
+    alt: 'Entrevista com APDC',
+    description:
+      'Entrevista à revista "Comunicações" da APDC - Associação Portuguesa para o Desenvolvimento das Comunicações.',
+    link: 'Lê o artigo',
+    url: 'https://comunicacoes.apdc.pt/comunicacoes-238-mulheres-e-tecnologia-o-namoro-que-acabara-em-casamento-2021/65590032'
   }
 ];
 

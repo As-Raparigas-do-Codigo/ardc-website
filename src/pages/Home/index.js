@@ -123,7 +123,7 @@ function Home() {
       */ }
       <div className="zig-zag"></div>
       <BasicCardsRow 
-        data={Events} 
+        data={Events.slice(0, 3)} 
         heading={SiteContent.HomePage.TalksSection.Title} 
         subtitle="" />
 
