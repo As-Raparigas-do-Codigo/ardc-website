@@ -1,57 +1,47 @@
 import React from 'react';
 import PageLayout from 'components/PageLayout';
 import { Container, Row } from 'react-bootstrap';
-import { Routes, SiteContent } from 'Constants';
+import Routes from 'data/Routes';
+import SiteContent from 'data/SiteContent';
 import './privacy-policy.scss';
 
 function PrivacyPolicy() {
   const breadcrumbs = [
     {
-      label: SiteContent.Title.Home,
+      label: SiteContent.HomePage.PageName,
       href: Routes.Home
     },
     {
-      label: SiteContent.Title.PrivacyPolicy
+      label: SiteContent.PrivacyPolicyPage.PageName
     }
   ];
 
   return (
     <PageLayout
-      title={SiteContent.Title.PrivacyPolicy}
-      description={SiteContent.Subtitle.PrivacyPolicy}
+      title={SiteContent.PrivacyPolicyPage.PageName}
+      description={SiteContent.PrivacyPolicyPage.Descriptiion}
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="padding-top-first-section">
         <Row>
           <p>
-            Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe
-            fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e
-            consentimento. Também informamos por que estamos coletando e como será usado.
+            {SiteContent.PrivacyPolicyPage.Text_p1}
           </p>
           <p>
-            Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço
-            solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente
-            aceitáveis para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou
-            modificação não autorizados.
+            {SiteContent.PrivacyPolicyPage.Text_p2}
           </p>
           <p>
-            Não compartilhamos informações de identificação pessoal publicamente ou com terceiros,
-            exceto quando exigido por lei.
+            {SiteContent.PrivacyPolicyPage.Text_p3}
           </p>
           <p>
-            O nosso site pode ter links para sites externos que não são operados por nós. Esteja
-            ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos
-            aceitar responsabilidade por suas respectivas políticas de privacidade.
+            {SiteContent.PrivacyPolicyPage.Text_p4}
           </p>
           <p>
-            Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que
-            talvez não possamos fornecer alguns dos serviços desejados.
+            {SiteContent.PrivacyPolicyPage.Text_p5}
           </p>
           <p>
-            O uso continuado de nosso site será considerado como aceitação de nossas práticas em
-            torno de Aviso de Privacidad e informações pessoais. Se você tiver alguma dúvida sobre
-            como lidamos com dados do utilizador e informações pessoais, entre em contacto connosco.
+            {SiteContent.PrivacyPolicyPage.Text_p6}
           </p>
-          <h2 className="fw-bold">Política de Cookies As Raparigas do Código</h2>
+          <h2 className="fw-bold">{SiteContent.PrivacyPolicyPage.Title}</h2>
           <h5>O que são cookies?</h5>
           <p>
             Como é prática comum em quase todos os sites profissionais, este site usa cookies, que
