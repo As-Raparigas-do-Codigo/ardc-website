@@ -57,7 +57,7 @@ function AboutUs({ translation }) {
       </Container>
       <div className="zig-zag"></div>
       <div className="bg-pink">
-        <Statistics />
+        <Statistics translation={translation}/>
       </div>
       <Container>
         <Row>{aboutBellow}</Row>
