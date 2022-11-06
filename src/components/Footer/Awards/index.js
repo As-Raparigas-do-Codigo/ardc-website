@@ -39,7 +39,7 @@ const Awards = ({ translation }) => {
       <Row className={'mt-5'}>
         <Col sm={12} md={6}>
           <h4>{translation("RdCLabel")}</h4>
-          <p className={'w-75'}>{translation("WhoWeAreLabel")}</p>
+          <p className={'w-75'}>{translation("Footer-WhoWeAreLabel")}</p>
           <p>
             <Icon name={'email'} link={'#'} />
             <a href={`mailto:${Constants.Email}`}>{Constants.Email}</a>
@@ -51,7 +51,7 @@ const Awards = ({ translation }) => {
               <h4>O Projecto</h4>
               <ul>
                 <li>
-                  <a href={Routes(translation).About}>{translation("AboutLabel-Title")}</a>
+                  <a href={Routes(translation).About}>{translation("AboutLabel")}</a>
                 </li>
                 <li>
                   <a href={Routes(translation).Contacts}>{translation("ContactsPage-PageName")}</a>
