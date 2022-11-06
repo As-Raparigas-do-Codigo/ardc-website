@@ -4,25 +4,24 @@ import PageLayout from 'components/PageLayout';
 import Teaser from 'components/Teaser';
 import Statistics from 'components/KPISSection';
 import AboutData from 'data/about';
-import SiteContent from 'data/SiteContent';
 import Routes from 'data/Routes';
 
-function AboutUs() {
+function AboutUs({ translation }) {
   const breadcrumbs = [
     {
-      label: SiteContent.HomePage.PageName,
+      label: translation("HomePage-PageName"),
       href: Routes.Home
     },
     {
-      label: SiteContent.AboutLabel,
+      label: translation("AboutLabel"),
       href: Routes.About
     },
     {
-      label: SiteContent.AboutUsPage.PageName
+      label: translation("AboutUsPage-PageName")
     }
   ];
 
-  const aboutBellow = AboutData.slice(1, 3).map((data) => {
+  const aboutBellow = AboutData(translation).slice(1, 3).map((data) => {
     return (
       <Col md={12} key={data.id}>
         <Teaser
@@ -39,19 +38,19 @@ function AboutUs() {
 
   return (
     <PageLayout
-      title={SiteContent.AboutUsPage.PageName}
-      description={SiteContent.AboutUsPage.Description}
+      title={translation("AboutUsPage-PageName")}
+      description={translation("AboutUsPage-Description")}
       breadcrumbsData={breadcrumbs}>
       <Container>
         <Row>
-          <Col md={12} key={AboutData[0].id}>
+          <Col md={12} key={AboutData(translation)[0].id}>
             <Teaser
-              title={AboutData[0].title}
-              subtitle={AboutData[0].subtitle}
-              description={AboutData[0].description}
-              imgPath={AboutData[0].img}
-              imageRight={AboutData[0].pictureRight}
-              linkFirst={AboutData[0].link1}
+              title={AboutData(translation)[0].title}
+              subtitle={AboutData(translation)[0].subtitle}
+              description={AboutData(translation)[0].description}
+              imgPath={AboutData(translation)[0].img}
+              imageRight={AboutData(translation)[0].pictureRight}
+              linkFirst={AboutData(translation)[0].link1}
             />
           </Col>
         </Row>
