@@ -23,8 +23,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources: {
-      en: { translation: translationsEN },
-      pt: { translation: translationsPT }
+      pt: { translation: translationsPT },
+      en: { translation: translationsEN }
     },
     fallbackLng: 'pt',
     interpolation: {
@@ -33,8 +33,8 @@ i18n
   });
 
 function App() {
-  const [currentLang, setLang] = useState('pt');
   const { t } = useTranslation();
+  const [currentLang, setLang] = useState('pt');
   const changeLanguageHandler = () => {
     if (currentLang == 'pt') {
       i18n.changeLanguage('en')
