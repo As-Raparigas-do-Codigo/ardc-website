@@ -3,7 +3,7 @@ import { Row, Container, Col } from 'react-bootstrap';
 import LinkButton from 'components/LinkButton';
 import PageLayout from 'components/PageLayout';
 import notFoundImg from 'assets/erro404-image.svg'
-import SiteContent from 'data/SiteContent';
+import { SiteContent } from 'Constants';
 import './index.scss'
 
 const NotFound404 = () => {
