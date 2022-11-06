@@ -8,7 +8,7 @@ import 'react-multi-carousel/lib/styles.css';
 import './mentors-section.scss';
 import Routes from 'data/Routes';
 import SiteContent from 'data/SiteContent';
-import TeamData from 'data/Team';
+import TeamData from 'data/team';
 import { shuffle, sortById } from 'utils';
 
 const responsive = {

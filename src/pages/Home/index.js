@@ -12,7 +12,7 @@ import KPISSection from 'components/KPISSection';
 import PageLayout from 'components/PageLayout';
 import banner from 'assets/home/banner.jpeg';
 import missao from 'assets/home/missao.png';
-import Events from '../../data/Events';
+import Events from '../../data/events';
 import pdf from '../../assets/Booklet_ARDC_2022.pdf'
 
 const IntroContent = () => {
