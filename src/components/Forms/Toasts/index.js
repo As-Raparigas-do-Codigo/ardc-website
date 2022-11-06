@@ -1,6 +1,6 @@
-import React from "react";
-import ToastMessage from "components/Toast";
-import { Constants } from "Constants";
+import React from 'react';
+import ToastMessage from 'components/Toast';
+import { Constants } from 'Constants';
 
 export const SuccessToastMessage = ({ show = false, onClose }) => (
   <ToastMessage
@@ -12,7 +12,8 @@ export const SuccessToastMessage = ({ show = false, onClose }) => (
     variant="success"
   >
     <p>
-      Agradecemos o teu interesse no nosso projecto. Alguém da nossa equipa irá entrar em contacto contigo, o mais depressa possível.
+      Agradecemos o teu interesse no nosso projecto. Alguém da nossa equipa irá entrar em contacto
+      contigo, o mais depressa possível.
     </p>
   </ToastMessage>
 );
@@ -26,7 +27,12 @@ export const ErrorToastMessage = ({ show = false, onClose }) => (
     variant="danger"
   >
     <p>
-      Pedimos desculpa mas, por motivos técnicos, não foi possível submeter o teu pedido. Tenta novamente ou contacta-nos através do email <a className="text-danger" href={`mailto:${Constants.Email}`}>{Constants.Email}</a>.
+      Pedimos desculpa mas, por motivos técnicos, não foi possível submeter o teu pedido. Tenta
+      novamente ou contacta-nos através do email{' '}
+      <a className="text-danger" href={`mailto:${Constants.Email}`}>
+        {Constants.Email}
+      </a>
+      .
     </p>
   </ToastMessage>
 );
