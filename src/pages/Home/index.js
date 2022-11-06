@@ -23,7 +23,7 @@ const IntroContent = ({ translation }) => {
         <Container className="p-0">
           <Row>
             <Col className="col-auto align-self-center">
-              <LinkButton href={Routes.Workshops} variant="primary">
+              <LinkButton href={Routes(translation).Workshops} variant="primary">
                 {translation("HomePage-IntroSection-PrimaryButton")}
               </LinkButton>
             </Col>
@@ -78,7 +78,7 @@ function Home({ translation }) {
               <Container className="p-0">
                 <Row>
                   <Col className="col-auto align-self-center">
-                    <LinkButton href={Routes.About} variant="primary">
+                    <LinkButton href={Routes(translation).About} variant="primary">
                     {translation("HomePage-MissionSection-Button")}
                     </LinkButton>
                   </Col>
@@ -111,7 +111,7 @@ function Home({ translation }) {
                   contigo!
                 </p>
                 <div className="text-center">
-                  <LinkButton href={Routes.Collaborate} variant="primary">
+                  <LinkButton href={Routes(translation).Collaborate} variant="primary">
                     Quero colaborar!
                   </LinkButton>
                 </div>

@@ -1,4 +1,4 @@
-const Routes  = ({ translation }) => {
+const Routes = (translation) => {
   return {
     About: '/' + translation("AboutUsPage-Route"),
     Contacts: '/' + translation("ContactsPage-Route"),

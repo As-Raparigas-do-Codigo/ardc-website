@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import i18n from 'i18next';
 import detector from 'i18next-browser-languagedetector';
@@ -33,17 +33,23 @@ i18n
   });
 
 function App() {
+  const [currentLang, setLang] = useState('pt');
   const { t } = useTranslation();
   const changeLanguageHandler = () => {
-    console.log('Changing language ...')
-    i18n.changeLanguage('en')
+    if (currentLang == 'pt') {
+      i18n.changeLanguage('en')
+      setLang('en')
+    } else {
+      i18n.changeLanguage('pt')
+      setLang('pt')
+    }
   }
   return (
     <div className='App'>
       <Router>
         <header>
-          <Social changeLanguage={changeLanguageHandler}/>
-          <NavBar translation={t}/>
+          <Social changeLanguage={changeLanguageHandler} currentLang={currentLang}/>
+          <NavBar translation={t} />
         </header>
         <Routes>
           <Route exact path={SiteRoutes(t).About} element={<AboutUs translation={t}/>} />

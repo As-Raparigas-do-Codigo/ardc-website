@@ -51,10 +51,10 @@ const Awards = ({ translation }) => {
               <h4>O Projecto</h4>
               <ul>
                 <li>
-                  <a href={Routes.About}>{translation("AboutLabel-Title")}</a>
+                  <a href={Routes(translation).About}>{translation("AboutLabel-Title")}</a>
                 </li>
                 <li>
-                  <a href={Routes.Contacts}>{translation("ContactsPage-PageName")}</a>
+                  <a href={Routes(translation).Contacts}>{translation("ContactsPage-PageName")}</a>
                 </li>
               </ul>
             </Col>
@@ -62,13 +62,13 @@ const Awards = ({ translation }) => {
               <h4>{translation("EventsPage-PageName")}</h4>
               <ul>
                 <li>
-                  <a href={Routes.Workshops}>{translation("WorkshopsPage-PageName")}</a>
+                  <a href={Routes(translation).Workshops}>{translation("WorkshopsPage-PageName")}</a>
                 </li>
                 <li>
-                  <a href={Routes.Events} style={{ display: 'none' }}>
+                  <a href={Routes(translation).Events} style={{ display: 'none' }}>
                     {translation("EventsPage-PageName")}
                   </a>
-                  <a href={Routes.Mentorships}>{translation("MentorshipsPage-PageName")}</a>
+                  <a href={Routes(translation).Mentorships}>{translation("MentorshipsPage-PageName")}</a>
                 </li>
               </ul>
             </Col>
@@ -84,7 +84,7 @@ const Awards = ({ translation }) => {
       <Row className={'legal-copy'}>
         <Col sm={12} md={6} className={'mt-5'}>
           <p className="text-center">
-            <a href={Routes.PrivacyPolicy}>{translation("PrivacyPolicyPage-PageName")}</a>
+            <a href={Routes(translation).PrivacyPolicy}>{translation("PrivacyPolicyPage-PageName")}</a>
           </p>
         </Col>
         <Col sm={12} md={6} className={'mt-5'}>

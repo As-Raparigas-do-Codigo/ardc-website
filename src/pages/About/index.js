@@ -10,11 +10,11 @@ function AboutUs({ translation }) {
   const breadcrumbs = [
     {
       label: translation("HomePage-PageName"),
-      href: Routes.Home
+      href: Routes(translation).Home
     },
     {
       label: translation("AboutLabel"),
-      href: Routes.About
+      href: Routes(translation).About
     },
     {
       label: translation("AboutUsPage-PageName")

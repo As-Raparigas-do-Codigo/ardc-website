@@ -13,7 +13,7 @@ function PersonCard({ person = null }) {
         <div className="person-card__body">
           <h5>Gostavas de colaborar connosco?</h5>
           <div className="person-card__icons">
-            <LinkButton href={Routes.Collaborate}>Quero Colaborar!</LinkButton>
+            <LinkButton href={Routes(translation).Collaborate}>Quero Colaborar!</LinkButton>
           </div>
         </div>
       </div>
