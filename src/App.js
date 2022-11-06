@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import i18n from 'i18next';
-import detector from 'i18next-browser-languagedetector';
 import { useTranslation, initReactI18next } from 'react-i18next';
 import AboutUs from 'pages/About';
 import Contact from 'pages/Contact';
@@ -19,7 +18,6 @@ import translationsEN from 'data/locales/translations_en.json';
 import translationsPT from 'data/locales/translations_pt.json';
 
 i18n
-  .use(detector)
   .use(initReactI18next)
   .init({
     resources: {
