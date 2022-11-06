@@ -4,16 +4,15 @@ import ContactForm from 'components/Forms/ContactForm';
 import PageLayout from 'components/PageLayout';
 import Constants from 'data/Constants';
 import Routes from 'data/Routes';
-import SiteContent from 'data/SiteContent';
 
-const ContactInfoSection = () => (
+const ContactInfoSection = ({ translation }) => (
   <Container className="my-5 py-5">
     <Row>
       <h2 className="mb-2">
-        {SiteContent.ContactsPage.ContactInfoSection.Title}
+        {translation("ContactsPage-ContactInfoSection-Title")}
       </h2>
       <p className="mb-4">
-        {SiteContent.ContactsPage.ContactInfoSection.Description}
+        {translation("ContactsPage-ContactInfoSection-Description")}
       </p>
     </Row>
     <Row>
@@ -21,7 +20,7 @@ const ContactInfoSection = () => (
         <Row xs="auto" md="auto" lg="auto" className="mb-3">
           <Col xs={2} md={2} lg={2}>
             <strong>
-              {SiteContent.ContactsPage.ContactInfoSection.AdminLabel}
+              {translation("ContactsPage-ContactInfoSection-AdminLabel")}
             </strong>
           </Col>
           <Col>Miriam Santos</Col>
@@ -29,7 +28,7 @@ const ContactInfoSection = () => (
         <Row xs="auto" md="auto" lg="auto" className="mb-3">
           <Col xs={2} md={2} lg={2}>
             <strong>
-              {SiteContent.ContactsPage.ContactInfoSection.EmailLabel}
+              {translation("ContactsPage-ContactInfoSection-EmailLabel")}
             </strong>
           </Col>
           <Col>
@@ -41,44 +40,44 @@ const ContactInfoSection = () => (
   </Container>
 );
 
-const ContactFormSection = () => (
+const ContactFormSection = ({ translation }) => (
   <Container className="my-5 py-5 px-5 box-radius shadow-lg">
     <Row>
       <h2 className="mb-2">
-        {SiteContent.ContactsPage.ContactFormSection.Title}
+        {translation("ContactsPage-ContactFormSection-Title")}
       </h2>
       <p className="mb-4">
-        {SiteContent.ContactsPage.ContactFormSection.Description}
+        {translation("ContactsPage-ContactFormSection-Description")}
       </p>
     </Row>
     <Row>
-      <ContactForm />
+      <ContactForm translation={translation}/>
     </Row>
   </Container>
 );
 
-const Contact = () => {
+const Contact = ({ translation }) => {
   const breadcrumbs = [
     {
-      label: SiteContent.HomePage.PageName,
+      label: translation("HomePage-PageName"),
       href: Routes.Home
     },
     {
-      label: SiteContent.ContactsPage.PageName
+      label: translation("ContactsPage-PageName")
     }
   ];
   return (
     <PageLayout
-      title={SiteContent.ContactsPage.Title}
-      description={SiteContent.ContactsPage.Description}
+      title={translation("ContactsPage-Title")}
+      description={translation("ContactsPage-Description")}
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="padding-top-first-section">
         <Row>
           <Col>
-            <ContactInfoSection />
+            <ContactInfoSection translation={translation}/>
           </Col>
           <Col>
-            <ContactFormSection />
+            <ContactFormSection translation={translation} />
           </Col>
         </Row>
       </Container>

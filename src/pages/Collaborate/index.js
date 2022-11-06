@@ -4,12 +4,11 @@ import NumberedRow from 'components/NumberedRow';
 import PageLayout from 'components/PageLayout';
 import { Container, Row } from 'react-bootstrap';
 import { Routes } from '../../data/Constants';
-import SiteContent from 'data/SiteContent';
 
-const CollaborateFormSection = () => (
+const CollaborateFormSection = ({ translation }) => (
   <Container className="my-5 py-5 padding-top-first-section">
     <Row>
-      <div className="mb-2 fs-xxl">{SiteContent.CollaboratePage.PageName}</div>
+      <div className="mb-2 fs-xxl">{translation("CollaboratePage-PageName")}</div>
       <p className="mb-4"></p>
     </Row>
     <Row id="formulario-colaboracao">
@@ -18,13 +17,13 @@ const CollaborateFormSection = () => (
   </Container>
 );
 
-const CollaborateContent = () => (
+const CollaborateContent = ({ translation }) => (
   <Container className="mt-5">
     <Row>
       <p className="mb-2">
-        {SiteContent.CollaboratePage.CollaborateContentSection.Title}
+        {translation("CollaboratePage-CollaborateContentSection-Title")}
       </p>
-      <h2>{SiteContent.CollaboratePage.CollaborateContentSection.Subtitle}</h2>
+      <h2>{translation("CollaboratePage-CollaborateContentSection-Subtitle")}</h2>
       <p className="mb-4">
         Enquanto comunidade, <strong>As Raparigas do Código</strong> baseiam-se na colaboração entre
         membros de diferentes áreas (engenharia, design, educação, marketing, comunicação, entre
@@ -43,25 +42,25 @@ const CollaborateContent = () => (
   </Container>
 );
 
-const Collaborate = () => {
+const Collaborate = ({ translation }) => {
   const breadcrumbs = [
     {
-      label: SiteContent.HomePage.PageName,
+      label: translation("SiteContent-HomePage-PageName"),
       href: Routes.Home
     },
     {
-      label: SiteContent.CollaboratePage.PageName
+      label: translation("SiteContent-CollaboratePage-PageName")
     }
   ];
   return (
     <PageLayout
-      title={SiteContent.CollaboratePage.Title}
-      description={SiteContent.CollaboratePage.Description}
+      title={translation("CollaboratePage-Title")}
+      description={translation("CollaboratePage-Description")}
       breadcrumbsData={breadcrumbs}
     >
       <Container fluid="md">
         <Row>
-          <CollaborateContent />
+          <CollaborateContent translation={translation}/>
         </Row>
         <NumberedRow
           number="01"
@@ -94,7 +93,7 @@ const Collaborate = () => {
           textHtml="<p>Se preferires, podes ajudar-nos na manutenção do website ou no apoio técnico às alunas (instalação de software, troubleshooting).</p>"
         />
         <Row className="px-5 mx-5">
-          <CollaborateFormSection />
+          <CollaborateFormSection translation={translation}/>
         </Row>
       </Container>
     </PageLayout>

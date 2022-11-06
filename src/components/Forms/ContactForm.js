@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
 import Reaptcha from 'reaptcha';
-import SiteContent from 'data/SiteContent';
 
-function ContactForm() {
+function ContactForm({ translation }) {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -75,14 +74,14 @@ function ContactForm() {
 
   return (
     <>
-      <SuccessToastMessage show={successToast} onClose={hideSuccessToast} />
-      <ErrorToastMessage show={errorToast} onClose={hideErrorToast} />
+      <SuccessToastMessage show={successToast} onClose={hideSuccessToast} translation={translation}/>
+      <ErrorToastMessage show={errorToast} onClose={hideErrorToast} translation={translation}/>
       <Form>
         <Stack gap={3}>
           <Form.Group className="mb-3" controlId="nameInputField">
             <Form.Control
               type="text"
-              placeholder={SiteContent.ContactsPage.ContactFormSection.NameLabel}
+              placeholder={translation("ContactsPage-ContactFormSection-NameLabel")}
               value={name}
               onChange={(e) => setName(e.target.value)}
               size="lg"
@@ -92,7 +91,7 @@ function ContactForm() {
           <Form.Group className="mb-3" controlId="emailInputField">
             <Form.Control
               type="email"
-              placeholder={SiteContent.ContactsPage.ContactFormSection.EmailLabel}
+              placeholder={translation("ContactsPage-ContactFormSection-EmailLabel")}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               size="lg"
@@ -114,7 +113,7 @@ function ContactForm() {
               type="text"
               as="textarea"
               rows="3"
-              placeholder={SiteContent.ContactsPage.ContactFormSection.MessageLabel}
+              placeholder={translation("ContactsPage-ContactFormSection-MessageLabel")}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               size="lg"
@@ -126,7 +125,7 @@ function ContactForm() {
           {
             !showCaptcha && (
               <p className="mandatory-hint">
-                {SiteContent.ContactsPage.ContactFormSection.MandatoryLabel}
+                {translation("ContactsPage-ContactFormSection-MandatoryLabel")}
               </p>
             )
           }
@@ -137,7 +136,7 @@ function ContactForm() {
                 type="submit"
                 disabled={!name || !email || !subject || !message || sending}
                 onClick={handleFormWasSubmitted}>
-                {SiteContent.ContactsPage.ContactFormSection.SendMessageButton}
+                {translation("ContactsPage-ContactFormSection-SendMessageButton")}
               </button>
             )
           }
