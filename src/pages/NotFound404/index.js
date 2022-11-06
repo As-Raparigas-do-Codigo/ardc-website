@@ -1,9 +1,9 @@
-import React from "react";
-import { Row, Container, Col } from "react-bootstrap";
-import LinkButton from "components/LinkButton";
-import PageLayout from "components/PageLayout";
-import notFoundImg from "assets/erro404-image.svg"
-import { SiteContent } from "Constants";
+import React from 'react';
+import { Row, Container, Col } from 'react-bootstrap';
+import LinkButton from 'components/LinkButton';
+import PageLayout from 'components/PageLayout';
+import notFoundImg from 'assets/erro404-image.svg'
+import SiteContent from 'data/SiteContent';
 import './index.scss'
 
 const NotFound404 = () => {
