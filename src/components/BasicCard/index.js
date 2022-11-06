@@ -11,7 +11,9 @@ function BasicCard(props) {
         {props.date && <span>{props.date}</span>}
         <h5>{props.title}</h5>
         <p className="basic-card__description">{props.description}</p>
-        <LinkArrow href={props.url}>{props.link}</LinkArrow>
+        {props.url && 
+          <LinkArrow href={props.url}>{props.link}</LinkArrow>
+        }
       </div>
     </div>
   );
