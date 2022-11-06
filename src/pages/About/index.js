@@ -1,27 +1,28 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { Routes, SiteContent } from 'Constants';
 import PageLayout from 'components/PageLayout';
 import Teaser from 'components/Teaser';
-import Statistics from 'components/Statistics';
-import about from 'data/about.js';
+import Statistics from 'components/KPISSection';
+import AboutData from 'data/about';
+import SiteContent from 'data/SiteContent';
+import Routes from 'data/Routes';
 
-function About() {
+function AboutUs() {
   const breadcrumbs = [
     {
-      label: SiteContent.Title.Home,
+      label: SiteContent.HomePage.PageName,
       href: Routes.Home
     },
     {
-      label: SiteContent.Title.AboutUs,
+      label: SiteContent.AboutLabel,
       href: Routes.About
     },
     {
-      label: SiteContent.Title.AboutTheProject
+      label: SiteContent.AboutUsPage.PageName
     }
   ];
 
-  const aboutBellow = about.slice(1, 3).map((data) => {
+  const aboutBellow = AboutData.slice(1, 3).map((data) => {
     return (
       <Col md={12} key={data.id}>
         <Teaser
@@ -38,19 +39,19 @@ function About() {
 
   return (
     <PageLayout
-      title={SiteContent.Title.AboutUs}
-      description={SiteContent.Subtitle.AboutUs}
+      title={SiteContent.AboutUsPage.PageName}
+      description={SiteContent.AboutUsPage.Description}
       breadcrumbsData={breadcrumbs}>
       <Container>
         <Row>
-          <Col md={12} key={about[0].id}>
+          <Col md={12} key={AboutData[0].id}>
             <Teaser
-              title={about[0].title}
-              subtitle={about[0].subtitle}
-              description={about[0].description}
-              imgPath={about[0].img}
-              imageRight={about[0].pictureRight}
-              linkFirst={about[0].link1}
+              title={AboutData[0].title}
+              subtitle={AboutData[0].subtitle}
+              description={AboutData[0].description}
+              imgPath={AboutData[0].img}
+              imageRight={AboutData[0].pictureRight}
+              linkFirst={AboutData[0].link1}
             />
           </Col>
         </Row>
@@ -66,4 +67,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutUs;

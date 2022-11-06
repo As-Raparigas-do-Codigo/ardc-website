@@ -1,6 +1,6 @@
 import aubay from '../assets/events/aubay-mulheres-tecnologia.jpeg';
 
-const events = [
+const Events = [
   {
     id: 1,
     title: 'Webinar Aubay Portugal(Women in Tech) ',
@@ -33,4 +33,4 @@ const events = [
   }
 ];
 
-export default events;
+export default Events;
