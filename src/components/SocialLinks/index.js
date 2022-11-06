@@ -12,7 +12,9 @@ const socialLinks = [
 
 const SocialLinks = ({ variant = 'dark', changeLanguage, currentLang }) => (
   <div className={`links links--${variant}`}>
-    <Button onClick={() => changeLanguage()}>{ currentLang == 'pt' ? 'en' : 'pt' }</Button>
+    {
+      variant != 'dark' && <Button onClick={() => changeLanguage()}>{ currentLang == 'pt' ? 'en' : 'pt' }</Button>
+    }
     {socialLinks.map((socialNetworkLink) => {
       let socialNetwork = Object.keys(socialNetworkLink)[0];
       return (
