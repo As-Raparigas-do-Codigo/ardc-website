@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import HorizontalCard from 'components/HorizontalCard';
 import Constants from 'data/Constants';
 import SiteContent from 'data/SiteContent';
-import dataWorkshops from 'data/Workshops';
+import dataWorkshops from 'data/workshops';
 
 function WorkshopsList({ next = false, old = false }) {
   const [workshops] = useState(dataWorkshops);

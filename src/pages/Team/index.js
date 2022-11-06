@@ -4,7 +4,7 @@ import PersonCard from 'components/PersonCard';
 import PageLayout from 'components/PageLayout';
 import Routes from 'data/Routes';
 import SiteContent from 'data/SiteContent';
-import TeamData from 'data/Team';
+import TeamData from 'data/team';
 
 function Team() {
   const breadcrumbs = [
