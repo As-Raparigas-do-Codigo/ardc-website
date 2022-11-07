@@ -118,6 +118,7 @@ function CollaboratorForm() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             size="lg"
+            maxLength="200"
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="emailInputField">
@@ -264,6 +265,7 @@ function CollaboratorForm() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             size="lg"
+            maxLength="500"
           />
         </Form.Group>
         <div className="d-flex justify-content-between">
