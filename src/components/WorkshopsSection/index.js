@@ -14,7 +14,7 @@ function WorkshopsSection(props) {
           <p className="">{props.subtitle}</p>
         </Col>
         <Col className="col-auto align-self-end">
-          <LinkArrow href={Routes.Workshop}>
+          <LinkArrow href={Routes.Workshops}>
             {SiteContent.HomePage.WorkshopsSection.Button}
           </LinkArrow>
         </Col>
