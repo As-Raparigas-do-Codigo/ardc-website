@@ -5,7 +5,7 @@ import Constants from 'data/Constants';
 import SiteContent from 'data/SiteContent';
 import dataWorkshops from 'data/workshops';
 
-function WorkshopsList({ next = false, old = false }) {
+function WorkshopsList({ next = false, old = false, all = false }) {
   const [workshops] = useState(dataWorkshops);
   let title = SiteContent.WorkshopsList.Title;
   let subtitle = SiteContent.WorkshopsList.Subtitle;
@@ -31,6 +31,12 @@ function WorkshopsList({ next = false, old = false }) {
 
   if (old) {
     subtitle = SiteContent.WorkshopsList.PreviousWorkshopsSection.Subtitle;
+  }
+  
+  if (all) {
+    title = SiteContent.WorkshopsList.AllWorkshopsSection.Title;
+    subtitle = SiteContent.WorkshopsList.AllWorkshopsSection.Subtitle;
+    emptyList = SiteContent.WorkshopsList.AllWorkshopsSection.Empty;
   }
 
   return (
