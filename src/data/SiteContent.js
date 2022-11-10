@@ -195,6 +195,11 @@ const SiteContent = {
       Title: 'Próximos workshops',
       Subtitle: 'Reserva já o teu lugar!',
       Empty: 'Aguarda pelos próximos workshops! Se tiveres sugestões, contacta-nos!'
+    },
+    AllWorkshopsSection: {
+      Title: 'Todos os nossos workshops',
+      Subtitle: 'Podes ver todos os workshops que já realizámos e aqueles que ainda estarão por acontecer!',
+      Empty: 'Infelizmente, não temos workshops, mas aceitamos sugestões. Contacta-nos!'
     }
   },
   TeamPage: {
