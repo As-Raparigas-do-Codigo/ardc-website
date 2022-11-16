@@ -60,7 +60,7 @@ const Contact = ({ translation }) => {
   const breadcrumbs = [
     {
       label: translation("HomePage-PageName"),
-      href: Routes(translation).Home
+      href: Routes.Home
     },
     {
       label: translation("ContactsPage-PageName")

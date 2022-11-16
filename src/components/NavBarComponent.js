@@ -83,7 +83,7 @@ function NavBarComponent({ translation }) {
             <Nav className="ms-auto">
               <NavLink
                 location={location}
-                to={Routes(translation).Home}
+                to={Routes.Home}
                 onSelect={onSelect}
                 className="d-none d-lg-block"
               >
@@ -91,7 +91,7 @@ function NavBarComponent({ translation }) {
               </NavLink>
               <NavLink
                 location={location}
-                to={Routes(translation).Workshops}
+                to={Routes.Workshops}
                 onSelect={onSelect}
                 className="text-center"
               >
@@ -99,7 +99,7 @@ function NavBarComponent({ translation }) {
               </NavLink>
               <NavLink
                 location={location}
-                to={Routes(translation).Mentorships}
+                to={Routes.Mentorships}
                 onSelect={onSelect}
                 className="text-center"
               >
@@ -112,7 +112,7 @@ function NavBarComponent({ translation }) {
               >
                 <NavDropdownItem
                   location={location}
-                  to={Routes(translation).About}
+                  to={Routes.About}
                   onSelect={onSelect}
                   className="text-center text-lg-center"
                 >
@@ -120,7 +120,7 @@ function NavBarComponent({ translation }) {
                 </NavDropdownItem>
                 <NavDropdownItem
                   location={location}
-                  to={Routes(translation).Team}
+                  to={Routes.Team}
                   onSelect={onSelect}
                   className="text-center"
                 >
@@ -129,7 +129,7 @@ function NavBarComponent({ translation }) {
               </NavDropdown>
               <NavLink
                 location={location}
-                to={Routes(translation).Contacts}
+                to={Routes.Contacts}
                 onSelect={onSelect}
                 className="text-center"
               >

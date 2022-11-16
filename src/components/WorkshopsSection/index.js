@@ -13,7 +13,7 @@ function WorkshopsSection({ heading, subtitle, translation }) {
           <p className="">{subtitle}</p>
         </Col>
         <Col className="col-auto align-self-end">
-          <LinkArrow href={Routes(translation).Workshop}>
+          <LinkArrow href={Routes.Workshop}>
             {translation("HomePage-WorkshopsSection-Button")}
           </LinkArrow>
         </Col>

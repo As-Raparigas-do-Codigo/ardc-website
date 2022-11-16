@@ -15,6 +15,7 @@ import NavBar from 'components/NavBarComponent';
 import Social from 'components/Social';
 import translationsEN from 'data/locales/translations_en.json';
 import translationsPT from 'data/locales/translations_pt.json';
+import RouteConstants from 'data/Routes';
 
 i18n
   .use(initReactI18next)
@@ -36,35 +37,9 @@ function App() {
     if (currentLang == 'pt') {
       i18n.changeLanguage('en')
       setLang('en')
-      if (location.pathname == '/sobre') {
-        location.pathname = '/about'
-      } else if (location.pathname == '/contactos') {
-        location.pathname = '/contacts'
-      } else if (location.pathname == '/eventos') {
-        location.pathname = '/events'
-      } else if (location.pathname == '/mentorias') {
-        location.pathname = '/mentorships'
-      } else if (location.pathname == '/privacidade') {
-        location.pathname = '/privacy'
-      } else if (location.pathname == '/equipa') {
-        location.pathname = '/team'
-      }
     } else {
       i18n.changeLanguage('pt')
       setLang('pt')
-      if (location.pathname == '/about') {
-        location.pathname = '/sobre'
-      } else if (location.pathname == '/contacts') {
-        location.pathname = '/contactos'
-      } else if (location.pathname == '/events') {
-        location.pathname = '/eventos'
-      } else if (location.pathname == '/mentorships') {
-        location.pathname = '/mentorias'
-      } else if (location.pathname == '/privacy') {
-        location.pathname = '/privacidade'
-      } else if (location.pathname == '/team') {
-        location.pathname = '/equipa'
-      }
     }
   }
   return (
@@ -75,20 +50,14 @@ function App() {
           <NavBar translation={t} />
         </header>
         <Routes>
-          <Route exact path='/about' element={<AboutUs translation={t}/>} />
-          <Route exact path='/sobre' element={<AboutUs translation={t}/>} />
-          <Route exact path='/contacts' element={<Contact translation={t}/>} />
-          <Route exact path='/contactos' element={<Contact translation={t}/>} />
-          <Route exact path='/events' element={<Events translation={t}/>} />
-          <Route exact path='/eventos' element={<Events translation={t}/>} />
-          <Route exact path='/' element={<Home translation={t}/>} />
-          <Route exact path='/mentorships' element={<Mentorship translation={t}/>} />
-          <Route exact path='/mentorias' element={<Mentorship translation={t}/>} />
-          <Route exact path='/privacy' element={<PrivacyPolicy translation={t}/>} />
-          <Route exact path='/privacidade' element={<PrivacyPolicy translation={t}/>} />
-          <Route exact path='/team' element={<Team translation={t}/>} />
-          <Route exact path='/equipa' element={<Team translation={t}/>} />
-          <Route exact path='/workshops' element={<Workshops translation={t}/>} />
+          <Route exact path={RouteConstants.About} element={<AboutUs translation={t}/>} />
+          <Route exact path={RouteConstants.Contacts} element={<Contact translation={t}/>} />
+          <Route exact path={RouteConstants.Events} element={<Events translation={t}/>} />
+          <Route exact path={RouteConstants.Home} element={<Home translation={t}/>} />
+          <Route exact path={RouteConstants.Mentorships} element={<Mentorship translation={t}/>} />
+          <Route exact path={RouteConstants.PrivacyPolicy} element={<PrivacyPolicy translation={t}/>} />
+          <Route exact path={RouteConstants.Team} element={<Team translation={t}/>} />
+          <Route exact path={RouteConstants.Workshops} element={<Workshops translation={t}/>} />
         </Routes>
         <Footer translation={t} />
       </Router>

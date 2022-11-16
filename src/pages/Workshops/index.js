@@ -9,7 +9,7 @@ function Workshops({ translation }) {
   const breadcrumbs = [
     {
       label: translation("HomePage-PageName"),
-      href: Routes(translation).Home
+      href: Routes.Home
     },
     {
       label: translation("WorkshopsPage-PageName")

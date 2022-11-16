@@ -51,7 +51,7 @@ function MentorsSection({ translation }) {
         </Col>
         <Col className="d-flex justify-content-end align-items-end fw-bold">
           <div className="mb-5">
-            <LinkArrow href={Routes(translation).Team}>{translation("HomePage-MentorsSection-AllMentorsLabel")}</LinkArrow>
+            <LinkArrow href={Routes.Team}>{translation("HomePage-MentorsSection-AllMentorsLabel")}</LinkArrow>
           </div>
         </Col>
       </Row>
