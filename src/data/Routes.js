@@ -1,14 +1,12 @@
-const Routes = (translation) => {
-  return {
-    About: '/' + translation("AboutUsPage-Route"),
-    Contacts: '/' + translation("ContactsPage-Route"),
-    Events: '/' + translation("EventsPage-Route"),
+const Routes = {
+    About: '/about',
+    Contacts: '/contacts',
+    Events: '/events',
     Home: '/',
-    Mentorships: '/' + translation("MentorshipsPage-Route"),
-    PrivacyPolicy: '/' + translation("PrivacyPolicyPage-Route"),
-    Team: '/' + translation("TeamPage-Route"),
-    Workshops:'/' + translation("WorkshopsPage-Route")
-  }
+    Mentorships: '/mentorships',
+    PrivacyPolicy: '/privacy',
+    Team: '/team',
+    Workshops:'/workshops'
 };
 
 export default Routes;
