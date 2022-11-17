@@ -12,6 +12,7 @@ import Footer from 'components/Footer';
 import NavBar from 'components/NavBarComponent';
 import Social from 'components/Social';
 import SiteRoutes from 'data/Routes';
+import NotFound404 from 'pages/NotFound404';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <NavBar />
         </header>
         <Routes>
+          <Route path={SiteRoutes.NotFound404} element={<NotFound404 />} />
           <Route exact path={SiteRoutes.About} element={<AboutUs />} />
           <Route exact path={SiteRoutes.Contacts} element={<Contact />} />
           <Route exact path={SiteRoutes.Events} element={<Events />} />

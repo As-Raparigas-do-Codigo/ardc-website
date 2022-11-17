@@ -8,7 +8,8 @@ const Routes = {
   Mentorships: '/' + SiteContent.MentorshipsPage.Route,
   PrivacyPolicy: '/' + SiteContent.PrivacyPolicyPage.Route,
   Team: '/' + SiteContent.TeamPage.Route,
-  Workshops:'/' + SiteContent.WorkshopsPage.Route
+  Workshops:'/' + SiteContent.WorkshopsPage.Route,
+  NotFound404: '*',
 };
 
 export default Routes;
