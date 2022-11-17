@@ -7,6 +7,8 @@ import outsystems from "../assets/sponsorlogos/outsystems.png"
 import valtech from "../assets/sponsorlogos/valtech.png"
 import kwan from "../assets/sponsorlogos/kwan.png"
 
+const amountOfTiers = 3
+
 const sponsors = [
   {
     id: 1,
@@ -66,4 +68,4 @@ const sponsors = [
   }
 ];
 
-export default sponsors;
+export { amountOfTiers, sponsors };

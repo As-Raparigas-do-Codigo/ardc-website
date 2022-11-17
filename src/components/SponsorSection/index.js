@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "./sponsorSection.scss";
-import sponsors from "data/sponsors";
+import { amountOfTiers, sponsors } from "data/sponsors";
 
 const SponsorSection = () => {
 
@@ -11,7 +11,7 @@ const SponsorSection = () => {
       sponsor => sponsor.tier === tier
     )
 
-    return <Row className="justify-content-center">
+    return <Row className="justify-content-center" key={tier}>
       {
         sponsorsToDisplay.map(
           sponsor => (
@@ -26,12 +26,20 @@ const SponsorSection = () => {
     </Row>
   }
 
+  const renderAllSponsorTiersInOrder = () => {
+    const tiers = []
+    for (let i = 1; i <= amountOfTiers; i++) {
+      tiers.push(renderSponsorLogosTier(i))
+    }
+    return tiers
+  }
+
   return (
     <Container className="mt-5 pt-md-5 py-5">
       <h6 className="sponsor-title text-uppercase text-center mb-4">Os nossos parceiros</h6>
-      {renderSponsorLogosTier(1)}
-      {renderSponsorLogosTier(2)}
-      {renderSponsorLogosTier(3)}
+      {
+        renderAllSponsorTiersInOrder()
+      }
     </Container>
   )
 }
