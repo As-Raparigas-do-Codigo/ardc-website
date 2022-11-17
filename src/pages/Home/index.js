@@ -1,8 +1,10 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Routes, SiteContent } from 'Constants';
+import Routes from 'data/Routes';
+import SiteContent from 'data/SiteContent';
 import BasicCardsRow from 'components/BasicCardsRow';
 import LinkButton from 'components/LinkButton';
+import LinkArrow from 'components/LinkArrow';
 import MentorsSection from 'components/MentorsSection';
 import SponsorSection from 'components/SponsorSection';
 import WorkshopsSection from 'components/WorkshopsSection';
@@ -10,29 +12,25 @@ import KPISSection from 'components/KPISSection';
 import PageLayout from 'components/PageLayout';
 import banner from 'assets/home/banner.jpeg';
 import missao from 'assets/home/missao.png';
-import events from '../../data/events';
-import LinkArrow from 'components/LinkArrow';
-import pdf from 'assets/Booklet_ARDC_2022.pdf';
-// data
-// TODO: retirar comentário após MVP
-//import articles from "../../data/articles";
+import Events from '../../data/events';
+import pdf from '../../assets/Booklet_ARDC_2022.pdf'
 
 const IntroContent = () => {
   return (
     <>
       <Col className="my-4 align-self-center">
-        <h1 className="py-1">{SiteContent.Title.WeAreRdC}</h1>
-        <p className="py-1">{SiteContent.Text.WhoWeAre}</p>
+        <h1 className="py-1">{SiteContent.HomePage.IntroSection.Title}</h1>
+        <p className="py-1">{SiteContent.HomePage.IntroSection.Description}</p>
         <Container className="p-0">
           <Row>
             <Col className="col-auto align-self-center">
               <LinkButton href={Routes.Workshops} variant="primary">
-                Conhece os nossos workshops
+                {SiteContent.HomePage.IntroSection.PrimaryButton}
               </LinkButton>
             </Col>
             <Col className="col-auto align-self-center">
               <LinkArrow href={pdf} download>
-                Faz aqui download do nosso booklet
+                {SiteContent.HomePage.IntroSection.SecondaryButton}
               </LinkArrow>
             </Col>
           </Row>
@@ -58,8 +56,8 @@ function Home() {
       <div className="zig-zag"></div>
 
       <WorkshopsSection
-        heading={SiteContent.Title.OurWorkshops}
-        subtitle={SiteContent.Subtitle.Workshops}
+        heading={SiteContent.HomePage.WorkshopsSection.Title}
+        subtitle={SiteContent.WorkshopsPage.Description}
       />
 
       <div className="zig-zag"></div>
@@ -68,14 +66,20 @@ function Home() {
         <Container className="py-md-5">
           <Row>
             <Col className="my-4">
-              <h6 className="py-5">A NOSSA MISSÃO</h6>
-              <p className="py-1">{SiteContent.Text.OurMission_p1}</p>
-              <p className="py-1">{SiteContent.Text.OurMission_p2}</p>
+              <h6 className="py-5">
+                {SiteContent.HomePage.MissionSection.Title}
+              </h6>
+              <p className="py-1">
+                {SiteContent.HomePage.MissionSection.Text_p1}
+              </p>
+              <p className="py-1">
+                {SiteContent.HomePage.MissionSection.Text_p2}
+              </p>
               <Container className="p-0">
                 <Row>
                   <Col className="col-auto align-self-center">
                     <LinkButton href={Routes.About} variant="primary">
-                      Sabe mais sobre nós
+                    {SiteContent.HomePage.MissionSection.Button}
                     </LinkButton>
                   </Col>
                 </Row>
@@ -118,7 +122,10 @@ function Home() {
       </div>
       */ }
       <div className="zig-zag"></div>
-      <BasicCardsRow data={events} heading={'Talks & Eventos'} subtitle="" />
+      <BasicCardsRow 
+        data={Events} 
+        heading={SiteContent.HomePage.TalksSection.Title} 
+        subtitle="" />
 
       {/* TODO: mudar para className="gradient" depois do MVP */}
       <div className="bg-blue">

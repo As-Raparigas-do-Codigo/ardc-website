@@ -1,15 +1,15 @@
 import React, { useMemo, useState } from 'react';
-
 import { Row, Col } from 'react-bootstrap';
 import HorizontalCard from 'components/HorizontalCard';
-import { Constants, SiteContent } from 'Constants';
-import dataWorkshops from '../../data/workshops';
+import Constants from 'data/Constants';
+import SiteContent from 'data/SiteContent';
+import dataWorkshops from 'data/workshops';
 
 function WorkshopsList({ next = false, old = false }) {
   const [workshops] = useState(dataWorkshops);
-  let title = SiteContent.Title.WorkshopsList;
-  let subtitle = SiteContent.Subtitle.WorkshopsList;
-  let emptyList = SiteContent.Empty.WorkshopsList;
+  let title = SiteContent.WorkshopsList.Title;
+  let subtitle = SiteContent.WorkshopsList.Subtitle;
+  let emptyList = SiteContent.WorkshopsList.Empty;
 
   const isFutureWorkshop = (date) => {
     return new Date(date).getTime() > Date.now();
@@ -24,13 +24,13 @@ function WorkshopsList({ next = false, old = false }) {
   }, [workshops, old, next]);
 
   if (next) {
-    title = SiteContent.Title.WorkshopsListNext;
-    subtitle = SiteContent.Subtitle.WorkshopsListNext;
-    emptyList = SiteContent.Empty.WorkshopsListNext;
+    title = SiteContent.WorkshopsList.NextWorkshopsSection.Title;
+    subtitle = SiteContent.WorkshopsList.NextWorkshopsSection.Subtitle;
+    emptyList = SiteContent.WorkshopsList.NextWorkshopsSection.Empty;
   }
 
   if (old) {
-    subtitle = SiteContent.Subtitle.WorkshopsListOld;
+    subtitle = SiteContent.WorkshopsList.PreviousWorkshopsSection.Subtitle;
   }
 
   return (
@@ -38,7 +38,10 @@ function WorkshopsList({ next = false, old = false }) {
       <h2 className="mb-2">{title}</h2>
       <p>{subtitle}</p>
       <Row className="pb-3 mb-md-2">
-        {filteredWorkshop.length === 0 && emptyList}
+        {
+          filteredWorkshop.length === 0 &&
+          <p><strong>{emptyList}</strong></p>
+        }
         {filteredWorkshop.map((item) => (
           <Col lg={12} md={12} sm={12} key={item.id}>
             <HorizontalCard
@@ -48,10 +51,9 @@ function WorkshopsList({ next = false, old = false }) {
               imgPath={item.image}
               buttonUrl={`mailto:${Constants.Email}`}
               buttonLabel={
-                isFutureWorkshop(item.startingDate) ? SiteContent.Buttons.WorkshopCard : null
+                isFutureWorkshop(item.startingDate) ? SiteContent.WorkshopsList.Buttons : null
               }
               linkUrl={item.linkUrl}
-              // linkLabel={"Ver mais detalhes"}
               duration={item.descriptiveDuration}
               title={item.title}
             />
