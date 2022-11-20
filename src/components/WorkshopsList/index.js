@@ -2,14 +2,13 @@ import React, { useMemo, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import HorizontalCard from 'components/HorizontalCard';
 import Constants from 'data/Constants';
-import SiteContent from 'data/SiteContent';
 import dataWorkshops from 'data/workshops';
 
-function WorkshopsList({ next = false, old = false }) {
+function WorkshopsList({ next = false, old = false, translation }) {
   const [workshops] = useState(dataWorkshops);
-  let title = SiteContent.WorkshopsList.Title;
-  let subtitle = SiteContent.WorkshopsList.Subtitle;
-  let emptyList = SiteContent.WorkshopsList.Empty;
+  let title = translation("WorkshopsList-Title");
+  let subtitle = translation("WorkshopsList-Subtitle");
+  let emptyList = translation("WorkshopsList-Empty");
 
   const isFutureWorkshop = (date) => {
     return new Date(date).getTime() > Date.now();
@@ -24,13 +23,13 @@ function WorkshopsList({ next = false, old = false }) {
   }, [workshops, old, next]);
 
   if (next) {
-    title = SiteContent.WorkshopsList.NextWorkshopsSection.Title;
-    subtitle = SiteContent.WorkshopsList.NextWorkshopsSection.Subtitle;
-    emptyList = SiteContent.WorkshopsList.NextWorkshopsSection.Empty;
+    title = translation("WorkshopsList-NextWorkshopsSection-Title");
+    subtitle = translation("WorkshopsList-NextWorkshopsSection-Subtitle");
+    emptyList = translation("WorkshopsList-NextWorkshopsSection-Empty");
   }
 
   if (old) {
-    subtitle = SiteContent.WorkshopsList.PreviousWorkshopsSection.Subtitle;
+    subtitle = translation("WorkshopsList-PreviousWorkshopsSection-Subtitle");
   }
 
   return (
@@ -51,7 +50,7 @@ function WorkshopsList({ next = false, old = false }) {
               imgPath={item.image}
               buttonUrl={`mailto:${Constants.Email}`}
               buttonLabel={
-                isFutureWorkshop(item.startingDate) ? SiteContent.WorkshopsList.Buttons : null
+                isFutureWorkshop(item.startingDate) ? translation("WorkshopsList-Buttons") : null
               }
               linkUrl={item.linkUrl}
               duration={item.descriptiveDuration}
