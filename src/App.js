@@ -16,6 +16,7 @@ import Social from 'components/Social';
 import translationsEN from 'data/locales/translations_en.json';
 import translationsPT from 'data/locales/translations_pt.json';
 import RouteConstants from 'data/Routes';
+import NotFound404 from 'pages/NotFound404';
 
 i18n
   .use(initReactI18next)
