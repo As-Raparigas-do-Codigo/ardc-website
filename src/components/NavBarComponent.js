@@ -10,7 +10,6 @@ import { ReactComponent as HomeIcon } from 'assets/icons/home.svg';
 import logo from 'assets/ardc-logo.svg';
 import 'components/navbar.scss';
 import Routes from 'data/Routes';
-import SiteContent from 'data/SiteContent';
 
 const NavLink = ({ location, to, children, onSelect, className = '' }) => (
   <Nav.Link
@@ -32,7 +31,7 @@ const NavDropdownItem = ({ location, to, children, onSelect, className = '' }) =
   </NavDropdown.Item>
 );
 
-function NavBarComponent() {
+function NavBarComponent({ translation }) {
   const [navColour, updateNavbar] = useState(false);
   const location = useLocation();
   const [expanded, setExpanded] = useState(false);
@@ -96,7 +95,7 @@ function NavBarComponent() {
                 onSelect={onSelect}
                 className="text-center"
               >
-                {SiteContent.WorkshopsPage.PageName}
+                {translation("WorkshopsPage-PageName")}
               </NavLink>
               <NavLink
                 location={location}
@@ -104,10 +103,10 @@ function NavBarComponent() {
                 onSelect={onSelect}
                 className="text-center"
               >
-                {SiteContent.MentorshipsPage.PageName}
+                {translation("MentorshipsPage-PageName")}
               </NavLink>
               <NavDropdown
-                title={SiteContent.AboutLabel}
+                title={translation("AboutLabel")}
                 id="navbarScrollingDropdown"
                 className="text-center"
               >
@@ -117,7 +116,7 @@ function NavBarComponent() {
                   onSelect={onSelect}
                   className="text-center text-lg-center"
                 >
-                  {SiteContent.AboutUsPage.PageName}
+                  {translation("AboutUsPage-PageName")}
                 </NavDropdownItem>
                 <NavDropdownItem
                   location={location}
@@ -125,7 +124,7 @@ function NavBarComponent() {
                   onSelect={onSelect}
                   className="text-center"
                 >
-                  {SiteContent.TeamPage.PageName}
+                  {translation("TeamPage-PageName")}
                 </NavDropdownItem>
               </NavDropdown>
               <NavLink
@@ -134,7 +133,7 @@ function NavBarComponent() {
                 onSelect={onSelect}
                 className="text-center"
               >
-                {SiteContent.ContactsPage.PageName}
+                {translation("ContactsPage-PageName")}
               </NavLink>
             </Nav>
           </Offcanvas.Body>

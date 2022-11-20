@@ -2,32 +2,31 @@ import { Row, Container, Col } from 'react-bootstrap';
 import LinkButton from 'components/LinkButton';
 import '../footer.scss';
 import testimonials from 'data/Testimonials';
-import SiteContent from 'data/SiteContent';
 
-const SupportTheProject = () => {
+const SupportTheProject = ({ translation }) => {
   return (
     <Container className="padding-top-bottom-medium">
       <Row>
         <Col>
           <p className="text-secondary-color text-700-weight">
-            {SiteContent.SupportTheProject.Title}
+            {translation("SupportTheProject-Title")}
           </p>
         </Col>
       </Row>
       <Row>
-        <h2>{SiteContent.SupportTheProject.Subtitle}</h2>
+        <h2>{translation("SupportTheProject-Subtitle")}</h2>
       </Row>
       <Row>
         <Col md={{ span: 6, offset: 3 }}>
           <p>
-            {SiteContent.SupportTheProject.Text}
+            {translation("SupportTheProject-Text")}
           </p>
         </Col>
       </Row>
       <Row>
         <Col md={{ span: 6, offset: 3 }}>
           <LinkButton href="#">
-            {SiteContent.SupportTheProject.Button}
+            {translation("SupportTheProject-Button")}
           </LinkButton>
         </Col>
       </Row>

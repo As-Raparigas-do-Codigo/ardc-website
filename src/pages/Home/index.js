@@ -1,7 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Routes from 'data/Routes';
-import SiteContent from 'data/SiteContent';
 import BasicCardsRow from 'components/BasicCardsRow';
 import LinkButton from 'components/LinkButton';
 import LinkArrow from 'components/LinkArrow';
@@ -15,22 +14,22 @@ import missao from 'assets/home/missao.png';
 import Events from '../../data/events';
 import pdf from '../../assets/Booklet_ARDC_2022.pdf'
 
-const IntroContent = () => {
+const IntroContent = ({ translation }) => {
   return (
     <>
       <Col className="my-4 align-self-center">
-        <h1 className="py-1">{SiteContent.HomePage.IntroSection.Title}</h1>
-        <p className="py-1">{SiteContent.HomePage.IntroSection.Description}</p>
+        <h1 className="py-1">{translation("HomePage-IntroSection-Title")}</h1>
+        <p className="py-1">{translation("HomePage-IntroSection-Description")}</p>
         <Container className="p-0">
           <Row>
             <Col className="col-auto align-self-center">
               <LinkButton href={Routes.Workshops} variant="primary">
-                {SiteContent.HomePage.IntroSection.PrimaryButton}
+                {translation("HomePage-IntroSection-PrimaryButton")}
               </LinkButton>
             </Col>
             <Col className="col-auto align-self-center">
               <LinkArrow href={pdf} download>
-                {SiteContent.HomePage.IntroSection.SecondaryButton}
+                {translation("HomePage-IntroSection-SecondaryButton")}
               </LinkArrow>
             </Col>
           </Row>
@@ -40,24 +39,25 @@ const IntroContent = () => {
         <img
           src={banner}
           className="box-border box-radius horizontal-card__img shadow"
-          alt="As raparigas do código"
+          alt={translation("RdCLabel")}
         />
       </Col>
     </>
   );
 };
 
-function Home() {
+function Home({ translation }) {
   return (
-    <PageLayout title="Home" customBanner={<IntroContent />}>
+    <PageLayout title="Home" customBanner={<IntroContent translation={translation}/>}>
       <SponsorSection />
       <hr />
 
       <div className="zig-zag"></div>
 
       <WorkshopsSection
-        heading={SiteContent.HomePage.WorkshopsSection.Title}
-        subtitle={SiteContent.WorkshopsPage.Description}
+        heading={translation("HomePage-WorkshopsSection-Title")}
+        subtitle={translation("WorkshopsPage-Description")}
+        translation={translation}
       />
 
       <div className="zig-zag"></div>
@@ -67,19 +67,19 @@ function Home() {
           <Row>
             <Col className="my-4">
               <h6 className="py-5">
-                {SiteContent.HomePage.MissionSection.Title}
+                {translation("HomePage-MissionSection-Title")}
               </h6>
               <p className="py-1">
-                {SiteContent.HomePage.MissionSection.Text_p1}
+                {translation("HomePage-MissionSection-Text_p1")}
               </p>
               <p className="py-1">
-                {SiteContent.HomePage.MissionSection.Text_p2}
+                {translation("HomePage-MissionSection-Text_p2")}
               </p>
               <Container className="p-0">
                 <Row>
                   <Col className="col-auto align-self-center">
                     <LinkButton href={Routes.About} variant="primary">
-                    {SiteContent.HomePage.MissionSection.Button}
+                    {translation("HomePage-MissionSection-Button")}
                     </LinkButton>
                   </Col>
                 </Row>
@@ -95,7 +95,7 @@ function Home() {
           </Row>
         </Container>
         <hr></hr>
-        <KPISSection />
+        <KPISSection translation={translation}/>
       </div>
       { /*
       <div className="bg-blue">
@@ -124,14 +124,14 @@ function Home() {
       <div className="zig-zag"></div>
       <BasicCardsRow 
         data={Events} 
-        heading={SiteContent.HomePage.TalksSection.Title} 
+        heading={translation("HomePage-TalksSection-Title")} 
         subtitle="" />
 
       {/* TODO: mudar para className="gradient" depois do MVP */}
       <div className="bg-blue">
         <div className="zig-zag"></div>
         <div className="pt-2">
-          <MentorsSection />
+          <MentorsSection translation={translation}/>
         </div>
       </div>
       {/* TODO: retirar comentário após MVP

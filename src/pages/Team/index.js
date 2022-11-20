@@ -3,21 +3,20 @@ import { Row, Col, Container } from 'react-bootstrap';
 import PersonCard from 'components/PersonCard';
 import PageLayout from 'components/PageLayout';
 import Routes from 'data/Routes';
-import SiteContent from 'data/SiteContent';
 import TeamData from 'data/team';
 
-function Team() {
+function Team({ translation }) {
   const breadcrumbs = [
     {
-      label: SiteContent.HomePage.PageName,
+      label: translation("HomePage-PageName"),
       href: Routes.Home
     },
     {
-      label: SiteContent.AboutLabel,
+      label: translation("AboutLabel"),
       href: Routes.Team
     },
     {
-      label: SiteContent.TeamPage.PageName
+      label: translation("TeamPage-PageName")
     }
   ];
 
@@ -29,13 +28,13 @@ function Team() {
 
   return (
     <PageLayout
-      title={SiteContent.TeamPage.PageName}
-      description={SiteContent.TeamPage.Description}
+      title={translation("TeamPage-PageName")}
+      description={translation("TeamPage-Description")}
       breadcrumbsData={breadcrumbs}
     >
       <Container className={'mt-5 padding-top-bottom-medium'}>
         <Row>
-          <h2>{SiteContent.TeamPage.Label.Founder}</h2>
+          <h2>{translation("TeamPage-Label-Founder")}</h2>
         </Row>
         <Row className={'mt-4'} xs={1} md={1} lg={4}>
           {founderTeam.map((item, key) => (
@@ -45,7 +44,7 @@ function Team() {
           ))}
         </Row>
         <Row className={'mt-5'}>
-          <h2>{SiteContent.TeamPage.Label.Administration}</h2>
+          <h2>{translation("TeamPage-Label-Administration")}</h2>
         </Row>
         <Row className={'mt-4'} xs={1} md={1} lg={4}>
           {adminTeam.map((item, key) => (
@@ -55,7 +54,7 @@ function Team() {
           ))}
         </Row>
         <Row className={'mt-5'}>
-          <h2>{SiteContent.TeamPage.Label.Collaborators}</h2>
+          <h2>{translation("TeamPage-Label-Collaborators")}</h2>
         </Row>
         <Row className={'mt-4 mb-5'} xs={1} lg={4}>
           {collabTeam.map((item, key) => (
