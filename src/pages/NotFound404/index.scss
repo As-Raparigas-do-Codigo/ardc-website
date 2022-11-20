@@ -1,0 +1,18 @@
+.notfound404 {
+  &__row > * {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image-wrapper {
+    padding: 0 20px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    flex-direction: column;
+  }
+}
