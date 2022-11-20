@@ -51,6 +51,7 @@ function App() {
           <NavBar translation={t} />
         </header>
         <Routes>
+          <Route path={RouteConstants.NotFound404} element={<NotFound404 />} />
           <Route exact path={RouteConstants.About} element={<AboutUs translation={t}/>} />
           <Route exact path={RouteConstants.Contacts} element={<Contact translation={t}/>} />
           <Route exact path={RouteConstants.Events} element={<Events translation={t}/>} />

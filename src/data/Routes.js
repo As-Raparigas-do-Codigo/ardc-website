@@ -1,4 +1,5 @@
 const Routes = {
+    NotFound404: '*',
     About: '/about',
     Contacts: '/contacts',
     Events: '/events',
