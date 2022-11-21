@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
 import Reaptcha from 'reaptcha';
-import SiteContent from 'data/SiteContent';
 
-function MentorshipForm() {
+function MentorshipForm({ translation }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [mentorshipType, setMentorshipType] = useState(1);
@@ -85,15 +84,15 @@ function MentorshipForm() {
 
   return (
     <>
-      <SuccessToastMessage show={successToast} onClose={hideSuccessToast} />
-      <ErrorToastMessage show={errorToast} onClose={hideErrorToast} />
+      <SuccessToastMessage show={successToast} onClose={hideSuccessToast} translation={translation}/>
+      <ErrorToastMessage show={errorToast} onClose={hideErrorToast} translation={translation}/>
       <Form>
         <Stack gap={3}>
           <Form.Group className="mb-3" controlId="nameInputField">
             <Form.Control
               type="text"
               name="nameInputField"
-              placeholder={SiteContent.MentorshipsPage.MentorshipForm.NameLabel}
+              placeholder={translation("MentorshipsPage-MentorshipForm-NameLabel")}
               value={name}
               onChange={(e) => setName(e.target.value)}
               size="lg"
@@ -103,7 +102,7 @@ function MentorshipForm() {
             <Form.Control
               type="email"
               name="emailInputField"
-              placeholder={SiteContent.MentorshipsPage.MentorshipForm.EmailLabel}
+              placeholder={translation("MentorshipsPage-MentorshipForm-EmailLabel")}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               size="lg"
@@ -168,7 +167,7 @@ function MentorshipForm() {
               type="text"
               as="textarea"
               rows="3"
-              placeholder={SiteContent.MentorshipsPage.MentorshipForm.MessageLabel}
+              placeholder={translation("MentorshipsPage-MentorshipForm-MessageLabel")}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               size="lg"
@@ -180,7 +179,7 @@ function MentorshipForm() {
           {
             !showCaptcha && (
               <p className="mandatory-hint">
-                {SiteContent.MentorshipsPage.MentorshipForm.MandatoryLabel}
+                {translation("MentorshipsPage-MentorshipForm-MandatoryLabel")}
               </p>
             )
           }
@@ -191,7 +190,7 @@ function MentorshipForm() {
                 type="submit"
                 disabled={!name || !email || !message || sending}
                 onClick={handleFormWasSubmitted}>
-                {SiteContent.MentorshipsPage.MentorshipForm.SubmitButton}
+                {translation("MentorshipsPage-MentorshipForm-SubmitButton")}
               </button>
             )
           }
