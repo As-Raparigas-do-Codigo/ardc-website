@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
-import SiteContent from 'data/SiteContent';
 
-function CollaboratorForm() {
+function CollaboratorForm({ translation }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [city, setCity] = useState('');
@@ -108,8 +107,8 @@ function CollaboratorForm() {
 
   return (
     <>
-      <SuccessToastMessage show={successToast} onClose={hideSuccessToast} />
-      <ErrorToastMessage show={errorToast} onClose={hideErrorToast} />
+      <SuccessToastMessage show={successToast} onClose={hideSuccessToast} translation={translation} />
+      <ErrorToastMessage show={errorToast} onClose={hideErrorToast} translation={translation}/>
       <Form>
         <Form.Group className="mb-3" controlId="nameInputField">
           <Form.Control
@@ -150,7 +149,7 @@ function CollaboratorForm() {
         <Form.Group className="mt-5 mb-2" controlId="collaborationAreasField">
           <Stack gap={3}>
             <Form.Label>
-              {SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreasLabel}
+              {translation("CollaboratePage-CollaboratorForm-CollaborationAreasLabel")}
             </Form.Label>
             <Form.Check
               type="checkbox"
@@ -163,49 +162,49 @@ function CollaboratorForm() {
               type="checkbox"
               id="speaker"
               checked={speakerChecked}
-              label={SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreas.Options.Speaker}
+              label={translation("CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Speaker")}
               onChange={(e) => setSpeakerChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="content"
               checked={contentChecked}
-              label={SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreas.Options.Content}
+              label={translation("CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Content")}
               onChange={(e) => setContentChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="socialMedia"
               checked={socialMediaChecked}
-              label={SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreas.Options.SocialMedia}
+              label={translation("CollaboratePage-CollaboratorForm-CollaborationAreas-Options-SocialMedia")}
               onChange={(e) => setSocialMediaChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="eventOrg"
               checked={eventOrgChecked}
-              label={SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreas.Options.EventOrganisation}
+              label={translation("CollaboratePage-CollaboratorForm-CollaborationAreas-Options-EventOrganisation")}
               onChange={(e) => setEventOrgChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="promotion"
               checked={promotionChecked}
-              label={SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreas.Options.Promotion}
+              label={translation("CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Promotion")}
               onChange={(e) => setPromotionChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="technical"
               checked={technicalChecked}
-              label={SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreas.Options.Technical}
+              label={translation("CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Technical")}
               onChange={(e) => setTechnicalChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="other"
               checked={otherChecked}
-              label={SiteContent.CollaboratePage.CollaboratorForm.CollaborationAreas.Options.Other}
+              label={translation("CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Other")}
               onChange={(e) => setOtherChecked(e.target.checked ? true : false)}
             />
           </Stack>
@@ -213,7 +212,7 @@ function CollaboratorForm() {
         <Form.Group className="mt-5 mb-2" controlId="howDidYouFindUsField">
           <Stack gap={3}>
             <Form.Label>
-              {SiteContent.CollaboratePage.CollaboratorForm.HowDidYouFindUsLabel}
+              {translation("CollaboratePage-CollaboratorForm-HowDidYouFindUsLabel")}
             </Form.Label>
             <Form.Check
               type="checkbox"
