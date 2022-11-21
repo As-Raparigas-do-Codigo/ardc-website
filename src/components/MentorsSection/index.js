@@ -7,7 +7,6 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './mentors-section.scss';
 import Routes from 'data/Routes';
-import SiteContent from 'data/SiteContent';
 import TeamData from 'data/team';
 import { shuffle, sortById } from 'utils';
 
@@ -29,7 +28,7 @@ const responsive = {
   }
 };
 
-function MentorsSection() {
+function MentorsSection({ translation }) {
   const mentorsCards = shuffle(TeamData.filter((x) => x.roles.includes('mentor')))
     .slice(0, 10)
     .map((item) => <PersonCard key={item.id} person={item} />)
@@ -39,20 +38,20 @@ function MentorsSection() {
     <Container className="mt-5 pt-md-5 pb-5">
       <Row>
         <h2 className="mb-2">
-          {SiteContent.HomePage.MentorsSection.Title}
+          {translation("HomePage-MentorsSection-Title")}
         </h2>
       </Row>
       <Row>
         <Col>
           <p className="mb-5">
-            {SiteContent.HomePage.MentorsSection.Text_p1}
+            {translation("HomePage-MentorsSection-Text_p1")}
             <br />
-            {SiteContent.HomePage.MentorsSection.Text_p2}
+            {translation("HomePage-MentorsSection-Text_p2")}
           </p>
         </Col>
         <Col className="d-flex justify-content-end align-items-end fw-bold">
           <div className="mb-5">
-            <LinkArrow href={Routes.Team}> {SiteContent.HomePage.MentorsSection.AllMentorsLabel} </LinkArrow>
+            <LinkArrow href={Routes.Team}>{translation("HomePage-MentorsSection-AllMentorsLabel")}</LinkArrow>
           </div>
         </Col>
       </Row>

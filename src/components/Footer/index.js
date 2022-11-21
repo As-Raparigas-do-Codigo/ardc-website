@@ -2,11 +2,11 @@ import React from 'react';
 import Awards from 'components/Footer/Awards';
 import './footer.scss';
 
-const Footer = function () {
+const Footer = function ({ translation }) {
   return (
     <div>
       <div className="gradient">
-        <Awards />
+        <Awards translation={translation}/>
       </div>
     </div>
   );

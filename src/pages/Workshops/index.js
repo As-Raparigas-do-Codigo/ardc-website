@@ -1,36 +1,35 @@
 import React from 'react';
 import Routes from 'data/Routes';
-import SiteContent from 'data/SiteContent';
 import { Container } from 'react-bootstrap';
 import PageLayout from 'components/PageLayout';
 import WorkshopsList from 'components/WorkshopsList';
 import KPISSection from 'components/KPISSection';
 
-function Workshops() {
+function Workshops({ translation }) {
   const breadcrumbs = [
     {
-      label: SiteContent.HomePage.PageName,
+      label: translation("HomePage-PageName"),
       href: Routes.Home
     },
     {
-      label: SiteContent.WorkshopsPage.PageName
+      label: translation("WorkshopsPage-PageName")
     }
   ];
   return (
     <PageLayout
-      title={SiteContent.WorkshopsPage.PageName}
-      description={SiteContent.WorkshopsPage.Description}
+      title={translation("WorkshopsPage-PageName")}
+      description={translation("WorkshopsPage-Description")}
       breadcrumbsData={breadcrumbs}
     >
       <Container className="mt-5 py-md-5">
-        <WorkshopsList next />
+        <WorkshopsList next translation={translation}/>
       </Container>
       <div className="zig-zag"></div>
       <div className="bg-pink">
-        <KPISSection />
+        <KPISSection translation={translation}/>
       </div>
       <Container className="mt-5 py-md-5">
-        <WorkshopsList all />
+        <WorkshopsList all translation={translation}/>
       </Container>
     </PageLayout>
   );

@@ -3,11 +3,11 @@ import Container from 'react-bootstrap/Container';
 import SocialLinks from 'components/SocialLinks';
 import './social.scss';
 
-function SocialBar() {
+function SocialBar({ changeLanguage, currentLang }) {
   return (
     <div className="social-bar">
       <Container>
-        <SocialLinks variant="light" />
+        <SocialLinks variant="light" changeLanguage={changeLanguage} currentLang={currentLang}/>
       </Container>
     </div>
   );
