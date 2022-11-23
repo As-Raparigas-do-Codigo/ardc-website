@@ -123,7 +123,7 @@ function Home({ translation }) {
       */ }
       <div className="zig-zag"></div>
       <BasicCardsRow 
-        data={Events} 
+        data={Events.slice(0, 3)}
         heading={translation("HomePage-TalksSection-Title")} 
         subtitle="" />
 
