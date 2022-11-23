@@ -2,46 +2,45 @@ import React from 'react';
 import PageLayout from 'components/PageLayout';
 import { Container, Row } from 'react-bootstrap';
 import Routes from 'data/Routes';
-import SiteContent from 'data/SiteContent';
 import './privacy-policy.scss';
 
-function PrivacyPolicy() {
+function PrivacyPolicy({ translation }) {
   const breadcrumbs = [
     {
-      label: SiteContent.HomePage.PageName,
+      label: translation("HomePage-PageName"),
       href: Routes.Home
     },
     {
-      label: SiteContent.PrivacyPolicyPage.PageName
+      label: translation("PrivacyPolicyPage-PageName")
     }
   ];
 
   return (
     <PageLayout
-      title={SiteContent.PrivacyPolicyPage.PageName}
-      description={SiteContent.PrivacyPolicyPage.Descriptiion}
+      title={translation("PrivacyPolicyPage-PageName")}
+      description={translation("PrivacyPolicyPage-Descriptiion")}
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="padding-top-first-section">
         <Row>
           <p>
-            {SiteContent.PrivacyPolicyPage.Text_p1}
+            {translation("PrivacyPolicyPage-Text_p1")}
           </p>
           <p>
-            {SiteContent.PrivacyPolicyPage.Text_p2}
+            {translation("PrivacyPolicyPage-Text_p2")}
           </p>
           <p>
-            {SiteContent.PrivacyPolicyPage.Text_p3}
+            {translation("PrivacyPolicyPage-Text_p3")}
           </p>
           <p>
-            {SiteContent.PrivacyPolicyPage.Text_p4}
+            {translation("PrivacyPolicyPage-Text_p4")}
           </p>
           <p>
-            {SiteContent.PrivacyPolicyPage.Text_p5}
+            {translation("PrivacyPolicyPage-Text_p5")}
           </p>
           <p>
-            {SiteContent.PrivacyPolicyPage.Text_p6}
+            {translation("PrivacyPolicyPage-Text_p6")}
           </p>
-          <h2 className="fw-bold">{SiteContent.PrivacyPolicyPage.Title}</h2>
+          <h2 className="fw-bold">{translation("PrivacyPolicyPage-Title")}</h2>
           <h5>O que são cookies?</h5>
           <p>
             Como é prática comum em quase todos os sites profissionais, este site usa cookies, que

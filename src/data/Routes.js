@@ -1,14 +1,13 @@
-import SiteContent from './SiteContent';
-
 const Routes = {
-  About: '/' + SiteContent.AboutUsPage.Route,
-  Contacts: '/' + SiteContent.ContactsPage.Route,
-  Events: '/' + SiteContent.EventsPage.Route,
-  Home: '/',
-  Mentorships: '/' + SiteContent.MentorshipsPage.Route,
-  PrivacyPolicy: '/' + SiteContent.PrivacyPolicyPage.Route,
-  Team: '/' + SiteContent.TeamPage.Route,
-  Workshops:'/' + SiteContent.WorkshopsPage.Route
+    NotFound404: '*',
+    About: '/about',
+    Contacts: '/contacts',
+    Events: '/events',
+    Home: '/',
+    Mentorships: '/mentorships',
+    PrivacyPolicy: '/privacy',
+    Team: '/team',
+    Workshops:'/workshops'
 };
 
 export default Routes;

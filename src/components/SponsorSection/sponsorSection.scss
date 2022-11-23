@@ -4,6 +4,26 @@ h6.sponsor-title {
   color: $light-gray;
 }
 
-.sponsor-image {
-  height: 50px;
+.sponsor-grayscale {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+
+  &:hover {
+    filter: none; /* IE6-9 */
+    -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: grayscale(0); /* Microsoft Edge and Firefox 35+ */
+  }
+}
+
+.sponsor-1 {
+  height:80px;
+}
+
+.sponsor-2 {
+  height:50px;
+}
+
+.sponsor-3 {
+  height: 28px;
 }
