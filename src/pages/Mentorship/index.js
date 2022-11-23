@@ -2,72 +2,71 @@ import React from 'react';
 import MentorshipForm from 'components/Forms/MentorshipForm';
 import { Container, Col, Row } from 'react-bootstrap';
 import Routes from 'data/Routes';
-import SiteContent from 'data/SiteContent';
 import PageLayout from 'components/PageLayout';
 
 import LinkArrow from 'components/LinkArrow';
 
-const MentorshipInfoSection = () => (
+const MentorshipInfoSection = ({ translation }) => (
   <Container className="my-5 py-5 padding-top-first-section">
     <Row>
-      <h6 className="mb-2">{SiteContent.MentorshipsPage.Title}</h6>
-      <h2 className="mb-2">{SiteContent.MentorshipsPage.Subtitle}</h2>
+      <h6 className="mb-2">{translation("MentorshipsPage-Title")}</h6>
+      <h2 className="mb-2">{translation("MentorshipsPage-Subtitle")}</h2>
       <p className="mb-4">
-        {SiteContent.MentorshipsPage.Text_p1}
+        {translation("MentorshipsPage-Text_p1")}
       </p>
       <p className="mb-4">
-        {SiteContent.MentorshipsPage.Text_p2}
+        {translation("MentorshipsPage-Text_p2")}
       </p>
       <p className="mb-4">
-        {SiteContent.MentorshipsPage.Text_p3}
+        {translation("MentorshipsPage-Text_p3")}
       </p>
     </Row>
     <Row>
       <ul className="mx-4">
         <li className="mb-2">
-          {SiteContent.MentorshipsPage.IndividualMentorshipTitle}
+          {translation("MentorshipsPage-IndividualMentorshipTitle")}
         </li>
         <p className="my-3">
-          {SiteContent.MentorshipsPage.IndividualMentorshipText}
+          {translation("MentorshipsPage-IndividualMentorshipText")}
         </p>
         <li className="mb-2">
-          {SiteContent.MentorshipsPage.GroupMentorshipTitle}
+          {translation("MentorshipsPage-GroupMentorshipTitle")}
         </li>
         <p className="my-3">
-          {SiteContent.MentorshipsPage.GroupMentorshipText}
+          {translation("MentorshipsPage-GroupMentorshipText")}
         </p>
       </ul>
     </Row>
-    <LinkArrow href={Routes.TeamRoute} variant="primary">
-      {SiteContent.HomePage.MentorsSection.Title}
+    <LinkArrow href={Routes.Team} variant="primary">
+      {translation("HomePage-MentorsSection-Title")}
     </LinkArrow>
   </Container>
 );
 
-const MentorshipFormSection = () => (
+const MentorshipFormSection = ({ translation }) => (
   <Container className="my-5 p-5 box-radius shadow-lg">
     <Row>
       <h2 className="mb-2">
-        {SiteContent.MentorshipsPage.MentorshipForm.Title}
+        {translation("MentorshipsPage-MentorshipForm-Title")}
       </h2>
       <p className="mb-4">
-        {SiteContent.MentorshipsPage.MentorshipForm.Subtitle}
+        {translation("MentorshipsPage-MentorshipForm-Subtitle")}
       </p>
     </Row>
     <Row>
-      <MentorshipForm />
+      <MentorshipForm translation={translation}/>
     </Row>
   </Container>
 );
 
-// const MentorsSection = () => {
+// const MentorsSection = ({ translation }) => {
 //   const mentorsTeam = team.filter((x) => x.roles.includes("mentor"));
 
 //   return (
 //    <Container className={"mt-5 padding-top-bottom-medium"}>
 //      <Row>
-//       <h2 className="mb-2">{SiteContent.Title.GetToKnowOurMentors}</h2>
-//       <p className="mb-4">{SiteContent.Subtitle.GetToKnowOurMentors}</p>
+//       <h2 className="mb-2">{translation("Title.GetToKnowOurMentors)}</h2>
+//       <p className="mb-4">{translation("Subtitle.GetToKnowOurMentors)}</p>
 //      </Row>
 //      <Row className={"mt-4"} xs={1} md={1} lg={4}>
 //        {mentorsTeam.map((item, key) => (
@@ -80,34 +79,31 @@ const MentorshipFormSection = () => (
 //   );
 // };
 
-const Mentorship = () => {
+const Mentorship = ({ translation }) => {
   const breadcrumbs = [
     {
-      label: SiteContent.HomePage.PageName,
+      label: translation("HomePage-PageName"),
       href: Routes.Home
     },
     {
-      label: SiteContent.MentorshipsPage.PageName
+      label: translation("MentorshipsPage-PageName")
     }
   ];
   return (
     <PageLayout
-      title={SiteContent.MentorshipsPage.PageName}
-      description={SiteContent.MentorshipsPage.Description}
+      title={translation("MentorshipsPage-PageName")}
+      description={translation("MentorshipsPage-Description")}
       breadcrumbsData={breadcrumbs}
     >
       <Container fluid="md">
         <Row>
           <Col>
-            <MentorshipInfoSection />
+            <MentorshipInfoSection translation={translation}/>
           </Col>
           <Col>
-            <MentorshipFormSection />
+            <MentorshipFormSection translation={translation}/>
           </Col>
         </Row>
-        {/* <Row>
-          <MentorsSection />
-        </Row> */}
       </Container>
     </PageLayout>
   );
