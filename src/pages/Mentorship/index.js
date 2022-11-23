@@ -37,7 +37,7 @@ const MentorshipInfoSection = ({ translation }) => (
         </p>
       </ul>
     </Row>
-    <LinkArrow href={Routes.TeamRoute} variant="primary">
+    <LinkArrow href={Routes.Team} variant="primary">
       {translation("HomePage-MentorsSection-Title")}
     </LinkArrow>
   </Container>
