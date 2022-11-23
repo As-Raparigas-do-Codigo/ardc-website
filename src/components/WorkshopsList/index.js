@@ -4,7 +4,7 @@ import HorizontalCard from 'components/HorizontalCard';
 import Constants from 'data/Constants';
 import dataWorkshops from 'data/workshops';
 
-function WorkshopsList({ next = false, old = false, translation }) {
+function WorkshopsList({ next = false, old = false, all = false, translation }) {
   const [workshops] = useState(dataWorkshops);
   let title = translation("WorkshopsList-Title");
   let subtitle = translation("WorkshopsList-Subtitle");
@@ -30,6 +30,12 @@ function WorkshopsList({ next = false, old = false, translation }) {
 
   if (old) {
     subtitle = translation("WorkshopsList-PreviousWorkshopsSection-Subtitle");
+  }
+  
+  if (all) {
+    title = translation("WorkshopsList-AllWorkshopsSection-Title");
+    subtitle = translation("WorkshopsList-AllWorkshopsSection-Subtitle");
+    emptyList = translation("WorkshopsList-AllWorkshopsSection-Empty");
   }
 
   return (
