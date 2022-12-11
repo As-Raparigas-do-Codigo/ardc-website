@@ -60,7 +60,7 @@ const TeamData = [
       { linkedin: 'https://www.linkedin.com/in/ines-af-martins/' },
       { other: 'https://inesmartins.github.io/' }
     ],
-    avatar: 'ines-martins.jpg'
+    avatar: 'ines-martins.jpeg'
   },
   {
     id: 6,
