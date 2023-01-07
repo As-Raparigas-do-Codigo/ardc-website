@@ -8,9 +8,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
 import { ReactComponent as HomeIcon } from 'assets/icons/home.svg';
 import logo from 'assets/ardc-logo.svg';
-import Constants from 'constants';
-
 import './navbar.scss';
+import Constants from 'constants';
 
 const NavLink = ({ location, to, children, onSelect, className = '' }) => (
   <Nav.Link
@@ -32,7 +31,7 @@ const NavDropdownItem = ({ location, to, children, onSelect, className = '' }) =
   </NavDropdown.Item>
 );
 
-function NavBar() {
+function NavBarComponent({ translation }) {
   const [navColour, updateNavbar] = useState(false);
   const location = useLocation();
   const [expanded, setExpanded] = useState(false);
@@ -94,17 +93,17 @@ function NavBar() {
                 to={Constants.Routes.Workshops}
                 onSelect={onSelect}
                 className="text-center">
-                {Constants.Content.Title.Workshops}
+                {translation('WorkshopsPage-PageName')}
               </NavLink>
               <NavLink
                 location={location}
                 to={Constants.Routes.Mentorships}
                 onSelect={onSelect}
                 className="text-center">
-                {Constants.Content.Title.Mentorships}
+                {translation('MentorshipsPage-PageName')}
               </NavLink>
               <NavDropdown
-                title={Constants.Content.Title.AboutUs}
+                title={translation('AboutLabel')}
                 id="navbarScrollingDropdown"
                 className="text-center">
                 <NavDropdownItem
@@ -112,14 +111,14 @@ function NavBar() {
                   to={Constants.Routes.About}
                   onSelect={onSelect}
                   className="text-center text-lg-center">
-                  {Constants.Content.Title.AboutTheProject}
+                  {translation('AboutUsPage-PageName')}
                 </NavDropdownItem>
                 <NavDropdownItem
                   location={location}
                   to={Constants.Routes.Team}
                   onSelect={onSelect}
                   className="text-center">
-                  {Constants.Content.Title.OurTeam}
+                  {translation('TeamPage-PageName')}
                 </NavDropdownItem>
               </NavDropdown>
               <NavLink
@@ -127,7 +126,7 @@ function NavBar() {
                 to={Constants.Routes.Contacts}
                 onSelect={onSelect}
                 className="text-center">
-                {Constants.Content.Title.Contacts}
+                {translation('ContactsPage-PageName')}
               </NavLink>
             </Nav>
           </Offcanvas.Body>
@@ -137,4 +136,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default NavBarComponent;

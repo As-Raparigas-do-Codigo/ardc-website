@@ -12,7 +12,7 @@ import PrivacyPolicy from 'pages/PrivacyPolicy';
 import Team from 'pages/Team';
 import Workshops from 'pages/Workshops';
 import Footer from 'components/Footer';
-import NavBar from 'components/NavBarComponent';
+import NavBar from 'components/NavBar';
 import Social from 'components/Social';
 import translationsEN from 'data/locales/translations_en.json';
 import translationsPT from 'data/locales/translations_pt.json';
