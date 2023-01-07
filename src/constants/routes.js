@@ -2,7 +2,7 @@ export default {
   NotFound404: '*',
   About: '/about',
   Contacts: '/contacts',
-  Collaborate: '/colaborar',
+  Collaborate: '/collaborate',
   Events: '/events',
   Home: '/',
   Mentorships: '/mentorships',

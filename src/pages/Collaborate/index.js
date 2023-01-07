@@ -3,7 +3,7 @@ import CollaboratorForm from 'components/Forms/CollaboratorForm';
 import NumberedRow from 'components/NumberedRow';
 import PageLayout from 'components/PageLayout';
 import { Container, Row } from 'react-bootstrap';
-import Constants from 'constants/contacts';
+import Constants from 'constants';
 
 const CollaborateFormSection = ({ translation }) => (
   <Container className="my-5 py-5 padding-top-first-section">
@@ -12,7 +12,7 @@ const CollaborateFormSection = ({ translation }) => (
       <p className="mb-4"></p>
     </Row>
     <Row id="formulario-colaboracao">
-      <CollaboratorForm />
+      <CollaboratorForm translation={translation} />
     </Row>
   </Container>
 );

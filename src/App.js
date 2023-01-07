@@ -7,6 +7,7 @@ import Contact from 'pages/Contact';
 import Events from 'pages/Events';
 import Home from 'pages/Home';
 import Mentorship from 'pages/Mentorship';
+import Collaborate from 'pages/Collaborate';
 import PrivacyPolicy from 'pages/PrivacyPolicy';
 import Team from 'pages/Team';
 import Workshops from 'pages/Workshops';
@@ -54,6 +55,11 @@ function App() {
           <Route exact path={Constants.Routes.Contacts} element={<Contact translation={t} />} />
           <Route exact path={Constants.Routes.Events} element={<Events translation={t} />} />
           <Route exact path={Constants.Routes.Home} element={<Home translation={t} />} />
+          <Route
+            exact
+            path={Constants.Routes.Collaborate}
+            element={<Collaborate translation={t} />}
+          />
           <Route
             exact
             path={Constants.Routes.Mentorships}

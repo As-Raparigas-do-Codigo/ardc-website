@@ -1,3 +1,3 @@
-export const Contacts = {
+export default {
   Email: 'geral@raparigasdocodigo.pt'
 };

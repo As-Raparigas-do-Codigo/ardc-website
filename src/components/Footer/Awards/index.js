@@ -4,6 +4,7 @@ import Constants from 'constants';
 import LinkButton from 'components/LinkButton';
 import SocialLinks from 'components/SocialLinks';
 import Icon from 'components/Icon';
+import FeatureFlag from 'components/FeatureFlag';
 import '../footer.scss';
 
 const Awards = ({ translation }) => {
@@ -52,6 +53,11 @@ const Awards = ({ translation }) => {
                 <li>
                   <a href={Constants.Routes.About}>{translation('AboutLabel')}</a>
                 </li>
+                <FeatureFlag name="show_colaboration">
+                  <li>
+                    <a href={Constants.Routes.Collaborate}>{'Quero Colaborar !'}</a>
+                  </li>
+                </FeatureFlag>
                 <li>
                   <a href={Constants.Routes.Contacts}>{translation('ContactsPage-PageName')}</a>
                 </li>

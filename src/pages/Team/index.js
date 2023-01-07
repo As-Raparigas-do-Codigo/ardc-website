@@ -4,6 +4,7 @@ import PersonCard from 'components/PersonCard';
 import PageLayout from 'components/PageLayout';
 import Constants from 'constants';
 import TeamData from 'data/team';
+import FeatureFlag from 'components/FeatureFlag';
 
 function Team({ translation }) {
   const breadcrumbs = [
@@ -34,36 +35,27 @@ function Team({ translation }) {
       description={translation('TeamPage-Description')}
       breadcrumbsData={breadcrumbs}>
       <Container>
-        <Row>
-          <h2>{translation('TeamPage-Label-Founder')}</h2>
-        </Row>
         <Row className={'mt-4 mb-5'} xs={1} lg={4}>
           {founderTeam.map((item, key) => (
             <Col key={key} className={'mt-4'}>
               <PersonCard key={key} person={item} />
             </Col>
           ))}
-        </Row>
-        <Row className={'mt-5'}>
-          <h2>{translation('TeamPage-Label-Administration')}</h2>
-        </Row>
-        <Row className={'mt-4'} xs={1} md={1} lg={4}>
           {adminTeam.map((item, key) => (
             <Col key={key} className={'mt-4'}>
               <PersonCard key={key} person={item} />
             </Col>
           ))}
-        </Row>
-        <Row className={'mt-5'}>
-          <h2>{translation('TeamPage-Label-Collaborators')}</h2>
-        </Row>
-        <Row className={'mt-4 mb-5'} xs={1} lg={4}>
           {collabTeam.map((item, key) => (
             <Col key={key} className={'mt-4'}>
               <PersonCard key={key} person={item} />
             </Col>
           ))}
-          {/* <PersonCard key={'colaborar'} /> */}
+          <FeatureFlag name="show_colaboration">
+            <Col key={'colaborar'} className={'mt-4'}>
+              <PersonCard key={'colaborar'} />
+            </Col>
+          </FeatureFlag>
         </Row>
       </Container>
     </PageLayout>

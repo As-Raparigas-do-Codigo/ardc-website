@@ -13,6 +13,7 @@ import banner from 'assets/home/banner.jpeg';
 import missao from 'assets/home/missao.png';
 import Events from '../../data/events';
 import pdf from '../../assets/Booklet_ARDC_2022.pdf';
+import FeatureFlag from 'components/FeatureFlag';
 
 const IntroContent = ({ translation }) => {
   return (
@@ -91,30 +92,31 @@ function Home({ translation }) {
         <hr></hr>
         <KPISSection translation={translation} />
       </div>
-      {/*
-      <div className="bg-blue">
-        <Container className="py-5">
-          <Row>
-            <Col xs={12} md={8} lg={6} className="mx-auto">
-              <div className="d-grid gap-4">
-                <h6 className="text-center">JUNTA-TE À NOSSA COMUNIDADE!</h6>
-                <h2 className="text-center">Gostavas de colaborar connosco?</h2>
-                <p className="text-center">
-                  Se gostas de ensinar, de escrever e produzir conteúdo digital, ou estás sempre a
-                  par das últimas novidades no mundo da tecnologia, gostávamos muito de poder contar
-                  contigo!
-                </p>
-                <div className="text-center">
-                  <LinkButton href={Constants.Routes.Collaborate} variant="primary">
-                    Quero colaborar!
-                  </LinkButton>
+
+      <FeatureFlag name="show_colaboration">
+        <div className="bg-blue">
+          <Container className="py-5">
+            <Row>
+              <Col xs={12} md={8} lg={6} className="mx-auto">
+                <div className="d-grid gap-4">
+                  <h6 className="text-center">JUNTA-TE À NOSSA COMUNIDADE!</h6>
+                  <h2 className="text-center">Gostavas de colaborar connosco?</h2>
+                  <p className="text-center">
+                    Se gostas de ensinar, de escrever e produzir conteúdo digital, ou estás sempre a
+                    par das últimas novidades no mundo da tecnologia, gostávamos muito de poder
+                    contar contigo!
+                  </p>
+                  <div className="text-center">
+                    <LinkButton href={Constants.Routes.Collaborate} variant="primary">
+                      Quero colaborar!
+                    </LinkButton>
+                  </div>
                 </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      */}
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      </FeatureFlag>
       <div className="zig-zag"></div>
       <BasicCardsRow
         data={Events.slice(0, 3)}
