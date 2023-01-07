@@ -1,9 +1,9 @@
-import * as Content from './content';
+import * as Contacts from './contacts';
 import Routes from './routes';
 import FeatureFlags from './featureflags';
 
 export default {
-  Content,
+  Contacts,
   Routes,
   FeatureFlags
 };

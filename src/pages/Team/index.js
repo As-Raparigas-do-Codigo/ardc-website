@@ -2,18 +2,18 @@ import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import PersonCard from 'components/PersonCard';
 import PageLayout from 'components/PageLayout';
-import Routes from 'data/Routes';
+import Constants from 'constants';
 import TeamData from 'data/team';
 
 function Team({ translation }) {
   const breadcrumbs = [
     {
       label: translation('HomePage-PageName'),
-      href: Routes.Home
+      href: Constants.Routes.Home
     },
     {
       label: translation('AboutLabel'),
-      href: Routes.Team
+      href: Constants.Routes.Team
     },
     {
       label: translation('TeamPage-PageName')

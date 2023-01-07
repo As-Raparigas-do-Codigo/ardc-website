@@ -1,13 +1,12 @@
 export default {
-  About: '/sobre',
-  Blog: '/blog',
+  NotFound404: '*',
+  About: '/about',
+  Contacts: '/contacts',
   Collaborate: '/colaborar',
-  Contacts: '/contactos',
-  Events: '/eventos',
+  Events: '/events',
   Home: '/',
-  TermsOfUsePolicy: '/termsofuse',
-  Mentorships: '/mentorias',
+  Mentorships: '/mentorships',
   PrivacyPolicy: '/privacy',
-  Team: '/equipa',
+  Team: '/team',
   Workshops: '/workshops'
 };

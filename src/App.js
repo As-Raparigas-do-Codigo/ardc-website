@@ -15,7 +15,6 @@ import NavBar from 'components/NavBarComponent';
 import Social from 'components/Social';
 import translationsEN from 'data/locales/translations_en.json';
 import translationsPT from 'data/locales/translations_pt.json';
-import RouteConstants from 'data/Routes';
 import NotFound404 from 'pages/NotFound404';
 import Constants from 'constants';
 
@@ -50,19 +49,23 @@ function App() {
           <NavBar translation={t} />
         </header>
         <Routes>
-          <Route path={RouteConstants.NotFound404} element={<NotFound404 />} />
-          <Route exact path={RouteConstants.About} element={<AboutUs translation={t} />} />
-          <Route exact path={RouteConstants.Contacts} element={<Contact translation={t} />} />
-          <Route exact path={RouteConstants.Events} element={<Events translation={t} />} />
-          <Route exact path={RouteConstants.Home} element={<Home translation={t} />} />
-          <Route exact path={RouteConstants.Mentorships} element={<Mentorship translation={t} />} />
+          <Route path={Constants.Routes.NotFound404} element={<NotFound404 translation={t} />} />
+          <Route exact path={Constants.Routes.About} element={<AboutUs translation={t} />} />
+          <Route exact path={Constants.Routes.Contacts} element={<Contact translation={t} />} />
+          <Route exact path={Constants.Routes.Events} element={<Events translation={t} />} />
+          <Route exact path={Constants.Routes.Home} element={<Home translation={t} />} />
           <Route
             exact
-            path={RouteConstants.PrivacyPolicy}
+            path={Constants.Routes.Mentorships}
+            element={<Mentorship translation={t} />}
+          />
+          <Route
+            exact
+            path={Constants.Routes.PrivacyPolicy}
             element={<PrivacyPolicy translation={t} />}
           />
-          <Route exact path={RouteConstants.Team} element={<Team translation={t} />} />
-          <Route exact path={RouteConstants.Workshops} element={<Workshops translation={t} />} />
+          <Route exact path={Constants.Routes.Team} element={<Team translation={t} />} />
+          <Route exact path={Constants.Routes.Workshops} element={<Workshops translation={t} />} />
         </Routes>
         <Footer translation={t} />
       </Router>

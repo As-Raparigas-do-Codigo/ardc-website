@@ -1,46 +1,34 @@
 import React from 'react';
 import PageLayout from 'components/PageLayout';
 import { Container, Row } from 'react-bootstrap';
-import Routes from 'data/Routes';
+import Constants from 'constants';
 import './privacy-policy.scss';
 
 function PrivacyPolicy({ translation }) {
   const breadcrumbs = [
     {
-      label: translation("HomePage-PageName"),
-      href: Routes.Home
+      label: translation('HomePage-PageName'),
+      href: Constants.Routes.Home
     },
     {
-      label: translation("PrivacyPolicyPage-PageName")
+      label: translation('PrivacyPolicyPage-PageName')
     }
   ];
 
   return (
     <PageLayout
-      title={translation("PrivacyPolicyPage-PageName")}
-      description={translation("PrivacyPolicyPage-Descriptiion")}
+      title={translation('PrivacyPolicyPage-PageName')}
+      description={translation('PrivacyPolicyPage-Descriptiion')}
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="padding-top-first-section">
         <Row>
-          <p>
-            {translation("PrivacyPolicyPage-Text_p1")}
-          </p>
-          <p>
-            {translation("PrivacyPolicyPage-Text_p2")}
-          </p>
-          <p>
-            {translation("PrivacyPolicyPage-Text_p3")}
-          </p>
-          <p>
-            {translation("PrivacyPolicyPage-Text_p4")}
-          </p>
-          <p>
-            {translation("PrivacyPolicyPage-Text_p5")}
-          </p>
-          <p>
-            {translation("PrivacyPolicyPage-Text_p6")}
-          </p>
-          <h2 className="fw-bold">{translation("PrivacyPolicyPage-Title")}</h2>
+          <p>{translation('PrivacyPolicyPage-Text_p1')}</p>
+          <p>{translation('PrivacyPolicyPage-Text_p2')}</p>
+          <p>{translation('PrivacyPolicyPage-Text_p3')}</p>
+          <p>{translation('PrivacyPolicyPage-Text_p4')}</p>
+          <p>{translation('PrivacyPolicyPage-Text_p5')}</p>
+          <p>{translation('PrivacyPolicyPage-Text_p6')}</p>
+          <h2 className="fw-bold">{translation('PrivacyPolicyPage-Title')}</h2>
           <h5>O que são cookies?</h5>
           <p>
             Como é prática comum em quase todos os sites profissionais, este site usa cookies, que

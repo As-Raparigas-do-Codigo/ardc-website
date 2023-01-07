@@ -13,7 +13,7 @@ function PersonCard({ person = null }) {
         <div className="person-card__body">
           <h5>Gostavas de colaborar connosco?</h5>
           <div className="person-card__icons">
-            <LinkButton href={Routes.Collaborate}>Quero Colaborar!</LinkButton>
+            <LinkButton href={Constants.Routes.Collaborate}>Quero Colaborar!</LinkButton>
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@ function PersonCard({ person = null }) {
     );
   };
   /* Quero Colaborar foi suprimido por agora */
-  return person ? <Person /> : '' /*<Colaborar />;*/
+  return person ? <Person /> : ''; /*<Colaborar />;*/
 }
 
 export default PersonCard;

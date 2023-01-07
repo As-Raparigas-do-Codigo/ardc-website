@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import WorkshopsList from 'components/WorkshopsList';
 import LinkArrow from 'components/LinkArrow';
-import Routes from 'data/Routes';
+import Constants from 'constants';
 
 function WorkshopsSection({ heading, subtitle, translation }) {
   return (
@@ -13,13 +13,13 @@ function WorkshopsSection({ heading, subtitle, translation }) {
           <p className="">{subtitle}</p>
         </Col>
         <Col className="col-auto align-self-end">
-          <LinkArrow href={Routes.Workshops}>
-            {translation("HomePage-WorkshopsSection-Button")}
+          <LinkArrow href={Constants.Routes.Workshops}>
+            {translation('HomePage-WorkshopsSection-Button')}
           </LinkArrow>
         </Col>
       </Row>
       <Row>
-        <WorkshopsList next translation={translation}/>
+        <WorkshopsList next translation={translation} />
       </Row>
     </Container>
   );

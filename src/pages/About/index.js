@@ -4,42 +4,44 @@ import PageLayout from 'components/PageLayout';
 import Teaser from 'components/Teaser';
 import Statistics from 'components/KPISSection';
 import AboutData from 'data/about';
-import Routes from 'data/Routes';
+import Constants from 'constants';
 
 function AboutUs({ translation }) {
   const breadcrumbs = [
     {
-      label: translation("HomePage-PageName"),
-      href: Routes.Home
+      label: translation('HomePage-PageName'),
+      href: Constants.Routes.Home
     },
     {
-      label: translation("AboutLabel"),
-      href: Routes.About
+      label: translation('AboutLabel'),
+      href: Constants.Routes.About
     },
     {
-      label: translation("AboutUsPage-PageName")
+      label: translation('AboutUsPage-PageName')
     }
   ];
 
-  const aboutBellow = AboutData(translation).slice(1, 3).map((data) => {
-    return (
-      <Col md={12} key={data.id}>
-        <Teaser
-          title={data.title}
-          subtitle={data.subtitle}
-          description={data.description}
-          imgPath={data.img}
-          imageRight={data.pictureRight}
-          linkFirst={data.link1}
-        />
-      </Col>
-    );
-  });
+  const aboutBellow = AboutData(translation)
+    .slice(1, 3)
+    .map((data) => {
+      return (
+        <Col md={12} key={data.id}>
+          <Teaser
+            title={data.title}
+            subtitle={data.subtitle}
+            description={data.description}
+            imgPath={data.img}
+            imageRight={data.pictureRight}
+            linkFirst={data.link1}
+          />
+        </Col>
+      );
+    });
 
   return (
     <PageLayout
-      title={translation("AboutUsPage-PageName")}
-      description={translation("AboutUsPage-Description")}
+      title={translation('AboutUsPage-PageName')}
+      description={translation('AboutUsPage-Description')}
       breadcrumbsData={breadcrumbs}>
       <Container>
         <Row>
@@ -57,7 +59,7 @@ function AboutUs({ translation }) {
       </Container>
       <div className="zig-zag"></div>
       <div className="bg-pink">
-        <Statistics translation={translation}/>
+        <Statistics translation={translation} />
       </div>
       <Container>
         <Row>{aboutBellow}</Row>
