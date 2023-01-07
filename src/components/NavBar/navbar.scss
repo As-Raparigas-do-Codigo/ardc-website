@@ -1,0 +1,61 @@
+@import "styles/variables";
+
+.navbar-nav, .offcanvas .navbar-nav {
+  @media (max-width: $lg) {
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 0.25rem;
+    z-index: 2;
+    position: relative;
+  }
+}
+
+@media (max-width: $lg) {
+  .offcanvas .offcanvas-body {
+    .dropdown-menu {
+      border: 0;
+      padding-left: 1rem;
+    }
+  }
+  
+  .navbar-toggler {
+    border: 0;
+    margin-right: 0 !important;
+  }
+}
+
+.nav-link {
+  font-weight: 500;
+  margin: 0px 15px;
+
+  &.active {
+    font-weight: 700;
+    text-decoration: underline;
+    color: $color-secondary;
+
+    svg path {
+      stroke: $color-secondary;
+    }
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.dropdown {
+  .dropdown-item:hover {
+    text-decoration: underline;
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+}
