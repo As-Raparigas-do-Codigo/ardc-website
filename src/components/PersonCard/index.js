@@ -1,9 +1,10 @@
 import React from 'react';
 import Icon from 'components/Icon';
 import './person-card.scss';
+import Constants from 'constants';
+import LinkButton from 'components/LinkButton';
 
 function PersonCard({ person = null }) {
-  /*
   const Colaborar = () => {
     return (
       <div className="person-card">
@@ -19,7 +20,6 @@ function PersonCard({ person = null }) {
       </div>
     );
   };
-    */
 
   const Person = () => {
     return (
@@ -43,8 +43,7 @@ function PersonCard({ person = null }) {
       </div>
     );
   };
-  /* Quero Colaborar foi suprimido por agora */
-  return person ? <Person /> : ''; /*<Colaborar />;*/
+  return person ? <Person /> : <Colaborar />;
 }
 
 export default PersonCard;

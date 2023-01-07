@@ -23,8 +23,8 @@ export const ErrorToastMessage = ({ show = false, onClose, translation }) => (
     variant="danger">
     <p>
       {translation('Toast-ErrorMessageWithEmail')}
-      <a className="text-danger" href={`mailto:${Constants.Email}`}>
-        {Constants.Email}
+      <a className="text-danger" href={`mailto:${Constants.Contacts.Email}`}>
+        {Constants.Contacts.Email}
       </a>
       .
     </p>

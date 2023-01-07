@@ -1,4 +1,4 @@
-import * as Contacts from './contacts';
+import Contacts from './contacts';
 import Routes from './routes';
 import FeatureFlags from './featureflags';
 
