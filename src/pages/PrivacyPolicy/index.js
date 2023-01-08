@@ -20,7 +20,7 @@ function PrivacyPolicy({ translation }) {
       title={translation('PrivacyPolicyPage-PageName')}
       description={translation('PrivacyPolicyPage-Descriptiion')}
       breadcrumbsData={breadcrumbs}>
-      <Container fluid="md" className="padding-top-first-section">
+      <Container fluid="md">
         <Row>
           <p>{translation('PrivacyPolicyPage-Text_p1')}</p>
           <p>{translation('PrivacyPolicyPage-Text_p2')}</p>

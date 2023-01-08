@@ -6,7 +6,7 @@ import { Container, Row } from 'react-bootstrap';
 import Constants from 'constants';
 
 const CollaborateFormSection = ({ translation }) => (
-  <Container className="my-5 py-5 padding-top-first-section">
+  <Container className="my-5 py-5">
     <Row>
       <div className="mb-2 fs-xxl">{translation('CollaboratePage-PageName')}</div>
       <p className="mb-4"></p>

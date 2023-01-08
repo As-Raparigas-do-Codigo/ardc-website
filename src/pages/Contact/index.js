@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import ContactForm from 'components/Forms/ContactForm';
 import PageLayout from 'components/PageLayout';
 import Constants from 'constants';
+import SocialLinks from 'components/SocialLinks';
 
 const ContactInfoSection = ({ translation }) => (
   <Container className="my-5 py-5">
@@ -14,16 +15,15 @@ const ContactInfoSection = ({ translation }) => (
       <Container>
         <Row xs="auto" md="auto" lg="auto" className="mb-3">
           <Col xs={2} md={2} lg={2}>
-            <strong>{translation('ContactsPage-ContactInfoSection-AdminLabel')}</strong>
-          </Col>
-          <Col>Miriam Santos</Col>
-        </Row>
-        <Row xs="auto" md="auto" lg="auto" className="mb-3">
-          <Col xs={2} md={2} lg={2}>
             <strong>{translation('ContactsPage-ContactInfoSection-EmailLabel')}</strong>
           </Col>
           <Col>
             <a href={`mailto:${Constants.Contacts.Email}`}>{Constants.Contacts.Email}</a>
+          </Col>
+        </Row>
+        <Row xs="auto" md="auto" lg="auto" className="mb-3">
+          <Col>
+            <SocialLinks />
           </Col>
         </Row>
       </Container>
@@ -58,7 +58,7 @@ const Contact = ({ translation }) => {
       title={translation('ContactsPage-Title')}
       description={translation('ContactsPage-Description')}
       breadcrumbsData={breadcrumbs}>
-      <Container fluid="md" className="padding-top-first-section">
+      <Container fluid="md" className="">
         <Row>
           <Col>
             <ContactInfoSection translation={translation} />
