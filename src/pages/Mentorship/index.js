@@ -7,7 +7,7 @@ import PageLayout from 'components/PageLayout';
 import LinkArrow from 'components/LinkArrow';
 
 const MentorshipInfoSection = ({ translation }) => (
-  <Container className="my-5 py-5 padding-top-first-section">
+  <Container className="my-5 py-5">
     <Row>
       <h6 className="mb-2">{translation('MentorshipsPage-Title')}</h6>
       <h2 className="mb-2">{translation('MentorshipsPage-Subtitle')}</h2>
