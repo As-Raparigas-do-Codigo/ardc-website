@@ -110,14 +110,15 @@ function NavBarComponent({ translation }) {
                   location={location}
                   to={Constants.Routes.About}
                   onSelect={onSelect}
-                  className="text-center text-lg-center">
+                  className="">
                   {translation('AboutUsPage-PageName')}
                 </NavDropdownItem>
+                <hr />
                 <NavDropdownItem
                   location={location}
                   to={Constants.Routes.Team}
                   onSelect={onSelect}
-                  className="text-center">
+                  className="">
                   {translation('TeamPage-PageName')}
                 </NavDropdownItem>
               </NavDropdown>
