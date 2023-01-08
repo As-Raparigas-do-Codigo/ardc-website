@@ -15,6 +15,13 @@
     z-index: 2;
     position: relative;
   }
+
+  hr {
+    width: 90%;
+    align-items: center;
+    margin: 5%;
+    border-width: 0.5px;
+  }
 }
 
 @media (max-width: $lg) {
