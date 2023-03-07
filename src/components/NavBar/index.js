@@ -97,10 +97,10 @@ function NavBarComponent({ translation }) {
               </NavLink>
               <NavLink
                 location={location}
-                to={Constants.Routes.Mentorships}
+                to={Constants.Routes.Community}
                 onSelect={onSelect}
                 className="text-center">
-                {translation('MentorshipsPage-PageName')}
+                {translation('CommunityPage-PageName')}
               </NavLink>
               <NavDropdown
                 title={translation('AboutLabel')}
