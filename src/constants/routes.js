@@ -5,7 +5,7 @@ export default {
   Collaborate: '/collaborate',
   Events: '/events',
   Home: '/',
-  Mentorships: '/mentorships',
+  Community: '/community',
   PrivacyPolicy: '/privacy',
   Team: '/team',
   Workshops: '/workshops'

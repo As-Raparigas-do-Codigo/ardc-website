@@ -3,7 +3,7 @@ import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
 import Reaptcha from 'reaptcha';
 
-function MentorshipForm({ translation }) {
+function CommunityForm({ translation }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [mentorshipType, setMentorshipType] = useState(1);
@@ -39,8 +39,8 @@ function MentorshipForm({ translation }) {
   };
 
   const onVerify = () => {
-    setShowCaptcha(false)
-  }
+    setShowCaptcha(false);
+  };
 
   const handleFormWasSubmitted = (evt) => {
     evt.preventDefault();
@@ -77,22 +77,26 @@ function MentorshipForm({ translation }) {
         showErrorToast();
       })
       .finally(() => {
-        setSending(false)
-        showCaptcha(true)
+        setSending(false);
+        showCaptcha(true);
       });
   };
 
   return (
     <>
-      <SuccessToastMessage show={successToast} onClose={hideSuccessToast} translation={translation}/>
-      <ErrorToastMessage show={errorToast} onClose={hideErrorToast} translation={translation}/>
+      <SuccessToastMessage
+        show={successToast}
+        onClose={hideSuccessToast}
+        translation={translation}
+      />
+      <ErrorToastMessage show={errorToast} onClose={hideErrorToast} translation={translation} />
       <Form>
         <Stack gap={3}>
           <Form.Group className="mb-3" controlId="nameInputField">
             <Form.Control
               type="text"
               name="nameInputField"
-              placeholder={translation("MentorshipsPage-MentorshipForm-NameLabel")}
+              placeholder={translation('CommunityPage-CommunityForm-NameLabel')}
               value={name}
               onChange={(e) => setName(e.target.value)}
               size="lg"
@@ -103,7 +107,7 @@ function MentorshipForm({ translation }) {
             <Form.Control
               type="email"
               name="emailInputField"
-              placeholder={translation("MentorshipsPage-MentorshipForm-EmailLabel")}
+              placeholder={translation('CommunityPage-CommunityForm-EmailLabel')}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               size="lg"
@@ -168,7 +172,7 @@ function MentorshipForm({ translation }) {
               type="text"
               as="textarea"
               rows="3"
-              placeholder={translation("MentorshipsPage-MentorshipForm-MessageLabel")}
+              placeholder={translation('CommunityPage-CommunityForm-MessageLabel')}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               size="lg"
@@ -178,30 +182,24 @@ function MentorshipForm({ translation }) {
         </Stack>
 
         <div className="d-flex justify-content-between">
-          {
-            !showCaptcha && (
-              <p className="mandatory-hint">
-                {translation("MentorshipsPage-MentorshipForm-MandatoryLabel")}
-              </p>
-            )
-          }
-          {
-            !showCaptcha && (
-              <button
-                className="button-primary"
-                type="submit"
-                disabled={!name || !email || !message || sending}
-                onClick={handleFormWasSubmitted}>
-                {translation("MentorshipsPage-MentorshipForm-SubmitButton")}
-              </button>
-            )
-          }
+          {!showCaptcha && (
+            <p className="mandatory-hint">
+              {translation('CommunityPage-CommunityForm-MandatoryLabel')}
+            </p>
+          )}
+          {!showCaptcha && (
+            <button
+              className="button-primary"
+              type="submit"
+              disabled={!name || !email || !message || sending}
+              onClick={handleFormWasSubmitted}>
+              {translation('CommunityPage-CommunityForm-SubmitButton')}
+            </button>
+          )}
           {
             /* this is a test recaptcha */
             showCaptcha && (
-              <Reaptcha 
-                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                onVerify={onVerify}/>
+              <Reaptcha sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" onVerify={onVerify} />
             )
           }
         </div>
@@ -210,4 +208,4 @@ function MentorshipForm({ translation }) {
   );
 }
 
-export default MentorshipForm;
+export default CommunityForm;
