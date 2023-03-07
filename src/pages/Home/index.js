@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import Routes from 'data/Routes';
+import Constants from 'constants';
 import BasicCardsRow from 'components/BasicCardsRow';
 import LinkButton from 'components/LinkButton';
 import LinkArrow from 'components/LinkArrow';
@@ -12,24 +12,25 @@ import PageLayout from 'components/PageLayout';
 import banner from 'assets/home/banner.jpeg';
 import missao from 'assets/home/missao.png';
 import Events from '../../data/events';
-import pdf from '../../assets/Booklet_ARDC_2022.pdf'
+import pdf from '../../assets/Booklet_ARDC_2022.pdf';
+import FeatureFlag from 'components/FeatureFlag';
 
 const IntroContent = ({ translation }) => {
   return (
     <>
       <Col className="my-4 align-self-center">
-        <h1 className="py-1">{translation("HomePage-IntroSection-Title")}</h1>
-        <p className="py-1">{translation("HomePage-IntroSection-Description")}</p>
+        <h1 className="py-1">{translation('HomePage-IntroSection-Title')}</h1>
+        <p className="py-1">{translation('HomePage-IntroSection-Description')}</p>
         <Container className="p-0">
           <Row>
             <Col className="col-auto align-self-center">
-              <LinkButton href={Routes.Workshops} variant="primary">
-                {translation("HomePage-IntroSection-PrimaryButton")}
+              <LinkButton href={Constants.Routes.Workshops} variant="primary">
+                {translation('HomePage-IntroSection-PrimaryButton')}
               </LinkButton>
             </Col>
             <Col className="col-auto align-self-center">
               <LinkArrow href={pdf} download>
-                {translation("HomePage-IntroSection-SecondaryButton")}
+                {translation('HomePage-IntroSection-SecondaryButton')}
               </LinkArrow>
             </Col>
           </Row>
@@ -39,7 +40,7 @@ const IntroContent = ({ translation }) => {
         <img
           src={banner}
           className="box-border box-radius horizontal-card__img shadow"
-          alt={translation("RdCLabel")}
+          alt={translation('RdCLabel')}
         />
       </Col>
     </>
@@ -48,15 +49,15 @@ const IntroContent = ({ translation }) => {
 
 function Home({ translation }) {
   return (
-    <PageLayout title="Home" customBanner={<IntroContent translation={translation}/>}>
+    <PageLayout title="Home" customBanner={<IntroContent translation={translation} />}>
       <SponsorSection />
       <hr />
 
       <div className="zig-zag"></div>
 
       <WorkshopsSection
-        heading={translation("HomePage-WorkshopsSection-Title")}
-        subtitle={translation("WorkshopsPage-Description")}
+        heading={translation('HomePage-WorkshopsSection-Title')}
+        subtitle={translation('WorkshopsPage-Description')}
         translation={translation}
       />
 
@@ -66,20 +67,14 @@ function Home({ translation }) {
         <Container className="py-md-5">
           <Row>
             <Col className="my-4">
-              <h6 className="py-5">
-                {translation("HomePage-MissionSection-Title")}
-              </h6>
-              <p className="py-1">
-                {translation("HomePage-MissionSection-Text_p1")}
-              </p>
-              <p className="py-1">
-                {translation("HomePage-MissionSection-Text_p2")}
-              </p>
+              <h6 className="py-5">{translation('HomePage-MissionSection-Title')}</h6>
+              <p className="py-1">{translation('HomePage-MissionSection-Text_p1')}</p>
+              <p className="py-1">{translation('HomePage-MissionSection-Text_p2')}</p>
               <Container className="p-0">
                 <Row>
                   <Col className="col-auto align-self-center">
-                    <LinkButton href={Routes.About} variant="primary">
-                    {translation("HomePage-MissionSection-Button")}
+                    <LinkButton href={Constants.Routes.About} variant="primary">
+                      {translation('HomePage-MissionSection-Button')}
                     </LinkButton>
                   </Col>
                 </Row>
@@ -95,43 +90,45 @@ function Home({ translation }) {
           </Row>
         </Container>
         <hr></hr>
-        <KPISSection translation={translation}/>
+        <KPISSection translation={translation} />
       </div>
-      { /*
-      <div className="bg-blue">
-        <Container className="py-5">
-          <Row>
-            <Col xs={12} md={8} lg={6} className="mx-auto">
-              <div className="d-grid gap-4">
-                <h6 className="text-center">JUNTA-TE À NOSSA COMUNIDADE!</h6>
-                <h2 className="text-center">Gostavas de colaborar connosco?</h2>
-                <p className="text-center">
-                  Se gostas de ensinar, de escrever e produzir conteúdo digital, ou estás sempre a
-                  par das últimas novidades no mundo da tecnologia, gostávamos muito de poder contar
-                  contigo!
-                </p>
-                <div className="text-center">
-                  <LinkButton href={Routes.Collaborate} variant="primary">
-                    Quero colaborar!
-                  </LinkButton>
+
+      <FeatureFlag name="show_colaboration">
+        <div className="bg-blue">
+          <Container className="py-5">
+            <Row>
+              <Col xs={12} md={8} lg={6} className="mx-auto">
+                <div className="d-grid gap-4">
+                  <h6 className="text-center">JUNTA-TE À NOSSA COMUNIDADE!</h6>
+                  <h2 className="text-center">Gostavas de colaborar connosco?</h2>
+                  <p className="text-center">
+                    Se gostas de ensinar, de escrever e produzir conteúdo digital, ou estás sempre a
+                    par das últimas novidades no mundo da tecnologia, gostávamos muito de poder
+                    contar contigo!
+                  </p>
+                  <div className="text-center">
+                    <LinkButton href={Constants.Routes.Collaborate} variant="primary">
+                      Quero colaborar!
+                    </LinkButton>
+                  </div>
                 </div>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      */ }
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      </FeatureFlag>
       <div className="zig-zag"></div>
-      <BasicCardsRow 
+      <BasicCardsRow
         data={Events.slice(0, 3)}
-        heading={translation("HomePage-TalksSection-Title")} 
-        subtitle="" />
+        heading={translation('HomePage-TalksSection-Title')}
+        subtitle=""
+      />
 
       {/* TODO: mudar para className="gradient" depois do MVP */}
       <div className="bg-blue">
         <div className="zig-zag"></div>
         <div className="pt-2">
-          <MentorsSection translation={translation}/>
+          <MentorsSection translation={translation} />
         </div>
       </div>
       {/* TODO: retirar comentário após MVP

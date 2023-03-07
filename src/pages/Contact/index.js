@@ -2,37 +2,28 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import ContactForm from 'components/Forms/ContactForm';
 import PageLayout from 'components/PageLayout';
-import Constants from 'data/Constants';
-import Routes from 'data/Routes';
+import Constants from 'constants';
+import SocialLinks from 'components/SocialLinks';
 
 const ContactInfoSection = ({ translation }) => (
   <Container className="my-5 py-5">
     <Row>
-      <h2 className="mb-2">
-        {translation("ContactsPage-ContactInfoSection-Title")}
-      </h2>
-      <p className="mb-4">
-        {translation("ContactsPage-ContactInfoSection-Description")}
-      </p>
+      <h2 className="mb-2">{translation('ContactsPage-ContactInfoSection-Title')}</h2>
+      <p className="mb-4">{translation('ContactsPage-ContactInfoSection-Description')}</p>
     </Row>
     <Row>
       <Container>
         <Row xs="auto" md="auto" lg="auto" className="mb-3">
           <Col xs={2} md={2} lg={2}>
-            <strong>
-              {translation("ContactsPage-ContactInfoSection-AdminLabel")}
-            </strong>
-          </Col>
-          <Col>Miriam Santos</Col>
-        </Row>
-        <Row xs="auto" md="auto" lg="auto" className="mb-3">
-          <Col xs={2} md={2} lg={2}>
-            <strong>
-              {translation("ContactsPage-ContactInfoSection-EmailLabel")}
-            </strong>
+            <strong>{translation('ContactsPage-ContactInfoSection-EmailLabel')}</strong>
           </Col>
           <Col>
-            <a href={`mailto:${Constants.Email}`}>{Constants.Email}</a>
+            <a href={`mailto:${Constants.Contacts.Email}`}>{Constants.Contacts.Email}</a>
+          </Col>
+        </Row>
+        <Row xs="auto" md="auto" lg="auto" className="mb-3">
+          <Col>
+            <SocialLinks />
           </Col>
         </Row>
       </Container>
@@ -43,15 +34,11 @@ const ContactInfoSection = ({ translation }) => (
 const ContactFormSection = ({ translation }) => (
   <Container className="my-5 py-5 px-5 box-radius shadow-lg">
     <Row>
-      <h2 className="mb-2">
-        {translation("ContactsPage-ContactFormSection-Title")}
-      </h2>
-      <p className="mb-4">
-        {translation("ContactsPage-ContactFormSection-Description")}
-      </p>
+      <h2 className="mb-2">{translation('ContactsPage-ContactFormSection-Title')}</h2>
+      <p className="mb-4">{translation('ContactsPage-ContactFormSection-Description')}</p>
     </Row>
     <Row>
-      <ContactForm translation={translation}/>
+      <ContactForm translation={translation} />
     </Row>
   </Container>
 );
@@ -59,22 +46,22 @@ const ContactFormSection = ({ translation }) => (
 const Contact = ({ translation }) => {
   const breadcrumbs = [
     {
-      label: translation("HomePage-PageName"),
-      href: Routes.Home
+      label: translation('HomePage-PageName'),
+      href: Constants.Routes.Home
     },
     {
-      label: translation("ContactsPage-PageName")
+      label: translation('ContactsPage-PageName')
     }
   ];
   return (
     <PageLayout
-      title={translation("ContactsPage-Title")}
-      description={translation("ContactsPage-Description")}
+      title={translation('ContactsPage-Title')}
+      description={translation('ContactsPage-Description')}
       breadcrumbsData={breadcrumbs}>
-      <Container fluid="md" className="padding-top-first-section">
+      <Container fluid="md" className="">
         <Row>
           <Col>
-            <ContactInfoSection translation={translation}/>
+            <ContactInfoSection translation={translation} />
           </Col>
           <Col>
             <ContactFormSection translation={translation} />

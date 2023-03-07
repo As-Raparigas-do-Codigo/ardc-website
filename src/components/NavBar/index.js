@@ -8,8 +8,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
 import { ReactComponent as HomeIcon } from 'assets/icons/home.svg';
 import logo from 'assets/ardc-logo.svg';
-import 'components/navbar.scss';
-import Routes from 'data/Routes';
+import './navbar.scss';
+import Constants from 'constants';
 
 const NavLink = ({ location, to, children, onSelect, className = '' }) => (
   <Nav.Link
@@ -60,8 +60,9 @@ function NavBarComponent({ translation }) {
       onSelect={onSelect}
       onToggle={onToggle}
       expand="lg"
-      className={navColour ? 'sticky navigation-position' : 'navbar__component navigation-position'}
-    >
+      className={
+        navColour ? 'sticky navigation-position' : 'navbar__component navigation-position'
+      }>
       <Container className="flex-nowrap">
         <Navbar.Brand as={Link} to="/">
           <img src={logo} className="img-fluid logo" alt="brand" />
@@ -70,8 +71,7 @@ function NavBarComponent({ translation }) {
         <Navbar.Offcanvas
           id="responsive-navbar-nav"
           aria-labelledby="responsive-navbar-nav"
-          placement="end"
-        >
+          placement="end">
           <Offcanvas.Header closeButton className="mx-2">
             <Container>
               <Link to="/" onClick={onSelect}>
@@ -83,57 +83,51 @@ function NavBarComponent({ translation }) {
             <Nav className="ms-auto">
               <NavLink
                 location={location}
-                to={Routes.Home}
+                to={Constants.Routes.Home}
                 onSelect={onSelect}
-                className="d-none d-lg-block"
-              >
+                className="d-none d-lg-block">
                 <HomeIcon />
               </NavLink>
               <NavLink
                 location={location}
-                to={Routes.Workshops}
+                to={Constants.Routes.Workshops}
                 onSelect={onSelect}
-                className="text-center"
-              >
-                {translation("WorkshopsPage-PageName")}
+                className="text-center">
+                {translation('WorkshopsPage-PageName')}
               </NavLink>
               <NavLink
                 location={location}
-                to={Routes.Mentorships}
+                to={Constants.Routes.Mentorships}
                 onSelect={onSelect}
-                className="text-center"
-              >
-                {translation("MentorshipsPage-PageName")}
+                className="text-center">
+                {translation('MentorshipsPage-PageName')}
               </NavLink>
               <NavDropdown
-                title={translation("AboutLabel")}
+                title={translation('AboutLabel')}
                 id="navbarScrollingDropdown"
-                className="text-center"
-              >
+                className="text-center">
                 <NavDropdownItem
                   location={location}
-                  to={Routes.About}
+                  to={Constants.Routes.About}
                   onSelect={onSelect}
-                  className="text-center text-lg-center"
-                >
-                  {translation("AboutUsPage-PageName")}
+                  className="">
+                  {translation('AboutUsPage-PageName')}
                 </NavDropdownItem>
+                <hr />
                 <NavDropdownItem
                   location={location}
-                  to={Routes.Team}
+                  to={Constants.Routes.Team}
                   onSelect={onSelect}
-                  className="text-center"
-                >
-                  {translation("TeamPage-PageName")}
+                  className="">
+                  {translation('TeamPage-PageName')}
                 </NavDropdownItem>
               </NavDropdown>
               <NavLink
                 location={location}
-                to={Routes.Contacts}
+                to={Constants.Routes.Contacts}
                 onSelect={onSelect}
-                className="text-center"
-              >
-                {translation("ContactsPage-PageName")}
+                className="text-center">
+                {translation('ContactsPage-PageName')}
               </NavLink>
             </Nav>
           </Offcanvas.Body>

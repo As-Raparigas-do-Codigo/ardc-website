@@ -1,9 +1,10 @@
 import React from 'react';
 import Icon from 'components/Icon';
 import './person-card.scss';
+import Constants from 'constants';
+import LinkButton from 'components/LinkButton';
 
 function PersonCard({ person = null }) {
-  /*
   const Colaborar = () => {
     return (
       <div className="person-card">
@@ -13,13 +14,12 @@ function PersonCard({ person = null }) {
         <div className="person-card__body">
           <h5>Gostavas de colaborar connosco?</h5>
           <div className="person-card__icons">
-            <LinkButton href={Routes.Collaborate}>Quero Colaborar!</LinkButton>
+            <LinkButton href={Constants.Routes.Collaborate}>Quero Colaborar!</LinkButton>
           </div>
         </div>
       </div>
     );
   };
-    */
 
   const Person = () => {
     return (
@@ -28,7 +28,7 @@ function PersonCard({ person = null }) {
           <img src={require('assets/team/' + person.avatar)} alt={'a person'} />
         </div>
         <div className="person-card__body">
-          <h5>{person.name}</h5>
+          <h5 className="person-card__name">{person.name}</h5>
           <div className="person-card__job">{person.job}</div>
           <div className="person-card__company">{person.company}</div>
           <div className="person-card__icons">
@@ -43,8 +43,7 @@ function PersonCard({ person = null }) {
       </div>
     );
   };
-  /* Quero Colaborar foi suprimido por agora */
-  return person ? <Person /> : '' /*<Colaborar />;*/
+  return person ? <Person /> : <Colaborar />;
 }
 
 export default PersonCard;

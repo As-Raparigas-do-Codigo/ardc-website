@@ -7,7 +7,7 @@ function PageLayout({ title, description, customBanner = null, breadcrumbsData, 
   return (
     <div>
       <div className={backgroundClass}>
-        <Container className="pt-md-5 pb-4 padding-top-first-section">
+        <Container className="pt-md-5 pb-4">
           {bannerHasInfo && (
             <Row className="py-md-5 py-sm-5">
               {customBanner ? (
@@ -39,9 +39,11 @@ function PageLayout({ title, description, customBanner = null, breadcrumbsData, 
                         </Breadcrumb.Item>
                       );
                     } else {
-                      return <Breadcrumb.Item active key={index}>
-                        {breadcrumb.label}
-                      </Breadcrumb.Item>;
+                      return (
+                        <Breadcrumb.Item active key={index}>
+                          {breadcrumb.label}
+                        </Breadcrumb.Item>
+                      );
                     }
                   })}
                 </Breadcrumb>
