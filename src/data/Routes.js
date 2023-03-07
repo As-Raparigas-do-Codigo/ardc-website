@@ -4,7 +4,7 @@ const Routes = {
   Contacts: '/contacts',
   Events: '/events',
   Home: '/',
-  Community: '/mentorships',
+  Community: '/community',
   PrivacyPolicy: '/privacy',
   Team: '/team',
   Workshops: '/workshops'
