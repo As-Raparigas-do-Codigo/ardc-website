@@ -6,7 +6,7 @@ import { ReactComponent as GreenArrow } from 'assets/icons/green-arrow.svg';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './mentors-section.scss';
-import Routes from 'data/Routes';
+import Constants from 'constants';
 import TeamData from 'data/team';
 import { shuffle, sortById } from 'utils';
 
@@ -37,21 +37,21 @@ function MentorsSection({ translation }) {
   return (
     <Container className="mt-5 pt-md-5 pb-5">
       <Row>
-        <h2 className="mb-2">
-          {translation("HomePage-MentorsSection-Title")}
-        </h2>
+        <h2 className="mb-2">{translation('HomePage-MentorsSection-Title')}</h2>
       </Row>
       <Row>
         <Col>
           <p className="mb-5">
-            {translation("HomePage-MentorsSection-Text_p1")}
+            {translation('HomePage-MentorsSection-Text_p1')}
             <br />
-            {translation("HomePage-MentorsSection-Text_p2")}
+            {translation('HomePage-MentorsSection-Text_p2')}
           </p>
         </Col>
         <Col className="d-flex justify-content-end align-items-end fw-bold">
           <div className="mb-5">
-            <LinkArrow href={Routes.Team}>{translation("HomePage-MentorsSection-AllMentorsLabel")}</LinkArrow>
+            <LinkArrow href={Constants.Routes.Team}>
+              {translation('HomePage-MentorsSection-AllMentorsLabel')}
+            </LinkArrow>
           </div>
         </Col>
       </Row>

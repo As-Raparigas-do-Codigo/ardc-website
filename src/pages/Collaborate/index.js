@@ -3,16 +3,16 @@ import CollaboratorForm from 'components/Forms/CollaboratorForm';
 import NumberedRow from 'components/NumberedRow';
 import PageLayout from 'components/PageLayout';
 import { Container, Row } from 'react-bootstrap';
-import { Routes } from '../../data/Constants';
+import Constants from 'constants';
 
 const CollaborateFormSection = ({ translation }) => (
-  <Container className="my-5 py-5 padding-top-first-section">
+  <Container className="my-5 py-5">
     <Row>
-      <div className="mb-2 fs-xxl">{translation("CollaboratePage-PageName")}</div>
+      <div className="mb-2 fs-xxl">{translation('CollaboratePage-PageName')}</div>
       <p className="mb-4"></p>
     </Row>
     <Row id="formulario-colaboracao">
-      <CollaboratorForm />
+      <CollaboratorForm translation={translation} />
     </Row>
   </Container>
 );
@@ -20,10 +20,8 @@ const CollaborateFormSection = ({ translation }) => (
 const CollaborateContent = ({ translation }) => (
   <Container className="mt-5">
     <Row>
-      <p className="mb-2">
-        {translation("CollaboratePage-CollaborateContentSection-Title")}
-      </p>
-      <h2>{translation("CollaboratePage-CollaborateContentSection-Subtitle")}</h2>
+      <p className="mb-2">{translation('CollaboratePage-CollaborateContentSection-Title')}</p>
+      <h2>{translation('CollaboratePage-CollaborateContentSection-Subtitle')}</h2>
       <p className="mb-4">
         Enquanto comunidade, <strong>As Raparigas do Código</strong> baseiam-se na colaboração entre
         membros de diferentes áreas (engenharia, design, educação, marketing, comunicação, entre
@@ -34,8 +32,7 @@ const CollaborateContent = ({ translation }) => (
         Existem diferentes formas de poderes colaborar connosco, dependendo da tua disponibilidade e
         interesse. Se gostavas de te juntar a nós, preenche o{' '}
         <a href="#formulario-colaboracao">formulário de colaboração</a> ou envia-nos um email para{' '}
-        <a href={`mailto=${Constants.Email}`}>{Constants.Email}</a>. Ficamos à tua
-        espera!{' '}
+        <a href={`mailto=${Constants.Email}`}>{Constants.Email}</a>. Ficamos à tua espera!{' '}
       </p>
     </Row>
     <hr></hr>
@@ -45,22 +42,21 @@ const CollaborateContent = ({ translation }) => (
 const Collaborate = ({ translation }) => {
   const breadcrumbs = [
     {
-      label: translation("SiteContent-HomePage-PageName"),
-      href: Routes.Home
+      label: translation('SiteContent-HomePage-PageName'),
+      href: Constants.Routes.Home
     },
     {
-      label: translation("SiteContent-CollaboratePage-PageName")
+      label: translation('SiteContent-CollaboratePage-PageName')
     }
   ];
   return (
     <PageLayout
-      title={translation("CollaboratePage-Title")}
-      description={translation("CollaboratePage-Description")}
-      breadcrumbsData={breadcrumbs}
-    >
+      title={translation('CollaboratePage-Title')}
+      description={translation('CollaboratePage-Description')}
+      breadcrumbsData={breadcrumbs}>
       <Container fluid="md">
         <Row>
-          <CollaborateContent translation={translation}/>
+          <CollaborateContent translation={translation} />
         </Row>
         <NumberedRow
           number="01"
@@ -93,7 +89,7 @@ const Collaborate = ({ translation }) => {
           textHtml="<p>Se preferires, podes ajudar-nos na manutenção do website ou no apoio técnico às alunas (instalação de software, troubleshooting).</p>"
         />
         <Row className="px-5 mx-5">
-          <CollaborateFormSection translation={translation}/>
+          <CollaborateFormSection translation={translation} />
         </Row>
       </Container>
     </PageLayout>

@@ -1,7 +1,6 @@
 import React from 'react';
 import Icon from 'components/Icon';
 import './social-links.scss';
-import { Button } from 'react-bootstrap';
 
 const socialLinks = [
   { facebook: 'https://www.facebook.com/AsRaparigasDoCodigo' },
@@ -12,15 +11,22 @@ const socialLinks = [
 
 const SocialLinks = ({ variant = 'dark', changeLanguage, currentLang }) => (
   <div className={`links links--${variant}`}>
-    {
-      variant != 'dark' && <Button onClick={() => changeLanguage()}>{ currentLang == 'pt' ? 'en' : 'pt' }</Button>
-    }
     {socialLinks.map((socialNetworkLink) => {
       let socialNetwork = Object.keys(socialNetworkLink)[0];
       return (
         <Icon key={socialNetwork} name={socialNetwork} link={socialNetworkLink[socialNetwork]} />
       );
     })}
+
+    {variant != 'dark' && (
+      <button
+        style={{ lineHeight: '100%', height: '50%' }}
+        className="button-secondary me-3 ms-5"
+        type="submit"
+        onClick={() => changeLanguage()}>
+        {currentLang == 'pt' ? 'en' : 'pt'}
+      </button>
+    )}
   </div>
 );
 

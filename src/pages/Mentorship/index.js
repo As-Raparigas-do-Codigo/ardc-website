@@ -1,44 +1,30 @@
 import React from 'react';
 import MentorshipForm from 'components/Forms/MentorshipForm';
 import { Container, Col, Row } from 'react-bootstrap';
-import Routes from 'data/Routes';
+import Constants from 'constants';
 import PageLayout from 'components/PageLayout';
 
 import LinkArrow from 'components/LinkArrow';
 
 const MentorshipInfoSection = ({ translation }) => (
-  <Container className="my-5 py-5 padding-top-first-section">
+  <Container className="my-5 py-5">
     <Row>
-      <h6 className="mb-2">{translation("MentorshipsPage-Title")}</h6>
-      <h2 className="mb-2">{translation("MentorshipsPage-Subtitle")}</h2>
-      <p className="mb-4">
-        {translation("MentorshipsPage-Text_p1")}
-      </p>
-      <p className="mb-4">
-        {translation("MentorshipsPage-Text_p2")}
-      </p>
-      <p className="mb-4">
-        {translation("MentorshipsPage-Text_p3")}
-      </p>
+      <h6 className="mb-2">{translation('MentorshipsPage-Title')}</h6>
+      <h2 className="mb-2">{translation('MentorshipsPage-Subtitle')}</h2>
+      <p className="mb-4">{translation('MentorshipsPage-Text_p1')}</p>
+      <p className="mb-4">{translation('MentorshipsPage-Text_p2')}</p>
+      <p className="mb-4">{translation('MentorshipsPage-Text_p3')}</p>
     </Row>
     <Row>
       <ul className="mx-4">
-        <li className="mb-2">
-          {translation("MentorshipsPage-IndividualMentorshipTitle")}
-        </li>
-        <p className="my-3">
-          {translation("MentorshipsPage-IndividualMentorshipText")}
-        </p>
-        <li className="mb-2">
-          {translation("MentorshipsPage-GroupMentorshipTitle")}
-        </li>
-        <p className="my-3">
-          {translation("MentorshipsPage-GroupMentorshipText")}
-        </p>
+        <li className="mb-2">{translation('MentorshipsPage-IndividualMentorshipTitle')}</li>
+        <p className="my-3">{translation('MentorshipsPage-IndividualMentorshipText')}</p>
+        <li className="mb-2">{translation('MentorshipsPage-GroupMentorshipTitle')}</li>
+        <p className="my-3">{translation('MentorshipsPage-GroupMentorshipText')}</p>
       </ul>
     </Row>
-    <LinkArrow href={Routes.Team} variant="primary">
-      {translation("HomePage-MentorsSection-Title")}
+    <LinkArrow href={Constants.Routes.Team} variant="primary">
+      {translation('HomePage-MentorsSection-Title')}
     </LinkArrow>
   </Container>
 );
@@ -46,15 +32,11 @@ const MentorshipInfoSection = ({ translation }) => (
 const MentorshipFormSection = ({ translation }) => (
   <Container className="my-5 p-5 box-radius shadow-lg">
     <Row>
-      <h2 className="mb-2">
-        {translation("MentorshipsPage-MentorshipForm-Title")}
-      </h2>
-      <p className="mb-4">
-        {translation("MentorshipsPage-MentorshipForm-Subtitle")}
-      </p>
+      <h2 className="mb-2">{translation('MentorshipsPage-MentorshipForm-Title')}</h2>
+      <p className="mb-4">{translation('MentorshipsPage-MentorshipForm-Subtitle')}</p>
     </Row>
     <Row>
-      <MentorshipForm translation={translation}/>
+      <MentorshipForm translation={translation} />
     </Row>
   </Container>
 );
@@ -82,26 +64,25 @@ const MentorshipFormSection = ({ translation }) => (
 const Mentorship = ({ translation }) => {
   const breadcrumbs = [
     {
-      label: translation("HomePage-PageName"),
-      href: Routes.Home
+      label: translation('HomePage-PageName'),
+      href: Constants.Routes.Home
     },
     {
-      label: translation("MentorshipsPage-PageName")
+      label: translation('MentorshipsPage-PageName')
     }
   ];
   return (
     <PageLayout
-      title={translation("MentorshipsPage-PageName")}
-      description={translation("MentorshipsPage-Description")}
-      breadcrumbsData={breadcrumbs}
-    >
+      title={translation('MentorshipsPage-PageName')}
+      description={translation('MentorshipsPage-Description')}
+      breadcrumbsData={breadcrumbs}>
       <Container fluid="md">
         <Row>
           <Col>
-            <MentorshipInfoSection translation={translation}/>
+            <MentorshipInfoSection translation={translation} />
           </Col>
           <Col>
-            <MentorshipFormSection translation={translation}/>
+            <MentorshipFormSection translation={translation} />
           </Col>
         </Row>
       </Container>
