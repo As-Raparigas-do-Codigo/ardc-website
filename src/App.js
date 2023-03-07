@@ -6,7 +6,7 @@ import AboutUs from 'pages/About';
 import Contact from 'pages/Contact';
 import Events from 'pages/Events';
 import Home from 'pages/Home';
-import Mentorship from 'pages/Mentorship';
+import Community from 'pages/Community';
 import Collaborate from 'pages/Collaborate';
 import PrivacyPolicy from 'pages/PrivacyPolicy';
 import Team from 'pages/Team';
@@ -60,11 +60,7 @@ function App() {
             path={Constants.Routes.Collaborate}
             element={<Collaborate translation={t} />}
           />
-          <Route
-            exact
-            path={Constants.Routes.Mentorships}
-            element={<Mentorship translation={t} />}
-          />
+          <Route exact path={Constants.Routes.Community} element={<Community translation={t} />} />
           <Route
             exact
             path={Constants.Routes.PrivacyPolicy}
