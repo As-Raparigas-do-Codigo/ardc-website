@@ -73,9 +73,7 @@ const Awards = ({ translation }) => {
                   <a href={Constants.Routes.Events} style={{ display: 'none' }}>
                     {translation('EventsPage-PageName')}
                   </a>
-                  <a href={Constants.Routes.Mentorships}>
-                    {translation('MentorshipsPage-PageName')}
-                  </a>
+                  <a href={Constants.Routes.Community}>{translation('CommunityPage-PageName')}</a>
                 </li>
               </ul>
             </Col>

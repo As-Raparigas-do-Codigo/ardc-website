@@ -1,27 +1,28 @@
 import React from 'react';
-import MentorshipForm from 'components/Forms/MentorshipForm';
+import CommunityForm from 'components/Forms/CommunityForm';
 import { Container, Col, Row } from 'react-bootstrap';
 import Constants from 'constants';
 import PageLayout from 'components/PageLayout';
 
 import LinkArrow from 'components/LinkArrow';
 
-const MentorshipInfoSection = ({ translation }) => (
+const CommunityInfoSection = ({ translation }) => (
   <Container className="my-5 py-5">
     <Row>
-      <h6 className="mb-2">{translation('MentorshipsPage-Title')}</h6>
-      <h2 className="mb-2">{translation('MentorshipsPage-Subtitle')}</h2>
-      <p className="mb-4">{translation('MentorshipsPage-Text_p1')}</p>
-      <p className="mb-4">{translation('MentorshipsPage-Text_p2')}</p>
-      <p className="mb-4">{translation('MentorshipsPage-Text_p3')}</p>
+      <h6 className="mb-2">{translation('CommunityPage-Title')}</h6>
+      <h2 className="mb-2">{translation('CommunityPage-Subtitle')}</h2>
+      <p className="mb-4">{translation('CommunityPage-Text_p1')}</p>
+      <p className="mb-4">{translation('CommunityPage-Text_p2')}</p>
+      <p className="mb-4">{translation('CommunityPage-Text_p3')}</p>
     </Row>
     <Row>
       <ul className="mx-4">
-        <li className="mb-2">{translation('MentorshipsPage-IndividualMentorshipTitle')}</li>
-        <p className="my-3">{translation('MentorshipsPage-IndividualMentorshipText')}</p>
-        <li className="mb-2">{translation('MentorshipsPage-GroupMentorshipTitle')}</li>
-        <p className="my-3">{translation('MentorshipsPage-GroupMentorshipText')}</p>
+        <li className="mb-2">{translation('CommunityPage-IndividualCommunityTitle')}</li>
+        <p className="my-3">{translation('CommunityPage-IndividualCommunityText')}</p>
+        <li className="mb-2">{translation('CommunityPage-GroupCommunityTitle')}</li>
+        <p className="my-3">{translation('CommunityPage-GroupCommunityText')}</p>
       </ul>
+      <p className="mb-4">{translation('CommunityPage-Text_p4')}</p>
     </Row>
     <LinkArrow href={Constants.Routes.Team} variant="primary">
       {translation('HomePage-MentorsSection-Title')}
@@ -29,14 +30,14 @@ const MentorshipInfoSection = ({ translation }) => (
   </Container>
 );
 
-const MentorshipFormSection = ({ translation }) => (
+const CommunityFormSection = ({ translation }) => (
   <Container className="my-5 p-5 box-radius shadow-lg">
     <Row>
-      <h2 className="mb-2">{translation('MentorshipsPage-MentorshipForm-Title')}</h2>
-      <p className="mb-4">{translation('MentorshipsPage-MentorshipForm-Subtitle')}</p>
+      <h2 className="mb-2">{translation('CommunityPage-CommunityForm-Title')}</h2>
+      <p className="mb-4">{translation('CommunityPage-CommunityForm-Subtitle')}</p>
     </Row>
     <Row>
-      <MentorshipForm translation={translation} />
+      <CommunityForm translation={translation} />
     </Row>
   </Container>
 );
@@ -61,28 +62,28 @@ const MentorshipFormSection = ({ translation }) => (
 //   );
 // };
 
-const Mentorship = ({ translation }) => {
+const Community = ({ translation }) => {
   const breadcrumbs = [
     {
       label: translation('HomePage-PageName'),
       href: Constants.Routes.Home
     },
     {
-      label: translation('MentorshipsPage-PageName')
+      label: translation('CommunityPage-PageName')
     }
   ];
   return (
     <PageLayout
-      title={translation('MentorshipsPage-PageName')}
-      description={translation('MentorshipsPage-Description')}
+      title={translation('CommunityPage-PageName')}
+      description={translation('CommunityPage-Description')}
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md">
         <Row>
           <Col>
-            <MentorshipInfoSection translation={translation} />
+            <CommunityInfoSection translation={translation} />
           </Col>
           <Col>
-            <MentorshipFormSection translation={translation} />
+            <CommunityFormSection translation={translation} />
           </Col>
         </Row>
       </Container>
@@ -90,4 +91,4 @@ const Mentorship = ({ translation }) => {
   );
 };
 
-export default Mentorship;
+export default Community;
