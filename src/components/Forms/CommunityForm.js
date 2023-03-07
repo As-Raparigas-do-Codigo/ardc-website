@@ -113,60 +113,6 @@ function CommunityForm({ translation }) {
               size="lg"
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="mentorshipTypeField">
-            <Stack gap={3}>
-              <div>Que tipo de mentorias procuras? *</div>
-              <Form.Check
-                type="radio"
-                id="mentorshipTypeIndividual"
-                checked={mentorshipType === 1}
-                value={1}
-                label="Individual"
-                onChange={(e) => setMentorshipType(e.target.checked ? 1 : 2)}
-              />
-              <Form.Check
-                type="radio"
-                id="mentorshipTypeGroup"
-                checked={mentorshipType === 2}
-                value={2}
-                label="Em grupo"
-                onChange={(e) => setMentorshipType(e.target.checked ? 2 : 1)}
-              />
-            </Stack>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="mentorshipAreas">
-            <Stack gap={3}>
-              <div>Em que área(s) procuras mentoria? *</div>
-              <Form.Check
-                type="checkbox"
-                id="mentorshipAreaFrontend"
-                checked={frontendChecked}
-                label="Frontend Development"
-                onChange={(e) => setFrontendChecked(e.target.checked ? true : false)}
-              />
-              <Form.Check
-                type="checkbox"
-                id="mentorshipAreaBackend"
-                checked={backendChecked}
-                label="Backend Development"
-                onChange={(e) => setBackendChecked(e.target.checked ? true : false)}
-              />
-              <Form.Check
-                type="checkbox"
-                id="mentorshipAreaUXUI"
-                checked={uxuiChecked}
-                label="UX / UI Design"
-                onChange={(e) => setUXUIChecked(e.target.checked ? true : false)}
-              />
-              <Form.Check
-                type="checkbox"
-                id="mentorshipAreaPM"
-                checked={projectMgmtChecked}
-                label="Project Management"
-                onChange={(e) => setProjectMgmtChecked(e.target.checked ? true : false)}
-              />
-            </Stack>
-          </Form.Group>
           <Form.Group className="mb-3" controlId="subjectMessageField">
             <Form.Control
               type="text"
