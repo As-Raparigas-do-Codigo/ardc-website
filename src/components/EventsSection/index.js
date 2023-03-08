@@ -23,7 +23,7 @@ function EventsSection({ translation }) {
   return (
     <Container className="mt-5 py-md-5 event-section">
       <Row>
-        <h2 className="mb-2">{translation('HomePage-TalksSection-Title')}</h2>
+        <h2 className="mb-2">{translation('HomePage-EventsSection-Title')}</h2>
         <p className="mb-5"></p>
       </Row>
       <Row>
