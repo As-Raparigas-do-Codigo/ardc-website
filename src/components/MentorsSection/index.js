@@ -2,31 +2,10 @@ import React from 'react';
 import { Row, Container, Col } from 'react-bootstrap';
 import PersonCard from 'components/PersonCard';
 import LinkArrow from 'components/LinkArrow';
-import { ReactComponent as GreenArrow } from 'assets/icons/green-arrow.svg';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import './mentors-section.scss';
+import Carousel from 'components/Carousel';
 import Constants from 'constants';
 import TeamData from 'data/team';
 import { shuffle, sortById } from 'utils';
-
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 4,
-    slidesToSlide: 3 // optional, default to 1.
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 1,
-    slidesToSlide: 1 // optional, default to 1.
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    slidesToSlide: 1 // optional, default to 1.
-  }
-};
 
 function MentorsSection({ translation }) {
   const mentorsCards = shuffle(TeamData.filter((x) => x.roles.includes('mentor')))
@@ -57,36 +36,10 @@ function MentorsSection({ translation }) {
       </Row>
 
       <Row>
-        <Carousel
-          autoPlaySpeed={9000000}
-          showDots
-          arrows
-          responsive={responsive}
-          renderDotsOutside
-          dotListClass="custom-dots"
-          itemClass="card-item"
-          customLeftArrow={<CustomLeftArrow />}
-          customRightArrow={<CustomRightArrow />}>
-          {mentorsCards}
-        </Carousel>
+        <Carousel items={mentorsCards} />
       </Row>
     </Container>
   );
 }
-
-const CustomLeftArrow = ({ onClick }) => (
-  <span onClick={() => onClick()}>
-    <div className="custom-arrow custom-arrow-left">
-      <GreenArrow className="blue-arrow" />
-    </div>
-  </span>
-);
-const CustomRightArrow = ({ onClick }) => (
-  <span onClick={() => onClick()}>
-    <div className="custom-arrow custom-arrow-right">
-      <GreenArrow className="blue-arrow" />
-    </div>
-  </span>
-);
 
 export default MentorsSection;
