@@ -24,7 +24,7 @@ const IntroContent = ({ translation }) => {
         <Container className="p-0">
           <Row>
             <Col className="col-auto align-self-center">
-              <LinkButton href={Constants.Routes.Workshops} variant="primary">
+              <LinkButton href={Constants.Routes.Community} variant="primary">
                 {translation('HomePage-IntroSection-PrimaryButton')}
               </LinkButton>
             </Col>
