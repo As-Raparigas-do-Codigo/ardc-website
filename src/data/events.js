@@ -23,7 +23,7 @@ const Events = [
     alt: 'Evento online organizado por Geek Girls Portugal',
     description:
       'Participamos no evento 93º Geek Girls Portugal para discutir sobre Rumo a uma carreira em TI.',
-    link: 'Vê o apresentação no Youtube',
+    link: 'Vê mais aqui',
     url: 'https://www.youtube.com/watch?v=f7G9geDLWSw'
   },
   {
@@ -31,9 +31,8 @@ const Events = [
     title: 'Webinar Aubay Portugal - Women in Tech',
     image: aubay,
     alt: 'Webinar Aubay Portugal - Women in Tech',
-    description:
-      'Estivemos presentes no webinar da Aubay Portugal sobre mulheres em tecnologia.',
-    link: 'Vê o webinar no Youtube',
+    description: 'Estivemos presentes no webinar da Aubay Portugal sobre mulheres em tecnologia.',
+    link: 'Vê mais aqui',
     url: 'https://www.youtube.com/watch?v=ccV9BrBjz2s'
   },
   {
@@ -43,7 +42,7 @@ const Events = [
     alt: 'Entrevista com Forbes Portugal',
     description:
       'Entrevista com Forbes sobre a missão das Raparigas do Código de apoiar e dar ferramentas às mulheres para ingressar no setor TI.',
-    link: 'Lê o artigo',
+    link: 'Vê mais aqui',
     url: 'https://www.forbespt.com/raparigas-do-codigo-encoraja-raparigas-e-mulheres-a-ingressar-no-setor-das-tic/'
   },
   {
@@ -51,8 +50,7 @@ const Events = [
     title: 'Participação no projeto We4Change',
     image: we4change,
     alt: 'Participação no projeto We4Change',
-    description:
-      'Participámos no evento Changemakers - hackathoon We4Change (presencial).',
+    description: 'Participámos no evento Changemakers - hackathoon We4Change (presencial).',
     link: '',
     url: ''
   },
@@ -63,7 +61,7 @@ const Events = [
     alt: 'Entrevista com APDC',
     description:
       'Entrevista à revista "Comunicações" da APDC - Associação Portuguesa para o Desenvolvimento das Comunicações.',
-    link: 'Lê o artigo',
+    link: 'Vê mais aqui',
     url: 'https://comunicacoes.apdc.pt/comunicacoes-238-mulheres-e-tecnologia-o-namoro-que-acabara-em-casamento-2021/65590032'
   }
 ];
