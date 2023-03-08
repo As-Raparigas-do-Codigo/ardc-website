@@ -1,7 +1,7 @@
  @import "styles/variables";
 
  .card-item {
-   padding-right: 30px;
+   margin: 30px;
  }
 
 .custom-dots {
@@ -59,4 +59,5 @@
 
 .react-multi-carousel-list {
   position: initial !important;
+  padding:0;
 }

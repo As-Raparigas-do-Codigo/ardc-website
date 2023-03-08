@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Constants from 'constants';
-import BasicCardsRow from 'components/BasicCardsRow';
+import EventsSection from 'components/EventsSection';
 import LinkButton from 'components/LinkButton';
 import LinkArrow from 'components/LinkArrow';
 import MentorsSection from 'components/MentorsSection';
@@ -11,7 +11,6 @@ import KPISSection from 'components/KPISSection';
 import PageLayout from 'components/PageLayout';
 import banner from 'assets/home/banner.jpeg';
 import missao from 'assets/home/missao.png';
-import Events from '../../data/events';
 import pdf from '../../assets/Booklet_ARDC_2022.pdf';
 import FeatureFlag from 'components/FeatureFlag';
 
@@ -52,17 +51,13 @@ function Home({ translation }) {
     <PageLayout title="Home" customBanner={<IntroContent translation={translation} />}>
       <SponsorSection />
       <hr />
-
       <div className="zig-zag"></div>
-
       <WorkshopsSection
         heading={translation('HomePage-WorkshopsSection-Title')}
         subtitle={translation('WorkshopsPage-Description')}
         translation={translation}
       />
-
       <div className="zig-zag"></div>
-
       <div className="gradient">
         <Container className="py-md-5">
           <Row>
@@ -92,7 +87,6 @@ function Home({ translation }) {
         <hr></hr>
         <KPISSection translation={translation} />
       </div>
-
       <FeatureFlag name="show_colaboration">
         <div className="bg-blue">
           <Container className="py-5">
@@ -118,11 +112,8 @@ function Home({ translation }) {
         </div>
       </FeatureFlag>
       <div className="zig-zag"></div>
-      <BasicCardsRow
-        data={Events.slice(0, 3)}
-        heading={translation('HomePage-TalksSection-Title')}
-        subtitle=""
-      />
+
+      <EventsSection translation={translation} />
 
       {/* TODO: mudar para className="gradient" depois do MVP */}
       <div className="bg-blue">
