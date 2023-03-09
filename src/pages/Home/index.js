@@ -6,7 +6,6 @@ import LinkButton from 'components/LinkButton';
 import LinkArrow from 'components/LinkArrow';
 import MentorsSection from 'components/MentorsSection';
 import SponsorSection from 'components/SponsorSection';
-import WorkshopsSection from 'components/WorkshopsSection';
 import KPISSection from 'components/KPISSection';
 import PageLayout from 'components/PageLayout';
 import banner from 'assets/home/banner.jpeg';
@@ -51,15 +50,13 @@ function Home({ translation }) {
   return (
     <PageLayout title="Home" customBanner={<IntroContent translation={translation} />}>
       <SponsorSection />
-      <hr />
-
       <div className="zig-zag"></div>
 
-      <WorkshopsSection
+      {/* <WorkshopsSection
         heading={translation('HomePage-WorkshopsSection-Title')}
         subtitle={translation('WorkshopsPage-Description')}
         translation={translation}
-      />
+      /> */}
 
       <div className="zig-zag"></div>
 
