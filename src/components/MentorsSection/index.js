@@ -41,11 +41,7 @@ function MentorsSection({ translation }) {
       </Row>
       <Row>
         <Col>
-          <p className="mb-5">
-            {translation('HomePage-MentorsSection-Text_p1')}
-            <br />
-            {translation('HomePage-MentorsSection-Text_p2')}
-          </p>
+          <p className="mb-5">{translation('HomePage-MentorsSection-Text')}</p>
         </Col>
         <Col className="d-flex justify-content-end align-items-end fw-bold">
           <div className="mb-5">
