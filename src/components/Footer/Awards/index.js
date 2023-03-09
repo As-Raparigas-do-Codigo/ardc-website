@@ -9,7 +9,7 @@ import '../footer.scss';
 
 const Awards = ({ translation }) => {
   return (
-    <Container className="info padding-top-bottom-medium align-center">
+    <Container id="footer" className="info padding-top-bottom-medium align-center">
       <Row>
         <Col>
           <img className="rounded mx-auto d-block" alt="" src={require('assets/award-logo.png')} />
@@ -36,8 +36,10 @@ const Awards = ({ translation }) => {
         </Col>
       </Row>
       <hr className={'mt-5'} />
-      <Row className={'mt-5'}>
-        <Col sm={12} md={6}>
+      <Row
+        className={'mt-5 justify-content-md-center justify-content-lg-center'}
+        id="middle-footer">
+        <Col sm={12} md={6} lg={4} className={'align-content-center'}>
           <h4>{translation('RdCLabel')}</h4>
           <p className={'w-75'}>{translation('Footer-WhoWeAreLabel')}</p>
           <p>
@@ -45,56 +47,52 @@ const Awards = ({ translation }) => {
             <a href={`mailto:${Constants.Contacts.Email}`}>{Constants.Contacts.Email}</a>
           </p>
         </Col>
-        <Col sm={12} md={6}>
+        <Col sm={12} md={6} lg={2}>
+          <h4>O Projecto</h4>
+          <ul>
+            <li>
+              <a href={Constants.Routes.About}>{translation('AboutLabel')}</a>
+            </li>
+            <FeatureFlag name="show_colaboration">
+              <li>
+                <a href={Constants.Routes.Collaborate}>{'Quero Colaborar !'}</a>
+              </li>
+            </FeatureFlag>
+            <li>
+              <a href={Constants.Routes.Contacts}>{translation('ContactsPage-PageName')}</a>
+            </li>
+            <li>
+              <a href={Constants.Routes.Community}>{translation('CommunityPage-PageName')}</a>
+            </li>
+          </ul>
+        </Col>
+        <Col sm={12} md={6} lg={4}>
           <Row>
-            <Col sm={12} md={6} className={'mt-3'}>
-              <h4>O Projecto</h4>
-              <ul>
-                <li>
-                  <a href={Constants.Routes.About}>{translation('AboutLabel')}</a>
-                </li>
-                <FeatureFlag name="show_colaboration">
-                  <li>
-                    <a href={Constants.Routes.Collaborate}>{'Quero Colaborar !'}</a>
-                  </li>
-                </FeatureFlag>
-                <li>
-                  <a href={Constants.Routes.Contacts}>{translation('ContactsPage-PageName')}</a>
-                </li>
-              </ul>
+            <Col sm={12} md={12} lg={12}>
+              <p className="text-center">
+                <SocialLinks translation={translation} />
+              </p>
             </Col>
-            <Col sm={12} md={6} className={'mt-3'}>
-              <h4>{translation('EventsPage-PageName')}</h4>
-              <ul>
-                <li>
-                  <a href={Constants.Routes.Events} style={{ display: 'none' }}>
-                    {translation('EventsPage-PageName')}
-                  </a>
-                  <a href={Constants.Routes.Community}>{translation('CommunityPage-PageName')}</a>
-                </li>
-              </ul>
+
+            <Col sm={12} md={12} lg={12}>
+              <p className="text-center">
+                <a href={Constants.Routes.PrivacyPolicy}>
+                  {translation('PrivacyPolicyPage-PageName')}
+                </a>
+              </p>
             </Col>
+            <Col sm={12} md={12} lg={12}>
+              <p className="text-center">
+                Copyright ™ {new Date().getFullYear()} As Raparigas do Código.
+                <br />
+                All Rights Reserved
+              </p>
+            </Col>
+            <Col></Col>
           </Row>
         </Col>
       </Row>
-      <Row className={'mt-5'}>
-        <div className={'mt-5 centering-col'}>
-          <SocialLinks translation={translation} />
-        </div>
-      </Row>
-      <hr className={'mt-5'} />
-      <Row className={'legal-copy'}>
-        <Col sm={12} md={6} className={'mt-5'}>
-          <p className="text-center">
-            <a href={Constants.Routes.PrivacyPolicy}>{translation('PrivacyPolicyPage-PageName')}</a>
-          </p>
-        </Col>
-        <Col sm={12} md={6} className={'mt-5'}>
-          <p className="text-center">
-            Copyright ™ {new Date().getFullYear()} As Raparigas do Código. All Rights Reserved
-          </p>
-        </Col>
-      </Row>
+      {/* <hr /> */}
     </Container>
   );
 };
