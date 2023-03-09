@@ -6,7 +6,7 @@
   border-radius: 8px;
   border: 1px solid $light-gray;
   position: relative;
-  margin: auto;
+  margin: 10px;
 
   flex-direction: column;
   height: 406px;
@@ -14,7 +14,7 @@
 
   @media (max-width: $lg) {
     flex-direction: row;
-    height: unset;
+    height: 100%;
     max-width: unset;
     min-height: 175px;
   }
@@ -56,23 +56,31 @@
 
 .person-card__name {
   margin-top: 0 !important;
+  font-size: 0.8rem;
 }
 
 .person-card__job {
   font-family: Roboto Mono;
-  font-size: 14px;
+  font-size: 0.8rem;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0em;
+  // @media (max-width: $md) {
+  //   display: none
+  // }
 }
 
 .person-card__company {
   font-family: Roboto Mono;
-  font-size: 14px;
+  font-size: 0.8rem;
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 0em;
   text-decoration: underline;
+
+  //  @media (max-width: $md) {
+  //   text-decoration: none;
+  // }
 }
 
 .person-card__icons {
@@ -92,4 +100,8 @@
       height: 15px;
     }
   }
+
+  // @media (max-width: $md) {
+  //   display:none
+  // }
 }
