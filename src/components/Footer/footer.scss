@@ -1,5 +1,12 @@
 @import "styles/variables";
 
+$assetPath :"../../";
+
+#footer {
+//   background-image: url( '../../assets/ardc-logo--footer-2.svg' );
+//  background-repeat: no-repeat;
+//  background-size: 100%;
+}
 
 hr{
   border: 1px solid #DEDEDE;
@@ -103,6 +110,7 @@ hr{
 }
 
 .centering-col {
+  display: flex;
   @media (max-width: $lg) {
     margin: 0 auto;
     width: fit-content;
