@@ -67,9 +67,6 @@ const Awards = ({ translation }) => {
               <h4>{translation('EventsPage-PageName')}</h4>
               <ul>
                 <li>
-                  <a href={Constants.Routes.Workshops}>{translation('WorkshopsPage-PageName')}</a>
-                </li>
-                <li>
                   <a href={Constants.Routes.Events} style={{ display: 'none' }}>
                     {translation('EventsPage-PageName')}
                   </a>

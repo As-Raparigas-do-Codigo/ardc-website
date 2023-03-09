@@ -90,13 +90,6 @@ function NavBarComponent({ translation }) {
               </NavLink>
               <NavLink
                 location={location}
-                to={Constants.Routes.Workshops}
-                onSelect={onSelect}
-                className="text-center">
-                {translation('WorkshopsPage-PageName')}
-              </NavLink>
-              <NavLink
-                location={location}
                 to={Constants.Routes.Community}
                 onSelect={onSelect}
                 className="text-center">
