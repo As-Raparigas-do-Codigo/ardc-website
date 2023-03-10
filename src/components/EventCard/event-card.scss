@@ -1,17 +1,17 @@
 @import "../../styles/variables";
 
-.basic-card {
+.event-card {
   display: flex;
   flex-direction: column;
   background-color: $white;
   border-radius: 8px;
   border: 1px solid $light-gray;
-  max-width: 370px;
+  max-width: 430px;
   margin-right: 15px;
 }
 
-.basic-card__fullDescription {
-    display: flex;
+.event-card__fullDescription {
+  display: flex;
   flex-direction: column;
   border-radius: 8px;
   border: 1px solid $light-gray;
@@ -19,8 +19,11 @@
   height: 100%;
   color: white;
   padding: 10%;
-  z-index: 10;
-  max-width: 370px;
+
+  max-width: 430px;
+  margin-right: 15px;
+    z-index: 10;
+    top:0;
 
   background-color: rgba(0,0,0,0.7);
     @media (max-width: $lg) {
@@ -28,7 +31,7 @@
   }
 }
 
-.basic-card__img {
+.event-card__img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -36,7 +39,7 @@
   border-top-right-radius: 8px;
 }
 
-.basic-card__body {
+.event-card__body {
   padding: 0px 30px 23px 30px;
   height: 250px;
   span {
@@ -51,7 +54,7 @@
   }
 }
 
-.basic-card__action {
+.event-card__action {
  position: absolute;
   z-index: 11;
   bottom: 15px;
@@ -64,14 +67,14 @@
   }
 }
 
-.basic-card__description {
+.event-card__description {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
-.basic-card__title {
+.event-card__title {
   overflow: hidden;
   height: 100px;
   margin-top: 0px !important;
