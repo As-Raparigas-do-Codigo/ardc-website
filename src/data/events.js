@@ -5,35 +5,52 @@ import forbesPortugal from '../assets/events/forbes-portugal.png';
 import apdc from '../assets/events/apdc.jpeg';
 import we4change from '../assets/events/we4change.jpeg';
 
+const Categories = Object.freeze({
+  EVENT: Symbol('event'),
+  WORKSHOP: Symbol('workshop'),
+  MEDIA: Symbol('media')
+});
+
+const LinkType = Object.freeze({
+  ARTICLE: Symbol('article'),
+  VIDEO: Symbol('video'),
+  FILE: Symbol('file')
+});
+
 const Events = [
   {
     id: 1,
     title: 'Tech Community Get-Together',
     image: techCommunityGetTogether,
+    category: Categories.EVENT,
     alt: 'Evento presencial organizado por nós',
     description:
-      'Um evento organizado por nós aberto à comunidade na escola 42 Lisboa que envolveu cerca de 60 pessoas.',
-    link: '',
-    url: ''
+      'Um evento organizado por nós aberto à comunidade na escola 42 Lisboa que envolveu cerca de 60 pessoas.'
   },
   {
     id: 2,
     title: '93º Geek Girls Portugal - Rumo a uma carreira de TI',
     image: geekGirlsPortugalRumoIT,
+    category: Categories.EVENT,
     alt: 'Evento online organizado por Geek Girls Portugal',
     description:
       'Participamos no evento 93º Geek Girls Portugal para discutir sobre Rumo a uma carreira em TI.',
-    link: 'Vê mais aqui',
-    url: 'https://www.youtube.com/watch?v=f7G9geDLWSw'
+    link: {
+      url: 'https://www.youtube.com/watch?v=f7G9geDLWSw',
+      type: LinkType.VIDEO
+    }
   },
   {
     id: 3,
     title: 'Webinar Aubay Portugal - Women in Tech',
     image: aubay,
+    category: Categories.EVENT,
     alt: 'Webinar Aubay Portugal - Women in Tech',
     description: 'Estivemos presentes no webinar da Aubay Portugal sobre mulheres em tecnologia.',
-    link: 'Vê mais aqui',
-    url: 'https://www.youtube.com/watch?v=ccV9BrBjz2s'
+    link: {
+      url: 'https://www.youtube.com/watch?v=ccV9BrBjz2s',
+      type: LinkType.VIDEO
+    }
   },
   {
     id: 4,
@@ -42,8 +59,11 @@ const Events = [
     alt: 'Entrevista com Forbes Portugal',
     description:
       'Entrevista com Forbes sobre a missão das Raparigas do Código de apoiar e dar ferramentas às mulheres para ingressar no setor TI.',
-    link: 'Vê mais aqui',
-    url: 'https://www.forbespt.com/raparigas-do-codigo-encoraja-raparigas-e-mulheres-a-ingressar-no-setor-das-tic/'
+    category: Categories.MEDIA,
+    link: {
+      url: 'https://www.forbespt.com/raparigas-do-codigo-encoraja-raparigas-e-mulheres-a-ingressar-no-setor-das-tic/',
+      type: LinkType.ARTICLE
+    }
   },
   {
     id: 5,
@@ -51,8 +71,7 @@ const Events = [
     image: we4change,
     alt: 'Participação no projeto We4Change',
     description: 'Participámos no evento Changemakers - hackathoon We4Change (presencial).',
-    link: '',
-    url: ''
+    category: Categories.EVENT
   },
   {
     id: 6,
@@ -61,8 +80,11 @@ const Events = [
     alt: 'Entrevista com APDC',
     description:
       'Entrevista à revista "Comunicações" da APDC - Associação Portuguesa para o Desenvolvimento das Comunicações.',
-    link: 'Vê mais aqui',
-    url: 'https://comunicacoes.apdc.pt/comunicacoes-238-mulheres-e-tecnologia-o-namoro-que-acabara-em-casamento-2021/65590032'
+    category: Categories.MEDIA,
+    link: {
+      url: 'https://comunicacoes.apdc.pt/comunicacoes-238-mulheres-e-tecnologia-o-namoro-que-acabara-em-casamento-2021/65590032',
+      type: LinkType.ARTICLE
+    }
   }
 ];
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import BasicCard from '../BasicCard';
+import EventCard from '../EventCard';
 import Events from '../../data/events';
 import Carousel from 'components/Carousel';
 import './events-section.scss';
@@ -7,18 +7,7 @@ import './events-section.scss';
 import { Row, Container } from 'react-bootstrap';
 
 function EventsSection({ translation }) {
-  const events = Events.map((item) => (
-    <BasicCard
-      alt={item.alt}
-      date={item.date}
-      description={item.description}
-      imgPath={item.image}
-      link={item.link}
-      title={item.title}
-      url={item.url}
-      key={item.id}
-    />
-  ));
+  const events = Events.map((item) => <EventCard item={item} key={item.id} />);
 
   return (
     <Container className="mt-5 py-md-5 event-section">
