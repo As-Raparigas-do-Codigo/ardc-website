@@ -10,6 +10,7 @@
   margin-right: 15px;
 }
 
+
 .event-card__fullDescription {
   display: flex;
   flex-direction: column;
@@ -25,8 +26,9 @@
     z-index: 10;
     top:0;
 
-  background-color: rgba(0,0,0,0.7);
-    @media (max-width: $lg) {
+  background: linear-gradient(to bottom, rgba(0,8,99,0.8) 30%, rgba(255,255,255,0.1) 100%);
+  // background-color: rgba(0,8,99,0.7);
+  @media (max-width: $lg) {
     margin-bottom: 30px;
   }
 }
@@ -50,8 +52,37 @@
   }
 
   h5 {
-    font-size: 18px;
+    font-size: 17px;
+    margin-top: 10px !important;
   }
+}
+
+.event-card__badge {
+  margin-right: 5px;
+  display: inline;
+
+
+  span {
+    display: unset;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  > .dark-blue {
+    background-color: $brand-color !important;
+    color: white !important;
+    opacity: 1;
+  }
+
+  > .blue {
+    background-color: $blue !important;
+    color: white !important;
+    opacity: 1;
+  }
+}
+
+.event-card__badge-wrapper{
+  margin-top: 10px;
 }
 
 .event-card__action {
@@ -59,23 +90,31 @@
   z-index: 11;
   bottom: 15px;
 
-  &.white {
-    a {
-      color: white !important;
-      font-size: 100%;
-    }
-  }
+  // &.white {
+  //   a {
+  //     // color: white !important;
+  //     font-size: 100%;
+  //   }
+  // }
 }
 
-.event-card__description {
+.event-card__subtitle {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  margin-top: 10px;
+
+  p {
+    color: rgba(0,0,0,0.4);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+  }
 }
 
 .event-card__title {
   overflow: hidden;
-  height: 100px;
+  height: 50px;
   margin-top: 0px !important;
 }

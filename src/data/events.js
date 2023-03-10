@@ -6,21 +6,22 @@ import apdc from '../assets/events/apdc.jpeg';
 import we4change from '../assets/events/we4change.jpeg';
 
 const Categories = Object.freeze({
-  EVENT: Symbol('event'),
-  WORKSHOP: Symbol('workshop'),
-  MEDIA: Symbol('media')
+  EVENT: { label: 'event', color: 'dark-blue' },
+  WORKSHOP: { label: 'workshop', color: 'dark-blue' },
+  MEDIA: { label: 'media', color: 'dark-blue' }
 });
 
 const LinkType = Object.freeze({
-  ARTICLE: Symbol('article'),
-  VIDEO: Symbol('video'),
-  FILE: Symbol('file')
+  ARTICLE: { label: 'article', color: 'blue' },
+  VIDEO: { label: 'video', color: 'blue' },
+  FILE: { label: 'file', color: 'blue' }
 });
 
 const Events = [
   {
     id: 1,
     title: 'Tech Community Get-Together',
+    subtitle: '42 lisboa',
     image: techCommunityGetTogether,
     category: Categories.EVENT,
     alt: 'Evento presencial organizado por nós',
@@ -29,7 +30,8 @@ const Events = [
   },
   {
     id: 2,
-    title: '93º Geek Girls Portugal - Rumo a uma carreira de TI',
+    title: '93º Geek Girls Portugal',
+    subtitle: 'Rumo a uma carreira de TI',
     image: geekGirlsPortugalRumoIT,
     category: Categories.EVENT,
     alt: 'Evento online organizado por Geek Girls Portugal',
@@ -42,7 +44,8 @@ const Events = [
   },
   {
     id: 3,
-    title: 'Webinar Aubay Portugal - Women in Tech',
+    title: 'Webinar Aubay Portugal',
+    subtitle: 'Women in Tech',
     image: aubay,
     category: Categories.EVENT,
     alt: 'Webinar Aubay Portugal - Women in Tech',
@@ -55,6 +58,7 @@ const Events = [
   {
     id: 4,
     title: 'Entrevista com Forbes Portugal',
+    subtitle: 'Raparigas do Código encoraja mulheres a ingressar no setor das TIC',
     image: forbesPortugal,
     alt: 'Entrevista com Forbes Portugal',
     description:
@@ -68,6 +72,7 @@ const Events = [
   {
     id: 5,
     title: 'Participação no projeto We4Change',
+    subtitle: '',
     image: we4change,
     alt: 'Participação no projeto We4Change',
     description: 'Participámos no evento Changemakers - hackathoon We4Change (presencial).',
@@ -76,6 +81,7 @@ const Events = [
   {
     id: 6,
     title: 'Mulheres e Tecnologia: O match que se impõe',
+    subtitle: '',
     image: apdc,
     alt: 'Entrevista com APDC',
     description:

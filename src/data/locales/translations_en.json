@@ -121,5 +121,11 @@
     "SupportTheProject-Title": "BUY US A COFFEE!",
     "SupportTheProject-Subtitle": "Ajuda o projecto a crescer.",
     "SupportTheProject-Text": "As Raparigas do Código são uma associação sem fins lucrativos e os nossos workshops e eventos são totalmente gratuitos. Considera um donativo para ajudar o nosso projecto a crescer e apoiar a nossa missão.",
-    "SupportTheProject-Button": "Quero fazer um donativo"
+    "SupportTheProject-Button": "Quero fazer um donativo",
+    "Categories-event": "event",
+    "Categories-workshop": "workshop",
+    "Categories-media": "media",
+    "LinkType-article": "article",
+    "LinkType-video": "video",
+    "LinkType-file": "file"
 }
