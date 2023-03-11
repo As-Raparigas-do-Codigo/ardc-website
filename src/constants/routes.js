@@ -3,7 +3,7 @@ export default {
   About: '/about',
   Contacts: '/contacts',
   Collaborate: '/collaborate',
-  Events: '/events',
+  Activities: '/activities',
   Home: '/',
   Community: '/community',
   PrivacyPolicy: '/privacy',

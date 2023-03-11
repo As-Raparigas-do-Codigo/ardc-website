@@ -1,5 +1,6 @@
 @import "../../styles/variables";
 
+
 .event-card {
   display: flex;
   flex-direction: column;
@@ -79,6 +80,15 @@
     color: $blue !important;
     border: 1px dashed $blue;
   }
+
+  > .grey{
+    background-color: $white !important;
+    color: rgba(0,0,0,0.4) !important;
+  }
+
+  &.float-right {
+    float: right;
+  }
 }
 
 .event-card__badge-wrapper{
@@ -96,6 +106,18 @@
   //     font-size: 100%;
   //   }
   // }
+}
+
+.event-card__date {
+  font-weight: 400;
+
+  span {
+
+  }
+}
+
+.event-card__metadata{
+  margin-top: 100;
 }
 
 .event-card__subtitle {

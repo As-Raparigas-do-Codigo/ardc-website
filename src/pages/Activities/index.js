@@ -3,9 +3,10 @@ import PageLayout from 'components/PageLayout';
 import EventCard from 'components/EventCard';
 import { Container, Row, Col } from 'react-bootstrap';
 import Constants from 'constants';
+import { sortByDesc } from 'utils';
 import './activities.scss';
 
-import events from 'data/events';
+import activities from 'data/activities';
 
 function Activities({ translation }) {
   const breadcrumbs = [
@@ -17,6 +18,14 @@ function Activities({ translation }) {
       label: translation('ActivitiesPage-PageName')
     }
   ];
+
+  const activitiesRefined = activities
+    .map((x) => {
+      x.date = new Date(x.date);
+      return x;
+    })
+    .sort((a, b) => sortByDesc(a, b, 'date'));
+
   return (
     <PageLayout
       title={translation('ActivitiesPage-PageName')}
@@ -24,7 +33,7 @@ function Activities({ translation }) {
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="">
         <Row className={'mt-4 mb-5'} xs={1} lg={4}>
-          {events.map((item, key) => (
+          {activitiesRefined.map((item, key) => (
             <Col key={key} className={'mt-4'}>
               <span className={'event-card-wrapper'}>
                 <EventCard item={item} key={item.id} />
