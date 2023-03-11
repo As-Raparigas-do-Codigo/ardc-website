@@ -71,13 +71,13 @@
   > .dark-blue {
     background-color: $brand-color !important;
     color: white !important;
-    opacity: 1;
+    
   }
 
   > .blue {
-    background-color: $blue !important;
-    color: white !important;
-    opacity: 1;
+    background-color: $white !important;
+    color: $blue !important;
+    border: 1px dashed $blue;
   }
 }
 
