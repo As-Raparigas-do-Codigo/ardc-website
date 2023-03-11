@@ -1,0 +1,142 @@
+@import "../../styles/variables";
+
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 8px;
+  border: 1px solid $light-gray;
+  max-width: 430px;
+  margin-right: 15px;
+}
+
+
+.event-card__fullDescription {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid $light-gray;
+  position: absolute;
+  height: 100%;
+  color: white;
+  padding: 10%;
+
+  max-width: 430px;
+  margin-right: 15px;
+    z-index: 10;
+    top:0;
+
+  background: linear-gradient(to bottom, rgba(0,8,99,0.8) 30%, rgba(255,255,255,0.1) 100%);
+  // background-color: rgba(0,8,99,0.7);
+  @media (max-width: $lg) {
+    margin-bottom: 30px;
+  }
+}
+
+.event-card__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.event-card__body {
+  padding: 0px 30px 23px 30px;
+  height: 250px;
+  span {
+    display: block;
+    font-size: 12px;
+    color: $color-secondary;
+    margin-bottom: 10px;
+  }
+
+  h5 {
+    font-size: 17px;
+    margin-top: 10px !important;
+  }
+}
+
+.event-card__badge {
+  margin-right: 5px;
+  display: inline;
+
+
+  span {
+    display: unset;
+    margin-bottom: 10px;
+    color: white;
+  }
+
+  > .dark-blue {
+    background-color: $brand-color !important;
+    color: white !important;
+    
+  }
+
+  > .blue {
+    background-color: $white !important;
+    color: $blue !important;
+    border: 1px dashed $blue;
+  }
+
+  > .grey{
+    background-color: $white !important;
+    color: rgba(0,0,0,0.4) !important;
+  }
+
+  &.float-right {
+    float: right;
+  }
+}
+
+.event-card__badge-wrapper{
+  margin-top: 10px;
+}
+
+.event-card__action {
+ position: absolute;
+  z-index: 11;
+  bottom: 15px;
+
+  // &.white {
+  //   a {
+  //     // color: white !important;
+  //     font-size: 100%;
+  //   }
+  // }
+}
+
+.event-card__date {
+  font-weight: 400;
+
+  span {
+
+  }
+}
+
+.event-card__metadata{
+  margin-top: 100;
+}
+
+.event-card__subtitle {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-top: 10px;
+
+  p {
+    color: rgba(0,0,0,0.4);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+}
+
+.event-card__title {
+  overflow: hidden;
+  height: 50px;
+  margin-top: 0px !important;
+}

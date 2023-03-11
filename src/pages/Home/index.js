@@ -122,14 +122,6 @@ function Home({ translation }) {
           <MentorsSection translation={translation} />
         </div>
       </div>
-      {/* TODO: retirar comentário após MVP
-        <div className="zig-zag"></div>
-        <BasicCardsRow 
-          data={articles}
-          heading={"Artigos recentes"}
-          subtitle={ "Placeholder de texto para descrição, lorem ipsum dolor sit amet, consectetur adipiscing elit." }
-        />
-        */}
     </PageLayout>
   );
 }
