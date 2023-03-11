@@ -1,13 +1,13 @@
 import React from 'react';
 import EventCard from '../EventCard';
-import Events from '../../data/events';
+import activities from '../../data/activities';
 import Carousel from 'components/Carousel';
 import './events-section.scss';
 
 import { Row, Container } from 'react-bootstrap';
 
 function EventsSection({ translation }) {
-  const events = Events.map((item) => <EventCard item={item} key={item.id} />);
+  const events = activities.slice(0, 8).map((item) => <EventCard item={item} key={item.id} />);
 
   return (
     <Container className="mt-5 py-md-5 event-section">

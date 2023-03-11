@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import HorizontalCard from 'components/HorizontalCard';
 import Constants from 'constants';
-import dataWorkshops from 'data/workshops';
+import dataWorkshops from 'data/activities/workshops';
 
 function WorkshopsList({ next = false, old = false, all = false, translation }) {
   const [workshops] = useState(dataWorkshops);

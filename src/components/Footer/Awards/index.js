@@ -59,7 +59,6 @@ const Awards = ({ translation }) => {
               <a href={Constants.Routes.Community}>{translation('CommunityPage-PageName')}</a>
             </li>
             <li>
-              {console.log(Constants.Routes)}
               <a href={Constants.Routes.Activities}>{translation('ActivitiesPage-PageName')}</a>
             </li>
             <li>

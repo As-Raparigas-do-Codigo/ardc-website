@@ -18,3 +18,11 @@ export const shuffle = (list) => {
 export const sortById = (a, b) => {
   return a.id - b.id;
 };
+
+export const sortByAsc = (a, b, param) => {
+  return a[param] - b[param];
+};
+
+export const sortByDesc = (a, b, param) => {
+  return b[param] - a[param];
+};
