@@ -44,8 +44,8 @@
     "ContactsPage-ContactFormSection-MessageLabel": "Mensagem / Comentário",
     "ContactsPage-ContactFormSection-MandatoryLabel": "* Preenchimento obrigatório",
     "ContactsPage-ContactFormSection-SendMessageButton": "Enviar mensagem",
-    "EventsPage-PageName": "Eventos",
-    "EventsPage-Description": "TBD",
+    "ActivitiesPage-PageName": "Atividades",
+    "ActivitiesPage-Description": "TBD",
     "Footer-AwardsSection-Title": "AWARDS",
     "Footer-AwardsSection-Subtitle": "Portuguese Women in Tech Awards 2021",
     "Footer-AwardsSection-Description": "Best Digital Inclusion Project started by a Woman.",
@@ -125,5 +125,11 @@
     "SupportTheProject-Title": "BUY US A COFFEE!",
     "SupportTheProject-Subtitle": "Ajuda o projecto a crescer.",
     "SupportTheProject-Text": "As Raparigas do Código são uma associação sem fins lucrativos e os nossos workshops e eventos são totalmente gratuitos. Considera um donativo para ajudar o nosso projecto a crescer e apoiar a nossa missão.",
-    "SupportTheProject-Button": "Quero fazer um donativo"
+    "SupportTheProject-Button": "Quero fazer um donativo",
+    "Categories-event": "evento",
+    "Categories-workshop": "workshop",
+    "Categories-media": "media",
+    "LinkType-article": "artigo",
+    "LinkType-video": "video",
+    "LinkType-file": "ficheiro"
 }

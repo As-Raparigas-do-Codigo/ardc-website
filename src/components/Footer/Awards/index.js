@@ -50,28 +50,31 @@ const Awards = ({ translation }) => {
         <Col sm={12} md={6} lg={2}>
           <h4>O Projecto</h4>
           <ul>
-            <li>
-              <a href={Constants.Routes.About}>{translation('AboutLabel')}</a>
-            </li>
             <FeatureFlag name="show_colaboration">
               <li>
                 <a href={Constants.Routes.Collaborate}>{'Quero Colaborar !'}</a>
               </li>
             </FeatureFlag>
             <li>
-              <a href={Constants.Routes.Contacts}>{translation('ContactsPage-PageName')}</a>
+              <a href={Constants.Routes.Community}>{translation('CommunityPage-PageName')}</a>
             </li>
             <li>
-              <a href={Constants.Routes.Community}>{translation('CommunityPage-PageName')}</a>
+              <a href={Constants.Routes.Activities}>{translation('ActivitiesPage-PageName')}</a>
+            </li>
+            <li>
+              <a href={Constants.Routes.About}>{translation('AboutLabel')}</a>
+            </li>
+            <li>
+              <a href={Constants.Routes.Contacts}>{translation('ContactsPage-PageName')}</a>
             </li>
           </ul>
         </Col>
         <Col sm={12} md={6} lg={4}>
           <Row>
             <Col sm={12} md={12} lg={12}>
-              <p className="text-center">
-                <SocialLinks translation={translation} />
-              </p>
+              <span className="text-center">
+                <SocialLinks className="text-center" translation={translation} />
+              </span>
             </Col>
 
             <Col sm={12} md={12} lg={12}>

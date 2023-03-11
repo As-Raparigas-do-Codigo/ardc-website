@@ -4,7 +4,7 @@ import i18n from 'i18next';
 import { useTranslation, initReactI18next } from 'react-i18next';
 import AboutUs from 'pages/About';
 import Contact from 'pages/Contact';
-import Events from 'pages/Events';
+import Activities from 'pages/Activities';
 import Home from 'pages/Home';
 import Community from 'pages/Community';
 import Collaborate from 'pages/Collaborate';
@@ -53,7 +53,11 @@ function App() {
           <Route path={Constants.Routes.NotFound404} element={<NotFound404 translation={t} />} />
           <Route exact path={Constants.Routes.About} element={<AboutUs translation={t} />} />
           <Route exact path={Constants.Routes.Contacts} element={<Contact translation={t} />} />
-          <Route exact path={Constants.Routes.Events} element={<Events translation={t} />} />
+          <Route
+            exact
+            path={Constants.Routes.Activities}
+            element={<Activities translation={t} />}
+          />
           <Route exact path={Constants.Routes.Home} element={<Home translation={t} />} />
           <Route
             exact
