@@ -70,6 +70,7 @@ const TeamData = [
     job: 'Software Engineer',
     social: [
       { linkedin: 'https://www.linkedin.com/in/isabelcmdcosta/' },
+      { github: 'https://github.com/isabelcosta' },
       { other: 'https://isabelcosta.github.io/' }
     ],
     avatar: 'isabel.jpg'
