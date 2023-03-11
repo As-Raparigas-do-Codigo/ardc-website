@@ -3,24 +3,24 @@ import PageLayout from 'components/PageLayout';
 import EventCard from 'components/EventCard';
 import { Container, Row, Col } from 'react-bootstrap';
 import Constants from 'constants';
-import './events.scss';
+import './activities.scss';
 
 import events from 'data/events';
 
-function Events({ translation }) {
+function Activities({ translation }) {
   const breadcrumbs = [
     {
       label: translation('HomePage-PageName'),
       href: Constants.Routes.Home
     },
     {
-      label: translation('EventsPage-PageName')
+      label: translation('ActivitiesPage-PageName')
     }
   ];
   return (
     <PageLayout
-      title={translation('EventsPage-PageName')}
-      description={translation('EventsPage-Description')}
+      title={translation('ActivitiesPage-PageName')}
+      description={translation('ActivitiesPage-Description')}
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="">
         <Row className={'mt-4 mb-5'} xs={1} lg={4}>
@@ -37,4 +37,4 @@ function Events({ translation }) {
   );
 }
 
-export default Events;
+export default Activities;
