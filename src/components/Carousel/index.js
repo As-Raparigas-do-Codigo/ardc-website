@@ -4,7 +4,15 @@ import MultiCarousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './carousel-section.scss';
 
-function Carousel({ items, desktop = 4, tablet = 2, mobile = 1 }) {
+function Carousel({
+  items,
+  desktop = 4,
+  tablet = 2,
+  mobile = 1,
+  autoSpeed = 9000000,
+  autoPlay = false,
+  infinite = false
+}) {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -25,9 +33,14 @@ function Carousel({ items, desktop = 4, tablet = 2, mobile = 1 }) {
 
   return (
     <MultiCarousel
-      autoPlaySpeed={9000000}
+      swipeable
+      draggable
+      autoPlaySpeed={autoSpeed}
       showDots
       arrows
+      autoPlay={autoPlay}
+      infinite={infinite}
+      transitionDuration={10000}
       responsive={responsive}
       renderDotsOutside
       dotListClass="custom-dots"

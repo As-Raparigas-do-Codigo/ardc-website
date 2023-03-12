@@ -62,6 +62,9 @@ const Awards = ({ translation }) => {
               <a href={Constants.Routes.Activities}>{translation('ActivitiesPage-PageName')}</a>
             </li>
             <li>
+              <a href={Constants.Routes.Partners}>{translation('PartnersPage-PageName')}</a>
+            </li>
+            <li>
               <a href={Constants.Routes.About}>{translation('AboutLabel')}</a>
             </li>
             <li>
