@@ -4,31 +4,41 @@ import { Container, Col, Row } from 'react-bootstrap';
 import Constants from 'constants';
 import PageLayout from 'components/PageLayout';
 
-import LinkArrow from 'components/LinkArrow';
-
-const CommunityInfoSection = ({ translation }) => (
-  <Container className="my-5 py-5">
-    <Row>
-      <h6 className="mb-2">{translation('CommunityPage-Title')}</h6>
-      <h2 className="mb-2">{translation('CommunityPage-Subtitle')}</h2>
-      <p className="mb-4">{translation('CommunityPage-Text_p1')}</p>
-      <p className="mb-4">{translation('CommunityPage-Text_p2')}</p>
-      <p className="mb-4">{translation('CommunityPage-Text_p3')}</p>
-    </Row>
-    <Row>
-      <ul className="mx-4">
-        <li className="mb-2">{translation('CommunityPage-IndividualCommunityTitle')}</li>
-        <p className="my-3">{translation('CommunityPage-IndividualCommunityText')}</p>
-        <li className="mb-2">{translation('CommunityPage-GroupCommunityTitle')}</li>
-        <p className="my-3">{translation('CommunityPage-GroupCommunityText')}</p>
-      </ul>
-      <p className="mb-4">{translation('CommunityPage-Text_p4')}</p>
-    </Row>
-    <LinkArrow href={Constants.Routes.Team} variant="primary">
-      {translation('HomePage-MentorsSection-Title')}
-    </LinkArrow>
-  </Container>
-);
+const CommunityInfoSection = ({ translation }) => {
+  return (
+    <Container className="my-5 py-5">
+      <Row>
+        <h6 className="mb-2">{translation('CommunityPage-Title')}</h6>
+        <h2 className="mb-2">{translation('CommunityPage-Subtitle')}</h2>
+        <p>
+          A nossa comunidade está desenhada para te ajudar a trilhar o teu caminho no mundo da
+          Tecnologia! Nela poderás encontrar uma equipa dedicada a apoiar o teu percurso, amigas com
+          os mesmos interesses e imensos recursos e oportunidades interessantes.
+        </p>
+        <h5>Comunidade e Networking</h5>
+        <p>
+          Vais encontrar um espaço seguro e encorajador onde dar os primeiros passos na Tecnlogia e
+          Programação e conhecer muitas raparigas e mulheres que partilham os teus objectivos!
+        </p>
+        <h5>Mentoria e Orientação </h5>
+        <p>
+          Poderás entrar em contacto com qualquer um dos nossos mentores para iniciares um processo
+          de mentoria: em grupo ou individual.
+        </p>
+        <h5>Recursos e Oportunidades </h5>
+        <p>
+          Partilharemos contigo recursos e materiais de estudo, dicas e vagas de emprego e
+          oportunidades de eventos, estágios e formações!
+        </p>
+        <h5>Acesso Exclusivo a Eventos e Formações</h5>
+        <p>
+          Terás acesso exclusivo a eventos e formações organizadas por nós ou pela nossa rede de
+          parceiros e patrocinadores.
+        </p>
+      </Row>
+    </Container>
+  );
+};
 
 const CommunityFormSection = ({ translation }) => (
   <Container className="my-5 p-5 box-radius shadow-lg">
@@ -41,26 +51,6 @@ const CommunityFormSection = ({ translation }) => (
     </Row>
   </Container>
 );
-
-// const MentorsSection = ({ translation }) => {
-//   const mentorsTeam = team.filter((x) => x.roles.includes("mentor"));
-
-//   return (
-//    <Container className={"mt-5 padding-top-bottom-medium"}>
-//      <Row>
-//       <h2 className="mb-2">{translation("Title.GetToKnowOurMentors)}</h2>
-//       <p className="mb-4">{translation("Subtitle.GetToKnowOurMentors)}</p>
-//      </Row>
-//      <Row className={"mt-4"} xs={1} md={1} lg={4}>
-//        {mentorsTeam.map((item, key) => (
-//          <Col className={"mt-4"}>
-//            <PersonCard key={key} person={item} />
-//          </Col>
-//        ))}
-//      </Row>
-//    </Container>
-//   );
-// };
 
 const Community = ({ translation }) => {
   const breadcrumbs = [
