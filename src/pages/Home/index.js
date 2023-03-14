@@ -9,7 +9,7 @@ import SponsorSection from 'components/SponsorSection';
 import KPISSection from 'components/KPISSection';
 import PageLayout from 'components/PageLayout';
 import banner from 'assets/home/banner.jpeg';
-import missao from 'assets/home/missao.png';
+import missao from 'assets/home/missao2.png';
 import pdf from '../../assets/Booklet_ARDC_2022.pdf';
 import FeatureFlag from 'components/FeatureFlag';
 
@@ -78,6 +78,7 @@ function Home({ translation }) {
             <Col className="my-4 col-auto">
               <img
                 src={missao}
+                id={'img-missao'}
                 className="box-border box-radius horizontal-card__img shadow"
                 alt="As raparigas do código"
               />
