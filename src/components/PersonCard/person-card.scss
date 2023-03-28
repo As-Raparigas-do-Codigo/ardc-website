@@ -14,9 +14,8 @@
 
   @media (max-width: $lg) {
     flex-direction: row;
-    height: 100%;
     max-width: unset;
-    min-height: 175px;
+    height: 200px;
   }
 }
 
@@ -88,8 +87,7 @@
   margin-bottom: 30px;
 
   @media (max-width: $lg) {
-    margin-top: 15px;
-    margin-bottom: auto;
+    margin-bottom: 60px;
   }
 
   .social-link-svg svg {

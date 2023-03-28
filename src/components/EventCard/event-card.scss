@@ -8,7 +8,7 @@
   border-radius: 8px;
   border: 1px solid $light-gray;
   max-width: 430px;
-  margin-right: 15px;
+  margin: 15px;
 }
 
 
@@ -18,20 +18,21 @@
   border-radius: 8px;
   border: 1px solid $light-gray;
   position: absolute;
-  height: 100%;
+  height: -webkit-fill-available;
   color: white;
   padding: 10%;
 
   max-width: 430px;
-  margin-right: 15px;
-    z-index: 10;
-    top:0;
+  z-index: 10;
+  top:0;
 
   background: linear-gradient(to bottom, rgba(0,8,99,0.8) 30%, rgba(255,255,255,0.1) 100%);
   // background-color: rgba(0,8,99,0.7);
-  @media (max-width: $lg) {
-    margin-bottom: 30px;
-  }
+  // @media (max-width: $lg) {
+  //   margin-bottom: 30px;
+  // }
+
+   margin: 15px;
 }
 
 .event-card__img {

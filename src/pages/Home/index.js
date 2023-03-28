@@ -13,10 +13,12 @@ import missao from 'assets/home/missao2.png';
 import pdf from '../../assets/Booklet_ARDC_2022.pdf';
 import FeatureFlag from 'components/FeatureFlag';
 
+import './home.scss';
+
 const IntroContent = ({ translation }) => {
   return (
     <>
-      <Col className="my-4 align-self-center">
+      <Col id="home-title" className="my-4 align-self-center">
         <h1 className="py-1">{translation('HomePage-IntroSection-Title')}</h1>
         <p className="py-1">{translation('HomePage-IntroSection-Description')}</p>
         <Container className="p-0">
@@ -62,7 +64,7 @@ function Home({ translation }) {
         <Container className="py-md-5">
           <Row>
             <Col className="my-4">
-              <h6 className="py-5">{translation('HomePage-MissionSection-Title')}</h6>
+              <h6 className="pt-5">{translation('HomePage-MissionSection-Title')}</h6>
               <p className="py-1">{translation('HomePage-MissionSection-Text_p1')}</p>
               <p className="py-1">{translation('HomePage-MissionSection-Text_p2')}</p>
               <Container className="p-0">

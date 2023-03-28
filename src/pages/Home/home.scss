@@ -1,0 +1,8 @@
+
+ @import "styles/variables";
+ 
+#home-title{
+  @media (max-width: $md) {
+    margin-top: 50px !important;
+  }
+}
