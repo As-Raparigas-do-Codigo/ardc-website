@@ -23,8 +23,8 @@ function MentorsSection({ translation }) {
           <p className="mb-5">{translation('HomePage-MentorsSection-Text')}</p>
         </Col>
         <Col className="d-flex justify-content-end align-items-end fw-bold">
-          <div className="mb-5">
-            <LinkArrow href={Constants.Routes.Team}>
+          <div>
+            <LinkArrow href={Constants.Routes.Team} sameWindow>
               {translation('HomePage-MentorsSection-AllMentorsLabel')}
             </LinkArrow>
           </div>
