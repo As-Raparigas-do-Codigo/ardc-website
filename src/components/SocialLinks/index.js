@@ -9,7 +9,7 @@ const socialLinks = [
   { github: 'https://github.com/As-Raparigas-do-Codigo/' }
 ];
 
-const SocialLinks = ({ variant = 'dark', changeLanguage, currentLang }) => (
+const SocialLinks = ({ variant = 'dark' }) => (
   <div className={`links links--${variant}`}>
     {socialLinks.map((socialNetworkLink) => {
       let socialNetwork = Object.keys(socialNetworkLink)[0];
@@ -18,7 +18,7 @@ const SocialLinks = ({ variant = 'dark', changeLanguage, currentLang }) => (
       );
     })}
 
-    {variant != 'dark' && (
+    {/* {variant != 'dark' && (
       <button
         style={{ lineHeight: '100%', height: '50%' }}
         className="button-secondary me-3 ms-5"
@@ -26,7 +26,7 @@ const SocialLinks = ({ variant = 'dark', changeLanguage, currentLang }) => (
         onClick={() => changeLanguage()}>
         {currentLang == 'pt' ? 'en' : 'pt'}
       </button>
-    )}
+    )} */}
   </div>
 );
 

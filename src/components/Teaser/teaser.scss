@@ -11,6 +11,11 @@
 .teaser__subtitle {
   color: $green;
   font-size: 14px;
+
+  @media (max-width: $lg) {
+    margin-top: 15px;
+  }
+
 }
 
 .teaser__title {
