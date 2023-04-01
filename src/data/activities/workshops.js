@@ -161,37 +161,75 @@ import Constants from 'constants';
 const Workshops = [
   {
     id: self.crypto.randomUUID(),
-    date: '2022-09-07',
-    title: 'Gestao Carreira ',
+    date: '2021-08-05',
+    title: 'Gestao Carreira',
     subtitle: '1a Edição',
     image: '',
     alt: '',
-    description: 'magnificooo para alem do imaginario',
+    description: 
+      'Workshop composto de 3 sessões, sobre partilha de ferramentas \
+      e dicas para preparação para procura de emprego, \
+      esclarecimento do processo de recrutamento e de entrevistas técnicas.',
     category: Constants.Categories.WORKSHOP
   },
   {
     id: self.crypto.randomUUID(),
-    date: '2022-11-25',
-    title: 'Gestao Carreira ',
+    date: '2021-12-01',
+    title: 'Workshop de Introdução a UX/UI',
     subtitle: '2a Edição',
     image: '',
     alt: '',
-    description: 'wowow fantastico mais balelasss',
+    description: 'Workshop sobre conceitos básicos relacionados com User Experience (UX) \
+     e User Interface (UI). Planeamento e prototipagem de um website passando por todas \
+     as fases com exercícios interativos e divertidos.',
     category: Constants.Categories.WORKSHOP
   },
   {
     id: self.crypto.randomUUID(),
-    date: '2022-11-25',
-    title: 'React ',
+    date: '2021-07-31',
+    title: 'Workshop Git na vida real',
     subtitle: '1a Edição',
     image: '',
     alt: '',
-    description: 'mais balelasss mais balelasss',
+    description: 'Exploração de como usar a ferramenta Git em ambiente de colaboração \
+     e ver o que são pull requests, branches e merges, \
+     como também aprender como lidar com conflitos.',
+    category: Constants.Categories.WORKSHOP
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2021-08-14',
+    title: 'Workshop Cria o teu portfólio em Git',
+    subtitle: '1a Edição',
+    image: '',
+    alt: '',
+    description: 'Neste workshop exploramos a criação de um website \
+    de portfólio com git e alojado através do GitHub Pages.',
+    category: Constants.Categories.WORKSHOP
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2021-02-06',
+    title: 'Workshop Introdução à tecnologia Web',
+    subtitle: '1a Edição',
+    image: '',
+    alt: '',
+    description: 'Exploração de conceitos básicos para o desenvolvimento de websites: Estrutura e \
+    funcionamento de um ficheiro HTML, elementos e atributos HTML. \
+    Definição de disposição dos elementos na página e estilos com CSS. \
+    Javascript como ferramenta para adicionar interatividade ao ficheiro.',
     category: Constants.Categories.WORKSHOP,
-    link: {
-      url: '',
-      type: Constants.LinkType.ARTICLE
-    }
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2021-07-24',
+    title: 'Workshop de Introdução a Git e GitHub',
+    subtitle: '1a Edição',
+    image: '',
+    alt: '',
+    description: 'Neste workshop introduzimos às alunas a Git e GitHub \
+    como ferramenta de controlo de versão e colaboração.',
+    category: Constants.Categories.WORKSHOP,
   }
 ];
 
