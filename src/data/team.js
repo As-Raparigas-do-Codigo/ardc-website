@@ -71,7 +71,7 @@ const TeamData = [
     avatar: 'ines-martins.jpg'
   },
   {
-    id: 6,
+    id: 7,
     roles: ['admin', 'mentor'],
     name: 'Isabel Costa',
     company: 'Deliveroo',
@@ -84,7 +84,7 @@ const TeamData = [
     avatar: 'isabel.jpg'
   },
   {
-    id: 7,
+    id: 8,
     roles: ['admin', 'mentor'],
     name: 'Joana Lopes',
     company: 'SIBS',
@@ -93,7 +93,7 @@ const TeamData = [
     avatar: 'joana_lopes.jpg'
   },
   {
-    id: 8,
+    id: 9,
     roles: ['admin', 'mentor'],
     name: 'Mónica Fidalgo',
     company: 'Mercedes-Benz.io',
@@ -102,7 +102,7 @@ const TeamData = [
     avatar: 'monica.jpg'
   },
   {
-    id: 9,
+    id: 10,
     roles: ['admin', 'mentor'],
     name: 'Pedro Fonseca',
     company: 'KWAN',
@@ -116,7 +116,7 @@ const TeamData = [
     avatar: 'pedro-fonseca.jpeg'
   },
   {
-    id: 10,
+    id: 11,
     roles: ['admin', 'mentor'],
     name: 'Sara Vieira',
     company: 'ISCTE - Eng. Informática',
@@ -152,36 +152,6 @@ const TeamData = [
   {
     id: 14,
     roles: ['mentor', 'collaborator'],
-    name: 'Daniela Domingues',
-    company: 'Critical Software',
-    job: 'Software Engineer',
-    social: [{ linkedin: 'https://www.linkedin.com/in/daniela-domingues-04b72645/' }],
-    avatar: 'daniela-domingues.jpg'
-  },
-  {
-    id: 15,
-    roles: ['mentor', 'collaborator'],
-    name: 'Flávia Ribeiro',
-    company: 'InvoiceXpress',
-    job: 'Software Engineer',
-    social: [{ linkedin: 'https://www.linkedin.com/in/daniela-domingues-04b72645/' }],
-    avatar: 'flavia.png'
-  },
-  {
-    id: 16,
-    roles: ['mentor', 'collaborator'],
-    name: 'Marina Baltar',
-    company: 'UAb - Eng. Informática',
-    job: 'Account Manager',
-    social: [
-      { linkedin: 'https://www.linkedin.com/in/flaviamribeiro/' },
-      { instagram: 'https://www.instagram.com/flavia_ribeiro_18/' }
-    ],
-    avatar: 'marina.jpg'
-  },
-  {
-    id: 17,
-    roles: ['mentor', 'collaborator'],
     name: 'Pedro Torres',
     company: 'Salsify',
     job: 'Senior Director of Engineering',
@@ -189,7 +159,7 @@ const TeamData = [
     avatar: 'pedro-torres.png'
   },
   {
-    id: 18,
+    id: 15,
     roles: ['mentor', 'collaborator'],
     name: 'Rita Pereira',
     company: 'Tibber',
@@ -201,7 +171,7 @@ const TeamData = [
     avatar: 'rita.jpg'
   },
   {
-    id: 19,
+    id: 16,
     roles: ['mentor', 'collaborator'],
     name: 'Sérgio Silva',
     company: 'Microsoft',
@@ -210,7 +180,7 @@ const TeamData = [
     avatar: 'sergio.png'
   },
   {
-    id: 20,
+    id: 17,
     roles: ['mentor', 'collaborator'],
     name: 'Ines de Matos',
     company: 'Web Summit',
@@ -224,7 +194,7 @@ const TeamData = [
     avatar: 'inesmatos.png'
   },
   {
-    id: 21,
+    id: 18,
     roles: ['mentor', 'collaborator'],
     name: 'Rita Peixoto',
     company: 'UM - Eng. Informática',
@@ -236,7 +206,7 @@ const TeamData = [
     avatar: 'ritapeixoto.png'
   },
   {
-    id: 22,
+    id: 19,
     roles: ['mentor', 'collaborator'],
     name: 'Marta Dias',
     company: 'KWAN',
@@ -251,7 +221,7 @@ const TeamData = [
     avatar: 'marta.png'
   },
   {
-    id: 23,
+    id: 20,
     roles: ['mentor', 'collaborator'],
     name: 'Inês Silvestre',
     company: 'Marley Spoon',
@@ -260,7 +230,7 @@ const TeamData = [
     avatar: 'ines-silvestre.jpg'
   },
   {
-    id: 24,
+    id: 21,
     roles: ['mentor', 'collaborator'],
     name: 'Jéssica Lemos',
     company: 'Talkdesk',
@@ -273,7 +243,7 @@ const TeamData = [
     avatar: 'jessica-lemos.png'
   },
   {
-    id: 25,
+    id: 22,
     roles: ['mentor', 'collaborator'],
     name: 'Nuno Reis',
     company: 'Nuno Cubal Reis, Unipessoal Lda.',
@@ -286,7 +256,7 @@ const TeamData = [
     avatar: 'nuno-reis.png'
   },
   {
-    id: 25,
+    id: 23,
     roles: ['mentor', 'collaborator'],
     name: 'Beatriz Sabino',
     company: 'Near Partner',
@@ -298,7 +268,7 @@ const TeamData = [
     avatar: 'beatriz-sabino.jpg'
   },
   {
-    id: 25,
+    id: 24,
     roles: ['mentor', 'collaborator'],
     name: 'Selmira Fernandes',
     company: '',
