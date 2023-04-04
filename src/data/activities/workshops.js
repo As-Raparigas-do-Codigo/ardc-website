@@ -214,9 +214,35 @@ const Workshops = [
     subtitle: '1a Edição',
     image: '',
     alt: '',
-    description: 'Exploração de conceitos básicos para o desenvolvimento de websites: Estrutura e \
-    funcionamento de um ficheiro HTML, elementos e atributos HTML. \
-    Definição de disposição dos elementos na página e estilos com CSS. \
+    description: 'Exploração de conceitos básicos para o desenvolvimento de websites: \\
+    Estrutura e funcionamento de um ficheiro HTML, elementos e atributos HTML. \\
+    Definição de disposição dos elementos na página e estilos com CSS. \\
+    Javascript como ferramenta para adicionar interatividade ao ficheiro.',
+    category: Constants.Categories.WORKSHOP,
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2021-02-06',
+    title: 'Workshop Introdução à tecnologia Web',
+    subtitle: '2a Edição',
+    image: '',
+    alt: '',
+    description: 'Exploração de conceitos básicos para o desenvolvimento de websites: \\
+    Estrutura e funcionamento de um ficheiro HTML, elementos e atributos HTML. \\
+    Definição de disposição dos elementos na página e estilos com CSS. \\
+    Javascript como ferramenta para adicionar interatividade ao ficheiro.',
+    category: Constants.Categories.WORKSHOP,
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2021-11-06',
+    title: 'Workshop Introdução à tecnologia Web',
+    subtitle: '3a Edição',
+    image: '',
+    alt: '',
+    description: 'Exploração de conceitos básicos para o desenvolvimento de websites: \\
+    Estrutura e funcionamento de um ficheiro HTML, elementos e atributos HTML. \\
+    Definição de disposição dos elementos na página e estilos com CSS. \\
     Javascript como ferramenta para adicionar interatividade ao ficheiro.',
     category: Constants.Categories.WORKSHOP,
   },
@@ -251,6 +277,30 @@ const Workshops = [
     alt: '',
     description: 'Neste workshop introduzimos às alunas a Git e GitHub \\
     como ferramenta de controlo de versão e trabalho colaborativo.',
+    category: Constants.Categories.WORKSHOP,
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2021-05-15',
+    title: 'Workshop Introdução a Python',
+    subtitle: '1a Edição',
+    image: '',
+    alt: '',
+    description: 'Workshop de introdução à linguagem Python. \\
+    Exploração de conceitos básicos de lógica e programação, \\
+    assim como de estruturas de dados simples.',
+    category: Constants.Categories.WORKSHOP,
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2021-10-30',
+    title: 'Workshop Introdução a Python',
+    subtitle: '2a Edição',
+    image: '',
+    alt: '',
+    description: 'Workshop de introdução à linguagem Python. \\
+    Exploração de conceitos básicos de lógica e programação, \\
+    assim como de estruturas de dados simples.',
     category: Constants.Categories.WORKSHOP,
   }
 ];
