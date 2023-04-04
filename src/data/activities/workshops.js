@@ -179,8 +179,8 @@ const Workshops = [
     subtitle: '',
     image: '',
     alt: '',
-    description: 'Workshop sobre conceitos básicos relacionados com User Experience (UX) \\
-    e User Interface (UI). Planeamento e prototipagem de um website passando por todas \\
+    description: 'Workshop sobre conceitos básicos relacionados com User Experience (UX) \
+    e User Interface (UI). Planeamento e prototipagem de um website passando por todas \
     as fases com exercícios interativos e divertidos.',
     category: Constants.Categories.WORKSHOP
   },
@@ -214,9 +214,9 @@ const Workshops = [
     subtitle: '1a Edição',
     image: '',
     alt: '',
-    description: 'Exploração de conceitos básicos para o desenvolvimento de websites: \\
-    Estrutura e funcionamento de um ficheiro HTML, elementos e atributos HTML. \\
-    Definição de disposição dos elementos na página e estilos com CSS. \\
+    description: 'Exploração de conceitos básicos para o desenvolvimento de websites: \
+    Estrutura e funcionamento de um ficheiro HTML, elementos e atributos HTML. \
+    Definição de disposição dos elementos na página e estilos com CSS. \
     Javascript como ferramenta para adicionar interatividade ao ficheiro.',
     category: Constants.Categories.WORKSHOP,
   },
@@ -227,11 +227,11 @@ const Workshops = [
     subtitle: '2a Edição',
     image: '',
     alt: '',
-    description: 'Exploração de conceitos básicos para o desenvolvimento de websites: \\
-    Estrutura e funcionamento de um ficheiro HTML, elementos e atributos HTML. \\
-    Definição de disposição dos elementos na página e estilos com CSS. \\
+    description: 'Exploração de conceitos básicos para o desenvolvimento de websites: \
+    Estrutura e funcionamento de um ficheiro HTML, elementos e atributos HTML. \
+    Definição de disposição dos elementos na página e estilos com CSS. \
     Javascript como ferramenta para adicionar interatividade ao ficheiro.',
-    category: Constants.Categories.WORKSHOP,
+    category: Constants.Categories.WORKSHOP
   },
   {
     id: self.crypto.randomUUID(),
@@ -240,11 +240,11 @@ const Workshops = [
     subtitle: '3a Edição',
     image: '',
     alt: '',
-    description: 'Exploração de conceitos básicos para o desenvolvimento de websites: \\
-    Estrutura e funcionamento de um ficheiro HTML, elementos e atributos HTML. \\
-    Definição de disposição dos elementos na página e estilos com CSS. \\
+    description: 'Exploração de conceitos básicos para o desenvolvimento de websites: \
+    Estrutura e funcionamento de um ficheiro HTML, elementos e atributos HTML. \
+    Definição de disposição dos elementos na página e estilos com CSS. \
     Javascript como ferramenta para adicionar interatividade ao ficheiro.',
-    category: Constants.Categories.WORKSHOP,
+    category: Constants.Categories.WORKSHOP
   },
   {
     id: self.crypto.randomUUID(),
@@ -253,9 +253,9 @@ const Workshops = [
     subtitle: '1a Edição',
     image: '',
     alt: '',
-    description: 'Neste workshop introduzimos às alunas a Git e GitHub \\
+    description: 'Neste workshop introduzimos às alunas a Git e GitHub \
     como ferramenta de controlo de versão e trabalho colaborativo.',
-    category: Constants.Categories.WORKSHOP,
+    category: Constants.Categories.WORKSHOP
   },
   {
     id: self.crypto.randomUUID(),
@@ -264,9 +264,9 @@ const Workshops = [
     subtitle: '1a Edição',
     image: '',
     alt: '',
-    description: 'Workshop introdutório de Figma, as suas funcionalidades básicas, \\
+    description: 'Workshop introdutório de Figma, as suas funcionalidades básicas, \
     como manipulação de imagens e vetores, inserção e edição de texto.',
-    category: Constants.Categories.WORKSHOP,
+    category: Constants.Categories.WORKSHOP
   },
   {
     id: self.crypto.randomUUID(),
@@ -275,9 +275,9 @@ const Workshops = [
     subtitle: '1a Edição',
     image: '',
     alt: '',
-    description: 'Neste workshop introduzimos às alunas a Git e GitHub \\
+    description: 'Neste workshop introduzimos às alunas a Git e GitHub \
     como ferramenta de controlo de versão e trabalho colaborativo.',
-    category: Constants.Categories.WORKSHOP,
+    category: Constants.Categories.WORKSHOP
   },
   {
     id: self.crypto.randomUUID(),
@@ -286,10 +286,10 @@ const Workshops = [
     subtitle: '1a Edição',
     image: '',
     alt: '',
-    description: 'Workshop de introdução à linguagem Python. \\
-    Exploração de conceitos básicos de lógica e programação, \\
+    description: 'Workshop de introdução à linguagem Python. \
+    Exploração de conceitos básicos de lógica e programação, \
     assim como de estruturas de dados simples.',
-    category: Constants.Categories.WORKSHOP,
+    category: Constants.Categories.WORKSHOP
   },
   {
     id: self.crypto.randomUUID(),
@@ -298,10 +298,10 @@ const Workshops = [
     subtitle: '2a Edição',
     image: '',
     alt: '',
-    description: 'Workshop de introdução à linguagem Python. \\
-    Exploração de conceitos básicos de lógica e programação, \\
+    description: 'Workshop de introdução à linguagem Python. \
+    Exploração de conceitos básicos de lógica e programação, \
     assim como de estruturas de dados simples.',
-    category: Constants.Categories.WORKSHOP,
+    category: Constants.Categories.WORKSHOP
   }
 ];
 
