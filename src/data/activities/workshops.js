@@ -176,12 +176,12 @@ const Workshops = [
     id: self.crypto.randomUUID(),
     date: '2021-12-01',
     title: 'Workshop de Introdução a UX/UI',
-    subtitle: '2a Edição',
+    subtitle: '',
     image: '',
     alt: '',
-    description: 'Workshop sobre conceitos básicos relacionados com User Experience (UX) \
-     e User Interface (UI). Planeamento e prototipagem de um website passando por todas \
-     as fases com exercícios interativos e divertidos.',
+    description: 'Workshop sobre conceitos básicos relacionados com User Experience (UX) \\
+    e User Interface (UI). Planeamento e prototipagem de um website passando por todas \\
+    as fases com exercícios interativos e divertidos.',
     category: Constants.Categories.WORKSHOP
   },
   {
@@ -227,8 +227,30 @@ const Workshops = [
     subtitle: '1a Edição',
     image: '',
     alt: '',
-    description: 'Neste workshop introduzimos às alunas a Git e GitHub \
-    como ferramenta de controlo de versão e colaboração.',
+    description: 'Neste workshop introduzimos às alunas a Git e GitHub \\
+    como ferramenta de controlo de versão e trabalho colaborativo.',
+    category: Constants.Categories.WORKSHOP,
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2021-12-08',
+    title: 'Workshop de Introdução a Figma',
+    subtitle: '1a Edição',
+    image: '',
+    alt: '',
+    description: 'Workshop introdutório de Figma, as suas funcionalidades básicas, \\
+    como manipulação de imagens e vetores, inserção e edição de texto.',
+    category: Constants.Categories.WORKSHOP,
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2021-11-02',
+    title: 'Workshop Git CSSBUC',
+    subtitle: '1a Edição',
+    image: '',
+    alt: '',
+    description: 'Neste workshop introduzimos às alunas a Git e GitHub \\
+    como ferramenta de controlo de versão e trabalho colaborativo.',
     category: Constants.Categories.WORKSHOP,
   }
 ];
