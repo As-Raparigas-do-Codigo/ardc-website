@@ -55,6 +55,8 @@ function PageLayout({ title, description, customBanner = null, breadcrumbsData, 
       )}
 
       <div>{children}</div>
+
+      {!title.includes('Home') && <div className="zig-zag"></div>}
     </div>
   );
 }
