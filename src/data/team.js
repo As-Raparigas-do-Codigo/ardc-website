@@ -3,13 +3,15 @@ const TeamData = [
     id: 1,
     roles: ['founder', 'admin', 'mentor'],
     name: 'Miriam Santos',
-    company: 'Univ. de Coimbra',
-    job: 'PhD Candidate',
+    company: 'YData',
+    job: 'Developer Advocate',
     social: [
       { linkedin: 'https://www.linkedin.com/in/miriamseoanesantos/' },
+      { github: 'https://github.com/miriamspsantos' },
+      { medium: 'https://medium.com/@miriam.santos' },
       { other: 'https://miriamspsantos.github.io/' }
     ],
-    avatar: 'miriam.jpg'
+    avatar: 'miriam.JPG'
   },
   {
     id: 2,
@@ -27,9 +29,14 @@ const TeamData = [
     id: 3,
     roles: ['admin', 'mentor'],
     name: 'José Amorim',
-    company: 'Univ. de Coimbra',
+    company: 'University of Coimbra',
     job: 'Invited Teaching Assistant',
-    social: [{ linkedin: 'https://linkedin.com/in/josepamorim' }],
+    social: [
+      { linkedin: 'https://linkedin.com/in/josepamorim' },
+      { github: 'https://github.com/jpamorim' },
+      { instagram: 'https://www.instagram.com/jose.p.amorim/' },
+      { other: 'https://linktr.ee/jpamorim' }
+    ],
     avatar: 'jose.jpg'
   },
   {
@@ -58,6 +65,7 @@ const TeamData = [
     job: 'Application Security Engineer',
     social: [
       { linkedin: 'https://www.linkedin.com/in/ines-af-martins/' },
+      { github: 'https://github.com/inesmartins' },
       { other: 'https://inesmartins.github.io/' }
     ],
     avatar: 'ines-martins.jpg'
@@ -79,10 +87,10 @@ const TeamData = [
     id: 7,
     roles: ['admin', 'mentor'],
     name: 'Joana Lopes',
-    company: 'IDMind',
-    job: 'Robotics Software Development',
-    social: [{ linkedin: 'https://www.linkedin.com/in/joana-g-lopes/' }],
-    avatar: 'joana.png'
+    company: 'SIBS',
+    job: 'Software Engineer',
+    social: [],
+    avatar: 'joana_lopes.jpg'
   },
   {
     id: 8,
@@ -98,14 +106,14 @@ const TeamData = [
     roles: ['admin', 'mentor'],
     name: 'Pedro Fonseca',
     company: 'KWAN',
-    job: 'Software Engineer',
+    job: 'Frontend Developer',
     social: [
-      { linkedin: 'http://linkedin.com/in/pedromlfonseca' },
-      { instagram: 'https://instagram.com/thedrawingdev' },
+      { linkedin: 'https://www.linkedin.com/in/pedromlfonseca/' },
+      { instagram: 'https://www.instagram.com/thedrawingdev/' },
       { github: 'https://github.com/PMLF' },
-      { other: 'https://pmlf.github.io/' }
+      { other: 'https://thedrawingdev.com/' }
     ],
-    avatar: 'pedro-fonseca.png'
+    avatar: 'pedro-fonseca.jpeg'
   },
   {
     id: 10,
@@ -132,9 +140,13 @@ const TeamData = [
     id: 13,
     roles: ['mentor', 'collaborator'],
     name: 'Catarina Silva',
-    company: 'Nature Research Centre',
-    job: 'Chief Researcher',
-    social: [{ linkedin: 'https://www.linkedin.com/in/catarina-ns-silva/' }],
+    company: 'University of Coimbra ',
+    job: 'Researcher',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/catarina-ns-silva/' },
+      { github: 'https://github.com/CatarinaNSSilva' },
+      { other: 'https://catarinasilva.weebly.com' }
+    ],
     avatar: 'catarina-silva.png'
   },
   {
@@ -227,11 +239,14 @@ const TeamData = [
     id: 22,
     roles: ['mentor', 'collaborator'],
     name: 'Marta Dias',
-    company: 'Talkdesk',
-    job: 'Software Engineer',
+    company: 'KWAN',
+    job: 'Product Owner',
     social: [
       { linkedin: 'https://www.linkedin.com/in/marta-r-dias/' },
-      { instagram: 'https://www.instagram.com/aanalista/' }
+      { instagram: 'https://www.instagram.com/aanalista/' },
+      { medium: 'https://medium.com/@markeldias' },
+      { github: 'https://github.com/markeldias' },
+      { other: 'https://aanalista.pt/' }
     ],
     avatar: 'marta.png'
   },
@@ -241,9 +256,7 @@ const TeamData = [
     name: 'Inês Silvestre',
     company: 'Marley Spoon',
     job: 'Talent Acquisition Manager',
-    social: [
-      { linkedin: 'https://www.linkedin.com/in/inespsilvestre/' }
-    ],
+    social: [{ linkedin: 'https://www.linkedin.com/in/inespsilvestre/' }],
     avatar: 'ines-silvestre.jpg'
   },
   {
@@ -253,7 +266,9 @@ const TeamData = [
     company: 'Talkdesk',
     job: 'Software Engineer',
     social: [
-      { linkedin: 'https://www.linkedin.com/in/inespsilvestre/' }
+      { linkedin: 'https://www.linkedin.com/in/inespsilvestre/' },
+      { github: 'https://github.com/jessicalemos ' },
+      { other: 'https://jessicalemos.github.io/' }
     ],
     avatar: 'jessica-lemos.png'
   },
@@ -261,7 +276,7 @@ const TeamData = [
     id: 25,
     roles: ['mentor', 'collaborator'],
     name: 'Nuno Reis',
-    company: 'Self-employed',
+    company: 'Nuno Cubal Reis, Unipessoal Lda.',
     job: 'Outsystems MVP',
     social: [
       { linkedin: 'https://www.linkedin.com/in/nunocubal/' },
@@ -269,6 +284,27 @@ const TeamData = [
       { outsystems: 'https://www.outsystems.com/profile/psonomp8dh' }
     ],
     avatar: 'nuno-reis.png'
+  },
+  {
+    id: 25,
+    roles: ['mentor', 'collaborator'],
+    name: 'Beatriz Sabino',
+    company: 'Near Partner',
+    job: 'OutSystems Developer',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/beatriz-sabino96/' },
+      { outsystems: 'https://www.outsystems.com/profile/5kda2s3k2u' }
+    ],
+    avatar: 'beatriz-sabino.jpg'
+  },
+  {
+    id: 25,
+    roles: ['mentor', 'collaborator'],
+    name: 'Selmira Fernandes',
+    company: '',
+    job: '',
+    social: [{ linkedin: 'https://www.linkedin.com/in/selmirafernandes/' }],
+    avatar: 'selmira.jpg'
   }
 ];
 
