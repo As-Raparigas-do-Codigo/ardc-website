@@ -40,105 +40,6 @@ import Constants from 'constants';
 //     }
 //   },
 //   {
-//     id: 2,
-//     title: 'Introdução à programação em Python',
-//     image: python,
-//     alt: 'Python workshop',
-//     description:
-//       'Temos o prazer de apresentar a primeira edição do ciclo de workshops de Python para Data Science. De acordo com a Havard Business Review Data Scientist é o trabalho mais sexy do seculo XXI. Não vais querer perder o workshop introdutório a nesta área (...)',
-//     descriptiveDate: 'Próxima Edição: 10 de Março (Sábado) das 10h às 12h',
-//     startingDate: '2022-03-10T10:00:00Z',
-//     endingDate: null,
-//     linkUrl: 'https://raparigasdocodigo.pt/atividades/',
-//     buttonUrl: 'https://raparigasdocodigo.pt/atividades/',
-//     descriptiveDuration: 'Longa Duração'
-//   },
-//   {
-//     id: 3,
-//     title: 'Como usar o GitHub como portfólio',
-//     image: gitportfolio,
-//     alt: 'GitHub como portfolio workshop',
-//     description:
-//       'Para muitos o perfil de GitHub é uma biblioteca de projetos pessoais. \
-//       Podemos usar como ferramenta de versionamento e alojamento do nosso trabalho, \
-//       mas também para publicar o código dos nossos projetos para outros developers e até possíveis empregadores poderem ver. \
-//       Não precisas de ter projetos enormes nem de muita complexidade para impressionar quem os visita, \
-//       por isso vamos ver como te podes destacar de entre os restantes developers!',
-//     descriptiveDate: null,
-//     startingDate: '2021-08-14T10:00:00Z',
-//     endingDate: null,
-//     linkUrl: 'https://raparigasdocodigo.pt/atividades/',
-//     buttonUrl: 'https://raparigasdocodigo.pt/atividades/',
-//     descriptiveDuration: 'Curta Duração'
-//   },
-//   {
-//     id: 4,
-//     title: 'Workshop de LinkedIn',
-//     image: linkedin,
-//     alt: 'LinkedIn workshop',
-//     description:
-//       'Hoje em dia ter um perfil de LinkedIn de qualidade é meio caminho andado para conseguir o nosso emprego de sonho, ou simplesmente começar a nossa aventura como developer. Por isso, iremos ver como podemos melhorar o nosso perfil, explorando os casos concretos das participantes. \
-//       Podes partilhar o teu perfil connosco e vamos-te dizer onde podes melhorá-lo de acordo com os teus objetivos.',
-//     descriptiveDate: '...',
-//     startingDate: '2021-08-05T10:00:00Z',
-//     endingDate: '2021-08-05T10:00:00Z',
-//     linkUrl: 'https://raparigasdocodigo.pt/atividades/',
-//     buttonUrl: 'https://raparigasdocodigo.pt/atividades/',
-//     descriptiveDuration: 'Curta Duração'
-//   },
-//   {
-//     id: 5,
-//     title: 'Workshop Git na vida real',
-//     image: gitvidareal,
-//     alt: 'Git na vida real, PRs e merge conflicts',
-//     description:
-//       'Vamos explorar o que são branches, como usar o Git em ambiente de cooperação e ver o que são pull requests e merges. \
-//       O uso de Git é importante quando trabalhamos sozinhas, mas é quando o usamos em equipa que \
-//       realmente começamos a ver todas as vantagens desta ferramenta. \
-//       Vais também aprender como lidar com conflitos, que parecem causar tantas dores de cabeça aos developers \
-//       quando aparecem.',
-//     descriptiveDate: null,
-//     startingDate: '2021-07-31T10:00:00Z',
-//     endingDate: null,
-//     linkUrl: 'https://raparigasdocodigo.pt/atividades/',
-//     buttonUrl: 'https://raparigasdocodigo.pt/atividades/',
-//     descriptiveDuration: 'Curta Duração'
-//   },
-//   {
-//     id: 6,
-//     title: 'Introdução às Tecnologias Web (Edição 3)',
-//     image: web3ed,
-//     alt: 'Introdução às Tecnologias Web',
-//     description:
-//       'Ao longo de 7 semanas, vais poder aprender a desenvolver um website desde o início \
-//       e publicá-lo online para que todos possamos ver o teu trabalho e teres o teu próprio cantinho na Internet. \
-//       Vais ficar a saber HTML, CSS e JavaScript!',
-//     descriptiveDate: null,
-//     startingDate: '2021-07-31T10:00:00Z',
-//     endingDate: null,
-//     linkUrl: 'https://raparigasdocodigo.pt/atividades/',
-//     buttonUrl: 'https://raparigasdocodigo.pt/atividades/',
-//     descriptiveDuration: 'Curta Duração'
-//   },
-//   {
-//     id: 7,
-//     title: 'Gestão de Carreira (Edição 1)',
-//     image: gestaocarreira1,
-//     alt: 'Workshop Gestão de Carreira (Edição 1)',
-//     description:
-//       'Uma carreira em Tech pode parecer algo assustador à primeira vista, \
-//       mas este workshop é mesmo para as desmistificar! \
-//       Vais perceber como procurar a vaga que pretendes, como te candidatares, \
-//       como são as entrevistas os Recursos Humanos e até as entrevistas técnicas! \
-//       Três sessões para esclareceres todas as tuas dúvidas.',
-//     descriptiveDate: null,
-//     startingDate: '2022-06-28T10:00:00Z',
-//     endingDate: null,
-//     linkUrl: 'https://raparigasdocodigo.pt/atividades/',
-//     buttonUrl: 'https://raparigasdocodigo.pt/atividades/',
-//     descriptiveDuration: 'Curta Duração'
-//   },
-//   {
 //     id: 8,
 //     title: 'Gestão de Carreira (Edição 2)',
 //     image: gestaocarreira2,
@@ -161,14 +62,27 @@ import Constants from 'constants';
 const Workshops = [
   {
     id: self.crypto.randomUUID(),
-    date: '2021-08-05',
-    title: 'Gestao Carreira',
+    date: '2022-06-28',
+    title: 'Workshop Gestão de Carreira',
     subtitle: '1a Edição',
     image: '',
     alt: '',
     description: 
-      'Workshop composto de 3 sessões, sobre partilha de ferramentas \
-      e dicas para preparação para procura de emprego, \
+      'Workshop composto de 3 sessões, sobre partilha de ferramentas e \
+      dicas para preparação para procura de emprego, \
+      esclarecimento do processo de recrutamento e de entrevistas técnicas.',
+    category: Constants.Categories.WORKSHOP
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2022-10-25',
+    title: 'Workshop Gestão de Carreira',
+    subtitle: '2a Edição',
+    image: '',
+    alt: '',
+    description: 
+      'Workshop composto de 3 sessões, sobre partilha de ferramentas e \
+      dicas para preparação para procura de emprego, \
       esclarecimento do processo de recrutamento e de entrevistas técnicas.',
     category: Constants.Categories.WORKSHOP
   },
@@ -191,9 +105,9 @@ const Workshops = [
     subtitle: '1a Edição',
     image: '',
     alt: '',
-    description: 'Exploração de como usar a ferramenta Git em ambiente de colaboração \
-     e ver o que são pull requests, branches e merges, \
-     como também aprender como lidar com conflitos.',
+    description: 'Exploração de como usar a ferramenta Git em ambiente \
+    de colaboração e ver o que são pull requests, branches e merges, \
+    como também aprender como lidar com conflitos.',
     category: Constants.Categories.WORKSHOP
   },
   {
@@ -203,8 +117,8 @@ const Workshops = [
     subtitle: '1a Edição',
     image: '',
     alt: '',
-    description: 'Neste workshop exploramos a criação de um website \
-    de portfólio com git e alojado através do GitHub Pages.',
+    description: 'Neste workshop exploramos a criação de um website de portfólio \
+    com git e alojado através do GitHub Pages.',
     category: Constants.Categories.WORKSHOP
   },
   {
@@ -301,6 +215,42 @@ const Workshops = [
     description: 'Workshop de introdução à linguagem Python. \
     Exploração de conceitos básicos de lógica e programação, \
     assim como de estruturas de dados simples.',
+    category: Constants.Categories.WORKSHOP
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2022-04-02',
+    title: 'Workshop de Introdução a python para data science',
+    subtitle: '1a Edição',
+    image: '',
+    alt: '',
+    description: 'Workshop de introdução ao estudo de Data Science utilizando a linguagem Python. \
+    Conceitos básicos de análise, interpretação e processamento de dados. \
+    Utilização de modelos para processamento de dados.',
+    category: Constants.Categories.WORKSHOP
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2022-09-03',
+    title: 'Workshop de Introdução a React',
+    subtitle: '1a Edição',
+    image: '',
+    alt: '',
+    description: 'Workshop de introdução ao desenvolvimento web utilizando React. \
+    Construção de uma aplicação, construção e reutilização de componentes. \
+    Páginas dinâmicas, dependências e inclusão de estilos.',
+    category: Constants.Categories.WORKSHOP
+  }
+  {
+    id: self.crypto.randomUUID(),
+    date: '2022-09-01',
+    title: 'Certificação Outsystems',
+    subtitle: '',
+    image: '',
+    alt: '',
+    description: 'Realização de uma Devschool e \
+    respectivo exame de certificação, em parceria com a Outsystems. \
+    Esta turma foi exclusivamente constituída por membros da comunidade.',
     category: Constants.Categories.WORKSHOP
   }
 ];
