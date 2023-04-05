@@ -11,14 +11,12 @@ const Events = [
     id: self.crypto.randomUUID(),
     date: '2022-03-26',
     title: 'Tech Community Get-Together',
-    subtitle: '42 Lisboa',
+    subtitle: '42 lisboa',
     image: techCommunityGetTogether,
     category: Constants.Categories.EVENT,
     alt: 'Evento presencial organizado por nós',
     description:
-      'Um encontro organizado por nós aberto à comunidade na escola 42 Lisboa que envolveu cerca de 60 pessoas, \
-      com sessões com oradores e uma tertúlia entre outras comunidades portuguesas \
-      com foco em apoiar Mulheres em Tecnologia.'
+      'Um evento organizado por nós aberto à comunidade na escola 42 Lisboa que envolveu cerca de 60 pessoas.'
   },
   {
     id: self.crypto.randomUUID(),
@@ -51,15 +49,13 @@ const Events = [
   },
   {
     id: self.crypto.randomUUID(),
-    date: '2022-11-19',
-    title: 'Evento Changemakers - Hackathon We4Change',
-    subtitle: '2a Edição do We4Change em parceria com Zero em Almada',
-    image: we4changeAlmada,
+    date: '2022-10-01',
+    title: 'Evento Changemakers 1a Edição',
+    subtitle: 'Hackathon we4change em parceria com Zero em Resende',
+    image: we4changeResende,
     alt: 'Participação no projeto We4Change',
     description:
-      'Hackathon presencial em Almada, no qual os participantes trabalham para resolver problemas num curto espaço de tempo. \
-      Durante dois dias foram realizados workshops temáticos com ferramentas para desenvolverem ideias e projetos \
-      tecnológicos numa temática relacionada com as Alterações Climáticas!',
+      'Participámos no evento Changemakers - hackathoon We4Change (presencial) - juntamente com Zero',
     category: Constants.Categories.EVENT,
     link: {
       url: 'https://www.cm-almada.pt/viver/juventude/changemakers-almada-2a-edicao',
@@ -69,42 +65,15 @@ const Events = [
   {
     id: self.crypto.randomUUID(),
     date: '2022-07-23',
-    title: 'Evento Changemakers - Hackathon We4Change',
-    subtitle: '1a Edição do We4Change em parceria com Zero em Resende',
+    title: 'Changemakers 2a Edição',
+    subtitle: 'Hackathon we4change em parceria com Zero em Almada',
     link: {
       url: 'https://cm-resende.pt/noticias/evento-changemakers-23-e-24-de-julho/',
       type: Constants.LinkType.ARTICLE
     },
-    image: we4changeResende,
+    image: we4changeAlmada,
     alt: 'Participação no projeto We4Change',
-    description: 'Hackathon presencial em Resende, no qual os participantes trabalham \
-    para resolver problemas num curto espaço de tempo. Durante dois dias foram \
-    realizados workshops temáticos com ferramentas para desenvolverem ideias e projetos \
-    tecnológicos numa temática relacionada com as Alterações Climáticas!',
-    category: Constants.Categories.EVENT
-  },
-  {
-    id: self.crypto.randomUUID(),
-    date: '2021-10-01',
-    title: 'Hacktoberfest 2021',
-    subtitle: 'Participamos no evento virtual Hacktoberfest durante o mês de Outubro',
-    image: '',
-    alt: 'Participação no evento virtual Hacktoberfest',
-    description: 'Participação no evento Hacktoberfest, durante o mês de Outubro, através da \
-    criação de tarefas para o projeto "jogo das profissões" e através de mentoria às alunas \
-    para contribuirem para o projeto de código aberto.',
-    category: Constants.Categories.EVENT
-  },
-  {
-    id: self.crypto.randomUUID(),
-    date: '2022-10-01',
-    title: 'Hacktoberfest 2022',
-    subtitle: 'Participamos no evento virtual Hacktoberfest durante o mês de Outubro',
-    image: '',
-    alt: 'Participação no evento virtual Hacktoberfest',
-    description: 'Participação no evento Hacktoberfest, durante o mês de Outubro, através da \
-    criação de tarefas para o projeto "jogo das profissões" e através de mentoria às alunas \
-    para contribuirem para o projeto de código aberto.',
+    description: 'Participámos no evento Changemakers - hackathoon We4Change (presencial).',
     category: Constants.Categories.EVENT
   }
 ];
