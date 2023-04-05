@@ -190,7 +190,7 @@ const Workshops = [
     Construção de uma aplicação, construção e reutilização de componentes. \
     Páginas dinâmicas, dependências e inclusão de estilos.',
     category: Constants.Categories.WORKSHOP
-  }
+  },
   {
     id: self.crypto.randomUUID(),
     date: '2022-09-01',
