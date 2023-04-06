@@ -11,7 +11,7 @@ const TeamData = [
       { medium: 'https://medium.com/@miriam.santos' },
       { other: 'https://miriamspsantos.github.io/' }
     ],
-    avatar: 'miriam.JPG'
+    avatar: 'miriam.jpg'
   },
   {
     id: 2,
@@ -236,7 +236,7 @@ const TeamData = [
     company: 'Talkdesk',
     job: 'Software Engineer',
     social: [
-      { linkedin: 'https://www.linkedin.com/in/inespsilvestre/' },
+      { linkedin: 'https://www.linkedin.com/in/jessicalemos9/' },
       { github: 'https://github.com/jessicalemos ' },
       { other: 'https://jessicalemos.github.io/' }
     ],
