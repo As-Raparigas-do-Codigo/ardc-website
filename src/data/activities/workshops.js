@@ -202,6 +202,30 @@ const Workshops = [
     respectivo exame de certificação, em parceria com a Outsystems. \
     Esta turma foi exclusivamente constituída por membros da comunidade.',
     category: Constants.Categories.WORKSHOP
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2021-08-05',
+    title: 'Workshop LinkedIn',
+    subtitle: '1a Edição',
+    image: '',
+    alt: '',
+    description: 'Workshop composto de 2 sessões: uma sessão sobre como melhorar o perfil de LinkedIn \
+    e a presença na plataforma; uma segunda sessão com revisão \
+    e conselhos sobre como melhorar os perfis das participantes.',
+    category: Constants.Categories.WORKSHOP
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2021-12-09',
+    title: 'Workshop LinkedIn',
+    subtitle: '2a Edição',
+    image: '',
+    alt: '',
+    description: 'Workshop composto de 2 sessões: uma sessão sobre como melhorar o perfil de LinkedIn \
+    e a presença na plataforma; uma segunda sessão com revisão \
+    e conselhos sobre como melhorar os perfis das participantes.',
+    category: Constants.Categories.WORKSHOP
   }
 ];
 
