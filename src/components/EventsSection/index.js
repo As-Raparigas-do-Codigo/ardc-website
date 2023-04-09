@@ -9,7 +9,9 @@ import './events-section.scss';
 import { Row, Container, Col } from 'react-bootstrap';
 
 function EventsSection({ translation }) {
-  const events = activities.slice(0, 8).map((item) => <EventCard item={item} key={item.id} />);
+  const events = activities
+    .slice(0, 8)
+    .map((item) => <EventCard inCarousel item={item} key={item.id} />);
 
   return (
     <Container className="mt-5 py-md-5 event-section">
