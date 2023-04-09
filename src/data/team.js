@@ -186,9 +186,9 @@ const TeamData = [
     company: 'Web Summit',
     job: 'Software Engineer',
     social: [
-      { linkedin: 'https://www.linkedin.com/in/itmm92/' },
-      { instagram: 'https://instagram.com/nenas.analog' },
-      { medium: 'https://ines-matos.medium.com/' },
+      { linkedin: 'https://www.linkedin.com/in/inesdematos/' },
+      { instagram: 'https://instagram.com/nenas.phot' },
+      { medium: 'https://inesdematos.medium.com/' },
       { github: 'https://github.com/toothlesspanda' }
     ],
     avatar: 'inesmatos.png'
