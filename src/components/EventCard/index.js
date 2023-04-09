@@ -5,7 +5,7 @@ import logo from 'assets/logo.png';
 import LinkArrow from 'components/LinkArrow';
 import './event-card.scss';
 
-function EventCard({ item }) {
+function EventCard({ item, inCarousel = false }) {
   const [showFullDescription, setShowFullDescription] = useState(false);
 
   const badgeColor = (item, isDate = false) => {
@@ -56,7 +56,9 @@ function EventCard({ item }) {
       {showFullDescription && (
         <div
           onMouseLeave={() => setShowFullDescription(false)}
-          className="event-card__fullDescription">
+          className={
+            inCarousel ? 'event-card__fullDescription' : 'event-card__fullDescription mb-0'
+          }>
           {item.description}
         </div>
       )}
