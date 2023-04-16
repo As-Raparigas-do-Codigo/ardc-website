@@ -26,13 +26,10 @@
   z-index: 10;
   top:0;
 
-  background: linear-gradient(to bottom, rgba(0,8,99,0.8) 30%, rgba(255,255,255,0.1) 100%);
-  // background-color: rgba(0,8,99,0.7);
-  // @media (max-width: $lg) {
-  //   margin-bottom: 30px;
-  // }
+  //background: linear-gradient(to bottom, rgba(0,8,99,0.8) 30%, rgba(255,255,255,0.1) 100%);
+  background-color: rgba(0,8,99,0.7);
 
-   margin: 15px;
+  margin: 15px;
 }
 
 .event-card__img {

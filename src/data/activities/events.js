@@ -1,6 +1,6 @@
-import aubay from '../../assets/events/aubay-mulheres-tecnologia.jpeg';
+// import aubay from '../../assets/events/aubay-mulheres-tecnologia.jpeg';
 import techCommunityGetTogether from '../../assets/events/tech-community-get-together.jpeg';
-import geekGirlsPortugalRumoIT from '../../assets/events/g2pt93-geek-girls-portugal.jpeg';
+// import geekGirlsPortugalRumoIT from '../../assets/events/g2pt93-geek-girls-portugal.jpeg';
 import we4changeResende from '../../assets/events/we4changeResende.jpeg';
 import we4changeAlmada from '../../assets/events/we4changeAlmada.jpeg';
 
@@ -11,51 +11,57 @@ const Events = [
     id: self.crypto.randomUUID(),
     date: '2022-03-26',
     title: 'Tech Community Get-Together',
-    subtitle: '42 lisboa',
+    subtitle: '42 Lisboa',
     image: techCommunityGetTogether,
     category: Constants.Categories.EVENT,
     alt: 'Evento presencial organizado por nós',
     description:
-      'Um evento organizado por nós aberto à comunidade na escola 42 Lisboa que envolveu cerca de 60 pessoas.'
+      'Primeiro encontro realizado pelo projeto, aberto ao público e \
+      com o apoio de várias entidades.  Realizou-se na escola 42 Lisboa, \
+      com sessões com oradores e uma tertúlia entre várias comunidades portuguesas \
+      com foco em desmistificar a presença de mulheres nas áreas tecnológicas.'
   },
+  // {
+  //   id: self.crypto.randomUUID(),
+  //   date: '2021-05-11',
+  //   title: '93º Geek Girls Portugal',
+  //   subtitle: 'Rumo a uma carreira de TI',
+  //   image: geekGirlsPortugalRumoIT,
+  //   category: Constants.Categories.EVENT,
+  //   alt: 'Evento online organizado por Geek Girls Portugal',
+  //   description:
+  //     'Participamos no evento 93º Geek Girls Portugal para discutir sobre Rumo a uma carreira em TI.',
+  //   link: {
+  //     url: 'https://www.youtube.com/watch?v=f7G9geDLWSw',
+  //     type: Constants.LinkType.VIDEO
+  //   }
+  // },
+  // {
+  //   id: self.crypto.randomUUID(),
+  //   date: '2021-03-09',
+  //   title: 'Webinar Aubay Portugal',
+  //   subtitle: 'Women in Tech',
+  //   image: aubay,
+  //   category: Constants.Categories.EVENT,
+  //   alt: 'Webinar Aubay Portugal - Women in Tech',
+  //   description: 'Estivemos presentes no webinar da Aubay Portugal sobre mulheres em tecnologia.',
+  //   link: {
+  //     url: 'https://www.youtube.com/watch?v=ccV9BrBjz2s',
+  //     type: Constants.LinkType.VIDEO
+  //   }
+  // },
   {
     id: self.crypto.randomUUID(),
-    date: '2021-05-11',
-    title: '93º Geek Girls Portugal',
-    subtitle: 'Rumo a uma carreira de TI',
-    image: geekGirlsPortugalRumoIT,
-    category: Constants.Categories.EVENT,
-    alt: 'Evento online organizado por Geek Girls Portugal',
-    description:
-      'Participamos no evento 93º Geek Girls Portugal para discutir sobre Rumo a uma carreira em TI.',
-    link: {
-      url: 'https://www.youtube.com/watch?v=f7G9geDLWSw',
-      type: Constants.LinkType.VIDEO
-    }
-  },
-  {
-    id: self.crypto.randomUUID(),
-    date: '2021-03-09',
-    title: 'Webinar Aubay Portugal',
-    subtitle: 'Women in Tech',
-    image: aubay,
-    category: Constants.Categories.EVENT,
-    alt: 'Webinar Aubay Portugal - Women in Tech',
-    description: 'Estivemos presentes no webinar da Aubay Portugal sobre mulheres em tecnologia.',
-    link: {
-      url: 'https://www.youtube.com/watch?v=ccV9BrBjz2s',
-      type: Constants.LinkType.VIDEO
-    }
-  },
-  {
-    id: self.crypto.randomUUID(),
-    date: '2022-10-01',
-    title: 'Evento Changemakers 1a Edição',
-    subtitle: 'Hackathon we4change em parceria com Zero em Resende',
+    date: '2022-07-23',
+    title: 'Hackathon WE4CHANGE',
+    subtitle: 'Resende',
     image: we4changeResende,
     alt: 'Participação no projeto We4Change',
     description:
-      'Participámos no evento Changemakers - hackathoon We4Change (presencial) - juntamente com Zero',
+      'Evento no qual os participantes trabalham para resolver problemas num curto espaço de tempo. \
+      Durante dois dias, os participantes realizaram vários workshops \
+      que os dotaram de conhecimentos para desenvolverem projetos \
+      com uma forte componente tecnológica, na temática das Alterações Climáticas.',
     category: Constants.Categories.EVENT,
     link: {
       url: 'https://www.cm-almada.pt/viver/juventude/changemakers-almada-2a-edicao',
@@ -64,16 +70,85 @@ const Events = [
   },
   {
     id: self.crypto.randomUUID(),
-    date: '2022-07-23',
-    title: 'Changemakers 2a Edição',
-    subtitle: 'Hackathon we4change em parceria com Zero em Almada',
+    date: '2022-11-19',
+    title: 'Hackathon WE4CHANGE',
+    subtitle: 'Almada',
     link: {
-      url: 'https://cm-resende.pt/noticias/evento-changemakers-23-e-24-de-julho/',
+      url: 'https://www.cm-almada.pt/viver/juventude/changemakers-almada-2a-edicao',
       type: Constants.LinkType.ARTICLE
     },
     image: we4changeAlmada,
     alt: 'Participação no projeto We4Change',
-    description: 'Participámos no evento Changemakers - hackathoon We4Change (presencial).',
+    description: 'Evento no qual os participantes trabalham para resolver \
+    problemas num curto espaço de tempo. Durante dois dias, os participantes \
+    realizaram vários workshops que os dotaram de conhecimentos para desenvolverem projetos \
+    com uma forte componente tecnológica, na temática da Energia.',
+    category: Constants.Categories.EVENT
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2021-06-01',
+    title: 'Jogo das Profissões',
+    subtitle: 'dia da criança',
+    link: {
+      url: 'https://www.womenintech.pt/o-jogo-das-profissoes',
+      type: Constants.LinkType.ARTICLE
+    },
+    image: '',
+    alt: 'Participação no projeto We4Change',
+    description: 'Evento no qual os participantes trabalham para resolver \
+    problemas num curto espaço de tempo. Durante dois dias, os participantes \
+    realizaram vários workshops que os dotaram de conhecimentos para desenvolverem projetos \
+    com uma forte componente tecnológica, na temática da Energia.',
+    category: Constants.Categories.EVENT
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2021-10-01',
+    title: 'Hacktoberfest 2021',
+    subtitle: '',
+    link: {
+      url: 'https://hacktoberfest.com/',
+      type: Constants.LinkType.ARTICLE
+    },
+    image: '',
+    alt: 'Participação no projeto We4Change',
+    description: 'Participação no evento Hacktoberfest, que decorre durante o mês de Outubro. \
+    Criação de tarefas associadas ao “Jogo das profissões” que os membros da comunidade foram desafiadas \
+    a completar com a orientação de mentores da equipa.',
+    category: Constants.Categories.EVENT
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2021-09-01',
+    title: 'Noite dos Investigadores',
+    subtitle: 'Coimbra',
+    link: {
+      url: 'https://www.uc.pt/iii/nei/nei-2021/',
+      type: Constants.LinkType.ARTICLE
+    },
+    image: '',
+    alt: '',
+    description: 'Membros da nossa equipa participaram na “A Noite Europeia dos Investigadores (NEI)” Coimbra 2021, \
+    que foi mais uma vez organizada pelo Instituto de Investigação Interdisciplinar da Universidade de Coimbra (IIIUC). \
+    Esta edição contou com cerca de 1800 visitantes.',
+    category: Constants.Categories.EVENT
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2022-04-01',
+    title: 'Webinar ISCAP',
+    subtitle: 'Mulheres na tecnologia',
+    link: {
+      url: 'https://directionemployment.org/en/about-the-organisations',
+      type: Constants.LinkType.ARTICLE
+    },
+    image: '',
+    alt: '',
+    description: 'Webinars integrados no projecto “Direction Employment” \
+    cujo objectivo é promover a formação a grupos de cidadãos \
+    vulneráveis de forma a melhorar as suas competências profissionais \
+    para facilitar o seu crescimento a nível profissional.',
     category: Constants.Categories.EVENT
   }
 ];
