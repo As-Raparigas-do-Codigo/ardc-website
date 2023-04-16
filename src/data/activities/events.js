@@ -1,8 +1,10 @@
-// import aubay from '../../assets/events/aubay-mulheres-tecnologia.jpeg';
-import techCommunityGetTogether from '../../assets/events/tech-community-get-together.jpeg';
-// import geekGirlsPortugalRumoIT from '../../assets/events/g2pt93-geek-girls-portugal.jpeg';
-import we4changeResende from '../../assets/events/we4changeResende.jpeg';
-import we4changeAlmada from '../../assets/events/we4changeAlmada.jpeg';
+import techCommunityGetTogether from '../../assets/events/get-together.png';
+import we4changeResende from '../../assets/events/we4change1.png';
+import we4changeAlmada from '../../assets/events/we4change2.png';
+import profissoes from '../../assets/events/profissoes.png';
+import hacktober from '../../assets/events/hacktober.png';
+import nei from '../../assets/events/nei.png';
+import iscap from '../../assets/events/iscap.png';
 
 import Constants from 'constants';
 
@@ -79,7 +81,8 @@ const Events = [
     },
     image: we4changeAlmada,
     alt: 'Participação no projeto We4Change',
-    description: 'Evento no qual os participantes trabalham para resolver \
+    description:
+      'Evento no qual os participantes trabalham para resolver \
     problemas num curto espaço de tempo. Durante dois dias, os participantes \
     realizaram vários workshops que os dotaram de conhecimentos para desenvolverem projetos \
     com uma forte componente tecnológica, na temática da Energia.',
@@ -94,9 +97,10 @@ const Events = [
       url: 'https://www.womenintech.pt/o-jogo-das-profissoes',
       type: Constants.LinkType.ARTICLE
     },
-    image: '',
+    image: profissoes,
     alt: 'Participação no projeto We4Change',
-    description: 'Evento no qual os participantes trabalham para resolver \
+    description:
+      'Evento no qual os participantes trabalham para resolver \
     problemas num curto espaço de tempo. Durante dois dias, os participantes \
     realizaram vários workshops que os dotaram de conhecimentos para desenvolverem projetos \
     com uma forte componente tecnológica, na temática da Energia.',
@@ -111,9 +115,10 @@ const Events = [
       url: 'https://hacktoberfest.com/',
       type: Constants.LinkType.ARTICLE
     },
-    image: '',
+    image: hacktober,
     alt: 'Participação no projeto We4Change',
-    description: 'Participação no evento Hacktoberfest, que decorre durante o mês de Outubro. \
+    description:
+      'Participação no evento Hacktoberfest, que decorre durante o mês de Outubro. \
     Criação de tarefas associadas ao “Jogo das profissões” que os membros da comunidade foram desafiadas \
     a completar com a orientação de mentores da equipa.',
     category: Constants.Categories.EVENT
@@ -127,9 +132,10 @@ const Events = [
       url: 'https://www.uc.pt/iii/nei/nei-2021/',
       type: Constants.LinkType.ARTICLE
     },
-    image: '',
+    image: nei,
     alt: '',
-    description: 'Membros da nossa equipa participaram na “A Noite Europeia dos Investigadores (NEI)” Coimbra 2021, \
+    description:
+      'Membros da nossa equipa participaram na “A Noite Europeia dos Investigadores (NEI)” Coimbra 2021, \
     que foi mais uma vez organizada pelo Instituto de Investigação Interdisciplinar da Universidade de Coimbra (IIIUC). \
     Esta edição contou com cerca de 1800 visitantes.',
     category: Constants.Categories.EVENT
@@ -143,9 +149,10 @@ const Events = [
       url: 'https://directionemployment.org/en/about-the-organisations',
       type: Constants.LinkType.ARTICLE
     },
-    image: '',
+    image: iscap,
     alt: '',
-    description: 'Webinars integrados no projecto “Direction Employment” \
+    description:
+      'Webinars integrados no projecto “Direction Employment” \
     cujo objectivo é promover a formação a grupos de cidadãos \
     vulneráveis de forma a melhorar as suas competências profissionais \
     para facilitar o seu crescimento a nível profissional.',
