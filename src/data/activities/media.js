@@ -1,4 +1,4 @@
-import forbesPortugal from '../../assets/events/forbes-portugal.png';
+import forbesPortugal from '../../assets/events/forbes.png';
 import apdc from '../../assets/events/apdc.jpeg';
 
 import Constants from 'constants';
