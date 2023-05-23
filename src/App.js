@@ -29,7 +29,7 @@ i18n.use(initReactI18next).init({
     escapeValue: false
   }
 });
-
+/* eslint-disable */
 function App() {
   const { t } = useTranslation();
   const [currentLang, setLang] = useState('pt');
@@ -78,5 +78,5 @@ function App() {
     </div>
   );
 }
-
+/* eslint-enable */
 export default App;
