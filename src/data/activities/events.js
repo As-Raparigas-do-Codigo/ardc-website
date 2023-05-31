@@ -157,6 +157,17 @@ const Events = [
     vulneráveis de forma a melhorar as suas competências profissionais \
     para facilitar o seu crescimento a nível profissional.',
     category: Constants.Categories.EVENT
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2023-05-23',
+    title: 'Women in Tech Summit',
+    subtitle: '',
+    image: iscap,
+    alt: '',
+    description:
+      'Evento organizado pela comunidade Women In Tech em que mães e filhas foram convidadas a participar de uma série de apresentações e actividades com o objectivo de introduzir os mais novos ao mundo das tecnologias. As “Raparigas do Código” fizeram parte deste evento com um workshop onde estiveram presentes crianças entre os 4 e os 15 anos.',
+    category: Constants.Categories.EVENT
   }
 ];
 
