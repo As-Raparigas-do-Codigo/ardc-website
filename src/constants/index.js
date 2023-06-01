@@ -11,7 +11,8 @@ const Categories = Object.freeze({
 const LinkType = Object.freeze({
   ARTICLE: { label: 'artigo', color: 'blue' },
   VIDEO: { label: 'video', color: 'blue' },
-  FILE: { label: 'ficheiro', color: 'blue' }
+  FILE: { label: 'ficheiro', color: 'blue' },
+  SOCIAL: { label: 'social', color: 'blue' }
 });
 
 export default {

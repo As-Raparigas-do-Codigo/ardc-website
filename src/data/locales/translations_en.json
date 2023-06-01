@@ -129,5 +129,6 @@
     "Categories-media": "media",
     "LinkType-article": "article",
     "LinkType-video": "video",
-    "LinkType-file": "file"
+    "LinkType-file": "file",
+    "LinkType-social": "social"
 }

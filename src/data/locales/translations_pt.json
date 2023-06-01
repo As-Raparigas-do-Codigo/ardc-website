@@ -133,5 +133,6 @@
     "Categories-media": "media",
     "LinkType-article": "artigo",
     "LinkType-video": "video",
-    "LinkType-file": "ficheiro"
+    "LinkType-file": "ficheiro",
+    "LinkType-social": "social"
 }
