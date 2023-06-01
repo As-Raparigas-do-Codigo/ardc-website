@@ -102,6 +102,13 @@ function NavBarComponent({ translation }) {
                 className="text-center">
                 {translation('ActivitiesPage-PageName')}
               </NavLink>
+              <NavLink
+                location={location}
+                to={Constants.Routes.Partners}
+                onSelect={onSelect}
+                className="text-center">
+                {translation('PartnersPage-PageName')}
+              </NavLink>
               <NavDropdown
                 title={translation('AboutLabel')}
                 id="navbarScrollingDropdown"

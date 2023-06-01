@@ -91,6 +91,7 @@
     "NotFound404-Title": "Oops! Página não encontrada...",
     "NotFound404-Subtitle": "Parece que a página que estás à procura está indisponível ou não existe.",
     "NotFound404-Button": "Ir para a Página Inicial",
+    "PartnersPage-PageName": "Parceiros",
     "PrivacyPolicyPage-PageName": "Política de Privacidade",
     "PrivacyPolicyPage-Title": "Política de Cookies As Raparigas do Código",
     "PrivacyPolicyPage-Description": "",
@@ -132,5 +133,6 @@
     "Categories-media": "media",
     "LinkType-article": "artigo",
     "LinkType-video": "video",
-    "LinkType-file": "ficheiro"
+    "LinkType-file": "ficheiro",
+    "LinkType-social": "social"
 }
