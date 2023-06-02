@@ -158,7 +158,7 @@ const Events = [
     id: self.crypto.randomUUID(),
     date: '2021-07-17',
     title: 'Best Digital Inclusion Project Started by a Woman',
-    subtitle: 'PWIT Awards 2012',
+    subtitle: 'PWIT Awards 2021',
     image: '',
     alt: '',
     description:

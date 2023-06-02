@@ -1,16 +1,73 @@
 import React from 'react';
 import { Row, Container, Col } from 'react-bootstrap';
-import Constants from 'constants';
 import LinkButton from 'components/LinkButton';
-import SocialLinks from 'components/SocialLinks';
-import Icon from 'components/Icon';
-import FeatureFlag from 'components/FeatureFlag';
+// import Carousel from 'components/Carousel';
+
 import '../footer.scss';
+
+const listAwards = (translation) => {
+  return [
+    <Col className="mt-5" key={1}>
+      <Row>
+        <Col className={'align-self-center'}>
+          <img
+            width={255}
+            className="rounded mx-auto d-block"
+            alt=""
+            src={require('assets/award-logo.png')}
+          />
+        </Col>
+        <Col>
+          <Row>
+            <h4>{translation('Footer-AwardsSection-Subtitle')}</h4>
+          </Row>
+          <Row>
+            <p>{translation('Footer-AwardsSection-Description')}</p>
+          </Row>
+          <Row>
+            <p>
+              <LinkButton href="https://www.youtube.com/watch?v=5ku99qSbZOI" target="blank">
+                {translation('Footer-AwardsSection-Button')}
+              </LinkButton>
+            </p>
+          </Row>
+        </Col>
+      </Row>
+    </Col>,
+    <Col className="mt-5" key={2}>
+      <Row>
+        <Col className={'align-self-center'}>
+          <img
+            width={255}
+            className="rounded mx-auto d-block"
+            alt=""
+            src={require('assets/apdc.png')}
+          />
+        </Col>
+        <Col>
+          <Row>
+            <h4>Prémio Cidades e Territórios do Futuro 2023</h4>
+          </Row>
+          <Row>
+            <p>Vencedoras nas categorias “Igualdade e Inclusão” e “Qualificações”.</p>
+          </Row>
+          <Row>
+            <p>
+              <LinkButton href="https://youtu.be/8VHslZ4dYWM?t=532" target="blank">
+                {translation('Footer-AwardsSection-Button')}
+              </LinkButton>
+            </p>
+          </Row>
+        </Col>
+      </Row>
+    </Col>
+  ];
+};
 
 const Awards = ({ translation }) => {
   return (
-    <Container id="footer" className="info padding-top-bottom-medium align-center">
-      <Row>
+    <Container id="footer" className="info padding-top-medium align-center">
+      {/* <Row>
         <Col>
           <img className="rounded mx-auto d-block" alt="" src={require('assets/award-logo.png')} />
         </Col>
@@ -34,71 +91,16 @@ const Awards = ({ translation }) => {
             </p>
           </Row>
         </Col>
+      </Row> */}
+      <Row>
+        <Col className="text-center">
+          <span className="text-secondary-color text-700-weight text-center">
+            {translation('Footer-AwardsSection-Title')}
+          </span>
+        </Col>
       </Row>
+      <Row>{listAwards(translation)}</Row>
       <hr className={'mt-5'} />
-      <Row
-        className={'mt-5 justify-content-md-center justify-content-lg-center'}
-        id="middle-footer">
-        <Col sm={12} md={6} lg={4} className={'align-content-center'}>
-          <h4>{translation('RdCLabel')}</h4>
-          <p className={'w-75'}>{translation('Footer-WhoWeAreLabel')}</p>
-          <p>
-            <Icon name={'email'} link={'#'} />
-            <a href={`mailto:${Constants.Contacts.Email}`}>{Constants.Contacts.Email}</a>
-          </p>
-        </Col>
-        <Col sm={12} md={6} lg={2}>
-          <h4>O Projecto</h4>
-          <ul>
-            <FeatureFlag name="show_colaboration">
-              <li>
-                <a href={Constants.Routes.Collaborate}>{'Quero Colaborar !'}</a>
-              </li>
-            </FeatureFlag>
-            <li>
-              <a href={Constants.Routes.Community}>{translation('CommunityPage-PageName')}</a>
-            </li>
-            <li>
-              <a href={Constants.Routes.Activities}>{translation('ActivitiesPage-PageName')}</a>
-            </li>
-            <li>
-              <a href={Constants.Routes.Partners}>{translation('PartnersPage-PageName')}</a>
-            </li>
-            <li>
-              <a href={Constants.Routes.About}>{translation('AboutLabel')}</a>
-            </li>
-            <li>
-              <a href={Constants.Routes.Contacts}>{translation('ContactsPage-PageName')}</a>
-            </li>
-          </ul>
-        </Col>
-        <Col sm={12} md={6} lg={4}>
-          <Row>
-            <Col sm={12} md={12} lg={12}>
-              <span className="text-center">
-                <SocialLinks className="text-center" translation={translation} />
-              </span>
-            </Col>
-
-            <Col sm={12} md={12} lg={12}>
-              <p className="text-center">
-                <a href={Constants.Routes.PrivacyPolicy}>
-                  {translation('PrivacyPolicyPage-PageName')}
-                </a>
-              </p>
-            </Col>
-            <Col sm={12} md={12} lg={12}>
-              <p className="text-center">
-                Copyright ™ {new Date().getFullYear()} As Raparigas do Código.
-                <br />
-                All Rights Reserved
-              </p>
-            </Col>
-            <Col></Col>
-          </Row>
-        </Col>
-      </Row>
-      {/* <hr /> */}
     </Container>
   );
 };
