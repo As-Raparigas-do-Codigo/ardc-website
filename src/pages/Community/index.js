@@ -11,11 +11,6 @@ const CommunityInfoSection = ({ translation }) => {
       <Row>
         <h6 className="mb-2">{translation('CommunityPage-Title')}</h6>
         <h2 className="mb-2">{translation('CommunityPage-Subtitle')}</h2>
-        {/* <p>
-          A nossa comunidade está desenhada para te ajudar a trilhar o teu caminho no mundo da
-          Tecnologia! Nela poderás encontrar uma equipa dedicada a apoiar o teu percurso, amigas com
-          os mesmos interesses e imensos recursos e oportunidades interessantes.
-        </p> */}
         <h5>Comunidade e Networking</h5>
         <p>
           Vais encontrar um espaço seguro e encorajador onde dar os primeiros passos na Tecnlogia 
