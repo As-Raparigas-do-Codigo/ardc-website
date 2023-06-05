@@ -3,6 +3,7 @@ import CommunityForm from 'components/Forms/CommunityForm';
 import { Container, Col, Row } from 'react-bootstrap';
 import Constants from 'constants';
 import PageLayout from 'components/PageLayout';
+import LinkArrow from 'components/LinkArrow';
 
 const CommunityInfoSection = ({ translation }) => {
   return (
@@ -10,32 +11,36 @@ const CommunityInfoSection = ({ translation }) => {
       <Row>
         <h6 className="mb-2">{translation('CommunityPage-Title')}</h6>
         <h2 className="mb-2">{translation('CommunityPage-Subtitle')}</h2>
-        <p>
+        {/* <p>
           A nossa comunidade está desenhada para te ajudar a trilhar o teu caminho no mundo da
           Tecnologia! Nela poderás encontrar uma equipa dedicada a apoiar o teu percurso, amigas com
           os mesmos interesses e imensos recursos e oportunidades interessantes.
-        </p>
+        </p> */}
         <h5>Comunidade e Networking</h5>
         <p>
-          Vais encontrar um espaço seguro e encorajador onde dar os primeiros passos na Tecnlogia e
-          Programação e conhecer muitas raparigas e mulheres que partilham os teus objectivos!
+          Vais encontrar um espaço seguro e encorajador onde dar os primeiros passos na Tecnlogia 
+          e Programação e conhecer muitas raparigas e mulheres que partilham os teus objectivos!
         </p>
-        <h5>Mentoria e Orientação </h5>
+        <h5>Mentoria e Orientação</h5>
         <p>
-          Poderás entrar em contacto com qualquer um dos nossos mentores para iniciares um processo
-          de mentoria: em grupo ou individual.
+          Temos uma equipa de profissionais ligados a várias áreas das TIs disponíveis 
+          para te guiar e ajudar sempre que precisares! Poderás também entrar em contacto 
+          com qualquer um dos nossos mentores para iniciares um processo de mentoria: em grupo ou individual.
         </p>
-        <h5>Recursos e Oportunidades </h5>
+        <h5>Recursos e Oportunidades</h5>
         <p>
-          Partilharemos contigo recursos e materiais de estudo, dicas e vagas de emprego e
-          oportunidades de eventos, estágios e formações!
+          Partilharemos contigo recursos e materiais de estudo, dicas e vagas 
+          de emprego e oportunidades de eventos, estágios e formações!
         </p>
         <h5>Acesso Exclusivo a Eventos e Formações</h5>
         <p>
-          Terás acesso exclusivo a eventos e formações organizadas por nós ou pela nossa rede de
-          parceiros e patrocinadores.
+          Terás acesso exclusivo a eventos e formações organizadas por nós 
+          ou pela nossa rede de parceiros e patrocinadores.
         </p>
       </Row>
+      <LinkArrow href={Constants.Routes.Team} variant="primary">
+        {translation('HomePage-MentorsSection-Title')}
+      </LinkArrow>
     </Container>
   );
 };
