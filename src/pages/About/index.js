@@ -41,7 +41,7 @@ function AboutUs({ translation }) {
   return (
     <PageLayout
       title={translation('AboutUsPage-PageName')}
-      description={translation('AboutUsPage-Description')}
+      descriptionParagraphs={[translation('AboutUsPage-Description')]}
       breadcrumbsData={breadcrumbs}>
       <Container>
         <Row>

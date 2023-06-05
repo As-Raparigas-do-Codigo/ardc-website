@@ -80,7 +80,7 @@ function Activities({ translation }) {
     <PageLayout
       customBanner={<ActivitiesFeaturesBanner t={translation} />}
       title={translation('ActivitiesPage-PageName')}
-      description={translation('ActivitiesPage-Description')}
+      descriptionParagraphs={[translation('ActivitiesPage-Description')]}
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="">
         <Row className={'mt-4 mb-5'} xs={1} lg={4}>

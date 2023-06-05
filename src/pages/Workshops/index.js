@@ -18,7 +18,7 @@ function Workshops({ translation }) {
   return (
     <PageLayout
       title={translation('WorkshopsPage-PageName')}
-      description={translation('WorkshopsPage-Description')}
+      descriptionParagraphs={[translation('WorkshopsPage-Description')]}
       breadcrumbsData={breadcrumbs}>
       <Container className="mt-5 py-md-5">
         <WorkshopsList next translation={translation} />

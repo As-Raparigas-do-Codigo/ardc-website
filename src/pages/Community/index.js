@@ -65,7 +65,10 @@ const Community = ({ translation }) => {
   return (
     <PageLayout
       title={translation('CommunityPage-PageName')}
-      description={translation('CommunityPage-Description')}
+      descriptionParagraphs={[
+        translation('CommunityPage-Description-Line1'), 
+        translation('CommunityPage-Description-Line2')
+      ]}
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md">
         <Row>

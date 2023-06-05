@@ -56,7 +56,7 @@ const Contact = ({ translation }) => {
   return (
     <PageLayout
       title={translation('ContactsPage-Title')}
-      description={translation('ContactsPage-Description')}
+      descriptionParagraphs={[translation('ContactsPage-Description')]}
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md" className="">
         <Row>
