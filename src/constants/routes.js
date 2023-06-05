@@ -8,5 +8,6 @@ export default {
   Community: '/community',
   PrivacyPolicy: '/privacy',
   Team: '/team',
-  Workshops: '/workshops'
+  Workshops: '/workshops',
+  Partners: '/partners'
 };

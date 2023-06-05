@@ -31,28 +31,28 @@ function PrivacyPolicy({ translation }) {
           <h2 className="fw-bold">{translation('PrivacyPolicyPage-Title')}</h2>
           <h5>O que são cookies?</h5>
           <p>
-            Como é prática comum em quase todos os sites, este site usa cookies, que
-            são pequenos ficheiros guardados no computador que ajudam a melhorar a experiência do utilizador. Esta
-            página descreve quais as informações que estas cookies recolhem, como as usamos e a razão pela qual
-            precisamos de as armazenar. Descrevemos ainda como poderá impedir que
-            estas cookies sejam armazenados, no entanto, isso poderá reduzir ou
-            &apos;partir&apos; certas funcionalidades do site.
+            Como é prática comum em quase todos os sites, este site usa cookies, que são pequenos
+            ficheiros guardados no computador que ajudam a melhorar a experiência do utilizador.
+            Esta página descreve quais as informações que estas cookies recolhem, como as usamos e a
+            razão pela qual precisamos de as armazenar. Descrevemos ainda como poderá impedir que
+            estas cookies sejam armazenados, no entanto, isso poderá reduzir ou &apos;partir&apos;
+            certas funcionalidades do site.
           </p>
           <h5>Como usamos as cookies?</h5>
           <p>
             Utilizamos cookies por vários motivos, detalhados abaixo. Infelizmente, na maioria dos
             casos, não existem opções padrão do setor para desativar cookies sem desativar
-            completamente a funcionalidade e os recursos que estam adicionam ao site. Recomendamos que
-            deixe todas as cookies activas caso não tenha certeza se precisa ou não
-            delas, caso sejam usadas para fornecer um serviço que usa.
+            completamente a funcionalidade e os recursos que estam adicionam ao site. Recomendamos
+            que deixe todas as cookies activas caso não tenha certeza se precisa ou não delas, caso
+            sejam usadas para fornecer um serviço que usa.
           </p>
           <h5>Desativar cookies</h5>
           <p>
-            Pode desactivar cookies ajustando as configurações do seu browser
-            (consulte a Ajuda do browser para saber como o fazer). Esteja ciente de que a
-            desativação de cookies afetará a funcionalidade deste e de muitos outros sites que você
-            visita. A desativação de cookies geralmente resultará na desativação de determinadas
-            funcionalidades e recursos deste site.
+            Pode desactivar cookies ajustando as configurações do seu browser (consulte a Ajuda do
+            browser para saber como o fazer). Esteja ciente de que a desativação de cookies afetará
+            a funcionalidade deste e de muitos outros sites que você visita. A desativação de
+            cookies geralmente resultará na desativação de determinadas funcionalidades e recursos
+            deste site.
           </p>
           <h5> Cookies que definimos</h5>
           <ul>
@@ -61,36 +61,36 @@ function PrivacyPolicy({ translation }) {
             </li>
             <li>
               <p>
-                Em certas situações, podemos guardar cookies de forma a conhecer-mos as suas 
+                Em certas situações, podemos guardar cookies de forma a conhecer-mos as suas
                 preferências de utilização do site.
               </p>
             </li>
           </ul>
           <h3>Cookies de Terceiros</h3>
           <p>
-            Em alguns casos especiais, também usamos cookies fornecidas por terceiros. A
-            secção a seguir detalha quais cookies de terceiros que pode encontrar neste
-            site.
+            Em alguns casos especiais, também usamos cookies fornecidas por terceiros. A secção a
+            seguir detalha quais cookies de terceiros que pode encontrar neste site.
           </p>
           <ul>
             <li className="special-quote-list">
               <p>
-                Este site utiliza o Google Analytics, que é uma das soluções de análise mais difundidas
-                e confiáveis da Web, para nos ajudar a entender como é utilizado o site e como podemos
-                continuar a melhorar a sua experiência. Estas cookies podem monitorizar dados como o tempo 
-                gasto no site e as páginas visitadas, para que possamos continuar a produzir
-                conteúdo atraente.
+                Este site utiliza o Google Analytics, que é uma das soluções de análise mais
+                difundidas e confiáveis da Web, para nos ajudar a entender como é utilizado o site e
+                como podemos continuar a melhorar a sua experiência. Estas cookies podem monitorizar
+                dados como o tempo gasto no site e as páginas visitadas, para que possamos continuar
+                a produzir conteúdo atraente.
               </p>
             </li>
             <p>
-              Para mais informações sobre as cookies do Google Analytics, consulte a página oficial do
-              Google Analytics.
+              Para mais informações sobre as cookies do Google Analytics, consulte a página oficial
+              do Google Analytics.
             </p>
           </ul>
           <h3>Compromisso de Utilizador</h3>
           <p>
-            O utilizador compromete-se a fazer uso adequado dos conteúdos e da informação que "As
-            Raparigas do Código" oferecem no site e com caráter enunciativo, mas não limitativo:
+            O utilizador compromete-se a fazer uso adequado dos conteúdos e da informação que
+            &quo;oAs Raparigas do Código&quo; oferecem no site e com caráter enunciativo, mas não
+            limitativo:
           </p>
           <ul>
             <li className="ms-5">
@@ -108,18 +108,18 @@ function PrivacyPolicy({ translation }) {
             </li>
             <li className="ms-5">
               <p>
-                C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) d' "As
-                Raparigas do Código", dos seus fornecedores ou terceiros, para introduzir ou
-                disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software
-                que sejam capazes de causar danos anteriormente mencionados.
+                C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) d&apos;
+                &quo;As Raparigas do Código&quo;, dos seus fornecedores ou terceiros, para
+                introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware
+                ou software que sejam capazes de causar danos anteriormente mencionados.
               </p>
             </li>
           </ul>
           <h3>Mais Informações</h3>
           <p>
-            Esperemos que este documento seja esclarecedor e, como mencionado anteriormente, 
-             se não tiver a certeza se precisa ou não de determinadas cookies, 
-               geralmente é mais seguro deixá-las activas.
+            Esperemos que este documento seja esclarecedor e, como mencionado anteriormente, se não
+            tiver a certeza se precisa ou não de determinadas cookies, geralmente é mais seguro
+            deixá-las activas.
           </p>
         </Row>
       </Container>
