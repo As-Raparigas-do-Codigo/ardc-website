@@ -19,7 +19,7 @@ const SupportTheProject = ({ translation }) => {
       </Row>
       <Row>
         <Col md={{ span: 6, offset: 3 }}>
-          <p>{translation('SupportTheProject-Text')}</p>
+          <p dangerouslySetInnerHTML={{ __html: translation('SupportTheProject-Text')}}/>
         </Col>
       </Row>
       <Row>

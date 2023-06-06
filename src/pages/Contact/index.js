@@ -9,7 +9,7 @@ const ContactInfoSection = ({ translation }) => (
   <Container className="my-5 py-5">
     <Row>
       <h2 className="mb-2">{translation('ContactsPage-ContactInfoSection-Title')}</h2>
-      <p className="mb-4">{translation('ContactsPage-ContactInfoSection-Description')}</p>
+      <p className="mb-4" dangerouslySetInnerHTML={{ __html: translation('ContactsPage-ContactInfoSection-Description') }}/>
     </Row>
     <Row>
       <Container>
