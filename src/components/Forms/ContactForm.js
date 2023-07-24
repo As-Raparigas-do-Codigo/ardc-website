@@ -4,7 +4,6 @@ import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts'
 import Reaptcha from 'reaptcha';
 
 function ContactForm({ translation }) {
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
@@ -34,8 +33,8 @@ function ContactForm({ translation }) {
   };
 
   const onVerify = () => {
-    setShowCaptcha(false)
-  }
+    setShowCaptcha(false);
+  };
 
   const handleFormWasSubmitted = () => {
     var myHeaders = new Headers();
@@ -66,35 +65,36 @@ function ContactForm({ translation }) {
         showErrorToast();
       })
       .finally(() => {
-        setSending(false)
-        showCaptcha(true)
-      }
-    );
-  }
+        setSending(false);
+        showCaptcha(true);
+      });
+  };
 
   return (
     <>
-      <SuccessToastMessage show={successToast} onClose={hideSuccessToast} translation={translation}/>
-      <ErrorToastMessage show={errorToast} onClose={hideErrorToast} translation={translation}/>
+      <SuccessToastMessage
+        show={successToast}
+        onClose={hideSuccessToast}
+        translation={translation}
+      />
+      <ErrorToastMessage show={errorToast} onClose={hideErrorToast} translation={translation} />
       <Form>
         <Stack gap={3}>
           <Form.Group className="mb-3" controlId="nameInputField">
             <Form.Control
               type="text"
-              placeholder={translation("ContactsPage-ContactFormSection-NameLabel")}
+              placeholder={translation('ContactsPage-ContactFormSection-NameLabel')}
               value={name}
               onChange={(e) => setName(e.target.value)}
-              size="lg"
               enabled={showCaptcha.toString()}
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="emailInputField">
             <Form.Control
               type="email"
-              placeholder={translation("ContactsPage-ContactFormSection-EmailLabel")}
+              placeholder={translation('ContactsPage-ContactFormSection-EmailLabel')}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              size="lg"
               enabled={showCaptcha.toString()}
             />
           </Form.Group>
@@ -104,7 +104,6 @@ function ContactForm({ translation }) {
               placeholder="Assunto *"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
-              size="lg"
               enabled={showCaptcha.toString()}
             />
           </Form.Group>
@@ -113,39 +112,32 @@ function ContactForm({ translation }) {
               type="text"
               as="textarea"
               rows="3"
-              placeholder={translation("ContactsPage-ContactFormSection-MessageLabel")}
+              placeholder={translation('ContactsPage-ContactFormSection-MessageLabel')}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              size="lg"
               enabled={showCaptcha.toString()}
             />
           </Form.Group>
         </Stack>
         <div className="d-flex justify-content-between">
-          {
-            !showCaptcha && (
-              <p className="mandatory-hint">
-                {translation("ContactsPage-ContactFormSection-MandatoryLabel")}
-              </p>
-            )
-          }
-          {
-            !showCaptcha && (
-              <button
-                className="button-primary"
-                type="submit"
-                disabled={!name || !email || !subject || !message || sending}
-                onClick={handleFormWasSubmitted}>
-                {translation("ContactsPage-ContactFormSection-SendMessageButton")}
-              </button>
-            )
-          }
+          {!showCaptcha && (
+            <p className="mandatory-hint">
+              {translation('ContactsPage-ContactFormSection-MandatoryLabel')}
+            </p>
+          )}
+          {!showCaptcha && (
+            <button
+              className="button-primary"
+              type="submit"
+              disabled={!name || !email || !subject || !message || sending}
+              onClick={handleFormWasSubmitted}>
+              {translation('ContactsPage-ContactFormSection-SendMessageButton')}
+            </button>
+          )}
           {
             /* this is a test recaptcha */
             showCaptcha && (
-              <Reaptcha 
-                sitekey="***REMOVED***"
-                onVerify={onVerify}/>
+              <Reaptcha sitekey="***REMOVED***" onVerify={onVerify} />
             )
           }
         </div>

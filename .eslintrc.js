@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     'react/prop-types': 0,
     'react/no-unescaped-entities': 'warn',
-    'no-undef': 0
+    'no-undef': 0,
+    'no-unused-vars': 'warn'
   }
 };

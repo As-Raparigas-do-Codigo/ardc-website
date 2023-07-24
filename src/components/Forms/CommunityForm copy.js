@@ -4,6 +4,7 @@ import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts'
 import APEX from 'services/apex-api';
 import formConstants from 'constants/forms';
 import Reaptcha from 'reaptcha';
+import { REST } from 'discord.js';
 
 function CommunityForm({ translation }) {
   const [name, setName] = useState('');
@@ -15,8 +16,8 @@ function CommunityForm({ translation }) {
   const [reskill, setReskill] = useState(false); //dropdown
   const [reskillDesc, setReskillDesc] = useState(false); //dropdown
   const [currentSituation, setCurrentSituation] = useState(false); //dropdown
-  const [foundUs, setFoundUs] = useState(false);
-  const [validForm, setValidForm] = useState(false);
+  const [foundUs] = useState(false);
+  const [validated, setValidated] = useState(false);
 
   const resetData = () => {
     setName('');
@@ -29,11 +30,10 @@ function CommunityForm({ translation }) {
     setReskillDesc('');
     setCurrentSituation('');
     setFoundUs('');
-    setMessage('');
   };
 
   const [showCaptcha, setShowCaptcha] = useState(true);
-  const [sending, setSending] = useState(false);
+  // const [sending, setSending] = useState(false);
 
   const [successToast, setSuccessToast] = useState(false);
   const hideSuccessToast = () => setSuccessToast(false);
@@ -52,13 +52,21 @@ function CommunityForm({ translation }) {
     setShowCaptcha(false);
   };
 
-  const selectLabelStyle = (e) => {
-    if (e.target.value == e.target.firstChild.value) {
-      e.target.classList.add('label-option');
-    } else {
-      e.target.classList.remove('label-option');
-    }
+  const validForm = () => {
+    let validation = true;
+
+    [name, email, birthYear, city, schoolYear, workField, currentSituation, foundUs].forEach(
+      (inputField) => {
+        inputField.length == 0 ? (validation = false) : '';
+      }
+    );
+
+    setValidated(validation);
   };
+
+  useEffect(() => {
+    validForm();
+  });
 
   const handleFormWasSubmitted = (evt) => {
     evt.preventDefault();
@@ -70,36 +78,31 @@ function CommunityForm({ translation }) {
       city,
       still_in_school: schoolYear,
       work_field: workField,
-      reskilling: reskill,
+      reskilling: reskill ? 1 : 0,
       reskilling_course: reskillDesc,
       current_situation: currentSituation,
       found_us: foundUs
     });
 
     // setSending(true);
-    // hideToasts();
-    console.log(formData);
-    // APEX.postCommunityForm(formData)
-    //   .then(() => {
-    //     showSuccessToast();
-    //     resetData();
-    //   })
-    //   .catch((error) => {
-    //     console.log('error', error);
-    //     showErrorToast();
-    //   })
-    //   .finally(() => {
-    //     setSending(false);
-    //     showCaptcha(true);
-    //   });
+    hideToasts();
+
+    APEX.postCommunityForm(formData)
+      .then(() => {
+        showSuccessToast();
+        resetData();
+      })
+      .catch((error) => {
+        console.log('error', error);
+        showErrorToast();
+      })
+      .finally(() => {
+        // setSending(false);
+        showCaptcha(true);
+      });
   };
 
   const yearsRange = Array.from(new Array(120), (_, index) => new Date().getFullYear() - index);
-
-  useEffect(() => {
-    if (name && email && birthYear && city && workField && currentSituation && foundUs && !sending)
-      setValidForm(true);
-  }, [name, email, birthYear, sending, city, workField, currentSituation, foundUs]);
 
   return (
     <>
@@ -109,9 +112,9 @@ function CommunityForm({ translation }) {
         translation={translation}
       />
       <ErrorToastMessage show={errorToast} onClose={hideErrorToast} translation={translation} />
-      <Form id="comunidade-form">
+      <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Stack gap={3}>
-          <Form.Group className="mb-3" controlId="nameInputField">
+          <Form.Group noValidate validated={validated} className="mb-3" controlId="nameInputField">
             <Form.Control
               required
               type="text"
@@ -119,6 +122,7 @@ function CommunityForm({ translation }) {
               placeholder={translation('CommunityPage-CommunityForm-NameLabel')}
               value={name}
               onChange={(e) => setName(e.target.value)}
+              size="lg"
               maxLength="200"
             />
           </Form.Group>
@@ -130,17 +134,14 @@ function CommunityForm({ translation }) {
               placeholder={translation('CommunityPage-CommunityForm-EmailLabel')}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              size="lg"
             />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="cityInputField">
             <Form.Select
               required
-              className="label-option"
-              onChange={(e) => {
-                setCity(e.target.value);
-                selectLabelStyle(e);
-              }}
+              onChange={(e) => setCity(e.target.value)}
               name="cityInputField"
               aria-label="Localização">
               <option>Localização</option>
@@ -155,12 +156,8 @@ function CommunityForm({ translation }) {
           </Form.Group>
           <Form.Group className="mb-3" controlId="birthYearInputField">
             <Form.Select
-              className="label-option"
               required
-              onChange={(e) => {
-                setBirthYear(e.target.value);
-                selectLabelStyle(e);
-              }}
+              onChange={(e) => setBirthYear(e.target.value)}
               name="birthYearInputField"
               aria-label="Ano de Nascimento">
               <option>Ano de Nascimento</option>
@@ -175,12 +172,8 @@ function CommunityForm({ translation }) {
           </Form.Group>
           <Form.Group className="mb-3" controlId="eduLevelInputField">
             <Form.Select
-              className="label-option"
               required
-              onChange={(e) => {
-                setSchoolYear(e.target.value);
-                selectLabelStyle(e);
-              }}
+              onChange={(e) => setSchoolYear(e.target.value)}
               name="eduLevelInputField"
               aria-label="Escolaridade">
               <option>Escolaridade</option>
@@ -196,11 +189,7 @@ function CommunityForm({ translation }) {
           <Form.Group className="mb-3" controlId="workFieldInputField">
             <Form.Select
               required
-              className="label-option"
-              onChange={(e) => {
-                setWorkField(e.target.value);
-                selectLabelStyle(e);
-              }}
+              onChange={(e) => setWorkField(e.target.value)}
               name="workFieldInputField"
               aria-label="Área de formação/trabalho">
               <option>Área de formação/trabalho</option>
@@ -214,8 +203,7 @@ function CommunityForm({ translation }) {
             </Form.Select>
           </Form.Group>
           <Form.Group className="mb-3" controlId="reskillInputField">
-            <Form.Label className="label-option me-3">Em mudança de carreira?</Form.Label>
-
+            <Form.Label>Em mudança de carreira? </Form.Label>
             <Form.Check // prettier-ignore
               inline
               onChange={(e) => setReskill(e.target.checked)}
@@ -223,12 +211,13 @@ function CommunityForm({ translation }) {
               id={'reskill-1'}
             />
             {reskill && (
-              <Form.Group className="mt-3" controlId="reskillDescField">
+              <Form.Group className="mb-3" controlId="reskillDescField">
                 <Form.Control
                   type="text"
                   name="reskillDescField"
                   placeholder={'Onde?'}
                   onChange={(e) => setReskillDesc(e.target.value)}
+                  size="lg"
                 />
               </Form.Group>
             )}
@@ -236,11 +225,7 @@ function CommunityForm({ translation }) {
           <Form.Group className="mb-3" controlId="currentSituationInputField">
             <Form.Select
               required
-              className="label-option"
-              onChange={(e) => {
-                setCurrentSituation(e.target.value);
-                selectLabelStyle(e);
-              }}
+              onChange={(e) => setCurrentSituation(e.target.value)}
               name="currentSituationInputField"
               aria-label="Situação Atual">
               <option>Situação Atual</option>
@@ -256,11 +241,7 @@ function CommunityForm({ translation }) {
           <Form.Group className="mb-3" controlId="foundUsInputField">
             <Form.Select
               required
-              className="label-option"
-              onChange={(e) => {
-                setFoundUs(e.target.value);
-                selectLabelStyle(e);
-              }}
+              onChange={(e) => setCurrentSituation(e.target.value)}
               name="foundUsInputField"
               aria-label="Onde conheceste As Raparigas do Código?">
               <option>Onde conheceste As Raparigas do Código?</option>
@@ -276,20 +257,17 @@ function CommunityForm({ translation }) {
         </Stack>
 
         <div className="d-flex justify-content-between">
-          {
-            <p className="mandatory-hint">
-              {translation('CommunityPage-CommunityForm-MandatoryLabel')}
-            </p>
-          }
-          {!showCaptcha && (
-            <button
-              className="button-primary"
-              type="submit"
-              disabled={!validForm}
-              onClick={handleFormWasSubmitted}>
-              {translation('CommunityPage-CommunityForm-SubmitButton')}
-            </button>
-          )}
+          <p className="mandatory-hint">
+            {translation('CommunityPage-CommunityForm-MandatoryLabel')}
+          </p>
+
+          <button
+            className="button-primary"
+            type="submit"
+            disabled={!validForm}
+            onClick={handleFormWasSubmitted}>
+            {translation('CommunityPage-CommunityForm-SubmitButton')}
+          </button>
           {
             /* this is a test recaptcha */
             showCaptcha && (
