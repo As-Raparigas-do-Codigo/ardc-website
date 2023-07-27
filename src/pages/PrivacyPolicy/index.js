@@ -18,7 +18,7 @@ function PrivacyPolicy({ translation }) {
   return (
     <PageLayout
       title={translation('PrivacyPolicyPage-PageName')}
-      description={translation('PrivacyPolicyPage-Description')}
+      descriptionParagraphs={[translation('PrivacyPolicyPage-Description')]}
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md">
         <Row>

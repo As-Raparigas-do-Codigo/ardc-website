@@ -52,7 +52,7 @@ const Collaborate = ({ translation }) => {
   return (
     <PageLayout
       title={translation('CollaboratePage-Title')}
-      description={translation('CollaboratePage-Description')}
+      descriptionParagraphs={[translation('CollaboratePage-Description')]}
       breadcrumbsData={breadcrumbs}>
       <Container fluid="md">
         <Row>

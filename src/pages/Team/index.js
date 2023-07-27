@@ -32,7 +32,11 @@ function Team({ translation }) {
   return (
     <PageLayout
       title={translation('TeamPage-PageName')}
-      description={translation('TeamPage-Description')}
+      descriptionParagraphs={[
+        translation('TeamPage-Description-Line1'),
+        translation('TeamPage-Description-Line2'),
+        translation('TeamPage-Description-Line3'),
+      ]}
       breadcrumbsData={breadcrumbs}>
       <Container>
         <Row className={'mt-4 mb-5'} xs={1} lg={4}>
