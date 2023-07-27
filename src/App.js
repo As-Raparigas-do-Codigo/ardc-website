@@ -47,6 +47,7 @@ function App() {
       setLang('pt');
     }
   };
+
   return (
     <div className="App">
       <Router>
