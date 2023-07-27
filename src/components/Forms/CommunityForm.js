@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
-import APEX from 'services/apex-api';
 import formConstants from 'constants/forms';
 import Reaptcha from 'reaptcha';
 
@@ -13,10 +12,17 @@ function CommunityForm({ translation }) {
   const [schoolYear, setSchoolYear] = useState(''); //dropdown
   const [workField, setWorkField] = useState(''); //dropdown
   const [reskill, setReskill] = useState(false); //dropdown
-  const [reskillDesc, setReskillDesc] = useState(false); //dropdown
+  const [reskillDesc, setReskillDesc] = useState(''); //dropdown
   const [currentSituation, setCurrentSituation] = useState(false); //dropdown
   const [foundUs, setFoundUs] = useState(false);
   const [validForm, setValidForm] = useState(false);
+
+  const birthYearSelect = useRef(null);
+  const citySelect = useRef(null);
+  const schoolYearSelect = useRef(null);
+  const workFieldSelect = useRef(null);
+  const currentSituationSelect = useRef(null);
+  const foundUsSelect = useRef(null);
 
   const resetData = () => {
     setName('');
@@ -29,7 +35,15 @@ function CommunityForm({ translation }) {
     setReskillDesc('');
     setCurrentSituation('');
     setFoundUs('');
-    setMessage('');
+    setValidForm(false);
+
+    //set first option to be like a label
+    birthYearSelect.current.classList.add('label-option');
+    citySelect.current.classList.add('label-option');
+    schoolYearSelect.current.classList.add('label-option');
+    workFieldSelect.current.classList.add('label-option');
+    currentSituationSelect.current.classList.add('label-option');
+    foundUsSelect.current.classList.add('label-option');
   };
 
   const [showCaptcha, setShowCaptcha] = useState(true);
@@ -63,42 +77,72 @@ function CommunityForm({ translation }) {
   const handleFormWasSubmitted = (evt) => {
     evt.preventDefault();
 
+    var myHeaders = new Headers();
+    myHeaders.append('Accept', 'application/json');
+    myHeaders.append('Content-Type', 'application/json');
     var formData = JSON.stringify({
-      name,
+      person_name: name,
       email,
-      birthyear: birthYear,
+      birth_year: birthYear,
       city,
-      still_in_school: schoolYear,
+      school_year: schoolYear,
       work_field: workField,
-      reskilling: reskill,
+      reskilling: reskill ? 1 : 0,
       reskilling_course: reskillDesc,
       current_situation: currentSituation,
       found_us: foundUs
     });
-
-    // setSending(true);
-    // hideToasts();
-    console.log(formData);
-    // APEX.postCommunityForm(formData)
-    //   .then(() => {
-    //     showSuccessToast();
-    //     resetData();
-    //   })
-    //   .catch((error) => {
-    //     console.log('error', error);
-    //     showErrorToast();
-    //   })
-    //   .finally(() => {
-    //     setSending(false);
-    //     showCaptcha(true);
-    //   });
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: formData,
+      redirect: 'follow'
+    };
+    setSending(true);
+    hideToasts();
+    fetch('https://apex.oracle.com/pls/apex/ardc/forms/community_access', requestOptions)
+      .then((response) => response.text())
+      .then((res) => {
+        console.log(res);
+        showSuccessToast();
+        resetData();
+      })
+      .catch((err) => {
+        console.log(err);
+        showErrorToast();
+      })
+      .finally(() => {
+        setSending(false);
+        setShowCaptcha(true);
+      });
   };
 
   const yearsRange = Array.from(new Array(120), (_, index) => new Date().getFullYear() - index);
 
   useEffect(() => {
-    if (name && email && birthYear && city && workField && currentSituation && foundUs && !sending)
+    const validateEmail = () => {
+      return String(email)
+        .toLowerCase()
+        .match(
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+    };
+
+    if (
+      name.length > 0 &&
+      email.length > 0 &&
+      birthYear.length > 0 &&
+      city.length > 0 &&
+      workField.length > 0 &&
+      currentSituation.length > 0 &&
+      foundUs.length > 0 &&
+      !sending &&
+      validateEmail()
+    ) {
       setValidForm(true);
+    } else {
+      setValidForm(false);
+    }
   }, [name, email, birthYear, sending, city, workField, currentSituation, foundUs]);
 
   return (
@@ -111,7 +155,7 @@ function CommunityForm({ translation }) {
       <ErrorToastMessage show={errorToast} onClose={hideErrorToast} translation={translation} />
       <Form id="comunidade-form">
         <Stack gap={3}>
-          <Form.Group className="mb-3" controlId="nameInputField">
+          <Form.Group className="mb-3 display-flex-webkit" controlId="nameInputField">
             <Form.Control
               required
               type="text"
@@ -121,8 +165,9 @@ function CommunityForm({ translation }) {
               onChange={(e) => setName(e.target.value)}
               maxLength="200"
             />
+            <span className={'asterisk-required'}>*</span>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="emailInputField">
+          <Form.Group className="mb-3 display-flex-webkit" controlId="emailInputField">
             <Form.Control
               required
               type="email"
@@ -131,19 +176,22 @@ function CommunityForm({ translation }) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+            <span className={'asterisk-required'}>*</span>
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="cityInputField">
+          <Form.Group className="mb-3 display-flex-webkit" controlId="cityInputField">
             <Form.Select
-              required
+              ref={citySelect}
               className="label-option"
+              required
+              value={city}
               onChange={(e) => {
                 setCity(e.target.value);
                 selectLabelStyle(e);
               }}
               name="cityInputField"
               aria-label="Localização">
-              <option>Localização</option>
+              <option value="">Localização</option>
               {formConstants.cities.map((city, idx) => {
                 return (
                   <option key={'city-' + idx} value={city}>
@@ -152,18 +200,21 @@ function CommunityForm({ translation }) {
                 );
               })}
             </Form.Select>
+            <span className={'asterisk-required'}>*</span>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="birthYearInputField">
+          <Form.Group className="mb-3 display-flex-webkit" controlId="birthYearInputField">
             <Form.Select
+              ref={birthYearSelect}
               className="label-option"
               required
+              value={birthYear}
               onChange={(e) => {
                 setBirthYear(e.target.value);
                 selectLabelStyle(e);
               }}
               name="birthYearInputField"
               aria-label="Ano de Nascimento">
-              <option>Ano de Nascimento</option>
+              <option value="">Ano de Nascimento</option>
               {yearsRange.map(function (year) {
                 return (
                   <option key={'year-' + year} value={year}>
@@ -172,18 +223,21 @@ function CommunityForm({ translation }) {
                 );
               })}
             </Form.Select>
+            <span className={'asterisk-required'}>*</span>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="eduLevelInputField">
+          <Form.Group className="mb-3 display-flex-webkit" controlId="schoolYearInputField">
             <Form.Select
+              ref={schoolYearSelect}
               className="label-option"
               required
+              value={schoolYear}
               onChange={(e) => {
                 setSchoolYear(e.target.value);
                 selectLabelStyle(e);
               }}
-              name="eduLevelInputField"
+              name="schoolYearField"
               aria-label="Escolaridade">
-              <option>Escolaridade</option>
+              <option value="">Escolaridade</option>
               {Object.keys(formConstants.educationLevelList).map(function (edulevel) {
                 return (
                   <option key={'edulevel-' + edulevel} value={edulevel}>
@@ -192,18 +246,21 @@ function CommunityForm({ translation }) {
                 );
               })}
             </Form.Select>
+            <span className={'asterisk-required'}>*</span>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="workFieldInputField">
+          <Form.Group className="mb-3 display-flex-webkit" controlId="workFieldInputField">
             <Form.Select
+              ref={workFieldSelect}
               required
               className="label-option"
+              value={workField}
               onChange={(e) => {
                 setWorkField(e.target.value);
                 selectLabelStyle(e);
               }}
               name="workFieldInputField"
               aria-label="Área de formação/trabalho">
-              <option>Área de formação/trabalho</option>
+              <option value="">Área de formação/trabalho</option>
               {Object.keys(formConstants.workFieldsList).map(function (work) {
                 return (
                   <option key={'work-' + work} value={work}>
@@ -212,12 +269,14 @@ function CommunityForm({ translation }) {
                 );
               })}
             </Form.Select>
+            <span className={'asterisk-required'}>*</span>
           </Form.Group>
           <Form.Group className="mb-3" controlId="reskillInputField">
             <Form.Label className="label-option me-3">Em mudança de carreira?</Form.Label>
 
             <Form.Check // prettier-ignore
               inline
+              value={reskill}
               onChange={(e) => setReskill(e.target.checked)}
               type="checkbox"
               id={'reskill-1'}
@@ -233,9 +292,11 @@ function CommunityForm({ translation }) {
               </Form.Group>
             )}
           </Form.Group>
-          <Form.Group className="mb-3" controlId="currentSituationInputField">
+          <Form.Group className="mb-3 display-flex-webkit" controlId="currentSituationInputField">
             <Form.Select
+              ref={currentSituationSelect}
               required
+              value={currentSituation}
               className="label-option"
               onChange={(e) => {
                 setCurrentSituation(e.target.value);
@@ -243,7 +304,7 @@ function CommunityForm({ translation }) {
               }}
               name="currentSituationInputField"
               aria-label="Situação Atual">
-              <option>Situação Atual</option>
+              <option value="">Situação Atual</option>
               {Object.keys(formConstants.currentSituationList).map(function (currsit) {
                 return (
                   <option key={'currsit-' + currsit} value={currsit}>
@@ -252,10 +313,13 @@ function CommunityForm({ translation }) {
                 );
               })}
             </Form.Select>
+            <span className={'asterisk-required'}>*</span>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="foundUsInputField">
+          <Form.Group className="mb-3 display-flex-webkit" controlId="foundUsInputField">
             <Form.Select
+              ref={foundUsSelect}
               required
+              value={foundUs}
               className="label-option"
               onChange={(e) => {
                 setFoundUs(e.target.value);
@@ -263,7 +327,7 @@ function CommunityForm({ translation }) {
               }}
               name="foundUsInputField"
               aria-label="Onde conheceste As Raparigas do Código?">
-              <option>Onde conheceste As Raparigas do Código?</option>
+              <option value="">Onde conheceste As Raparigas do Código?</option>
               {Object.keys(formConstants.foundUsList).map(function (found) {
                 return (
                   <option key={'found-' + found} value={found}>
@@ -272,15 +336,17 @@ function CommunityForm({ translation }) {
                 );
               })}
             </Form.Select>
+            <span className={'asterisk-required'}>*</span>
           </Form.Group>
         </Stack>
 
-        <div className="d-flex justify-content-between">
+        <div className="justify-content-between">
           {
             <p className="mandatory-hint">
               {translation('CommunityPage-CommunityForm-MandatoryLabel')}
             </p>
           }
+
           {!showCaptcha && (
             <button
               className="button-primary"

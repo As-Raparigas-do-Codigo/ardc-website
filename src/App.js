@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import i18n from 'i18next';
 import { useTranslation, initReactI18next } from 'react-i18next';
-import Discord from 'discord.js';
 
 import AboutUs from 'pages/About';
 import Activities from 'pages/Activities';
@@ -49,11 +48,6 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    const client = new Discord.client();
-    client.login('MTEzMjk5ODA0NDA2MTgwMjQ5Ng.Gao645.pAwp53wmIF5ufRHvgPArdOg2Ql_7J91I5xNj-s');
-    console.log(client);
-  }, []);
   return (
     <div className="App">
       <Router>

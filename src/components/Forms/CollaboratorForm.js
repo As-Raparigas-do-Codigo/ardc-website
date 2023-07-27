@@ -107,50 +107,54 @@ function CollaboratorForm({ translation }) {
 
   return (
     <>
-      <SuccessToastMessage show={successToast} onClose={hideSuccessToast} translation={translation} />
-      <ErrorToastMessage show={errorToast} onClose={hideErrorToast} translation={translation}/>
+      <SuccessToastMessage
+        show={successToast}
+        onClose={hideSuccessToast}
+        translation={translation}
+      />
+      <ErrorToastMessage show={errorToast} onClose={hideErrorToast} translation={translation} />
       <Form>
-        <Form.Group className="mb-3" controlId="nameInputField">
+        <Form.Group className="mb-3 display-flex-webkit" controlId="nameInputField">
           <Form.Control
             type="text"
-            placeholder="Nome *"
+            placeholder="Nome"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            size="lg"
             maxLength="200"
           />
+          <span className={'asterisk-required'}>*</span>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="emailInputField">
+        <Form.Group className="mb-3 display-flex-webkit" controlId="emailInputField">
           <Form.Control
             type="email"
-            placeholder="Email *"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            size="lg"
           />
+          <span className={'asterisk-required'}>*</span>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="cityInputField">
+        <Form.Group className="mb-3 display-flex-webkit" controlId="cityInputField">
           <Form.Control
             type="text"
-            placeholder="Cidade *"
+            placeholder="Cidade"
             value={city}
             onChange={(e) => setCity(e.target.value)}
-            size="lg"
           />
+          <span className={'asterisk-required'}>*</span>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="websiteInputField">
+        <Form.Group className="mb-3 display-flex-webkit" controlId="websiteInputField">
           <Form.Control
             type="url"
             placeholder="Website / LinkedIn *"
             value={website}
             onChange={(e) => setWebsite(e.target.value)}
-            size="lg"
           />
+          <span className={'asterisk-required'}>*</span>
         </Form.Group>
-        <Form.Group className="mt-5 mb-2" controlId="collaborationAreasField">
+        <Form.Group className="mt-5 mb-2 display-flex-webkit" controlId="collaborationAreasField">
           <Stack gap={3}>
             <Form.Label>
-              {translation("CollaboratePage-CollaboratorForm-CollaborationAreasLabel")}
+              {translation('CollaboratePage-CollaboratorForm-CollaborationAreasLabel')}
             </Form.Label>
             <Form.Check
               type="checkbox"
@@ -163,49 +167,63 @@ function CollaboratorForm({ translation }) {
               type="checkbox"
               id="speaker"
               checked={speakerChecked}
-              label={translation("CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Speaker")}
+              label={translation(
+                'CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Speaker'
+              )}
               onChange={(e) => setSpeakerChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="content"
               checked={contentChecked}
-              label={translation("CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Content")}
+              label={translation(
+                'CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Content'
+              )}
               onChange={(e) => setContentChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="socialMedia"
               checked={socialMediaChecked}
-              label={translation("CollaboratePage-CollaboratorForm-CollaborationAreas-Options-SocialMedia")}
+              label={translation(
+                'CollaboratePage-CollaboratorForm-CollaborationAreas-Options-SocialMedia'
+              )}
               onChange={(e) => setSocialMediaChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="eventOrg"
               checked={eventOrgChecked}
-              label={translation("CollaboratePage-CollaboratorForm-CollaborationAreas-Options-EventOrganisation")}
+              label={translation(
+                'CollaboratePage-CollaboratorForm-CollaborationAreas-Options-EventOrganisation'
+              )}
               onChange={(e) => setEventOrgChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="promotion"
               checked={promotionChecked}
-              label={translation("CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Promotion")}
+              label={translation(
+                'CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Promotion'
+              )}
               onChange={(e) => setPromotionChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="technical"
               checked={technicalChecked}
-              label={translation("CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Technical")}
+              label={translation(
+                'CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Technical'
+              )}
               onChange={(e) => setTechnicalChecked(e.target.checked ? true : false)}
             />
             <Form.Check
               type="checkbox"
               id="other"
               checked={otherChecked}
-              label={translation("CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Other")}
+              label={translation(
+                'CollaboratePage-CollaboratorForm-CollaborationAreas-Options-Other'
+              )}
               onChange={(e) => setOtherChecked(e.target.checked ? true : false)}
             />
           </Stack>
@@ -213,7 +231,7 @@ function CollaboratorForm({ translation }) {
         <Form.Group className="mt-5 mb-2" controlId="howDidYouFindUsField">
           <Stack gap={3}>
             <Form.Label>
-              {translation("CollaboratePage-CollaboratorForm-HowDidYouFindUsLabel")}
+              {translation('CollaboratePage-CollaboratorForm-HowDidYouFindUsLabel')}
             </Form.Label>
             <Form.Check
               type="checkbox"
@@ -273,8 +291,7 @@ function CollaboratorForm({ translation }) {
             className="button-primary"
             type="submit"
             disabled={!name || !email || !city || !website || !message || sending}
-            onClick={sendForm}
-          >
+            onClick={sendForm}>
             Submeter
           </button>
         </div>

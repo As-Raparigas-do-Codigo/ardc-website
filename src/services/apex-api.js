@@ -1,4 +1,5 @@
-function postCommunityForm(data) {
+async function postCommunityForm(data) {
+  console.log('DATA: ' + data);
   var requestOptions = {
     method: 'POST',
     headers: {
@@ -9,7 +10,7 @@ function postCommunityForm(data) {
     redirect: 'follow'
   };
 
-  fetch('https://apex.oracle.com/pls/apex/ardc/forms/mentorship', requestOptions)
+  fetch('https://apex.oracle.com/pls/apex/ardc/forms/community_access', requestOptions)
     .then((response) => response.text())
     .then((result) => console.log(result));
 }

@@ -80,7 +80,7 @@ function ContactForm({ translation }) {
       <ErrorToastMessage show={errorToast} onClose={hideErrorToast} translation={translation} />
       <Form>
         <Stack gap={3}>
-          <Form.Group className="mb-3" controlId="nameInputField">
+          <Form.Group className="mb-3 display-flex-webkit" controlId="nameInputField">
             <Form.Control
               type="text"
               placeholder={translation('ContactsPage-ContactFormSection-NameLabel')}
@@ -88,8 +88,9 @@ function ContactForm({ translation }) {
               onChange={(e) => setName(e.target.value)}
               enabled={showCaptcha.toString()}
             />
+            <span className={'asterisk-required'}>*</span>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="emailInputField">
+          <Form.Group className="mb-3 display-flex-webkit" controlId="emailInputField">
             <Form.Control
               type="email"
               placeholder={translation('ContactsPage-ContactFormSection-EmailLabel')}
@@ -97,15 +98,17 @@ function ContactForm({ translation }) {
               onChange={(e) => setEmail(e.target.value)}
               enabled={showCaptcha.toString()}
             />
+            <span className={'asterisk-required'}>*</span>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="subjectInputField">
+          <Form.Group className="mb-3 display-flex-webkit" controlId="subjectInputField">
             <Form.Control
               type="text"
-              placeholder="Assunto *"
+              placeholder="Assunto"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               enabled={showCaptcha.toString()}
             />
+            <span className={'asterisk-required'}>*</span>
           </Form.Group>
           <Form.Group className="mb-3" controlId="subjectMessageField">
             <Form.Control
@@ -119,12 +122,12 @@ function ContactForm({ translation }) {
             />
           </Form.Group>
         </Stack>
-        <div className="d-flex justify-content-between">
-          {!showCaptcha && (
+        <div className="justify-content-between">
+          {
             <p className="mandatory-hint">
               {translation('ContactsPage-ContactFormSection-MandatoryLabel')}
             </p>
-          )}
+          }
           {!showCaptcha && (
             <button
               className="button-primary"
