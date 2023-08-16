@@ -80,6 +80,7 @@ function CommunityForm({ translation }) {
     var myHeaders = new Headers();
     myHeaders.append('Accept', 'application/json');
     myHeaders.append('Content-Type', 'application/json');
+    myHeaders.append('Access-Control-Allow-Origin', '*');
     var formData = JSON.stringify({
       person_name: name,
       email,
@@ -95,6 +96,7 @@ function CommunityForm({ translation }) {
     var requestOptions = {
       method: 'POST',
       headers: myHeaders,
+      mode: 'no-cors',
       body: formData,
       redirect: 'follow'
     };

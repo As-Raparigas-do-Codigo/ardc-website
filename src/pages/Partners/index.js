@@ -76,7 +76,14 @@ const PartnerFeaturesBanner = ({ t }) => (
         <h1 className="py-1">{t('PartnersPage-PageName')}</h1>
       </Col>
     </Row>
-    <Carousel items={features} desktop={3} autoSpeed={3000} infinite autoPlay />
+    <Carousel
+      items={features}
+      desktop={3}
+      autoSpeed={10000}
+      infinite
+      autoPlay
+      transitionDuration={500}
+    />
   </>
 );
 
