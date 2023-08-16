@@ -32,7 +32,7 @@ function MentorsSection({ translation }) {
       </Row>
 
       <Row>
-        <Carousel items={mentorsCards} />
+        <Carousel items={mentorsCards} autoPlay infinite />
       </Row>
     </Container>
   );

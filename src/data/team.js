@@ -182,12 +182,12 @@ const TeamData = [
   {
     id: 17,
     roles: ['mentor', 'collaborator'],
-    name: 'Ines de Matos',
+    name: 'Inês de Matos',
     company: 'Web Summit',
     job: 'Software Engineer',
     social: [
       { linkedin: 'https://www.linkedin.com/in/inesdematos/' },
-      { instagram: 'https://instagram.com/nenas.phot' },
+      { instagram: 'https://instagram.com/nenas.shots' },
       { medium: 'https://inesdematos.medium.com/' },
       { github: 'https://github.com/toothlesspanda' }
     ],

@@ -40,6 +40,7 @@ function ContactForm({ translation }) {
     var myHeaders = new Headers();
     myHeaders.append('Accept', 'application/json');
     myHeaders.append('Content-Type', 'application/json');
+    myHeaders.append('Access-Control-Allow-Origin', '*');
     var raw = JSON.stringify({
       name: name,
       email: email,
@@ -49,6 +50,7 @@ function ContactForm({ translation }) {
     var requestOptions = {
       method: 'POST',
       headers: myHeaders,
+      mode: 'no-cors',
       body: raw,
       redirect: 'follow'
     };

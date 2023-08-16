@@ -9,9 +9,10 @@ function Carousel({
   desktop = 4,
   tablet = 2,
   mobile = 1,
-  autoSpeed = 9000000,
+  autoSpeed = 10000,
   autoPlay = false,
-  infinite = false
+  infinite = false,
+  transitionDuration = 500
 }) {
   const responsive = {
     desktop: {
@@ -40,7 +41,7 @@ function Carousel({
       arrows
       autoPlay={autoPlay}
       infinite={infinite}
-      transitionDuration={10000}
+      transitionDuration={transitionDuration}
       responsive={responsive}
       renderDotsOutside
       dotListClass="custom-dots"
