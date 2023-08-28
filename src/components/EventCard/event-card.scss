@@ -138,3 +138,18 @@
   height: 50px;
   margin-top: 0px !important;
 }
+
+.event-card__fullDescription-title{
+  margin-bottom: 15px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.event-card__fullDescription-description{
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  padding: 10px;
+  height: 250px;
+  overflow-y: scroll;
+}

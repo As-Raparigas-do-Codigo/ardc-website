@@ -102,8 +102,7 @@ function CommunityForm({ translation }) {
     hideToasts();
     fetch('https://apex.oracle.com/pls/apex/ardc/forms/community_access', requestOptions)
       .then((response) => response.text())
-      .then((res) => {
-        console.log(res);
+      .then(() => {
         showSuccessToast();
         resetData();
       })

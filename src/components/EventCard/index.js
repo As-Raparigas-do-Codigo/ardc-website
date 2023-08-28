@@ -59,7 +59,8 @@ function EventCard({ item, inCarousel = false }) {
           className={
             inCarousel ? 'event-card__fullDescription' : 'event-card__fullDescription mb-0'
           }>
-          {item.description}
+          <div className={'event-card__fullDescription-title'}>{item.title}</div>
+          <div className={'event-card__fullDescription-description'}>{item.description}</div>
         </div>
       )}
     </>
