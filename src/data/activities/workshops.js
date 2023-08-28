@@ -19,6 +19,7 @@ import wsTechWeb2 from '../../assets/events/ws-tec-web-2.png';
 import wsTechWeb3 from '../../assets/events/ws-tec-web-3.png';
 import wsFigma from '../../assets/events/figma.png';
 import wsPython1 from '../../assets/events/ws-python-1.png';
+import wsIntroPython from '../../assets/events/ws-intro-python.png';
 
 import wsDataScience from '../../assets/events/ws-data-science-1.png';
 import wsReact from '../../assets/events/ws-react-1.png';
@@ -163,18 +164,6 @@ const Workshops = [
   },
   {
     id: self.crypto.randomUUID(),
-    date: '2021-11-02',
-    title: 'Workshop Git CSSBUC',
-    subtitle: '1a Edição',
-    image: '',
-    alt: '',
-    description:
-      'Neste workshop introduzimos às alunas a Git e GitHub \
-    como ferramenta de controlo de versão e trabalho colaborativo.',
-    category: Constants.Categories.WORKSHOP
-  },
-  {
-    id: self.crypto.randomUUID(),
     date: '2021-05-15',
     title: 'Workshop Introdução a Python',
     subtitle: '1a Edição',
@@ -191,7 +180,7 @@ const Workshops = [
     date: '2021-10-30',
     title: 'Workshop Introdução a Python',
     subtitle: '2a Edição',
-    image: '',
+    image: wsIntroPython,
     alt: '',
     description:
       'Workshop de introdução à linguagem Python. \

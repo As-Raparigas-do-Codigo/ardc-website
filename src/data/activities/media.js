@@ -1,5 +1,15 @@
 import forbesPortugal from '../../assets/events/forbes.png';
 import apdc from '../../assets/events/apdc.jpeg';
+import pwitAwards2021 from '../../assets/events/best_digital_inclusion_project.png';
+import mercedesMoveTogether from '../../assets/events/move_together_challenge.png';
+import widsPortugal from '../../assets/events/wids.png';
+import valtechPadel from '../../assets/events/torneio_padel.png';
+import aubayPodcast from '../../assets/events/ouves_me_aubay.jpg';
+import premiosAPDC from '../../assets/events/premio_territorios_cidades.jpg';
+import teleperformanceWebinar from '../../assets/events/webinar_teleperformance.png';
+import technovationGirls from '../../assets/events/technovation_girls.png';
+import incode2023 from '../../assets/events/incode_2030.jpg';
+import webinarAubay from '../../assets/events/webinar_aubay.jpg';
 
 import Constants from 'constants';
 
@@ -39,7 +49,7 @@ const Events = [
     date: '2021-11-21',
     title: 'Ouves-me Aubay?',
     subtitle: 'Podcast',
-    image: '',
+    image: aubayPodcast,
     alt: '',
     description:
       'Participação no podcast “Ouves-me Aubay?”. Discussão sobre o papel das mulheres nas áreas tecnológicas, os desafios que encontram e o que ainda podemos melhorar nessa área.',
@@ -54,7 +64,7 @@ const Events = [
     date: '2021-03-08',
     title: 'Webinar Aubay Portugal',
     subtitle: 'Women in Tech ',
-    image: '',
+    image: webinarAubay,
     alt: '',
     description:
       'Participação no webinar promovido pela Aubay Portugal no âmbito da comemoração do Dia da Mulher.',
@@ -69,7 +79,7 @@ const Events = [
     date: '2022-06-06',
     title: 'WIDS Portugal',
     subtitle: 'Women in Data Science 2022',
-    image: '',
+    image: widsPortugal,
     alt: '',
     description:
       'Conferência WiDS Portugal 2022, contando com a presença d’ As Raparigas do Código.',
@@ -84,7 +94,7 @@ const Events = [
     date: '2022-12-01',
     title: 'Move Together Challenge',
     subtitle: 'Mercedes-benz.io',
-    image: '',
+    image: mercedesMoveTogether,
     alt: '',
     description:
       'A empresa Mercedes-benz.io apoiou o projeto através de um donativo obtido com a sua iniciativa interna de promoção de bem-estar e saúde para os seus colaboradores “Move Together Challenge”.',
@@ -99,7 +109,7 @@ const Events = [
     date: '2022-10-19',
     title: 'Torneio de Pádel',
     subtitle: 'Valtech',
-    image: '',
+    image: valtechPadel,
     alt: '',
     description:
       'Evento desportivo promovido pela empresa Valtech que estendeu o desafio a outras empresas a participar num torneio de padel. O valor das inscrições reverteu para As Raparigas do Código.',
@@ -114,7 +124,7 @@ const Events = [
     date: '2023-01-01',
     title: 'TECHNOVATION GIRLS',
     subtitle: 'Challenge 2022',
-    image: '',
+    image: technovationGirls,
     alt: '',
     description:
       'Mais de 270 alunas em território nacional trabalharam em equipa selecionando um problema na sua comunidade e criando uma aplicação para dispositivos móveis para ajudar a resolvê-lo, seguindo um currículo que as formou e orientou ao longo de quatro meses.',
@@ -122,36 +132,6 @@ const Events = [
     link: {
       url: 'https://www.dge.mec.pt/noticias/technovation-girls-challenge-2023',
       type: Constants.LinkType.ARTICLE
-    }
-  },
-  {
-    id: self.crypto.randomUUID(),
-    date: '2023-01-01',
-    title: 'TECHNOVATION GIRLS',
-    subtitle: 'Challenge 2022',
-    image: '',
-    alt: '',
-    description:
-      'Mais de 270 alunas em território nacional trabalharam em equipa selecionando um problema na sua comunidade e criando uma aplicação para dispositivos móveis para ajudar a resolvê-lo, seguindo um currículo que as formou e orientou ao longo de quatro meses.',
-    category: Constants.Categories.MEDIA,
-    link: {
-      url: 'https://www.dge.mec.pt/noticias/technovation-girls-challenge-2023',
-      type: Constants.LinkType.ARTICLE
-    }
-  },
-  {
-    id: self.crypto.randomUUID(),
-    date: '2023-07-17',
-    title: 'Best Digital Inclusion Project Started by a Woman',
-    subtitle: 'PWIT Awards 2021',
-    image: '',
-    alt: '',
-    description:
-      'As Raparigas do Código sagram-se vencedoras do melhor projeto de inclusão digital na primeira edição em que a categoria é considerada',
-    category: Constants.Categories.MEDIA,
-    link: {
-      url: 'https://www.youtube.com/watch?v=5ku99qSbZOI',
-      type: Constants.LinkType.VIDEO
     }
   },
   {
@@ -159,7 +139,7 @@ const Events = [
     date: '2021-07-17',
     title: 'Best Digital Inclusion Project Started by a Woman',
     subtitle: 'PWIT Awards 2021',
-    image: '',
+    image: pwitAwards2021,
     alt: '',
     description:
       'As Raparigas do Código sagram-se vencedoras do melhor projeto de inclusão digital na primeira edição em que a categoria é considerada',
@@ -174,7 +154,7 @@ const Events = [
     date: '2023-02-01',
     title: 'Webinar “Diversidade e Inclusão”',
     subtitle: 'Teleperformance',
-    image: '',
+    image: teleperformanceWebinar,
     alt: '',
     description:
       'Realização de um webinar para os colaboradores da empresa Teleperformance no âmbito de uma parceria estabelecida para o ano 2022-2023.',
@@ -188,8 +168,8 @@ const Events = [
     id: self.crypto.randomUUID(),
     date: '2022-11-01',
     title: 'As Raparigas do Código no Programa INCoDe.2030',
-    subtitle: 'Teleperformance',
-    image: '',
+    subtitle: 'INCoDe 2030',
+    image: incode2023,
     alt: '',
     description:
       'As Raparigas do Código integram as atividades desenvolvidas no âmbito do programa INCoDe 2030 na vertente “Igualdade de Género”. ',
@@ -204,7 +184,7 @@ const Events = [
     date: '2023-05-01',
     title: 'Prémio Cidades e Territórios do Futuro ',
     subtitle: 'APDC 2023',
-    image: '',
+    image: premiosAPDC,
     alt: '',
     description:
       'As Raparigas do Código foram vencedoras da 2ª edição do Prémios Cidades e Territórios do Futuro nas categorias “Igualdade e Inclusão” e “Qualificações”.',
