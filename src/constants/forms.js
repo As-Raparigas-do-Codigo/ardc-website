@@ -43,10 +43,12 @@ const workFieldsList = {
 
 const currentSituationList = {
   ESTUDOS_OBRIGATORIOS: 'Ensino Obrigatório (5º - 12º)',
-  MUDANCA_CARREIRA: 'Mudança de carreira ',
+  T_MUDANCA_CARREIRA: 'Empregad@ e em mudança de carreira',
+  D_MUDANCA_CARREIRA: 'Desempregad@ e em mudança de carreira',
+  T_NOVAS_OPORTUNIDADES: 'Empregd@ e à procura de novas oportunidades',
+  D_NOVAS_OPORTUNIDADES: 'Desempregad@ e à procura de novas oportunidades',
   FREELANCER: 'Freelancer',
-  NOVAS_OPORTUNIDADES: 'À procura de novas oportunidades',
-  PROJECTOS_PESSOAS: 'Projectos pessoais de empreendedorismo '
+  PROJECTOS_PESSOAS: 'Projectos pessoais de empreendedorismo'
 };
 
 const foundUsList = {
