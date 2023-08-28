@@ -130,7 +130,7 @@ function ContactForm({ translation }) {
               {translation('ContactsPage-ContactFormSection-MandatoryLabel')}
             </p>
           }
-          {!showCaptcha && (
+          {
             <button
               className="button-primary"
               type="submit"
@@ -138,12 +138,6 @@ function ContactForm({ translation }) {
               onClick={handleFormWasSubmitted}>
               {translation('ContactsPage-ContactFormSection-SendMessageButton')}
             </button>
-          )}
-          {
-            /* this is a test recaptcha */
-            showCaptcha && (
-              <Reaptcha sitekey="***REMOVED***" onVerify={onVerify} />
-            )
           }
         </div>
       </Form>

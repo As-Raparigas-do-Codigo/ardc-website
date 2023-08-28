@@ -348,7 +348,7 @@ function CommunityForm({ translation }) {
             </p>
           }
 
-          {!showCaptcha && (
+          {
             <button
               className="button-primary"
               type="submit"
@@ -356,12 +356,6 @@ function CommunityForm({ translation }) {
               onClick={handleFormWasSubmitted}>
               {translation('CommunityPage-CommunityForm-SubmitButton')}
             </button>
-          )}
-          {
-            /* this is a test recaptcha */
-            showCaptcha && (
-              <Reaptcha sitekey="***REMOVED***" onVerify={onVerify} />
-            )
           }
         </div>
       </Form>
