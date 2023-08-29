@@ -10,7 +10,7 @@ import KPISSection from 'components/KPISSection';
 import PageLayout from 'components/PageLayout';
 import banner from 'assets/home/banner.jpeg';
 import missao from 'assets/home/missao2.png';
-import pdf from '../../assets/Booklet_ARDC_2022.pdf';
+import pdf from '../../assets/Booklet_ARDC_2023.pdf';
 import FeatureFlag from 'components/FeatureFlag';
 
 import './home.scss';
