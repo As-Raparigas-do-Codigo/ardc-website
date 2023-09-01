@@ -1,14 +1,17 @@
 {
   "name": "ardc-website",
   "version": "0.1.0",
+  "homepage": "https://raparigasdocodigo.pt",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "10.4.5",
+    "basic-ftp": "^5.0.3",
     "bootstrap": "^5.1.3",
     "i18next": "^22.0.4",
+    "node-ftp-cli": "^1.0.4",
     "react": "^18.1.0",
     "react-bootstrap": "^2.3.1",
     "react-dom": "^18.1.0",
@@ -27,7 +30,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "deploy-ftp": "export $(cat .env | xargs) && node deploy-ftp.js",
+    "build:deploy-ftp": "git checkout dev && git pull && npm run build && npm run deploy-ftp"
   },
   "eslintConfig": {
     "extends": [
