@@ -27,7 +27,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 # Processo de Deployment
 [//]: https://github.com/As-Raparigas-do-Codigo/ardc-website-deployment
 
-To deploy this project you need to setup the `.env` file with. Ask someone inside the team to get these to you:
+To deploy this project you need to setup the `.env` file with the following variables (ask someone inside the team to get these for you):
 ```bash
 PUBLIC_URL=https://raparigasdocodigo.pt
 FTP_HOST=
