@@ -39,6 +39,10 @@ After that you just need to run:
 ```bash
 npm run build:deploy-ftp
 ```
-Which will create a new build inside `./build` and transfer the files via FTP to the ARDC server
+Which will
+- checkout to `dev` branch
+- update it (`git pull`)
+- create a new build inside `./build`
+- transfer the files via FTP to the ARDC server
 
 
