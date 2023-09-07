@@ -1,12 +1,12 @@
-name: New mentor
-description: Add new mentor
-title: "Adicionar <o_teu_nome> à equipa"
-labels: ["new member"]
+name: Team update
+description: Update team
+title: "Adicionar <o_teu_nome> à equipa / Atualizar informação sobre <o_teu_nome>"
+labels: ["team update"]
 body:
   - type: markdown
     attributes:
       value: |
-        Preenche os campos desta issue para te adicionarmos à [equipa no website](https://raparigasdocodigo.pt/team)!
+        Preenche os campos desta issue para te atualizarmos os dados da [equipa no website](https://raparigasdocodigo.pt/team)!
   - type: input
     id: name
     attributes:
@@ -33,8 +33,6 @@ body:
       label: Link para uma foto tua
       description: Qual é a foto que queres que te represente no website?
       placeholder: https://www.drive.google.com/xxxx
-    validations:
-      required: true
   - type: markdown
     attributes:
       value: |
