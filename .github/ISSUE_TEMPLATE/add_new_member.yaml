@@ -1,0 +1,64 @@
+name: Team update
+description: Update team
+title: "Adicionar <o_teu_nome> à equipa / Atualizar informação sobre <o_teu_nome>"
+labels: ["team update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Preenche os campos desta issue para te atualizarmos os dados da [equipa no website](https://raparigasdocodigo.pt/team)!
+  - type: input
+    id: name
+    attributes:
+      label: Nome
+      description: Qual o nome que pretendes que apareça no website?
+      placeholder: Primeiro e último nome
+    validations:
+      required: true
+  - type: input
+    id: occupation
+    attributes:
+      label: Ocupação
+      description: Qual é a ocupação que queres ter representada no website?
+      placeholder: Estudante, Software Engineer, Designer, etc...
+  - type: input
+    id: organization
+    attributes:
+      label: Organização
+      description: Onde trabalhas ou estudas?
+      placeholder: Empresa, Escola, Instituto, etc
+  - type: input
+    id: photo
+    attributes:
+      label: Link para uma foto tua
+      description: Qual é a foto que queres que te represente no website?
+      placeholder: https://www.drive.google.com/xxxx
+  - type: markdown
+    attributes:
+      value: |
+        Preenche os links das Redes Sociais que pretendes que esteja no website.
+  - type: input
+    attributes:
+      label: LinkedIn
+      placeholder: https://linkedin.com/in/xxxx
+  - type: input
+    attributes:
+      label: GitHub
+      placeholder: https://github.com/xxxx
+  - type: input
+    attributes:
+      label: Website
+      placeholder: https://teu-cantinho-na-web.com
+  - type: input
+    attributes:
+      label: Medium
+      placeholder: https://medium.com/xxxx
+  - type: input
+    attributes:
+      label: Instagram
+      placeholder: https://instagram.com/xxxx
+  - type: input
+    attributes:
+      label: Outsystems
+      placeholder: https://outsystems.com/profile/xxxx
+
