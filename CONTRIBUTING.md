@@ -57,4 +57,7 @@ Finalmente, caso tenhas qualquer dúvida durante a tua contribuição, deixa a t
   ```
 
 2. Abre o projeto no teu editor de código (IDE) favorito;
-3. Abre o `index.html` no teu browser para ver o site;
+3. Instala a ferramente [npm](https://www.npmjs.com/) caso não a tiveres instalada;
+4. Abre um terminal na pasta do projecto;
+5. Usa o commando no terminal para instalar dependências do projeto com `npm install`;
+6. Depois de instalares as dependencias podes correr o projeto no terminal com `npm start`.
