@@ -7,7 +7,8 @@ import './index.scss';
 
 const NotFound404 = ({ translation }) => {
   return (
-    <PageLayout>
+    <PageLayout  title={translation('NotFound404-PageName')}
+    descriptionParagraphs={[translation('NotFound404-Description')]}>
       <Container className="info padding-top-bottom-large align-center">
         <Row xs={1} md={1} lg={2} className="notfound404__row">
           <Col className="notfound404__image-wrapper ">
