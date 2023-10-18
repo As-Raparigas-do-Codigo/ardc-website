@@ -6,6 +6,7 @@ import widsPortugal from '../../assets/events/wids.png';
 import valtechPadel from '../../assets/events/torneio_padel.png';
 import aubayPodcast from '../../assets/events/ouves_me_aubay.jpg';
 import premiosAPDC from '../../assets/events/premio_territorios_cidades.jpg';
+import diretorioTic from '../../assets/events/diretorio_tic.png';
 import teleperformanceWebinar from '../../assets/events/webinar_teleperformance.png';
 import technovationGirls from '../../assets/events/technovation_girls.png';
 import incode2023 from '../../assets/events/incode_2030.jpg';
@@ -192,6 +193,21 @@ const Events = [
     link: {
       url: 'https://www.youtube.com/watch?v=8VHslZ4dYWM&t=532s',
       type: Constants.LinkType.VIDEO
+    }
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2023-10-01',
+    title: 'Menção no Directório Global das TIC',
+    subtitle: 'Iniciativas APDC',
+    image: diretorioTic,
+    alt: '',
+    description:
+      'Na Edição Especial da Revista Comunicações, As Raparigas do Código são incluídas no Directório Global das TIC nas categorias Inclusão Digital e Qualificações.',
+    category: Constants.Categories.MEDIA,
+    link: {
+      url: 'https://comunicacoes.apdc.pt/diretorio-global-das-tic-global-ict-directory-2022-2023/68477896/22',
+      type: Constants.LinkType.ARTICLE
     }
   }
 ];
