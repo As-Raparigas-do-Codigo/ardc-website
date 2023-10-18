@@ -4,7 +4,7 @@ This repository contains the code for our website [raparigasdocodigo.pt](https:/
 
 ### How to contribute
 
-Learn how to contribute to the project by reading our contribution guidelines at [CONTRIBUTING.md](/CONTRIBUTING.md).
+Learn how to contribute to the project by reading our contribution guidelines at [CONTRIBUTING.md](/CONTRIBUTING.md). Before starting on those PRs, check our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) to stay aligned with our values.
 
 ### Setup and running the app
 
