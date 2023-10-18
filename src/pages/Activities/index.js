@@ -30,7 +30,7 @@ const ActivitiesFeaturesBanner = ({ t }) => (
           imgsrc={comunidade}
           title={'Comunidade'}
           description={
-            'Dinamizamos workshops, mentorias e momentos de networking. Partilhamos recursos, vagas de emprego e promovemos o acesso exclusivo a eventos e formações.'
+            'Dinamizamos workshops, mentorias e momentos de networking. Partilhamos recursos, vagas de emprego e promovemos o acesso exclusivo a eventos e formações'
           }
         />
       </Col>
@@ -40,7 +40,7 @@ const ActivitiesFeaturesBanner = ({ t }) => (
           imgsrc={projectoEducacao}
           title={'Projeto Educação'}
           description={
-            'Organizamos workshops para crianças e jovens, fomentando o interesse pelas áreas CTEM (Ciência, Tecnologia, Engenharia e Matemática). '
+            'Organizamos workshops para crianças e jovens, fomentando o interesse pelas áreas CTEM (Ciência, Tecnologia, Engenharia e Matemática)'
           }
         />
       </Col>
