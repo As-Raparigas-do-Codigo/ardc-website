@@ -24,7 +24,7 @@ const features = [
     imgsrc={lideranca}
     title={'Lidera para a inclusão digital'}
     description={
-      'Torna-te parceiro do nosso projeto e ajuda-nos a promover a educação gratuita, a inclusão digital e a igualdade de género no sector tecnológico.'
+      'Torna-te parceiro do nosso projeto e ajuda-nos a promover a educação gratuita, a inclusão digital e a igualdade de género no sector tecnológico'
     }
   />,
   <OrganizationFeature
@@ -32,7 +32,7 @@ const features = [
     imgsrc={iniciativas}
     title={'Desenvolve iniciativas com impacto'}
     description={
-      'Integra as nossas atividades e ajuda-nos a criar impacto a nível social, cultural, económico e tecnológico.'
+      'Integra as nossas atividades e ajuda-nos a criar impacto a nível social, cultural, económico e tecnológico'
     }
   />,
   <OrganizationFeature
@@ -40,7 +40,7 @@ const features = [
     imgsrc={geracoes}
     title={'Inspira as próximas gerações'}
     description={
-      'Dinamiza connosco projetos de consciencialização e ajuda-nos a desmistificar preconceitos de género em crianças e jovens.'
+      'Dinamiza connosco projetos de consciencialização e ajuda-nos a desmistificar preconceitos de género em crianças e jovens'
     }
   />,
   <OrganizationFeature
@@ -48,7 +48,7 @@ const features = [
     imgsrc={recursos}
     title={'Doa material e recursos'}
     description={
-      'Ajuda-nos a conseguir material, recursos e ferramentas para a realização e divulgação das nossas atividades.'
+      'Ajuda-nos a conseguir material, recursos e ferramentas para a realização e divulgação das nossas atividades'
     }
   />,
   <OrganizationFeature
@@ -56,7 +56,7 @@ const features = [
     imgsrc={apoio_comunidade}
     title={'Apoia a comunidade'}
     description={
-      'Considera integrar as nossas alunas nos teus estágios, formações, posições e outras oportunidades. '
+      'Considera integrar as nossas alunas nos teus estágios, formações, posições e outras oportunidades'
     }
   />,
   <OrganizationFeature
@@ -64,7 +64,7 @@ const features = [
     imgsrc={patrono}
     title={'Torna-te nosso patrono '}
     description={
-      'Oferece-nos um espaço de trabalho e dá-nos formação para acompanharmos a comunidade no nosso melhor. '
+      'Oferece-nos um espaço de trabalho e dá-nos formação para acompanharmos a comunidade no nosso melhor'
     }
   />
 ];
