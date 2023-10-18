@@ -31,7 +31,9 @@
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "deploy-ftp": "export $(cat .env | xargs) && node deploy-ftp.js",
-    "build:deploy-ftp": "git checkout dev && git pull && npm run build && npm run deploy-ftp"
+    "build:deploy-ftp": "git checkout dev && git pull && npm run build && npm run deploy-ftp",
+    "precommit": "npm run lint:fix && git add . && npm run format",
+    "configure-husky": "npx husky install && npx husky add .husky/pre-commit 'npx --no-install lint-staged'"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +60,8 @@
     "eslint-plugin-react": "^7.33.2",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.1",
     "prettier": "^3.0.3"
   },
   "overrides": {
@@ -65,5 +69,16 @@
       "@svgr/webpack": "8.1.0",
       "postcss": "8.4.31"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx, ts, tsx, css, md, json}": [
+      "eslint . --fix",
+      "prettier --write ."
+    ]
   }
 }
