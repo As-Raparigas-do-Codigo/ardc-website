@@ -1,4 +1,4 @@
-@import "/src/styles/variables";
+@import '/src/styles/variables';
 
 .teaser__wrapper {
   display: flex;
@@ -15,7 +15,6 @@
   @media (max-width: $lg) {
     margin-top: 15px;
   }
-
 }
 
 .teaser__title {

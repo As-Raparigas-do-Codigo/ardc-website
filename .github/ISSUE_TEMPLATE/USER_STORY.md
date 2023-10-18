@@ -1,10 +1,10 @@
 ---
 name: User Story
 about: Ajuda-nos a criar novas tarefas para a comunidade ajudar a melhorar o projeto.
-
 ---
 
 ## Descrição
+
 <!--As a [USER],
 I need [TO DO THIS],
 so that I can [ACCOMPLISH THAT].-->

@@ -1,19 +1,21 @@
- @import "styles/variables";
+@import 'styles/variables';
 
- .card-item {
-   margin: 30px;
- }
+.card-item {
+  margin: 30px;
+}
 
 .custom-dots {
   position: inherit;
   margin-top: 10px;
 
   button {
-  border-color: $color-primary;
+    border-color: $color-primary;
   }
 
   .react-multi-carousel-dot--active {
-    button { background-color: $color-primary; }
+    button {
+      background-color: $color-primary;
+    }
   }
 }
 
@@ -24,7 +26,7 @@
   height: 60px;
   width: 60px;
   padding: inherit;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -44,7 +46,7 @@
   &.custom-arrow-left {
     left: 0px;
     border-radius: 0px 10px 10px 0px;
-    
+
     .blue-arrow {
       transform: rotate(180deg);
     }
@@ -54,10 +56,9 @@
     right: 0px;
     border-radius: 10px 0px 0px 10px;
   }
-
 }
 
 .react-multi-carousel-list {
   position: initial !important;
-  padding:0;
+  padding: 0;
 }

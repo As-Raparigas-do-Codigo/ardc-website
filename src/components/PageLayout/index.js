@@ -1,7 +1,13 @@
 import React from 'react';
 import { Container, Col, Row, Breadcrumb } from 'react-bootstrap';
 
-function PageLayout({ title, descriptionParagraphs, customBanner = null, breadcrumbsData, children }) {
+function PageLayout({
+  title,
+  descriptionParagraphs,
+  customBanner = null,
+  breadcrumbsData,
+  children
+}) {
   const bannerHasInfo = title || customBanner;
   const backgroundClass = bannerHasInfo ? 'gradient' : 'bg-blue';
   return (
@@ -15,8 +21,12 @@ function PageLayout({ title, descriptionParagraphs, customBanner = null, breadcr
               ) : (
                 <Col md={{ span: 6, offset: 3 }} className="my-4 align-self-center text-center">
                   <h1 className="py-1">{title}</h1>
-                  {descriptionParagraphs.map((description,index)=>{
-                    return <p className="py-1" key={index}>{description}</p>
+                  {descriptionParagraphs.map((description, index) => {
+                    return (
+                      <p className="py-1" key={index}>
+                        {description}
+                      </p>
+                    );
                   })}
                 </Col>
               )}
