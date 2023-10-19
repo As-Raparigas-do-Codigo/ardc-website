@@ -19,7 +19,7 @@ Este repositório contém o código do nosso website [raparigasdocodigo.pt](http
 >#### Setup and running the app
 >
 >In the project directory, you can run:
-
+>
 > | Script | Description                                                                           |
 | ------------------------- | ------------------------------------------------------------------------------------- |
 | `npm install` | Installs dependencies necessaries to run the app. |
