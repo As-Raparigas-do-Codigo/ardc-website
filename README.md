@@ -39,7 +39,7 @@ No diretório do projeto, podes executar:
 
 | Comando | Descrição |
 | ------- | ------------------------------------ |
-| `npm install` | Instala as dependências necessárias para executar a aplicação |
+| `npm install` | Instala as dependências necessárias para executar a aplicação. |
 | `npm start` | Compila a aplicação em modo de desenvolvimento. Abre [http://localhost:3000](http://localhost:3000) para visualizares no teu browser. |
-| `npm run build` | Compila a app na pasta `build`. Isto integra corretamente correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. |
+| `npm run build` | Compila a app na pasta `build`. Isto integra corretamente a biblioteca React no modo de produção e otimiza a compilação para o melhor desempenho. A compilação é minificada e os nomes dos arquivos incluem os cardinais. |
 | `npm run buil:deploy-ftp` | [Check the Deployment section](/docs/DEPLOYMENT.md#deployment-process)                                                                                                                                           |
