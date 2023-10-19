@@ -11,7 +11,7 @@ Este repositório contém o código do nosso website [raparigasdocodigo.pt](http
 <summary> Note for non-Portuguese Speaking Contributors </summary>
 
 > This repository contains the code for our website [raparigasdocodigo.pt](https://raparigasdocodigo.pt/). This was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+>
 > #### How to contribute
 
 > Learn how to contribute to the project by reading our contribution guidelines at [CONTRIBUTING.md](/CONTRIBUTING.md).
