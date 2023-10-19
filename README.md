@@ -26,9 +26,9 @@ Este repositório contém o código do nosso website [raparigasdocodigo.pt](http
 | `npm start` | Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser. |
 | `npm run build` | Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. |
 | `npm run buil:deploy-ftp` | [Check the Deployment section](/docs/DEPLOYMENT.md#deployment-process) |
-> _____________________________
+_____________________________
 </details>
-
+    
 
 ### Como contribuir
 Percebe como podes contribuir para o projeto através das nossas diretrizes de contribuição disponíveis em [CONTRIBUTING.md](/CONTRIBUTING.md).
