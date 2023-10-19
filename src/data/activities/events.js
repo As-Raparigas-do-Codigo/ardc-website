@@ -6,6 +6,7 @@ import hacktober from '../../assets/events/hacktober.png';
 import nei from '../../assets/events/nei.png';
 import iscap from '../../assets/events/iscap.png';
 import witSummit from '../../assets/events/women_in_tech_summit.png';
+import digitalBusinessCommunity from '../../assets/events/digital_business_community_apdc';
 
 import Constants from 'constants';
 
@@ -173,7 +174,23 @@ const Events = [
     description:
       'Evento organizado pela comunidade Women In Tech em que mães e filhas foram convidadas a participar de uma série de apresentações e actividades com o objectivo de introduzir os mais novos ao mundo das tecnologias. As “Raparigas do Código” fizeram parte deste evento com um workshop onde estiveram presentes crianças entre os 4 e os 15 anos.',
     category: Constants.Categories.EVENT
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2023-10-03',
+    title: 'Digital with Purpose',
+    subtitle: '',
+    link: {
+      url: 'https://digitalwithpurpose.org/',
+      type: Constants.LinkType.ARTICLE
+    },
+    image: digitalBusinessCommunity,
+    alt: '',
+    description:'',
+    category: Constants.Categories.MEDIA,
+    
   }
 ];
+
 
 export default Events;
