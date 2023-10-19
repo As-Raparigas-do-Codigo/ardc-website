@@ -13,14 +13,14 @@ Este repositório contém o código do nosso website [raparigasdocodigo.pt](http
 > This repository contains the code for our website [raparigasdocodigo.pt](https://raparigasdocodigo.pt/). This was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 >
 > #### How to contribute
-
+>
 > Learn how to contribute to the project by reading our contribution guidelines at [CONTRIBUTING.md](/CONTRIBUTING.md).
+>
+>#### Setup and running the app
+>
+>In the project directory, you can run:
 
-#### Setup and running the app
-
-In the project directory, you can run:
-
-| Script | Description                                                                           |
+> | Script | Description                                                                           |
 | ------------------------- | ------------------------------------------------------------------------------------- |
 | `npm install` | Installs dependencies necessaries to run the app. |
 | `npm start` | Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser. |
