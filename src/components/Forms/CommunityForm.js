@@ -77,11 +77,11 @@ function CommunityForm({ translation }) {
   const handleFormWasSubmitted = (evt) => {
     evt.preventDefault();
 
-    var myHeaders = new Headers();
+    let myHeaders = new Headers();
     myHeaders.append('Accept', 'application/json');
     myHeaders.append('Content-Type', 'application/json');
     myHeaders.append('Access-Control-Allow-Origin', '*');
-    var formData = JSON.stringify({
+    let formData = JSON.stringify({
       person_name: name,
       email,
       birth_year: birthYear,
@@ -93,7 +93,7 @@ function CommunityForm({ translation }) {
       current_situation: currentSituation,
       found_us: foundUs
     });
-    var requestOptions = {
+    let requestOptions = {
       method: 'POST',
       headers: myHeaders,
       mode: 'no-cors',

@@ -17,7 +17,7 @@ Thank you!
 
 1. Vai até à [tab de "Issues"](https://github.com/As-Raparigas-do-Codigo/ardc-website/issues) e escolhe um issue que tenha a label `Hacktoberfest`:
 
-   <!-- ![Tab das issues](https://github.com/As-Raparigas-do-Codigo/ardc-website/assets/11148726/5a89b985-3f4d-434f-8840-21dc7ae91770) -->
+   ![Tab das issues](https://github.com/As-Raparigas-do-Codigo/ardc-website/assets/11148726/5a89b985-3f4d-434f-8840-21dc7ae91770)
 
    - Se estás indecisa, começa com os Issues com a label `good first issue`, que são acessíveis a pessoas com todo o tipo de experiência.
 
@@ -32,7 +32,7 @@ Thank you!
 7. Quando terminares o teu trabalho faz um Pull Request (PR) para o branch `main` do repositório original - vê [aqui](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) como;
 8. Quando criares o novo PR podes ver as tuas alterações no ambiente de "preview" gerado pelo Vercel -> clicka no link e vê como é que o site vai ficar com a tua alteração
 
-   <!-- ![preview do site numa pull request](https://github.com/As-Raparigas-do-Codigo/ardc-website/assets/11148726/a7b01708-2220-485d-aabc-8e873add5714) -->
+   ![preview do site numa pull request](https://github.com/As-Raparigas-do-Codigo/ardc-website/assets/11148726/a7b01708-2220-485d-aabc-8e873add5714)
 
 9. O teu PR será revisto por um dos mentores, e contará como uma contribuição para o Hacktoberfest se:
    - for "merged"; ou
