@@ -27,12 +27,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix",
+    "lint": "eslint . --config ./.eslintrc.js",
+    "lint:fix": "eslint . --config ./.eslintrc.js --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "deploy-ftp": "export $(cat .env | xargs) && node deploy-ftp.js",
     "build:deploy-ftp": "git checkout dev && git pull && npm run build && npm run deploy-ftp",
-    "precommit": "npm run lint:fix && git add . && npm run format",
+    "precommit": "eslint . --config ./.eslintrc.js --fix  && npm run format",
     "configure-husky": "npx husky install && npx husky add .husky/pre-commit 'npx --no-install lint-staged'"
   },
   "eslintConfig": {
@@ -77,8 +77,8 @@
   },
   "lint-staged": {
     "**/*.{js,jsx, ts, tsx, css, md, json}": [
-      "eslint . --fix",
-      "prettier --write ."
+      "eslint . --config ./.eslintrc.js --fix",
+      "prettier --write . --config ./.prettierrc"
     ]
   }
 }
