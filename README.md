@@ -4,8 +4,6 @@ Este repositório contém o código do nosso website [raparigasdocodigo.pt](http
 [Create React App](https://github.com/facebook/create-react-app).
 
 
-## Notas para quem não falar português
-
 <details>
 
 <summary> Note for non-Portuguese Speaking Contributors </summary>
