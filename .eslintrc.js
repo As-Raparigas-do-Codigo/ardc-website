@@ -23,8 +23,7 @@ module.exports = {
     'react/no-unescaped-entities': 'warn',
     'no-undef': 0,
     'no-unused-vars': 'warn',
-    'prettier/prettier': 'warn',
-    'no-var': 'error'
+    'prettier/prettier': 'warn'
   },
   settings: {
     react: {
