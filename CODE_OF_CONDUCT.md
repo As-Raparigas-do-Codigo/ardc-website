@@ -11,7 +11,7 @@ Para garantir um ambiente positivo, pedimos a todos os participantes que sigam e
 
 2. **Colabora:** Encorajamos a colaboração e o trabalho em equipa. Respeita as opiniões e ideias dos outros e sê aberto a críticas construtivas.
 
-3. **Mantém um Ambiente Seguro:** Todos têm o direito de contribuir sem sentir medo. [Reporta](geral@raparigasdocodigo.pt) imediatamente qualquer comportamento inadequado dos contribudores ou revisores do projeto.
+3. **Mantém um Ambiente Seguro:** Todos têm o direito de contribuir sem sentir medo. Reporta imediatamente qualquer comportamento inadequado dos contribudores ou revisores do projeto, enviando um email para [geral@raparigasdocodigo.pt](mailto:geral@raparigasdocodigo.pt).
 
 4. **Concentra-te no Código:** Mantém as discussões e interações focadas no código e nos objetivos do projeto. Evita discussões ou tópicos não relacionados.
 
