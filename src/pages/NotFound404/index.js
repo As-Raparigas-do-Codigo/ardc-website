@@ -18,14 +18,14 @@ const NotFound404 = ({ translation }) => {
               <p className="text-secondary-color text-700-weight">Erro 404</p>
             </Row>
             <Row>
-              <h4>{translation('NotFound404-Title')}</h4>
+              <h4 data-testid="NotFound404-Title" >{translation('NotFound404-Title')}</h4>
             </Row>
             <Row>
-              <p>{translation('NotFound404-Subtitle')}</p>
+              <p data-testid='NotFound404-Subtitle'>{translation('NotFound404-Subtitle')}</p>
             </Row>
             <Row>
               <p>
-                <LinkButton href="/">{translation('NotFound404-Button')}</LinkButton>
+                <LinkButton id="NotFound404-Button" href="/">{translation('NotFound404-Button')}</LinkButton>
               </p>
             </Row>
           </Col>
