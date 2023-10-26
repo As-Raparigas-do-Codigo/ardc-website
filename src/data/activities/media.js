@@ -11,6 +11,7 @@ import teleperformanceWebinar from '../../assets/events/webinar_teleperformance.
 import technovationGirls from '../../assets/events/technovation_girls.png';
 import incode2023 from '../../assets/events/incode_2030.jpg';
 import webinarAubay from '../../assets/events/webinar_aubay.jpg';
+import comunicacoesSet2023 from '../../assets/events/comunicacoes_Set_2023.png';
 
 import Constants from 'constants';
 
@@ -193,6 +194,21 @@ const Events = [
     link: {
       url: 'https://www.youtube.com/watch?v=8VHslZ4dYWM&t=532s',
       type: Constants.LinkType.VIDEO
+    }
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2023-09-10',
+    title: 'Entrevista à Revista Comunicações',
+    subtitle: 'Inovação para a Sustentabilidade',
+    image: comunicacoesSet2023,
+    alt: '',
+    description:
+      '"Ainda há pouca visibilidade para as mulheres na ciência, em especial nas áreas das engenharias." Descobre como As Raparigas do Código estão a quebrar o ciclo da invisibilidade na tecnologia.',
+    category: Constants.Categories.MEDIA,
+    link: {
+      url: 'https://comunicacoes.apdc.pt/comunicacoes-247-pedro-dominguinhos-o-guardiao-do-prr/68477243/48',
+      type: Constants.LinkType.ARTICLE
     }
   },
   {

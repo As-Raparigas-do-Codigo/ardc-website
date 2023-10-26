@@ -36,6 +36,7 @@ Este repositório contém o código do nosso website [raparigasdocodigo.pt](http
 ### Como contribuir
 
 Percebe como podes contribuir para o projeto através das nossas diretrizes de contribuição disponíveis em [CONTRIBUTING.md](/CONTRIBUTING.md).
+Antes de começares, lê o nosso código de conduta disponível em [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ### Configuração e execução da app
 
