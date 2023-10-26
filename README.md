@@ -1,14 +1,12 @@
 # As Raparigas do Código
 
-This repository contains the code for our website [raparigasdocodigo.pt](https://raparigasdocodigo.pt/). This was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este repositório contém o código do nosso website [raparigasdocodigo.pt](https://raparigasdocodigo.pt/), e foi criado com React -
+[Create React App](https://github.com/facebook/create-react-app).
 
-### How to contribute
 
-Learn how to contribute to the project by reading our contribution guidelines at [CONTRIBUTING.md](/CONTRIBUTING.md).
+<details>
 
-### Setup and running the app
-
-In the project directory, you can run:
+<summary> Note for non-Portuguese Speaking Contributors </summary>
 
 | Script                    | Description                                                                                                                                                                                                      |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

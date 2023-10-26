@@ -68,7 +68,7 @@ function PageLayout({
 
       <div>{children}</div>
 
-      {!title.includes('Home') && <div className="zig-zag"></div>}
+      {title !== undefined && !title.includes('Home') && <div className="zig-zag"></div>}
     </div>
   );
 }
