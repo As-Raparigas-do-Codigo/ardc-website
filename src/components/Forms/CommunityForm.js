@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
 import formConstants from 'constants/forms';
-import Reaptcha from 'reaptcha';
 
 function CommunityForm({ translation }) {
   const [name, setName] = useState('');
@@ -46,7 +45,6 @@ function CommunityForm({ translation }) {
     foundUsSelect.current.classList.add('label-option');
   };
 
-  const [showCaptcha, setShowCaptcha] = useState(true);
   const [sending, setSending] = useState(false);
 
   const [successToast, setSuccessToast] = useState(false);
@@ -60,10 +58,6 @@ function CommunityForm({ translation }) {
   const hideToasts = () => {
     hideSuccessToast();
     hideErrorToast();
-  };
-
-  const onVerify = () => {
-    setShowCaptcha(false);
   };
 
   const selectLabelStyle = (e) => {
