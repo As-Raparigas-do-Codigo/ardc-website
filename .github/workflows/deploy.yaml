@@ -10,18 +10,18 @@ jobs:
       matrix:
         node: [ 14, 16, 18 ]
     steps:
-    - uses: actions/checkout@v3
-    - name: Faz build do projecto
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node }}
-      - run: npm run build
-    - name: Actualiza site via FTP
-      uses: sebastianpopp/ftp-action@releases/v2
-      with:
-        host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        localDir: "build/static"
-        remoteDir: "public_html/static"
-        options: "--delete --asci"
+      - uses: actions/checkout@v3
+      - name: Faz build do projecto
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+        - run: npm run build
+      - name: Actualiza site via FTP
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          localDir: "build/static"
+          remoteDir: "public_html/static"
+          options: "--delete --asci"
