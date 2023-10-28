@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: npm install
-      - run: npm eslint --fix
+      - run: npm lint:fix
       - run: npm run build --if-present
       - name: Actualiza site via FTP
         uses: sebastianpopp/ftp-action@releases/v2
