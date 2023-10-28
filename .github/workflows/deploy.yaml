@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-        - run: npm run build
+      - run: npm run build
       - name: Actualiza site via FTP
         uses: sebastianpopp/ftp-action@releases/v2
         with:
