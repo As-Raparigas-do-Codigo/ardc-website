@@ -11,11 +11,12 @@ jobs:
         node: [ 14, 16, 18 ]
     steps:
       - uses: actions/checkout@v4
-      - name: Faz build do projecto
+      - name: Uses Node.js
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-      - run: npm run build
+      - run: npm install
+      - run: npm run build --if-present
       - name: Actualiza site via FTP
         uses: sebastianpopp/ftp-action@releases/v2
         with:
