@@ -44,6 +44,7 @@ function CommunityForm({ translation }) {
     currentSituationSelect.current.classList.add('label-option');
     foundUsSelect.current.classList.add('label-option');
   };
+
   const [_, setShowCaptcha] = useState(true);
   const [sending, setSending] = useState(false);
 
