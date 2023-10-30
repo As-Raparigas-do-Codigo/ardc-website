@@ -1,6 +1,6 @@
-import NotFound404 from 'pages/NotFound404';
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
+import NotFound404 from 'pages/NotFound404';
 
 const translationProps = {
   translation: jest.fn()

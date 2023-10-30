@@ -83,6 +83,17 @@
       "prettier --write . --config ./.prettierrc"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx, ts, tsx, css, md, json}": [
+      "eslint . --config ./.eslintrc.js --fix",
+      "prettier --write . --config ./.prettierrc"
+    ]
+  },
   "overrides": {
     "react-scripts": {
       "@svgr/webpack": "8.1.0",
