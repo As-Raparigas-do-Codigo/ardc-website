@@ -27,11 +27,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix",
+    "lint": "eslint . --config ./.eslintrc.js",
+    "lint:fix": "eslint . --config ./.eslintrc.js --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "deploy-ftp": "export $(cat .env | xargs) && node deploy-ftp.js",
-    "build:deploy-ftp": "git checkout dev && git pull && npm run build && npm run deploy-ftp"
+    "build:deploy-ftp": "git checkout dev && git pull && npm run build && npm run deploy-ftp",
+    "precommit": "eslint . --config ./.eslintrc.js --fix  && npm run format",
+    "configure-husky": "npx husky install && npx husky add .husky/pre-commit 'npx --no-install lint-staged'"
   },
   "eslintConfig": {
     "extends": [
@@ -56,7 +58,20 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.1",
     "prettier": "^3.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx, ts, tsx, css, md, json}": [
+      "eslint . --config ./.eslintrc.js --fix",
+      "prettier --write . --config ./.prettierrc"
+    ]
   },
   "overrides": {
     "react-scripts": {

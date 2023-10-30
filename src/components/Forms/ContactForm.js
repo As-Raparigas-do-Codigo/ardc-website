@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
-import Reaptcha from 'reaptcha';
 
 function ContactForm({ translation }) {
   const [name, setName] = useState('');
@@ -16,7 +15,7 @@ function ContactForm({ translation }) {
     setMessage('');
   };
 
-  const [showCaptcha, setShowCaptcha] = useState(true);
+  const [showCaptcha, _] = useState(true);
   const [sending, setSending] = useState(false);
 
   const [successToast, setSuccessToast] = useState(false);
@@ -30,10 +29,6 @@ function ContactForm({ translation }) {
   const hideToasts = () => {
     hideSuccessToast();
     hideErrorToast();
-  };
-
-  const onVerify = () => {
-    setShowCaptcha(false);
   };
 
   const handleFormWasSubmitted = () => {
