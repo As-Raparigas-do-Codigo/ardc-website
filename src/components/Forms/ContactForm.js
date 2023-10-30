@@ -32,17 +32,17 @@ function ContactForm({ translation }) {
   };
 
   const handleFormWasSubmitted = () => {
-    var myHeaders = new Headers();
+    let myHeaders = new Headers();
     myHeaders.append('Accept', 'application/json');
     myHeaders.append('Content-Type', 'application/json');
     myHeaders.append('Access-Control-Allow-Origin', '*');
-    var raw = JSON.stringify({
+    let raw = JSON.stringify({
       name: name,
       email: email,
       subject: subject,
       message: message
     });
-    var requestOptions = {
+    let requestOptions = {
       method: 'POST',
       headers: myHeaders,
       mode: 'no-cors',

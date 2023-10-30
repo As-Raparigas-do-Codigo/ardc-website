@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ 14, 16, 18 ]
+        node: [14, 16, 18]
     steps:
       - uses: actions/checkout@v4
       - name: Uses Node.js
@@ -24,6 +24,6 @@ jobs:
           host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          localDir: "build/static"
-          remoteDir: "public_html/static"
-          options: "--delete --asci"
+          localDir: 'build/static'
+          remoteDir: 'public_html/static'
+          options: '--delete --asci'

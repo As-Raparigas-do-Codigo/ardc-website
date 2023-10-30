@@ -1,5 +1,4 @@
-@import "../../styles/variables";
-
+@import '../../styles/variables';
 
 .event-card {
   display: flex;
@@ -10,7 +9,6 @@
   max-width: 430px;
   margin: 15px;
 }
-
 
 .event-card__fullDescription {
   display: flex;
@@ -24,10 +22,10 @@
 
   max-width: 430px;
   z-index: 10;
-  top:0;
+  top: 0;
 
   //background: linear-gradient(to bottom, rgba(0,8,99,0.8) 30%, rgba(255,255,255,0.1) 100%);
-  background-color: rgba(0,8,99,0.7);
+  background-color: rgba(0, 8, 99, 0.7);
 
   margin: 15px;
 }
@@ -60,7 +58,6 @@
   margin-right: 5px;
   display: inline;
 
-
   span {
     display: unset;
     margin-bottom: 10px;
@@ -70,7 +67,6 @@
   > .dark-blue {
     background-color: $brand-color !important;
     color: white !important;
-    
   }
 
   > .blue {
@@ -79,9 +75,9 @@
     border: 1px dashed $blue;
   }
 
-  > .grey{
+  > .grey {
     background-color: $white !important;
-    color: rgba(0,0,0,0.4) !important;
+    color: rgba(0, 0, 0, 0.4) !important;
   }
 
   &.float-right {
@@ -89,12 +85,12 @@
   }
 }
 
-.event-card__badge-wrapper{
+.event-card__badge-wrapper {
   margin-top: 10px;
 }
 
 .event-card__action {
- position: absolute;
+  position: absolute;
   z-index: 11;
   bottom: 15px;
 
@@ -110,11 +106,10 @@
   font-weight: 400;
 
   span {
-
   }
 }
 
-.event-card__metadata{
+.event-card__metadata {
   margin-top: 100;
 }
 
@@ -126,7 +121,7 @@
   margin-top: 10px;
 
   p {
-    color: rgba(0,0,0,0.4);
+    color: rgba(0, 0, 0, 0.4);
     font-size: 14px;
     line-height: 20px;
     font-weight: 700;
@@ -139,14 +134,14 @@
   margin-top: 0px !important;
 }
 
-.event-card__fullDescription-title{
+.event-card__fullDescription-title {
   margin-bottom: 15px;
   border: 2px solid white;
   border-radius: 10px;
   padding: 10px;
 }
 
-.event-card__fullDescription-description{
+.event-card__fullDescription-description {
   border-left: 2px solid white;
   border-right: 2px solid white;
   padding: 10px;
