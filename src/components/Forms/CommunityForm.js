@@ -45,7 +45,6 @@ function CommunityForm({ translation }) {
     foundUsSelect.current.classList.add('label-option');
   };
 
-  const [_, setShowCaptcha] = useState(true);
   const [sending, setSending] = useState(false);
 
   const [successToast, setSuccessToast] = useState(false);

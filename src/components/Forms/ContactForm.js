@@ -15,7 +15,6 @@ function ContactForm({ translation }) {
     setMessage('');
   };
 
-  const [showCaptcha, _] = useState(true);
   const [sending, setSending] = useState(false);
 
   const [successToast, setSuccessToast] = useState(false);
