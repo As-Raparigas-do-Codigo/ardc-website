@@ -12,6 +12,7 @@ import technovationGirls from '../../assets/events/technovation_girls.png';
 import incode2023 from '../../assets/events/incode_2030.jpg';
 import webinarAubay from '../../assets/events/webinar_aubay.jpg';
 import comunicacoesSet2023 from '../../assets/events/comunicacoes_Set_2023.png';
+import digitalWithPurpose2023 from '../../assets/events/digital_with_purpose_2023.jpg'
 
 import Constants from 'constants';
 
@@ -223,6 +224,21 @@ const Events = [
     category: Constants.Categories.MEDIA,
     link: {
       url: 'https://comunicacoes.apdc.pt/diretorio-global-das-tic-global-ict-directory-2022-2023/68477896/22',
+      type: Constants.LinkType.ARTICLE
+    }
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2023-10-30',
+    title: '2ª Edição do Digital with Purpose Global Summit 2023',
+    subtitle: 'DwP 2023',
+    image: digitalWithPurpose2023,
+    alt: '',
+    description:
+      'As Raparigas do Código marcaram presença na 2ª edição do Digital with Purpose Global Summit 2023.',
+    category: Constants.Categories.MEDIA,
+    link: {
+      url: 'https://digitalwithpurpose.org/',
       type: Constants.LinkType.ARTICLE
     }
   }
