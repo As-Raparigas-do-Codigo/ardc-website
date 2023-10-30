@@ -13,24 +13,24 @@ const CommunityInfoSection = ({ translation }) => {
         <h2 className="mb-2">{translation('CommunityPage-Subtitle')}</h2>
         <h5>Comunidade e Networking</h5>
         <p>
-          Vais encontrar um espaço seguro e encorajador onde dar os primeiros passos na Tecnlogia 
-          e Programação e conhecer muitas raparigas e mulheres que partilham os teus objectivos!
+          Vais encontrar um espaço seguro e encorajador onde dar os primeiros passos na Tecnlogia e
+          Programação e conhecer muitas raparigas e mulheres que partilham os teus objectivos!
         </p>
         <h5>Mentoria e Orientação</h5>
         <p>
-          Temos uma equipa de profissionais ligados a várias áreas das TIs disponíveis 
-          para te guiar e ajudar sempre que precisares! Poderás também entrar em contacto 
-          com qualquer um dos nossos mentores para iniciares um processo de mentoria: em grupo ou individual.
+          Temos uma equipa de profissionais ligados a várias áreas das TIs disponíveis para te guiar
+          e ajudar sempre que precisares! Poderás também entrar em contacto com qualquer um dos
+          nossos mentores para iniciares um processo de mentoria: em grupo ou individual.
         </p>
         <h5>Recursos e Oportunidades</h5>
         <p>
-          Partilharemos contigo recursos e materiais de estudo, dicas e vagas 
-          de emprego e oportunidades de eventos, estágios e formações!
+          Partilharemos contigo recursos e materiais de estudo, dicas e vagas de emprego e
+          oportunidades de eventos, estágios e formações!
         </p>
         <h5>Acesso Exclusivo a Eventos e Formações</h5>
         <p>
-          Terás acesso exclusivo a eventos e formações organizadas por nós 
-          ou pela nossa rede de parceiros e patrocinadores.
+          Terás acesso exclusivo a eventos e formações organizadas por nós ou pela nossa rede de
+          parceiros e patrocinadores.
         </p>
       </Row>
       <LinkArrow href={Constants.Routes.Team} variant="primary">
@@ -66,7 +66,7 @@ const Community = ({ translation }) => {
     <PageLayout
       title={translation('CommunityPage-PageName')}
       descriptionParagraphs={[
-        translation('CommunityPage-Description-Line1'), 
+        translation('CommunityPage-Description-Line1'),
         translation('CommunityPage-Description-Line2')
       ]}
       breadcrumbsData={breadcrumbs}>

@@ -21,25 +21,19 @@
     position: absolute;
     top: -20px;
     left: 0;
-    background: linear-gradient(
-        -45deg,
-        #ffffff 16px,
-        #ffffff 16px,
-        #ffffff 16px,
-        transparent 0
-      ),
+    background: linear-gradient(-45deg, #ffffff 16px, #ffffff 16px, #ffffff 16px, transparent 0),
       linear-gradient(45deg, #ffffff 16px, transparent 0);
     background-position: left top;
     background-repeat: repeat-x;
     background-size: 22px 32px;
-    content: " ";
+    content: ' ';
     display: block;
     height: 20px;
     width: 100%;
   }
 
   &:after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     bottom: -16px;

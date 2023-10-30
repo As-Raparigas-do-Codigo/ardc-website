@@ -1,7 +1,7 @@
- @import "styles/variables";
+@import 'styles/variables';
 
- .event-section {
+.event-section {
   @media (max-width: $lg) {
     margin-bottom: 30px;
   }
- }
+}

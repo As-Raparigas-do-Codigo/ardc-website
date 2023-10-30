@@ -1,6 +1,6 @@
 async function postCommunityForm(data) {
   console.log('DATA: ' + data);
-  var requestOptions = {
+  let requestOptions = {
     method: 'POST',
     headers: {
       Accept: 'application/json',
