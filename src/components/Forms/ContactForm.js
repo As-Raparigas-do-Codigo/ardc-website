@@ -15,6 +15,8 @@ function ContactForm({ translation }) {
     setMessage('');
   };
 
+  // eslint-disable-next-line no-unused-vars
+  const [showCaptcha, setShowCaptcha] = useState(true);
   const [sending, setSending] = useState(false);
 
   const [successToast, setSuccessToast] = useState(false);
