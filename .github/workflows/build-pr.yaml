@@ -1,9 +1,6 @@
 name: Build website
 
 on:
-  push:
-    branches:
-      - dev
   pull_request:
     branches:
       - dev
@@ -26,9 +23,3 @@ jobs:
 
     - name: Build
       run: npm run build
-
-    - name: Save artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: build
-        path: ./build
