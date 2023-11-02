@@ -16,8 +16,7 @@ const ToastMessage = ({
       show={show}
       onClose={onClose}
       autohide={autohide}
-      delay={delay}
-    >
+      delay={delay}>
       <Toast.Header>
         <div className={`w-100 fw-bold text-${variant}`}>{title}</div>
       </Toast.Header>

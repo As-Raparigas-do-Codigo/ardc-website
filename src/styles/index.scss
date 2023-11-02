@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap");
-@import "./variables";
-@import "./backgrounds";
-@import "./buttons";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+@import './variables';
+@import './backgrounds';
+@import './buttons';
 
-// 
+//
 // Customizar Bootsrap nesta secção (INÍCIO)
-// 
+//
 
 // Customizar cores default
 $success: $green;
@@ -43,12 +43,11 @@ $dropdown-link-color: $color-primary;
 $dropdown-link-hover-color: $color-primary;
 $dropdown-link-hover-bg: $white;
 
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
-// 
+//
 // Customizar Bootsrap nesta secção (FIM)
-// 
-
+//
 
 body {
   margin: 0;
@@ -114,14 +113,14 @@ hr {
   object-fit: contain;
 }
 
-.margin-right-15{
+.margin-right-15 {
   margin-right: 15px;
 }
 
 .fs-x5 {
   font-size: $font-size-base * 5 !important;
   line-height: $font-size-base * 5 !important;
-} 
+}
 .text-secondary-color {
   color: $color-secondary;
 }
@@ -131,21 +130,21 @@ hr {
   line-height: 3.5rem !important;
 }
 
-.text-700-weight{
+.text-700-weight {
   font-weight: 700;
 }
 
-.navigation-position{
-    margin: 0 auto;
-    position: absolute;
-    width: 100%;
-    color: $color-primary;
+.navigation-position {
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  color: $color-primary;
 }
 
 .padding-top-first-section {
-   &:first-child {
+  &:first-child {
     padding-top: 3rem !important;
-   }
+  }
 }
 
 .breadcrumb-item.active {
@@ -153,10 +152,10 @@ hr {
   font-weight: 700;
 }
 
-.breadcrumb>li+li:before {
-    font-weight: 700 !important;
-    color: $color-primary !important;
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E") !important;
+.breadcrumb > li + li:before {
+  font-weight: 700 !important;
+  color: $color-primary !important;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E") !important;
 }
 
 li.special-quote-list {
@@ -164,7 +163,7 @@ li.special-quote-list {
   margin-left: 10% !important;
 }
 
-.arrow-size-default{
+.arrow-size-default {
   width: 14px;
 }
 
@@ -173,7 +172,7 @@ li.special-quote-list {
 }
 
 .label-option {
-    color: #767f85;
+  color: #767f85;
 }
 
 .asterisk-required {
@@ -183,5 +182,5 @@ li.special-quote-list {
 }
 
 .display-flex-webkit {
-  display: flex ;
+  display: flex;
 }

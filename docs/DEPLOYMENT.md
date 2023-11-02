@@ -3,6 +3,7 @@
 [//]: https://github.com/As-Raparigas-do-Codigo/ardc-website-deployment
 
 To deploy this project you need to setup the `.env` file with the following variables (ask someone inside the team to get these for you):
+
 ```bash
 PUBLIC_URL=https://raparigasdocodigo.pt
 FTP_HOST=
@@ -11,10 +12,13 @@ FTP_PASSWORD=
 ```
 
 After that you just need to run:
+
 ```bash
 npm run build:deploy-ftp
 ```
+
 Which will
+
 - checkout to `dev` branch
 - update it (`git pull`)
 - create a new build inside `./build`
@@ -25,6 +29,7 @@ Which will
 ### Routing Not Working in Production
 
 The project must have a `.htaccess` file inside the server in order to get the React Routing working in production. This should be the content:
+
 ```bash
 <IfModule mod_rewrite.c>
 
