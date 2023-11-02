@@ -12,7 +12,7 @@ import technovationGirls from '../../assets/events/technovation_girls.png';
 import incode2023 from '../../assets/events/incode_2030.jpg';
 import webinarAubay from '../../assets/events/webinar_aubay.jpg';
 import comunicacoesSet2023 from '../../assets/events/comunicacoes_Set_2023.png';
-import digitalWithPurpose2023 from '../../assets/events/digital_with_purpose_2023.jpg'
+import digitalWithPurpose2023 from '../../assets/events/digital_with_purpose_2023.jpg';
 
 import Constants from 'constants';
 
