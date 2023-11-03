@@ -3,13 +3,12 @@
 <!-- Inclui um resumo das alterações e motivação / contexto relevante. Lista todas as dependências necessárias para essa mudança. -->
 
 <!-- XXXX é o numero da tarefa/issue - isto é para quando fizermos merge desta alteração fechar a issue original automaticamente -->
-Fixes #XXXX
 
+Fixes #XXXX
 
 ### Como testar esta modificação?
 
 <!-- Descreve os testes que executaste para verificar tuas alterações. Diz-nos as instruções ou GIFs para que possamos reproduzir. Lista todos os detalhes relevantes para o teu teste. -->
-
 
 ### Checklist:
 

@@ -5,11 +5,13 @@ labels: bug
 ---
 
 ## Descrição
+
 <!--Uma descrição clara e concisa do que é o bug.-->
 
 ## Como reproduzir
 
 Passos para reproduzir o comportamento:
+
 1. Vai para '...'
 2. Clica em '...'
 3. Faz scroll para baixo até '...'
@@ -25,7 +27,7 @@ Passos para reproduzir o comportamento:
 
 ## Capturas de ecrã
 
-<!-- Se aplicável, adiciona capturas de ecrã para ajudar a explicar seu problema. --> 
+<!-- Se aplicável, adiciona capturas de ecrã para ajudar a explicar seu problema. -->
 
 ## Contexto
 
@@ -34,15 +36,17 @@ Passos para reproduzir o comportamento:
 <!-- Apaga isto se não for aplicável -->
 
 ### Desktop:
- - Sistema operativo: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Versão [e.g. 22]
+
+- Sistema operativo: [e.g. iOS]
+- Browser [e.g. chrome, safari]
+- Versão [e.g. 22]
 
 ### Smartphone:
- - Dispositivo: [e.g. iPhone6]
- - Sistema operativo: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Versão [e.g. 22]
+
+- Dispositivo: [e.g. iPhone6]
+- Sistema operativo: [e.g. iOS8.1]
+- Browser [e.g. stock browser, safari]
+- Versão [e.g. 22]
 
 ## Mais informação
 

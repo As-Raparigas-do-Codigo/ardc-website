@@ -7,7 +7,7 @@ function SocialBar({ changeLanguage, currentLang }) {
   return (
     <div className="social-bar">
       <Container>
-        <SocialLinks variant="light" changeLanguage={changeLanguage} currentLang={currentLang}/>
+        <SocialLinks variant="light" changeLanguage={changeLanguage} currentLang={currentLang} />
       </Container>
     </div>
   );

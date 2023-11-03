@@ -15,7 +15,8 @@ function ContactForm({ translation }) {
     setMessage('');
   };
 
-  const [showCaptcha, _] = useState(true);
+  // eslint-disable-next-line no-unused-vars
+  const [showCaptcha, setShowCaptcha] = useState(true);
   const [sending, setSending] = useState(false);
 
   const [successToast, setSuccessToast] = useState(false);
@@ -32,17 +33,17 @@ function ContactForm({ translation }) {
   };
 
   const handleFormWasSubmitted = () => {
-    var myHeaders = new Headers();
+    let myHeaders = new Headers();
     myHeaders.append('Accept', 'application/json');
     myHeaders.append('Content-Type', 'application/json');
     myHeaders.append('Access-Control-Allow-Origin', '*');
-    var raw = JSON.stringify({
+    let raw = JSON.stringify({
       name: name,
       email: email,
       subject: subject,
       message: message
     });
-    var requestOptions = {
+    let requestOptions = {
       method: 'POST',
       headers: myHeaders,
       mode: 'no-cors',

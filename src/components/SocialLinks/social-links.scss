@@ -1,16 +1,15 @@
-@import "styles/variables";
+@import 'styles/variables';
 
 .links {
-    
-    &--dark {
-        .social-link-svg svg path {
-            fill: $color-primary;
-        }
+  &--dark {
+    .social-link-svg svg path {
+      fill: $color-primary;
     }
-    
-    &--light {
-        .social-link-svg svg path {
-            fill: $white;
-        }
+  }
+
+  &--light {
+    .social-link-svg svg path {
+      fill: $white;
     }
+  }
 }
