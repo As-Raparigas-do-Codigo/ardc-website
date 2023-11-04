@@ -32,6 +32,12 @@ body:
     validations:
       required: true
   - type: input
+    id: url
+    attributes:
+      label: Link
+      description: Há algum link externo sobre a atividade (caso seja um evento ou destaque nos media)?
+      placeholder: www.forbespt.com
+  - type: input
     id: date
     attributes:
       label: Data (DD/MM/AAAA)
