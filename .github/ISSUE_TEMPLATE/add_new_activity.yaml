@@ -42,8 +42,8 @@ body:
   - type: input
     id: photo
     attributes:
-      label: Link para uma ou várias fotos do evento
-      description: Apenas usaremos uma foto
+      label: Link para uma ou várias imagens do evento
+      description: Apenas usaremos uma imagem
       placeholder: https://www.drive.google.com/xxxx
     validations:
       required: true
