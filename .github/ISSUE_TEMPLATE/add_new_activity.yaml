@@ -35,7 +35,7 @@ body:
     id: date
     attributes:
       label: Data (DD/MM/AAAA)
-      description: Em que dia aconteceu a atividade? Ou data de início do evento.
+      description: Em que dia aconteceu a atividade ou qual é a data de início da atividade?
       placeholder: 20/04/2023
     validations:
       required: true
