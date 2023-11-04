@@ -1,5 +1,5 @@
-name: Activities update
-description: Update Activities
+name: Atualização das atividades
+description: Atualizar as atividades no website
 title: "Adicionar <nome_da_atividade> ao website"
 labels: ["event update"]
 body:
