@@ -11,7 +11,7 @@ Para atualizar os [dados da equipa](https://raparigasdocodigo.pt/team) em `Home 
 
 Formato da informação do membro:
 
-```JSON
+```javascript
 {
     id: <id_unico_no_ficheiro>,
     roles: ['<responsabilidade_do_membro>'],
@@ -49,4 +49,28 @@ Para atualizar as atividades:
 Ao adicionar ou remover uma atividade terás de atualizar o ficheiro respectivo:
 - [src/data/activities/events.js](/src/data/activities/events.js) para eventos
 - [src/data/activities/workshops.js](/src/data/activities/workshops.js) para workshops
-- [src/data/activities/media.js](/src/data/activities/media.js) para destaques nos media
+- [src/data/activities/media.js](/src/data/activities/media.js) para destaques nos _media_
+
+O formato da informação da atividade é o seguinte:
+
+```javascript
+{
+    id: <id_unico_da_atividade>,
+    date: '<AAAA-MM-DD>',
+    title: '<titulo_da_atividade>',
+    subtitle: '<subtitulo_da_atividade>',
+    image: `<imagem_que_representa_a_atividade>`,
+    alt: '<descrição_alternativa_da_imagem_para_efeitos_de_a11y>',
+    description: '<descrição_da_atividade>',
+    category: <categoria_da_atividade>,
+    link: {
+        url: '<link_url>',
+        type: <tipo_de_link_externo>
+    }
+}
+```
+
+**Notas:**
+
+- Os campos `category` e `link`, geralmente não são necessários para atividades do tipo Workshop
+- Podes verificar os tipos de categoria e links aqui [src/constants/index.js](/src/constants/index.js). 
