@@ -10,14 +10,14 @@ body:
   - type: input
     id: title
     attributes:
-      label: Titulo da atividade
+      label: Título da atividade
       placeholder: Workshop Gestão de Carreira
     validations:
       required: true
   - type: input
     id: subtitle
     attributes:
-      label: Subtitulo da atividade
+      label: Subtítulo da atividade
       placeholder: 3a Edição
   - type: dropdown
     id: type
