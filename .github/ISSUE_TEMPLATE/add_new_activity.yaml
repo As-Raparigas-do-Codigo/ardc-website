@@ -1,0 +1,55 @@
+name: Atualização das atividades
+description: Atualizar as atividades no website
+title: "Adicionar <nome_da_atividade> ao website"
+labels: ["event update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Preenche os campos desta issue para te atualizarmos os dados das [nossas atividades no website](https://raparigasdocodigo.pt/activities)!
+  - type: input
+    id: title
+    attributes:
+      label: Título da atividade
+      placeholder: Workshop Gestão de Carreira
+    validations:
+      required: true
+  - type: input
+    id: subtitle
+    attributes:
+      label: Subtítulo da atividade
+      placeholder: 3a Edição
+  - type: dropdown
+    id: type
+    attributes:
+      label: Categoria da atividade
+      description: A atividade pode ser um workshop que realizamos, um destaque da comunidade nos media ou um evento no qual participamos
+      options:
+        - Workshop
+        - Media
+        - Evento
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Link
+      description: Há algum link externo sobre a atividade (caso seja um evento ou destaque nos media)?
+      placeholder: www.forbespt.com
+  - type: input
+    id: date
+    attributes:
+      label: Data (DD/MM/AAAA)
+      description: Em que dia aconteceu a atividade ou qual é a data de início da atividade?
+      placeholder: 20/04/2023
+    validations:
+      required: true
+  - type: input
+    id: photo
+    attributes:
+      label: Link para uma ou várias imagens do evento
+      description: Apenas usaremos uma imagem
+      placeholder: https://www.drive.google.com/xxxx
+    validations:
+      required: true
