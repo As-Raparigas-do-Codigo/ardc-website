@@ -72,5 +72,6 @@ O formato da informação da atividade é o seguinte:
 
 **Notas:**
 
+- O campo `id` deverá ser auto-gerado usando `self.crypto.randomUUID()`. Isto facilita a nossa manutenção de conteúdo e segue as boas práticas de _web development._
 - Os campos `category` e `link`, geralmente não são necessários para atividades do tipo Workshop
 - Podes verificar os tipos de categoria e links aqui [src/constants/index.js](/src/constants/index.js). 
