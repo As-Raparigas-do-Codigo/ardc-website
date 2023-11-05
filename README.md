@@ -53,3 +53,9 @@ No diretório do projeto, podes executar:
 | `npm run format`          | Corre o formatador em todos os arquivos.                                                                                                                                                                               |
 | `npm run precommit`       | Corre o linter, corrige os erros possíveis e formata o código.                                                                                                                                                         |
 | `npm run configure-husky` | Configura o husky, se não estiver configurado no projeto.                                                                                                                                                              |
+#### Contribuidores
+<a href="https://github.com/As-Raparigas-do-Codigo/ardc-website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=As-Raparigas-do-Codigo/ardc-website" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
