@@ -1,7 +1,7 @@
 name: Deploy via ftp
 on:
   push:
-    branches: [dev]
+    branches: [a_non_existent_branch] # mudar para "dev" quando corrigido
 jobs:
   deploy:
     name: Deploy
