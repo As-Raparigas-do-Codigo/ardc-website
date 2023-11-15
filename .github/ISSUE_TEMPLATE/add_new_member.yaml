@@ -1,5 +1,5 @@
-name: Team update
-description: Update team
+name: Atualização da equipa
+description: Atualizar equipa no website
 title: "Adicionar <o_teu_nome> à equipa / Atualizar informação sobre <o_teu_nome>"
 labels: ["team update"]
 body:
