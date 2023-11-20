@@ -114,8 +114,10 @@ function CommunityForm({ translation }) {
       });
   };
 
-  const yearsRange = Array.from(new Array(100), 
-    (_, index) => new Date().getFullYear() - index - 18);
+  const yearsRange = Array.from(
+    new Array(100),
+    (_, index) => new Date().getFullYear() - index - 18
+  );
 
   useEffect(() => {
     const validateEmail = () => {
