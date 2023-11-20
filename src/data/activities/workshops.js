@@ -263,7 +263,8 @@ const Workshops = [
     image: wsCybersecurity,
     alt: '',
     description:
-      'As Raparigas do Código colaboraram com as Women4Cyber em 5 sessões sobre CiberSegurança.',
+      'As Raparigas do Código colaboraram com as Women4Cyber em 5 sessões sobre CiberSegurança \
+      durante os meses de Outubro e Novembro.',
     category: Constants.Categories.WORKSHOP
   }
 ];
