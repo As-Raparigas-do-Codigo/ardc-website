@@ -258,8 +258,8 @@ const Workshops = [
   {
     id: self.crypto.randomUUID(),
     date: '2023-11-18',
-    title: 'Workshop de Cyber em colaboração com Women4Cyber',
-    subtitle: 'Segurança',
+    title: 'Workshop de Cybersecurity',
+    subtitle: '1a edição',
     image: wsCybersecurity,
     alt: '',
     description:
