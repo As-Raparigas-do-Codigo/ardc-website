@@ -79,13 +79,7 @@ function ContactForm({ translation }) {
         );
     };
 
-    if (
-      name.length > 0 &&
-      email.length > 0 &&
-      subject.length > 0 &&
-      !sending &&
-      validateEmail()
-    ) {
+    if (name.length > 0 && email.length > 0 && subject.length > 0 && !sending && validateEmail()) {
       setValidForm(true);
     } else {
       setValidForm(false);
