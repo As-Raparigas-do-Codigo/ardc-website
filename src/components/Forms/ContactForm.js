@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
 
@@ -7,12 +7,14 @@ function ContactForm({ translation }) {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [validForm, setValidForm] = useState(false);
 
   const resetData = () => {
     setName('');
     setEmail('');
     setSubject('');
     setMessage('');
+    setValidForm(false);
   };
 
   // eslint-disable-next-line no-unused-vars
@@ -67,6 +69,28 @@ function ContactForm({ translation }) {
         showCaptcha(true);
       });
   };
+
+  useEffect(() => {
+    const validateEmail = () => {
+      return String(email)
+        .toLowerCase()
+        .match(
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+    };
+
+    if (
+      name.length > 0 &&
+      email.length > 0 &&
+      subject.length > 0 &&
+      !sending &&
+      validateEmail()
+    ) {
+      setValidForm(true);
+    } else {
+      setValidForm(false);
+    }
+  }, [name, email, subject, sending]);
 
   return (
     <>
@@ -130,7 +154,7 @@ function ContactForm({ translation }) {
             <button
               className="button-primary"
               type="submit"
-              disabled={!name || !email || !subject || !message || sending}
+              disabled={!validForm}
               onClick={handleFormWasSubmitted}>
               {translation('ContactsPage-ContactFormSection-SendMessageButton')}
             </button>
