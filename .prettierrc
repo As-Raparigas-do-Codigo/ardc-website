@@ -4,9 +4,5 @@
   "printWidth": 100,
   "singleQuote": true,
   "trailingComma": "none",
-  "bracketSameLine": true,
-  "prettier/prettier": [
-      "error",
-      { "endOfLine": "auto" }
-  ]
+  "bracketSameLine": true
 }
