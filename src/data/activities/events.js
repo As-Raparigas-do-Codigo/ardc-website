@@ -186,8 +186,7 @@ const Events = [
     },
     image: hacktober2023,
     alt: '',
-    description:
-      'Participação no evento Hacktoberfest, que decorre durante o mês de Outubro.',
+    description: 'Participação no evento Hacktoberfest, que decorre durante o mês de Outubro.',
     category: Constants.Categories.EVENT
   }
 ];
