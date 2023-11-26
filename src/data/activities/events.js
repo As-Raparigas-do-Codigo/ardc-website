@@ -6,6 +6,7 @@ import hacktober from '../../assets/events/hacktober.png';
 import nei from '../../assets/events/nei.png';
 import iscap from '../../assets/events/iscap.png';
 import witSummit from '../../assets/events/women_in_tech_summit.png';
+import hacktober2023 from '../../assets/events/HacktoberFest2023.png';
 
 import Constants from 'constants';
 
@@ -172,6 +173,20 @@ const Events = [
     alt: '',
     description:
       'Evento organizado pela comunidade Women In Tech em que mães e filhas foram convidadas a participar de uma série de apresentações e actividades com o objectivo de introduzir os mais novos ao mundo das tecnologias. As “Raparigas do Código” fizeram parte deste evento com um workshop onde estiveram presentes crianças entre os 4 e os 15 anos.',
+    category: Constants.Categories.EVENT
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2023-10-01',
+    title: 'Hacktoberfest 2023',
+    subtitle: '',
+    link: {
+      url: 'https://hacktoberfest.com/',
+      type: Constants.LinkType.ARTICLE
+    },
+    image: hacktober2023,
+    alt: '',
+    description: 'Participação no evento Hacktoberfest, que decorre durante o mês de Outubro.',
     category: Constants.Categories.EVENT
   }
 ];
