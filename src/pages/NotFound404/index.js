@@ -18,7 +18,7 @@ const NotFound404 = ({ translation }) => {
               <p className="text-secondary-color text-700-weight">Erro 404</p>
             </Row>
             <Row>
-              <h4>{translation('NotFound404-Title')}</h4>
+              <h4 className="notfound404__title">{translation('NotFound404-Title')}</h4>
             </Row>
             <Row>
               <p>{translation('NotFound404-Subtitle')}</p>

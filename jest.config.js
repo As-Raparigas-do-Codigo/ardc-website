@@ -11,5 +11,8 @@ module.exports = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleDirectories: ['node_modules', 'src'],
-  modulePaths: ['<rootdir>/src']
+  modulePaths: ['<rootdir>/src'],
+
+  // The glob patterns Jest uses to detect test files
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)']
 };

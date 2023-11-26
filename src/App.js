@@ -25,16 +25,22 @@ import translationsEN from 'data/locales/translations_en.json';
 import translationsPT from 'data/locales/translations_pt.json';
 
 i18n.use(initReactI18next).init({
-  resources: {
-    pt: { translation: translationsPT },
-    en: { translation: translationsEN }
-  },
+  lng: 'pt',
   fallbackLng: 'pt',
+
+  // have a common namespace used around the full app
+  ns: ['translationsNS'],
+  defaultNS: 'translationsNS',
+
+  debug: true,
+
   interpolation: {
     escapeValue: false
-  }
+  },
+
+  resources: { pt: { translation: translationsPT }, en: { translation: translationsEN } }
 });
-/* eslint-disable */
+
 function App() {
   const { t } = useTranslation();
   const [currentLang, setLang] = useState('pt');
@@ -85,5 +91,4 @@ function App() {
     </div>
   );
 }
-/* eslint-enable */
 export default App;

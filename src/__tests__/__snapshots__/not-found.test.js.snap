@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`testing NotFound404.js renders correctly 1`] = `
 <div>
   <div
     className="bg-blue"
@@ -40,15 +40,13 @@ exports[`renders correctly 1`] = `
             className="row"
           >
             <h4
-              data-testid="NotFound404-Title"
+              className="notfound404__title"
             />
           </div>
           <div
             className="row"
           >
-            <p
-              data-testid="NotFound404-Subtitle"
-            />
+            <p />
           </div>
           <div
             className="row"
@@ -68,4 +66,16 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
 </div>
+`;
+
+exports[`testing page rendering with translation should render page with translation 1`] = `
+<h4
+  class="notfound404__title"
+/>
+`;
+
+exports[`testing page rendering without translation should render 404 page without translation 1`] = `
+<h4
+  class="notfound404__title"
+/>
 `;
