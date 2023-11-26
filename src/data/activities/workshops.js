@@ -29,6 +29,8 @@ import certOutsystems from '../../assets/events/outsystems.png';
 import wsLinkedin1 from '../../assets/events/ws-linkedin-1.png';
 import wsLinkedin2 from '../../assets/events/ws-linkedin-2.png';
 
+import wsCybersecurity from '../../assets/events/women4cyber-workshop.jpg';
+
 import Constants from 'constants';
 
 const Workshops = [
@@ -251,6 +253,18 @@ const Workshops = [
       'Workshop composto de 2 sessões: uma sessão sobre como melhorar o perfil de LinkedIn \
     e a presença na plataforma; uma segunda sessão com revisão \
     e conselhos sobre como melhorar os perfis das participantes.',
+    category: Constants.Categories.WORKSHOP
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2023-11-18',
+    title: 'Workshop de Cybersecurity',
+    subtitle: '1a edição',
+    image: wsCybersecurity,
+    alt: '',
+    description:
+      'As Raparigas do Código colaboraram com as Women4Cyber em 5 sessões sobre CiberSegurança \
+      durante os meses de Outubro e Novembro.',
     category: Constants.Categories.WORKSHOP
   }
 ];
