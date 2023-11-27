@@ -1,20 +1,26 @@
-name: DEPLOY
+name: Deploy via ftp
 on:
   push:
-    branches:
-    - release
-
+    branches: [a_non_existent_branch] # mudar para "dev" quando corrigido
 jobs:
   deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: rsync deployments
-      uses: burnett01/rsync-deployments@5.2.1
-      with:
-        switches: -avzr --delete
-        path: build/
-        remote_path: /var/www/html/
-        remote_host: ${{ secrets.RDC_IP }}
-        remote_user: ${{ secrets.RDC_SSH_USER }}
-        remote_key: ${{ secrets.RDC_SSH_PRIVATE_KEY }}
+      - uses: actions/checkout@v4
+      - name: Uses Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm install
+      - run: npm run lint:fix
+      - run: npm run build --if-present
+      - name: Actualiza site via FTP
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          localDir: 'build/static'
+          remoteDir: 'public_html/static'
+          options: '--delete --asci'

@@ -19,7 +19,7 @@ function Icon({ name, link = '#', onClickAction = null }) {
     medium: <MediumIcon />,
     email: <EmailIcon />,
     outsystems: <OutsystemsIcon />,
-    other: <Other />,
+    other: <Other />
   };
 
   const ClickableIcon = <span onClick={onClickAction}>{iconsMap[name]}</span>;

@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
 import formConstants from 'constants/forms';
-import Reaptcha from 'reaptcha';
 
 function CommunityForm({ translation }) {
   const [name, setName] = useState('');
@@ -46,6 +45,7 @@ function CommunityForm({ translation }) {
     foundUsSelect.current.classList.add('label-option');
   };
 
+  // eslint-disable-next-line no-unused-vars
   const [showCaptcha, setShowCaptcha] = useState(true);
   const [sending, setSending] = useState(false);
 
@@ -62,10 +62,6 @@ function CommunityForm({ translation }) {
     hideErrorToast();
   };
 
-  const onVerify = () => {
-    setShowCaptcha(false);
-  };
-
   const selectLabelStyle = (e) => {
     if (e.target.value == e.target.firstChild.value) {
       e.target.classList.add('label-option');
@@ -77,11 +73,11 @@ function CommunityForm({ translation }) {
   const handleFormWasSubmitted = (evt) => {
     evt.preventDefault();
 
-    var myHeaders = new Headers();
+    let myHeaders = new Headers();
     myHeaders.append('Accept', 'application/json');
     myHeaders.append('Content-Type', 'application/json');
     myHeaders.append('Access-Control-Allow-Origin', '*');
-    var formData = JSON.stringify({
+    let formData = JSON.stringify({
       person_name: name,
       email,
       birth_year: birthYear,
@@ -93,7 +89,7 @@ function CommunityForm({ translation }) {
       current_situation: currentSituation,
       found_us: foundUs
     });
-    var requestOptions = {
+    let requestOptions = {
       method: 'POST',
       headers: myHeaders,
       mode: 'no-cors',
@@ -118,7 +114,10 @@ function CommunityForm({ translation }) {
       });
   };
 
-  const yearsRange = Array.from(new Array(120), (_, index) => new Date().getFullYear() - index);
+  const yearsRange = Array.from(
+    new Array(100),
+    (_, index) => new Date().getFullYear() - index - 18
+  );
 
   useEffect(() => {
     const validateEmail = () => {

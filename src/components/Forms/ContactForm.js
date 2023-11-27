@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
-import Reaptcha from 'reaptcha';
 
 function ContactForm({ translation }) {
   const [name, setName] = useState('');
@@ -16,6 +15,7 @@ function ContactForm({ translation }) {
     setMessage('');
   };
 
+  // eslint-disable-next-line no-unused-vars
   const [showCaptcha, setShowCaptcha] = useState(true);
   const [sending, setSending] = useState(false);
 
@@ -32,22 +32,18 @@ function ContactForm({ translation }) {
     hideErrorToast();
   };
 
-  const onVerify = () => {
-    setShowCaptcha(false);
-  };
-
   const handleFormWasSubmitted = () => {
-    var myHeaders = new Headers();
+    let myHeaders = new Headers();
     myHeaders.append('Accept', 'application/json');
     myHeaders.append('Content-Type', 'application/json');
     myHeaders.append('Access-Control-Allow-Origin', '*');
-    var raw = JSON.stringify({
+    let raw = JSON.stringify({
       name: name,
       email: email,
       subject: subject,
       message: message
     });
-    var requestOptions = {
+    let requestOptions = {
       method: 'POST',
       headers: myHeaders,
       mode: 'no-cors',

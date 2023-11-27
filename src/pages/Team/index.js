@@ -35,7 +35,7 @@ function Team({ translation }) {
       descriptionParagraphs={[
         translation('TeamPage-Description-Line1'),
         translation('TeamPage-Description-Line2'),
-        translation('TeamPage-Description-Line3'),
+        translation('TeamPage-Description-Line3')
       ]}
       breadcrumbsData={breadcrumbs}>
       <Container>

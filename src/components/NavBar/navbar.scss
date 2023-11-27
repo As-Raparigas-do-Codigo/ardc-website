@@ -1,6 +1,7 @@
-@import "styles/variables";
+@import 'styles/variables';
 
-.navbar-nav, .offcanvas .navbar-nav {
+.navbar-nav,
+.offcanvas .navbar-nav {
   @media (max-width: $lg) {
     min-width: 10rem;
     padding: 0.5rem 0;
@@ -31,7 +32,7 @@
       padding-left: 1rem;
     }
   }
-  
+
   .navbar-toggler {
     border: 0;
     margin-right: 0 !important;

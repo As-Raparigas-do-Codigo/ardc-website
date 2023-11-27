@@ -60,11 +60,11 @@ function CollaboratorForm({ translation }) {
 
   const sendForm = (evt) => {
     evt.preventDefault();
-    var myHeaders = new Headers();
+    let myHeaders = new Headers();
     myHeaders.append('Accept', 'application/json');
     myHeaders.append('Content-Type', 'application/json');
     myHeaders.append('Access-Control-Allow-Origin', '*');
-    var raw = JSON.stringify({
+    let raw = JSON.stringify({
       name: name,
       email: email,
       city: city,
@@ -84,7 +84,7 @@ function CollaboratorForm({ translation }) {
       found_us_other: foundUsOtherChecked ? 1 : 0,
       message: message
     });
-    var requestOptions = {
+    let requestOptions = {
       method: 'POST',
       headers: myHeaders,
       mode: 'no-cors',
