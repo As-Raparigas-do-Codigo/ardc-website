@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
+import { validateEmail } from 'helpers/utils/ValidateEmail';
 
 function ContactForm({ translation }) {
   const [name, setName] = useState('');
@@ -55,31 +56,31 @@ function ContactForm({ translation }) {
     setSending(true);
     hideToasts();
     fetch('https://apex.oracle.com/pls/apex/ardc/forms/contact', requestOptions)
-      .then((response) => response.text())
-      .then((result) => console.log(result))
-      .then(() => {
-        showSuccessToast();
-        resetData();
+      .then((res) => {
+        if (res.status == 200) {
+          showSuccessToast();
+          resetData();
+        } else {
+          showErrorToast();
+        }
       })
-      .catch(() => {
+      .catch((err) => {
+        console.log('Error:' + err);
         showErrorToast();
       })
       .finally(() => {
         setSending(false);
-        showCaptcha(true);
       });
   };
 
   useEffect(() => {
-    const validateEmail = () => {
-      return String(email)
-        .toLowerCase()
-        .match(
-          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        );
-    };
-
-    if (name.length > 0 && email.length > 0 && subject.length > 0 && !sending && validateEmail()) {
+    if (
+      name.length > 0 &&
+      email.length > 0 &&
+      subject.length > 0 &&
+      !sending &&
+      validateEmail(email)
+    ) {
       setValidForm(true);
     } else {
       setValidForm(false);

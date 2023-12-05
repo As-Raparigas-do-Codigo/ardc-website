@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
 import formConstants from 'constants/forms';
+import { validateEmail } from 'helpers/utils/ValidateEmail';
 
 function CommunityForm({ translation }) {
   const [name, setName] = useState('');
@@ -99,32 +100,26 @@ function CommunityForm({ translation }) {
     setSending(true);
     hideToasts();
     fetch('https://apex.oracle.com/pls/apex/ardc/forms/community_access', requestOptions)
-      .then((response) => response.text())
-      .then(() => {
-        showSuccessToast();
-        resetData();
+      .then((res) => {
+        if (res.status == 200) {
+          showSuccessToast();
+          resetData();
+        } else {
+          showErrorToast();
+        }
       })
       .catch((err) => {
-        console.log(err);
+        console.log('Error:' + err);
         showErrorToast();
       })
       .finally(() => {
         setSending(false);
-        setShowCaptcha(true);
       });
   };
 
-  const yearsRange = Array.from(new Array(120), (_, index) => new Date().getFullYear() - index);
+  const yearsRange = Array.from(new Array(120), (_, index) => new Date().getFullYear() - index); //alteração em dev que não está a ficar aqui
 
   useEffect(() => {
-    const validateEmail = () => {
-      return String(email)
-        .toLowerCase()
-        .match(
-          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        );
-    };
-
     if (
       name.length > 0 &&
       email.length > 0 &&
@@ -134,7 +129,7 @@ function CommunityForm({ translation }) {
       currentSituation.length > 0 &&
       foundUs.length > 0 &&
       !sending &&
-      validateEmail()
+      validateEmail(email)
     ) {
       setValidForm(true);
     } else {
