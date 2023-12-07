@@ -117,7 +117,7 @@ function CommunityForm({ translation }) {
       });
   };
 
-  const yearsRange = Array.from(new Array(120), (_, index) => new Date().getFullYear() - index); //alteração em dev que não está a ficar aqui
+  const yearsRange = Array.from(new Array(120), (_, index) => new Date().getFullYear() - index - 18);
 
   useEffect(() => {
     if (
