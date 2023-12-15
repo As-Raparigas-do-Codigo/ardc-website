@@ -28,10 +28,6 @@ i18n.use(initReactI18next).init({
   lng: 'pt',
   fallbackLng: 'pt',
 
-  // have a common namespace used around the full app
-  ns: ['translationsNS'],
-  defaultNS: 'translationsNS',
-
   debug: true,
 
   interpolation: {
