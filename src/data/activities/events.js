@@ -7,6 +7,7 @@ import nei from '../../assets/events/nei.png';
 import iscap from '../../assets/events/iscap.png';
 import witSummit from '../../assets/events/women_in_tech_summit.png';
 import hacktober2023 from '../../assets/events/HacktoberFest2023.png';
+import hacktober2022 from '../../assets/events/HacktoberFest2022.png';
 
 import Constants from 'constants';
 
@@ -185,6 +186,20 @@ const Events = [
       type: Constants.LinkType.ARTICLE
     },
     image: hacktober2023,
+    alt: '',
+    description: 'Participação no evento Hacktoberfest, que decorre durante o mês de Outubro.',
+    category: Constants.Categories.EVENT
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2022-10-01',
+    title: 'Hacktoberfest 2022',
+    subtitle: '',
+    link: {
+      url: 'https://hacktoberfest.com/',
+      type: Constants.LinkType.ARTICLE
+    },
+    image: hacktober2022,
     alt: '',
     description: 'Participação no evento Hacktoberfest, que decorre durante o mês de Outubro.',
     category: Constants.Categories.EVENT
