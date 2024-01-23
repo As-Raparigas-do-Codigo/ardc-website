@@ -224,7 +224,7 @@ const TeamData = [
     id: 20,
     roles: ['mentor', 'collaborator'],
     name: 'Inês Silvestre',
-    company: 'Marley Spoon',
+    company: 'LastPass',
     job: 'Talent Acquisition Manager',
     social: [{ linkedin: 'https://www.linkedin.com/in/inespsilvestre/' }],
     avatar: 'ines-silvestre.jpg'
