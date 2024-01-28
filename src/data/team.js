@@ -285,7 +285,7 @@ const TeamData = [
     social: [
       { linkedin: 'https://www.linkedin.com/in/inescalcoa/' },
       { github: 'https://github.com/iscc92' }
-  ],
+    ],
     avatar: 'ines-calcoa.jpeg'
   }
 ];
