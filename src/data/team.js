@@ -287,6 +287,19 @@ const TeamData = [
       { github: 'https://github.com/iscc92' }
     ],
     avatar: 'ines-calcoa.jpeg'
+  },
+  {
+    id: 26,
+    roles: ['mentor', 'collaborator'],
+    name: 'Cristiane Fidelix',
+    company: '',
+    job: 'IT Consultant - Cybersecurity Specialist',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/cristianefidelix/' },
+      { instagram: 'https://www.instagram.com/cristianefidelix.live' },
+      { other: 'https://sites.google.com/view/cristianefidelix/home' }
+    ],
+    avatar: 'cristiane-fidelix.jpeg'
   }
 ];
 
