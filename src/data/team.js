@@ -275,6 +275,18 @@ const TeamData = [
     job: '',
     social: [{ linkedin: 'https://www.linkedin.com/in/selmirafernandes/' }],
     avatar: 'selmira.jpg'
+  },
+  {
+    id: 25,
+    roles: ['mentor', 'collaborator'],
+    name: 'Inês Calçôa',
+    company: 'Volkswagen Group Services',
+    job: 'Software Developer',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/inescalcoa/' },
+      { github: 'https://github.com/iscc92' }
+    ],
+    avatar: 'ines-calcoa.jpeg'
   }
 ];
 
