@@ -16,10 +16,10 @@ function PrivacyPolicy({ translation }) {
   ];
 
   function WebOrMobileClassName() {
-    var className = "";
+    var className = '';
 
     if (window.innerWidth <= 500) {
-      className = "container-mobile";
+      className = 'container-mobile';
     }
 
     return className;
