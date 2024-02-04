@@ -15,12 +15,22 @@ function PrivacyPolicy({ translation }) {
     }
   ];
 
+  function WebOrMobileClassName() {
+    var className = "";
+
+    if (window.innerWidth <= 500) {
+      className = "container-mobile";
+    }
+
+    return className;
+  }
+
   return (
     <PageLayout
       title={translation('PrivacyPolicyPage-PageName')}
       descriptionParagraphs={[translation('PrivacyPolicyPage-Description')]}
       breadcrumbsData={breadcrumbs}>
-      <Container fluid="md">
+      <Container fluid="md" className={WebOrMobileClassName()}>
         <Row>
           <p>{translation('PrivacyPolicyPage-Text_p1')}</p>
           <p>{translation('PrivacyPolicyPage-Text_p2')}</p>
