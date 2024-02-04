@@ -92,7 +92,6 @@ function CommunityForm({ translation }) {
     let requestOptions = {
       method: 'POST',
       headers: myHeaders,
-      mode: 'no-cors',
       body: formData,
       redirect: 'follow'
     };
