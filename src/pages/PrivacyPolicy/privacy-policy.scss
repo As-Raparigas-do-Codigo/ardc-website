@@ -5,6 +5,8 @@ h5 {
   margin-top: 30px !important;
 }
 
-.container-mobile {
-  margin-top: 15px;
+@media (max-width: 768px) {
+  .container-mobile {
+    margin-top: 15px;
+  }
 }
