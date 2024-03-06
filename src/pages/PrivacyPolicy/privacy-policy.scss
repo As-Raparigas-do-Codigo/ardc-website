@@ -4,3 +4,9 @@ h3,
 h5 {
   margin-top: 30px !important;
 }
+
+@media (max-width: 768px) {
+  .container-mobile {
+    margin-top: 15px;
+  }
+}
