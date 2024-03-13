@@ -1,12 +1,3 @@
-// import python from '../assets/workshops/workshop-python.png';
-// import react from '../assets/workshops/workshop-react.png';
-// import linkedin from '../assets/workshops/workshop-linkedin.jpeg';
-// import gitportfolio from '../assets/workshops/workshop-gitportfolio.jpeg';
-// import gitvidareal from '../assets/workshops/workshop-gitvidareal.jpeg';
-// import web3ed from '../assets/workshops/workshop-web3ed.jpeg';
-// import gestaocarreira1 from '../assets/workshops/workshop-gestao-carreira-1.jpeg';
-// import gestaocarreira2 from '../assets/workshops/workshop-gestao-carreira-2.jpeg';
-
 import wsCarreira1 from '../../assets/events/ws-carreira-1.png';
 import wsCarreira2 from '../../assets/events/ws-carreira-2.png';
 import uxiui from '../../assets/events/uxiui.png';
