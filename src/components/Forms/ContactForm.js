@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form, Stack } from 'react-bootstrap';
 import { SuccessToastMessage, ErrorToastMessage } from 'components/Forms/Toasts';
+import { validateEmail } from 'helpers/utils/ValidateEmail';
 
 function ContactForm({ translation }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [validForm, setValidForm] = useState(false);
 
   const resetData = () => {
     setName('');
     setEmail('');
     setSubject('');
     setMessage('');
+    setValidForm(false);
   };
 
   // eslint-disable-next-line no-unused-vars
@@ -53,20 +56,36 @@ function ContactForm({ translation }) {
     setSending(true);
     hideToasts();
     fetch('https://apex.oracle.com/pls/apex/ardc/forms/contact', requestOptions)
-      .then((response) => response.text())
-      .then((result) => console.log(result))
-      .then(() => {
-        showSuccessToast();
-        resetData();
+      .then((res) => {
+        if (res.status == 200) {
+          showSuccessToast();
+          resetData();
+        } else {
+          showErrorToast();
+        }
       })
-      .catch(() => {
+      .catch((err) => {
+        console.log('Error:' + err);
         showErrorToast();
       })
       .finally(() => {
         setSending(false);
-        showCaptcha(true);
       });
   };
+
+  useEffect(() => {
+    if (
+      name.length > 0 &&
+      email.length > 0 &&
+      subject.length > 0 &&
+      !sending &&
+      validateEmail(email)
+    ) {
+      setValidForm(true);
+    } else {
+      setValidForm(false);
+    }
+  }, [name, email, subject, sending]);
 
   return (
     <>
@@ -130,7 +149,7 @@ function ContactForm({ translation }) {
             <button
               className="button-primary"
               type="submit"
-              disabled={!name || !email || !subject || !message || sending}
+              disabled={!validForm}
               onClick={handleFormWasSubmitted}>
               {translation('ContactsPage-ContactFormSection-SendMessageButton')}
             </button>
