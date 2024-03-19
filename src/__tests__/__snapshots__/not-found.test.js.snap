@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing NotFound404.js renders correctly 1`] = `
+<div>
+  <div
+    className="bg-blue"
+  >
+    <div
+      className="pt-md-5 pb-4 container"
+    />
+  </div>
+  <div>
+    <div
+      className="info padding-top-bottom-large align-center container"
+    >
+      <div
+        className="notfound404__row row row-cols-lg-2 row-cols-md-1 row-cols-1"
+      >
+        <div
+          className="notfound404__image-wrapper  col"
+        >
+          <img
+            alt="404 warning"
+            src="erro404-image.svg"
+          />
+        </div>
+        <div
+          className="notfound404__text col"
+        >
+          <div
+            className="row"
+          >
+            <p
+              className="text-secondary-color text-700-weight"
+            >
+              Erro 404
+            </p>
+          </div>
+          <div
+            className="row"
+          >
+            <h4
+              className="notfound404__title"
+            />
+          </div>
+          <div
+            className="row"
+          >
+            <p />
+          </div>
+          <div
+            className="row"
+          >
+            <p>
+              <a
+                className="button-primary"
+                disabled={false}
+                href="/"
+                rel="noreferrer"
+                target=""
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`testing page rendering with translation should render page with translation 1`] = `
+<h4
+  class="notfound404__title"
+/>
+`;
+
+exports[`testing page rendering without translation should render 404 page without translation 1`] = `
+<h4
+  class="notfound404__title"
+/>
+`;

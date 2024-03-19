@@ -1,10 +1,12 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    'jest/globals': true
   },
   extends: [
     'plugin:react/recommended',
+    'plugin:jest/recommended',
     'plugin:react-hooks/recommended',
     'plugin:prettier/recommended',
     'prettier',
@@ -17,7 +19,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react'],
+  plugins: ['react', 'jest', 'prettier'],
   rules: {
     'react/prop-types': 0,
     'react/no-unescaped-entities': 'warn',

@@ -224,7 +224,7 @@ const TeamData = [
     id: 20,
     roles: ['mentor', 'collaborator'],
     name: 'Inês Silvestre',
-    company: 'Marley Spoon',
+    company: 'LastPass',
     job: 'Talent Acquisition Manager',
     social: [{ linkedin: 'https://www.linkedin.com/in/inespsilvestre/' }],
     avatar: 'ines-silvestre.jpg'
@@ -275,6 +275,31 @@ const TeamData = [
     job: '',
     social: [{ linkedin: 'https://www.linkedin.com/in/selmirafernandes/' }],
     avatar: 'selmira.jpg'
+  },
+  {
+    id: 25,
+    roles: ['mentor', 'collaborator'],
+    name: 'Inês Calçôa',
+    company: 'Volkswagen Group Services',
+    job: 'Software Developer',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/inescalcoa/' },
+      { github: 'https://github.com/iscc92' }
+    ],
+    avatar: 'ines-calcoa.jpeg'
+  },
+  {
+    id: 26,
+    roles: ['mentor', 'collaborator'],
+    name: 'Cristiane Fidelix',
+    company: '',
+    job: 'IT Consultant - Cybersecurity Specialist',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/cristianefidelix/' },
+      { instagram: 'https://www.instagram.com/cristianefidelix.live' },
+      { other: 'https://sites.google.com/view/cristianefidelix/home' }
+    ],
+    avatar: 'cristiane-fidelix.jpeg'
   }
 ];
 
