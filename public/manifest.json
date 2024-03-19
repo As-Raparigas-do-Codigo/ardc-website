@@ -9,12 +9,7 @@
     },
     {
       "src": "favicon192.ico",
-      "sizes": "192x192",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "favicon192.ico",
-      "sizes": "512x512",
+      "sizes": "512x512 192x192",
       "type": "image/x-icon"
     }
   ],
