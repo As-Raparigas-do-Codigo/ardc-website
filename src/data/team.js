@@ -300,6 +300,18 @@ const TeamData = [
       { other: 'https://sites.google.com/view/cristianefidelix/home' }
     ],
     avatar: 'cristiane-fidelix.jpeg'
+  },
+  {
+    id: 27,
+    roles: ['mentor', 'collaborator'],
+    name: 'Teresa Alves',
+    company: 'Cloudflare',
+    job: 'Systems Engineer',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/teresalves/' },
+      { github: 'https://github.com/teresalves' }
+    ],
+    avatar: 'teresa-alves.jpg'
   }
 ];
 
