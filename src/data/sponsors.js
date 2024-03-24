@@ -1,35 +1,32 @@
-import wit from '../assets/sponsorlogos/wit.png';
-import microsoft from '../assets/sponsorlogos/microsoft.png';
-import outsystems from '../assets/sponsorlogos/outsystems.png';
-import nunocubalreis from '../assets/sponsorlogos/nunocubalreis.png';
+import { importAll } from '../utils';
+const logos = importAll(require.context('../assets/sponsorlogos/', false, /\.(png|jpe?g|svg)$/));
 
 const amountOfTiers = 3;
 
 const sponsors = [
   {
     id: 1,
-    image: outsystems,
+    image: logos['outsystems.png'],
     alt: 'Logo da Outsystems',
     tier: 1,
     link: 'https://www.outsystems.com/'
   },
   {
     id: 2,
-    image: microsoft,
-    alt: 'Logo da Microsoft',
+    image: logos['icapital.png'],
+    alt: 'Logo da iCapital',
     tier: 2,
-    link: 'https://www.microsoft.com/pt-pt/'
+    link: 'https://www.icapital.com/'
   },
   {
     id: 3,
-    image: wit,
-    alt: 'Logo das Women In Tech',
+    image: logos['unit4.png'],
+    alt: 'Logo da Unit4',
     tier: 2,
-    link: 'https://women-in-tech.org/'
+    link: 'https://www.unit4.com/'
   },
   {
-    id: 4,
-    image: nunocubalreis,
+    image: logos['nunocubalreis.png'],
     alt: 'Logo da Nuno Cubal Reis',
     tier: 2,
     link: 'https://www.nunoreis.pt/'

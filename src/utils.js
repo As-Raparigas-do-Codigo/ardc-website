@@ -44,3 +44,11 @@ export const sortByAsc = (a, b, param) => {
 export const sortByDesc = (a, b, param) => {
   return b[param] - a[param];
 };
+
+export function importAll(r) {
+  let images = {};
+  r.keys().map((item) => {
+    images[item.replace('./', '')] = r(item);
+  });
+  return images;
+}
