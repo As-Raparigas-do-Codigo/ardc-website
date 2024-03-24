@@ -1,5 +1,6 @@
 import wsCarreira1 from '../../assets/events/ws-carreira-1.png';
 import wsCarreira2 from '../../assets/events/ws-carreira-2.png';
+import wsCarreira3 from '../../assets/events/ws-carreira-3.png';
 import uxiui from '../../assets/events/uxiui.png';
 import wsGit1 from '../../assets/events/ws-git-1.png';
 import wsGit2 from '../../assets/events/ws-git-2.png';
@@ -256,6 +257,19 @@ const Workshops = [
     description:
       'As Raparigas do Código colaboraram com as Women4Cyber em 5 sessões sobre CiberSegurança \
       durante os meses de Outubro e Novembro.',
+    category: Constants.Categories.WORKSHOP
+  },
+  {
+    id: self.crypto.randomUUID(),
+    date: '2024-02-19',
+    title: 'Workshop Gestão de Carreira',
+    subtitle: '3a Edição',
+    image: wsCarreira3,
+    alt: '',
+    description:
+      'Workshop composto de 6 sessões, sobre partilha de ferramentas e \
+      dicas para preparação para procura de emprego, \
+      esclarecimento do processo de recrutamento e de entrevistas técnicas.',
     category: Constants.Categories.WORKSHOP
   }
 ];
