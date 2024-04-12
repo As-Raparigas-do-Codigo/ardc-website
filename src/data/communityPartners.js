@@ -20,6 +20,12 @@ const communityPartners = [
     alt: 'Logo da 42 Porto',
     tier: 1,
     link: 'https://42porto.com/'
+  },
+  {
+    image: logos['dspa.png'],
+    alt: 'Logo da DSPA',
+    tier: 1,
+    link: 'https://dspa.pt/'
   }
 ];
 export { communityPartners };
