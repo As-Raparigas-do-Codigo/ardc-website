@@ -312,6 +312,19 @@ const TeamData = [
       { github: 'https://github.com/teresalves' }
     ],
     avatar: 'teresa-alves.jpg'
+  },
+  {
+    id: 28,
+    roles: ['mentor', 'collaborator'],
+    name: 'Gustavo Rodrigues',
+    company: 'KWAN',
+    job: 'Full Stack Developer',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/gustavocrodrigues/' },
+      { github: 'https://github.com/gustavorodrigues19' },
+      { other: 'https://www.gustavocrodrigues.com' }
+    ],
+    avatar: 'gustavo-rodrigues.png'
   }
 ];
 
