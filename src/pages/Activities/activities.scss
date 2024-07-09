@@ -7,3 +7,31 @@
 .activity-feature-image {
   width: 80px;
 }
+
+.inactiveTab, .activeTab {
+  padding: 6px 18px;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.inactiveTab {
+  border: 1px solid $light-gray;
+  background-color: transparent;
+  color: $brand-color;
+}
+
+.activeTab {
+  background-color: $green;
+  color: $white;
+  border: 1px solid $green;
+}
+
+.activeTab > span, .inactiveTab > span {
+  padding: 5px;
+  background-color: $brand-color;
+  border-radius: 50px;
+  font-size: 10px;
+  color: $white;
+  line-height: 1.5;
+  vertical-align: middle;
+}

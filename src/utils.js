@@ -52,3 +52,7 @@ export function importAll(r) {
   });
   return images;
 }
+
+export function capitalize(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}
