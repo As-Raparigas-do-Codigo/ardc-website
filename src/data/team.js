@@ -140,9 +140,7 @@ const TeamData = [
     name: 'Camila de Medeiros',
     job: 'Product Manager',
     location: 'Porto',
-    social: [
-      { linkedin: 'https://www.linkedin.com/in/milamedeiros' }
-    ],
+    social: [{ linkedin: 'https://www.linkedin.com/in/milamedeiros' }],
     avatar: 'camilademedeiros.jpeg'
   },
   {
@@ -151,9 +149,7 @@ const TeamData = [
     name: 'Thais Costa',
     job: 'Outsystems Developer',
     location: 'Lisboa',
-    social: [
-      { linkedin: 'https://www.linkedin.com/in/thais-costa-4b09a71bb/' }
-    ],
+    social: [{ linkedin: 'https://www.linkedin.com/in/thais-costa-4b09a71bb/' }],
     avatar: 'thaiscosta.jpeg'
   },
   {
@@ -162,9 +158,7 @@ const TeamData = [
     name: 'Joana Filipe',
     job: 'Digital Designer',
     location: 'Lisboa',
-    social: [
-      { linkedin: 'https://www.linkedin.com/in/joanalf-uxuidesign/' }
-    ],
+    social: [{ linkedin: 'https://www.linkedin.com/in/joanalf-uxuidesign/' }],
     avatar: 'joanafilipe.jpeg'
   }
 ];

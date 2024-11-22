@@ -74,7 +74,7 @@ const ExCollaborators = [
     social: [
       { linkedin: 'https://www.linkedin.com/in/catarina-ns-silva/' },
       { github: 'https://github.com/CatarinaNSSilva' }
-    ],
+    ]
   },
   {
     name: 'Gustavo Rodrigues',
@@ -88,8 +88,8 @@ const ExCollaborators = [
     social: [
       { linkedin: 'https://www.linkedin.com/in/cristianefidelix/' },
       { instagram: 'https://www.instagram.com/cristianefidelix.live' }
-    ],
-  },
+    ]
+  }
 ];
 
 export default ExCollaborators;
