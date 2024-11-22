@@ -68,6 +68,27 @@ const ExCollaborators = [
       { linkedin: 'https://www.linkedin.com/in/jessicalemos9/' },
       { github: 'https://github.com/jessicalemos ' }
     ]
+  },
+  {
+    name: 'Catarina Silva',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/catarina-ns-silva/' },
+      { github: 'https://github.com/CatarinaNSSilva' }
+    ]
+  },
+  {
+    name: 'Gustavo Rodrigues',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/gustavocrodrigues/' },
+      { github: 'https://github.com/gustavorodrigues19' }
+    ]
+  },
+  {
+    name: 'Cristiane Fidelix',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/cristianefidelix/' },
+      { instagram: 'https://www.instagram.com/cristianefidelix.live' }
+    ]
   }
 ];
 
