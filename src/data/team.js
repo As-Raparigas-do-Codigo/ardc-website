@@ -133,6 +133,39 @@ const TeamData = [
       { github: 'https://github.com/teresalves' }
     ],
     avatar: 'teresa-alves.jpg'
+  },
+  {
+    id: 28,
+    roles: ['mentor', 'collaborator'],
+    name: 'Camila de Medeiros',
+    job: 'Product Manager',
+    location: 'Porto',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/milamedeiros' }
+    ],
+    avatar: 'camilademedeiros.jpeg'
+  },
+  {
+    id: 29,
+    roles: ['mentor', 'collaborator'],
+    name: 'Thais Costa',
+    job: 'Outsystems Developer',
+    location: 'Lisboa',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/thais-costa-4b09a71bb/' }
+    ],
+    avatar: 'thaiscosta.jpeg'
+  },
+  {
+    id: 30,
+    roles: ['mentor', 'collaborator'],
+    name: 'Joana Filipe',
+    job: 'Digital Designer',
+    location: 'Lisboa',
+    social: [
+      { linkedin: 'https://www.linkedin.com/in/joanalf-uxuidesign/' }
+    ],
+    avatar: 'joanafilipe.jpeg'
   }
 ];
 
