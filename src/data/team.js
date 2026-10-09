@@ -56,18 +56,6 @@ const TeamData = [
     avatar: 'isabel.jpg'
   },
   {
-    id: 13,
-    roles: ['mentor', 'collaborator'],
-    name: 'Catarina Silva',
-    job: 'Researcher',
-    location: 'Coimbra',
-    social: [
-      { linkedin: 'https://www.linkedin.com/in/catarina-ns-silva/' },
-      { github: 'https://github.com/CatarinaNSSilva' }
-    ],
-    avatar: 'catarina-silva.png'
-  },
-  {
     id: 17,
     roles: ['mentor', 'collaborator'],
     name: 'Inês de Matos',
@@ -135,18 +123,6 @@ const TeamData = [
     avatar: 'ines-calcoa.jpeg'
   },
   {
-    id: 26,
-    roles: ['mentor', 'collaborator'],
-    name: 'Cristiane Fidelix',
-    job: 'IT Consultant - Cybersecurity Specialist',
-    location: 'Brasil',
-    social: [
-      { linkedin: 'https://www.linkedin.com/in/cristianefidelix/' },
-      { instagram: 'https://www.instagram.com/cristianefidelix.live' }
-    ],
-    avatar: 'cristiane-fidelix.jpeg'
-  },
-  {
     id: 27,
     roles: ['mentor', 'collaborator'],
     name: 'Teresa Alves',
@@ -161,14 +137,29 @@ const TeamData = [
   {
     id: 28,
     roles: ['mentor', 'collaborator'],
-    name: 'Gustavo Rodrigues',
-    job: 'Full Stack Developer',
+    name: 'Camila de Medeiros',
+    job: 'Product Manager',
+    location: 'Porto',
+    social: [{ linkedin: 'https://www.linkedin.com/in/milamedeiros' }],
+    avatar: 'camilademedeiros.jpeg'
+  },
+  {
+    id: 29,
+    roles: ['mentor', 'collaborator'],
+    name: 'Thais Costa',
+    job: 'Outsystems Developer',
     location: 'Lisboa',
-    social: [
-      { linkedin: 'https://www.linkedin.com/in/gustavocrodrigues/' },
-      { github: 'https://github.com/gustavorodrigues19' }
-    ],
-    avatar: 'gustavo-rodrigues.png'
+    social: [{ linkedin: 'https://www.linkedin.com/in/thais-costa-4b09a71bb/' }],
+    avatar: 'thaiscosta.jpeg'
+  },
+  {
+    id: 30,
+    roles: ['mentor', 'collaborator'],
+    name: 'Joana Filipe',
+    job: 'Digital Designer',
+    location: 'Lisboa',
+    social: [{ linkedin: 'https://www.linkedin.com/in/joanalf-uxuidesign/' }],
+    avatar: 'joanafilipe.jpeg'
   }
 ];
 
