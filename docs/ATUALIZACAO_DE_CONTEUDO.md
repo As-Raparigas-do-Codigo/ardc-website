@@ -27,6 +27,7 @@ Formato da informação do membro:
 ```
 
 **Notas:**
+
 - Nos links sociais tens as seguintes opções: `linkedin`, `github`, `outsystems`, `medium` e `other`;
 - Nos roles podes ter `founder`, `admin` ou `mentor`. O mais provável é usar a opção `mentor`;
 - Alguns campos são opcionais, por exemplo `company`. Convém ter pelo menos o nome e a foto do membro da equipa.
@@ -36,6 +37,7 @@ Formato da informação do membro:
 ## Atualizar Atividades
 
 Neste momento temos 3 tipos de atividades:
+
 - **Media** - destaque nos media (exemplo: destaque num artigo de noticias, etc);
 - **Workshop** - um workshops de longa ou curta duração que tenhamos organizado para a nossa comunidade de alunas;
 - **Evento** - um evento onde participamos ou organizamos como comunidade, seja em pessoa ou virtualmente (exemplo: podcast, painel em que os nossos membros participaram a representar a comunidade, etc...)
@@ -43,10 +45,12 @@ Neste momento temos 3 tipos de atividades:
 Estas atividades aparecem em duas páginas do website: [Atividades](https://raparigasdocodigo.pt/activities) e [Parceiros](https://raparigasdocodigo.pt/partners).
 
 Para atualizar as atividades:
+
 1. [`src/assets/`](/src/assets/) - pasta com imagens a usar nas atividades
 2. [`src/data/activities/`](/src/data/activities/) - pasta com a informação das atividades
 
 Ao adicionar ou remover uma atividade terás de atualizar o ficheiro respectivo:
+
 - [src/data/activities/events.js](/src/data/activities/events.js) para eventos
 - [src/data/activities/workshops.js](/src/data/activities/workshops.js) para workshops
 - [src/data/activities/media.js](/src/data/activities/media.js) para destaques nos _media_
@@ -74,4 +78,4 @@ O formato da informação da atividade é o seguinte:
 
 - O campo `id` deverá ser auto-gerado usando `self.crypto.randomUUID()`. Isto facilita a nossa manutenção de conteúdo e segue as boas práticas de _web development._
 - Os campos `category` e `link`, geralmente não são necessários para atividades do tipo Workshop
-- Podes verificar os tipos de categoria e links aqui [src/constants/index.js](/src/constants/index.js). 
+- Podes verificar os tipos de categoria e links aqui [src/constants/index.js](/src/constants/index.js).

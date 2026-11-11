@@ -24,9 +24,10 @@ const Events = [
     // },
     image: communityBrunch,
     alt: 'Community Brunch - oportunidade única para profissionais e aspirantes da tecnologia se conectarem e colaborarem',
-    description: 'O evento realizado na nova casa do nosso Community Partner, @42porto, reuniu a comunidade para \
+    description:
+      'O evento realizado na nova casa do nosso Community Partner, @42porto, reuniu a comunidade para \
     um encontro de networking e aprendizado. \
-    Foi uma ótima oportunidade para trocar experiências e fortalecer laços dentro da comunidade.',  
+    Foi uma ótima oportunidade para trocar experiências e fortalecer laços dentro da comunidade.',
     category: Constants.Categories.EVENT
   },
   {

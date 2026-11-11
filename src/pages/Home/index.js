@@ -23,11 +23,11 @@ const IntroContent = ({ translation }) => {
         <p className="py-1">{translation('HomePage-IntroSection-Description')}</p>
         <Container className="p-0">
           <Row>
-            <Col className="col-auto align-self-center">
+            {/* <Col className="col-auto align-self-center">
               <LinkButton href={Constants.Routes.Community} variant="primary">
                 {translation('HomePage-IntroSection-PrimaryButton')}
               </LinkButton>
-            </Col>
+            </Col> */}
             <Col className="col-auto align-self-center">
               <LinkArrow href={pdf} download>
                 {translation('HomePage-IntroSection-SecondaryButton')}

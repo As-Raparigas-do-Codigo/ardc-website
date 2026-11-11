@@ -55,6 +55,12 @@ body {
   font-family: $font-family-primary;
 }
 
+// Site inativo: tons de cinzento e esbatidos (washed out) em todo o conteúdo, exceto no banner de aviso e no menu de navegação
+.App > :not(header),
+.App > header > :not(.inactive-banner):not(.navigation-position) {
+  filter: grayscale(0.5) contrast(0.85) brightness(1.1);
+}
+
 h1,
 h2,
 h3,
@@ -139,6 +145,8 @@ hr {
   position: absolute;
   width: 100%;
   color: $color-primary;
+  // fica acima do conteúdo, que tem filtro (e por isso cria o seu próprio contexto de empilhamento)
+  z-index: 10;
 }
 
 .padding-top-first-section {
