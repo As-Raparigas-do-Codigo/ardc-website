@@ -16,10 +16,10 @@ export const awardsList = [
 ];
 
 export const projectLinks = [
-  {
-    path: Constants.Routes.Community,
-    name: 'CommunityPage-PageName'
-  },
+  // {
+  //   path: Constants.Routes.Community,
+  //   name: 'CommunityPage-PageName'
+  // },
   {
     path: Constants.Routes.Activities,
     name: 'ActivitiesPage-PageName'
@@ -31,9 +31,9 @@ export const projectLinks = [
   {
     path: Constants.Routes.About,
     name: 'AboutLabel'
-  },
-  {
-    path: Constants.Routes.Contacts,
-    name: 'ContactsPage-PageName'
   }
+  // {
+  //   path: Constants.Routes.Contacts,
+  //   name: 'ContactsPage-PageName'
+  // }
 ];

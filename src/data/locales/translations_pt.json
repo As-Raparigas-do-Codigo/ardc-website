@@ -139,5 +139,8 @@
   "LinkType-article": "artigo",
   "LinkType-video": "video",
   "LinkType-file": "ficheiro",
-  "LinkType-social": "social"
+  "LinkType-social": "social",
+  "InactiveBanner-Status": "O projeto As Raparigas do Código encerrou a sua atividade.",
+  "InactiveBanner-Farewell": "Foi uma aventura com muita satisfação, aprendizagem e ligações que ficam para sempre.",
+  "InactiveBanner-Thanks": "Obrigada a todas as voluntárias, mentoras, parceiros e participantes que fizeram parte desta comunidade."
 }

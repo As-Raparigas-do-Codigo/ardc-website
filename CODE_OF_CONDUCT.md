@@ -5,6 +5,7 @@
 N'As Raparigas do Código, estamos comprometidos em criar e manter um ambiente amigável, respeitoso e inclusivo para todos. Queremos que todos os contribuidores deste projeto se sintam bem-vindos e valorizados, independentemente da sua experiência, identidade, origem, género, orientação sexual, raça, religião ou outras características pessoais.
 
 ## 📚 As Nossas Normas
+
 Para garantir um ambiente positivo, pedimos a todos os participantes que sigam estas normas:
 
 1. **Sê Respeitoso:** Trata todos os contribuidores e revisores com respeito e cortesia. Comportamentos desrespeitosos, como linguagem ofensiva, intimidação ou assédio, não serão tolerados.
@@ -18,4 +19,5 @@ Para garantir um ambiente positivo, pedimos a todos os participantes que sigam e
 5. **Sê Grato:** Agradece a todos pelas suas contribuições, independentemente do tipo ou tamanho. Um ambiente de reconhecimento positivo motiva-nos a todos.
 
 ## ✊ A Nossa Responsabilidade
+
 Os responsáveis do projeto têm o dever de fazer cumprir estas normas de conduta. Em caso de se verificar algum tipo de comportamento inadequado, poderão ser tomadas medidas corretivas, incluindo a remoção de comentários, problemas e contribuições, ou a proibição de participação no projeto.

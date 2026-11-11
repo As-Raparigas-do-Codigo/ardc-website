@@ -5,9 +5,10 @@ import { useTranslation, initReactI18next } from 'react-i18next';
 
 import AboutUs from 'pages/About';
 import Activities from 'pages/Activities';
-import Collaborate from 'pages/Collaborate';
-import Community from 'pages/Community';
-import Contact from 'pages/Contact';
+// Pages with forms are hidden while the project is inactive
+// import Collaborate from 'pages/Collaborate';
+// import Community from 'pages/Community';
+// import Contact from 'pages/Contact';
 import Home from 'pages/Home';
 import NotFound404 from 'pages/NotFound404';
 import Partners from 'pages/Partners';
@@ -16,6 +17,7 @@ import Team from 'pages/Team';
 import Workshops from 'pages/Workshops';
 
 import Footer from 'components/Footer';
+import InactiveBanner from 'components/InactiveBanner';
 import NavBar from 'components/NavBar';
 import Social from 'components/Social';
 
@@ -54,25 +56,26 @@ function App() {
     <div className="App">
       <Router>
         <header>
+          <InactiveBanner translation={t} />
           <Social changeLanguage={changeLanguageHandler} currentLang={currentLang} />
           <NavBar translation={t} />
         </header>
         <Routes>
           <Route path={Constants.Routes.NotFound404} element={<NotFound404 translation={t} />} />
           <Route exact path={Constants.Routes.About} element={<AboutUs translation={t} />} />
-          <Route exact path={Constants.Routes.Contacts} element={<Contact translation={t} />} />
+          {/* <Route exact path={Constants.Routes.Contacts} element={<Contact translation={t} />} /> */}
           <Route
             exact
             path={Constants.Routes.Activities}
             element={<Activities translation={t} />}
           />
           <Route exact path={Constants.Routes.Home} element={<Home translation={t} />} />
-          <Route
+          {/* <Route
             exact
             path={Constants.Routes.Collaborate}
             element={<Collaborate translation={t} />}
           />
-          <Route exact path={Constants.Routes.Community} element={<Community translation={t} />} />
+          <Route exact path={Constants.Routes.Community} element={<Community translation={t} />} /> */}
           <Route
             exact
             path={Constants.Routes.PrivacyPolicy}

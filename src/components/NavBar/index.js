@@ -88,13 +88,13 @@ function NavBarComponent({ translation }) {
                 className="d-none d-lg-block">
                 <HomeIcon />
               </NavLink>
-              <NavLink
+              {/* <NavLink
                 location={location}
                 to={Constants.Routes.Community}
                 onSelect={onSelect}
                 className="text-center">
                 {translation('CommunityPage-PageName')}
-              </NavLink>
+              </NavLink> */}
               <NavLink
                 location={location}
                 to={Constants.Routes.Activities}
@@ -129,13 +129,13 @@ function NavBarComponent({ translation }) {
                   {translation('TeamPage-PageName')}
                 </NavDropdownItem>
               </NavDropdown>
-              <NavLink
+              {/* <NavLink
                 location={location}
                 to={Constants.Routes.Contacts}
                 onSelect={onSelect}
                 className="text-center">
                 {translation('ContactsPage-PageName')}
-              </NavLink>
+              </NavLink> */}
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

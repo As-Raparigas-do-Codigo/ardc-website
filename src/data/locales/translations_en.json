@@ -132,5 +132,8 @@
   "LinkType-article": "article",
   "LinkType-video": "video",
   "LinkType-file": "file",
-  "LinkType-social": "social"
+  "LinkType-social": "social",
+  "InactiveBanner-Status": "As Raparigas do Código has ended its activity.",
+  "InactiveBanner-Farewell": "It was an adventure full of satisfaction, learning and connections that will last.",
+  "InactiveBanner-Thanks": "Thank you to all the volunteers, mentors, partners and participants who were part of this community."
 }
